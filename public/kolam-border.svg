@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="360"
+  height="400"
+  viewBox="0 0 360 400"
+  fill="none"
+  role="img"
+  aria-labelledby="kolam-title kolam-description"
+>
+  <title id="kolam-title">Continuous-line kolam</title>
+  <desc id="kolam-description">
+    A symmetrical continuous-line kolam with a central square and four outward rounded loops.
+  </desc>
+  <path
+    d="M 120 150 H 85 C 62 150, 45 135, 45 112 C 45 90, 62 75, 85 75 C 105 75, 120 90, 120 110 V 290 C 120 310, 105 325, 85 325 C 62 325, 45 310, 45 288 C 45 265, 62 250, 85 250 H 275 C 298 250, 315 265, 315 288 C 315 310, 298 325, 275 325 C 255 325, 240 310, 240 290 V 110 C 240 90, 255 75, 275 75 C 298 75, 315 90, 315 112 C 315 135, 298 150, 275 150 H 120"
+    stroke="#121212"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
