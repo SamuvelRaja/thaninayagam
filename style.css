@@ -3069,3 +3069,194 @@ body.nav-open {
   }
 }
 .brand-avatar { width: 100%; height: 100%; object-fit: cover; }
+
+/* -------------------------------------
+ * Annavin Katturaigal Archive Styles
+ * ------------------------------------- */
+
+.anna-archive-page {
+  padding: 4rem 1.5rem;
+  background: var(--surface, #fafafa);
+  min-height: 100vh;
+}
+
+.anna-top-nav {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border, #eaeaea);
+  padding-bottom: 1.5rem;
+}
+
+.anna-top-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.anna-top-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: white;
+  border: 1px solid var(--border, #eaeaea);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-main, #333);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.anna-top-card:hover, .anna-top-card.is-active {
+  background: var(--primary, #660000);
+  color: white;
+  border-color: var(--primary, #660000);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.anna-sub-nav {
+  margin-bottom: 2rem;
+}
+
+.anna-sub-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.anna-sub-bar a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f1f1f1;
+  color: #555;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.anna-sub-bar a:hover, .anna-sub-bar a.is-active {
+  background: #330099;
+  color: white;
+}
+
+.anna-table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border, #eaeaea);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.anna-table-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.anna-table-title {
+  color: var(--primary, #990000);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-latha, sans-serif);
+}
+
+.anna-table-part {
+  color: #330099;
+  font-size: 1.1rem;
+}
+
+.anna-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+}
+
+.anna-pagination ul {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.anna-pagination button {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  color: #0044cc;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.anna-pagination button:hover {
+  background: #e9e9e9;
+}
+
+.anna-pagination button.is-active {
+  background: #cc0000;
+  color: white;
+  border-color: #cc0000;
+}
+
+.anna-archive-register {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.anna-archive-register th,
+.anna-archive-register td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.anna-archive-register th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #333;
+}
+
+.anna-archive-register .col-no { width: 5%; text-align: center; }
+.anna-archive-register .col-year { width: 15%; text-align: center; }
+.anna-archive-register .col-source { width: 20%; text-align: center; }
+
+.anna-table-link {
+  color: #0044cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.anna-table-link:hover {
+  text-decoration: underline;
+  color: #002266;
+}
+
+.anna-empty {
+  text-align: center;
+  color: #888;
+  padding: 2rem !important;
+}
+
+@media (max-width: 768px) {
+  .anna-table-container {
+    padding: 1rem;
+  }
+  .anna-archive-register {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

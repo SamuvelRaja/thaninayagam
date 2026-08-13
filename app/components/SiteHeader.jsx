@@ -12,6 +12,19 @@ function isActive(pathname, href) {
   return pathname === href || pathname.startsWith(href);
 }
 
+function getFocusable(root) {
+  if (!root) return [];
+  return Array.from(
+    root.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    ),
+  ).filter((el) => {
+    if (el.hasAttribute("disabled")) return false;
+    if (el.getAttribute("aria-hidden") === "true") return false;
+    return el.offsetParent !== null || el === document.activeElement;
+  });
+}
+
 export default function SiteHeader({ lang = "ta" }) {
   const pathname = usePathname() || "/";
   const items = lang === "en" ? navItems : navItemsTa;
@@ -24,12 +37,28 @@ export default function SiteHeader({ lang = "ta" }) {
 
   const adjustedItems = items.map((item) => ({
     ...item,
-    href: lang === "en" ? `/en${item.href === "/" ? "" : item.href}` : item.href,
+    href: lang === "en" ? `/en${item.href}` : item.href,
   }));
 
+  const homeHref = lang === "en" ? "/en" : "/";
   const isEn = pathname.startsWith("/en");
   const pathWithoutEn = isEn ? pathname.replace(/^\/en/, "") || "/" : pathname;
   const enPath = `/en${pathWithoutEn === "/" ? "" : pathWithoutEn}`;
+
+  const copy =
+    lang === "ta"
+      ? {
+          primary: "முதன்மை வழிசெலுத்தல்",
+          menu: "பட்டியல்",
+          close: "மூடு",
+          language: "மொழி",
+        }
+      : {
+          primary: "Primary",
+          menu: "Menu",
+          close: "Close",
+          language: "Language",
+        };
 
   useEffect(() => {
     setMenuOpen(false);
@@ -38,17 +67,35 @@ export default function SiteHeader({ lang = "ta" }) {
   useEffect(() => {
     if (!menuOpen) return undefined;
 
+    const panel = panelRef.current;
+    const focusables = getFocusable(panel);
+    focusables[0]?.focus();
+
     const onKeyDown = (event) => {
       if (event.key === "Escape") {
         setMenuOpen(false);
         toggleRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab" || focusables.length === 0) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
     scrollYRef.current = window.scrollY;
     document.body.classList.add("nav-open");
     document.body.style.top = `-${scrollYRef.current}px`;
-
     document.addEventListener("keydown", onKeyDown);
 
     return () => {
@@ -67,15 +114,13 @@ export default function SiteHeader({ lang = "ta" }) {
       if (!(target instanceof Node)) return;
       if (
         panelRef.current?.contains(target) ||
-        toggleRef.current?.contains(target) ||
-        headerRef.current?.contains(target)
+        toggleRef.current?.contains(target)
       ) {
         return;
       }
       setMenuOpen(false);
     };
 
-    // Defer so the opening tap cannot immediately close the menu.
     const timer = window.setTimeout(() => {
       document.addEventListener("pointerdown", onPointerDown);
     }, 0);
@@ -94,7 +139,7 @@ export default function SiteHeader({ lang = "ta" }) {
       <div className="header-inner">
         <a
           className="brand"
-          href={lang === "en" ? "/en" : "/"}
+          href={homeHref}
           aria-label={
             lang === "ta"
               ? "தனிநாயகம் அடிகளார் ஆவணகம் முகப்பு"
@@ -102,9 +147,9 @@ export default function SiteHeader({ lang = "ta" }) {
           }
         >
           <span className="brand-mark" aria-hidden="true">
-            <img src="/tna.webp" alt="" className="brand-avatar" />
+            {lang === "ta" ? "த" : "TN"}
           </span>
-          <span>
+          <span className="brand-text">
             {lang === "ta" ? (
               <>
                 <strong lang="ta">தனிநாயகம்</strong>
@@ -123,8 +168,11 @@ export default function SiteHeader({ lang = "ta" }) {
           ref={panelRef}
           id={navId}
           className={`header-navs${menuOpen ? " is-open" : ""}`}
+          role={menuOpen ? "dialog" : undefined}
+          aria-modal={menuOpen ? true : undefined}
+          aria-label={menuOpen ? copy.primary : undefined}
         >
-          <nav aria-label={lang === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Primary"}>
+          <nav aria-label={copy.primary}>
             <ul className="nav-list">
               {adjustedItems.map((item) => {
                 const active = isActive(pathname, item.href);
@@ -148,13 +196,23 @@ export default function SiteHeader({ lang = "ta" }) {
           <div
             className="lang-switcher"
             role="group"
-            aria-label={lang === "ta" ? "மொழி" : "Language"}
+            aria-label={copy.language}
           >
-            <a href={pathWithoutEn} className={lang === "ta" ? "active" : ""}>
+            <a
+              href={pathWithoutEn}
+              className={lang === "ta" ? "active" : undefined}
+              aria-current={lang === "ta" ? "true" : undefined}
+              lang="ta"
+            >
               தமிழ்
             </a>
             <span aria-hidden="true">|</span>
-            <a href={enPath} className={lang === "en" ? "active" : ""}>
+            <a
+              href={enPath}
+              className={lang === "en" ? "active" : undefined}
+              aria-current={lang === "en" ? "true" : undefined}
+              lang="en"
+            >
               English
             </a>
           </div>
@@ -165,6 +223,7 @@ export default function SiteHeader({ lang = "ta" }) {
             className="nav-toggle"
             aria-expanded={menuOpen}
             aria-controls={navId}
+            aria-haspopup="dialog"
             onClick={() => setMenuOpen((open) => !open)}
           >
             <span className="nav-toggle-bars" aria-hidden="true">
@@ -173,13 +232,7 @@ export default function SiteHeader({ lang = "ta" }) {
               <span />
             </span>
             <span className="nav-toggle-label">
-              {menuOpen
-                ? lang === "ta"
-                  ? "மூடு"
-                  : "Close"
-                : lang === "ta"
-                  ? "பட்டியல்"
-                  : "Menu"}
+              {menuOpen ? copy.close : copy.menu}
             </span>
           </button>
         </div>

@@ -1,7 +1,7 @@
 import PageIntro from "@/app/components/PageIntro";
-import PageLinks from "@/app/components/PageLinks";
 import Figure from "@/app/components/Figure";
-import { KolamCorners } from "@/app/components/Ornaments";
+import SectionNext from "@/app/components/SectionNext";
+import OnThisPage from "@/app/components/OnThisPage";
 import { imagesTa } from "@/app/lib/data.ta";
 
 export const metadata = {
@@ -22,30 +22,59 @@ const onThisPage = [
 export default function BiographyPage() {
   return (
     <main id="main">
-      <div className="content-section page-shell">
-        <PageIntro
-          label="அவரைப் பற்றி"
-          title="மொழிகளையும் எல்லைகளையும் கடந்து பணியாற்றிய அறிஞர்"
-          titleId="about-title"
-          summary="இந்தக் கணக்கு அரசு நூலக வாழ்க்கை வரலாறுகள், சமகால இதழியல், ஆங்கில மற்றும் தமிழ் விக்கிப்பீடியா ஆகியவற்றை அடிப்படையாகக் கொண்டது; முரண்படும் இடங்களில் முதன்மை மூலங்களுக்கு முன்னுரிமை அளிக்கப்படுகிறது."
-        >
-          <nav
-            className="on-this-page kolam-frame"
-            aria-label="இந்தப் பக்கத்தில்"
-          >
-            <KolamCorners />
-            <h2 className="on-this-page-title">இந்தப் பக்கத்தில்</h2>
-            <ul>
-              {onThisPage.map((item) => (
-                <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </PageIntro>
+      <PageIntro
+        label="அவரைப் பற்றி"
+        title="மொழிகளையும் எல்லைகளையும் கடந்து பணியாற்றிய அறிஞர்"
+        titleId="about-title"
+        summary="அரசு நூலகப் பதிவுகள், சமகால இதழியல், நூல்பதிவு மூலங்களை அடிப்படையாகக் கொண்ட வாழ்க்கை வரலாற்றுக் கட்டுரை. முரண்படும் இடங்களில் முதன்மை மூலங்களுக்கு முன்னுரிமை."
+      />
+      <div className="content-section page-shell biography-page">
+        <aside className="at-a-glance" aria-labelledby="glance-title">
+          <h2 id="glance-title">சுருக்கமாக</h2>
+          <dl>
+            <div>
+              <dt>வாழ்க்கைக் காலம்</dt>
+              <dd>2 ஆகஸ்ட் 1913 – 1 செப்டம்பர் 1980</dd>
+            </div>
+            <div>
+              <dt>பிறந்த இடம்</dt>
+              <dd>கரம்பொன், ஊர்காவற்றுறை அருகில், யாழ்ப்பாணம்</dd>
+            </div>
+            <div>
+              <dt>பெயர்</dt>
+              <dd>
+                பிறப்புப் பெயர் சேவியர் நிக்கோலஸ் ஸ்ரனிஸ்லாஸ்; “தனிநாயகம்”
+                என்பது “தனித்த வீரர்”
+              </dd>
+            </div>
+            <div>
+              <dt>மொழிகள்</dt>
+              <dd>
+                தமிழ், ஆங்கிலம், லத்தீன் மற்றும் பல ஐரோப்பிய, செவ்வியல் மொழிகள்
+              </dd>
+            </div>
+            <div>
+              <dt>இரண்டு முனைவர் பட்டங்கள்</dt>
+              <dd>ரோமில் இறையியல்; லண்டனில் கல்வியியல்</dd>
+            </div>
+            <div>
+              <dt>1952</dt>
+              <dd>
+                <cite>Tamil Culture</cite> காலாண்டிதழ் நிறுவப்பட்டது
+              </dd>
+            </div>
+            <div>
+              <dt>1964</dt>
+              <dd>உலகத் தமிழாராய்ச்சி மன்றம் நிறுவப்பட்டது</dd>
+            </div>
+            <div>
+              <dt>1966</dt>
+              <dd>கோலாலம்பூரில் முதல் உலகத் தமிழாராய்ச்சி மாநாடு</dd>
+            </div>
+          </dl>
+        </aside>
 
-        <div className="biography-layout">
+        <div className="section-with-toc">
           <div className="biography-sections">
             <section aria-labelledby="early-life-title">
               <h2 id="early-life-title">ஆரம்ப வாழ்க்கையும் குடும்பமும்</h2>
@@ -143,11 +172,26 @@ export default function BiographyPage() {
                 </p>
               </div>
 
-              <Figure
-                image={imagesTa.portraitSecondary}
-                className="section-figure small-portrait"
-                lang="ta"
-              />
+              <div
+                className="photographic-record"
+                aria-labelledby="photographic-record-title"
+              >
+                <header className="photographic-record-head">
+                  <p className="section-label">புகைப்படப் பதிவு</p>
+                  <h3 id="photographic-record-title">பொதுவாழ்வில் அறிஞர்</h3>
+                  <p>
+                    காலத்தைய உருவப்படங்களும் ஆவணப் புகைப்படங்களும், முறையான
+                    உருவப்படத்தைத் தாண்டி அவரது பயணம், உடனுழைப்பு, சர்வதேசச்
+                    சந்திப்புகள் ஆகியவற்றைப் பதிவு செய்கின்றன.
+                  </p>
+                </header>
+                <div className="photographic-record-grid">
+                  <Figure image={imagesTa.withColleague} lang="ta" />
+                  <Figure image={imagesTa.outdoorPortrait} lang="ta" />
+                  <Figure image={imagesTa.conferenceSecond} lang="ta" />
+                  <Figure image={imagesTa.archivalPortrait} lang="ta" />
+                </div>
+              </div>
             </section>
 
             <section aria-labelledby="legacy-work-title">
@@ -163,11 +207,8 @@ export default function BiographyPage() {
                   ஐரோப்பிய நூலக ஆய்வுகள் ஆரம்பகால அச்சுத் தமிழ் நூல்களையும்
                   கையெழுத்துப் பிரதிகளையும் அறிஞர்களின் கவனத்திற்குக் கொண்டுவந்தன—
                   1950 இல் லிஸ்பனில் அடையாளம் காணப்பட்ட 1554 லூசோ-தமிழ் கார்த்திலா
-                  உட்பட.{" "}
-                  <a href="/archive/">ஆவணகம் பக்கம்</a> பொது உரிமைப் பரப்பு
-                  ஆவணங்களை மறுபதிப்பு செய்கிறது;{" "}
-                  <a href="/contributions/">பங்களிப்புகள் பக்கம்</a> விரிவான
-                  மீட்புப் பணியை விவரிக்கிறது.
+                  உட்பட. ஆவணகத்தில் <cite>Tamil Culture</cite> ஆரம்ப இதழ்களும்
+                  தொடர்புடைய ஆவணங்களும் பட்டியலிடப்பட்டுள்ளன.
                 </p>
                 <p>
                   1964 ஜனவரியில் காமில் சுவெலபில் மற்றும் வி. ஐ. சுப்பிரமணியத்துடன்
@@ -199,63 +240,15 @@ export default function BiographyPage() {
             </section>
           </div>
 
-          <aside
-            className="at-a-glance kolam-frame"
-            aria-labelledby="glance-title"
-          >
-            <KolamCorners />
-            <h2 id="glance-title">சுருக்கமாக</h2>
-            <dl>
-              <div>
-                <dt>வாழ்க்கைக் காலம்</dt>
-                <dd>2 ஆகஸ்ட் 1913 – 1 செப்டம்பர் 1980</dd>
-              </div>
-              <div>
-                <dt>பிறந்த இடம்</dt>
-                <dd>கரம்பொன், ஊர்காவற்றுறை அருகில், யாழ்ப்பாணம்</dd>
-              </div>
-              <div>
-                <dt>பெயர்</dt>
-                <dd>
-                  பிறப்புப் பெயர் சேவியர் நிக்கோலஸ் ஸ்ரனிஸ்லாஸ்; “தனிநாயகம்”
-                  என்பது “தனித்த வீரர்”
-                </dd>
-              </div>
-              <div>
-                <dt>மொழிகள்</dt>
-                <dd>
-                  தமிழ், ஆங்கிலம், லத்தீன் மற்றும் பல ஐரோப்பிய, செவ்வியல் மொழிகள்
-                </dd>
-              </div>
-              <div>
-                <dt>இரண்டு முனைவர் பட்டங்கள்</dt>
-                <dd>ரோமில் இறையியல்; லண்டனில் கல்வியியல்</dd>
-              </div>
-              <div>
-                <dt>1952</dt>
-                <dd>
-                  <cite>Tamil Culture</cite> காலாண்டிதழ் நிறுவப்பட்டது
-                </dd>
-              </div>
-              <div>
-                <dt>1964</dt>
-                <dd>உலகத் தமிழாராய்ச்சி மன்றம் நிறுவப்பட்டது</dd>
-              </div>
-              <div>
-                <dt>1966</dt>
-                <dd>கோலாலம்பூரில் முதல் உலகத் தமிழாராய்ச்சி மாநாடு</dd>
-              </div>
-            </dl>
-
-            <p className="aside-actions">
-              <a className="button button-secondary" href="/timeline/">
-                முழுமையான காலக்கோட்டைத் திறக்க
-              </a>
-            </p>
-          </aside>
+          <OnThisPage items={onThisPage} lang="ta" />
         </div>
 
-        <PageLinks current="/about/" lang="ta" />
+        <SectionNext
+          lang="ta"
+          href="/contributions/#timeline"
+          label="பங்களிப்புகள்"
+          title="பணித் தலைப்புகளும் பதினேழு மைல்கற்களும்"
+        />
       </div>
     </main>
   );

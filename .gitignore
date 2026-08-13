@@ -3,3 +3,15 @@ node_modules/
 out/
 .DS_Store
 npm-debug.log*
+
+# Local research downloads (OCR dumps, IA derivatives)
+workbench/research/*-djvu.txt
+workbench/research/*-meta.json
+workbench/research/*page_numbers.json
+workbench/research/scandata*.xml
+workbench/research/*wiki.json
+workbench/research/*wiki.txt
+workbench/research/jp2-listing.html
+workbench/research/shots/
+workbench/research/ia-text/
+workbench/research/ia-text/pdfs/

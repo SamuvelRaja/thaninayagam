@@ -1,0 +1,296 @@
+{
+  "carthaginian": {
+    "title": "The Carthaginian clergy during the episcopate of Saint Cyprian",
+    "first_publish_date": "1950",
+    "editions": [
+      {
+        "key": "/books/OL16592045M",
+        "publish_date": "1950",
+        "publishers": [
+          "Tamil Literature Society"
+        ],
+        "pagination": "xviii, 112 p. :",
+        "number_of_pages": 112,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": null,
+        "publish_places": [
+          "Tuticorin, South India"
+        ],
+        "subtitle": null,
+        "title": "The Carthaginian clergy during the episcopate of Saint Cyprian."
+      }
+    ],
+    "subjects": [
+      "Clergy",
+      "History"
+    ]
+  },
+  "nature": {
+    "title": "Nature in ancient Tamil poetry, concept and interpretation",
+    "first_publish_date": "1953",
+    "editions": [
+      {
+        "key": "/books/OL5484411M",
+        "publish_date": "1953",
+        "publishers": [
+          "Tamil Literature Society"
+        ],
+        "pagination": "xxii, 185 p.",
+        "number_of_pages": 185,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": "by Xavier S. Thani Nayagam.",
+        "publish_places": [
+          "Tuticorin"
+        ],
+        "subtitle": null,
+        "title": "Nature in ancient Tamil poetry, concept and interpretation"
+      }
+    ],
+    "subjects": [
+      "Tamil poetry",
+      "History and criticism",
+      "Nature in literature"
+    ]
+  },
+  "ore_ulakam": {
+    "title": "On̲r̲ē ulakam",
+    "first_publish_date": "1966",
+    "editions": [
+      {
+        "key": "/books/OL26211M",
+        "publish_date": "1966",
+        "publishers": null,
+        "pagination": "vii, 230 p.",
+        "number_of_pages": 230,
+        "languages": [
+          {
+            "key": "/languages/tam"
+          }
+        ],
+        "by_statement": null,
+        "publish_places": null,
+        "subtitle": null,
+        "title": "On̲r̲ē ulakam"
+      }
+    ],
+    "subjects": [
+      "Voyages and travels"
+    ]
+  },
+  "reference": {
+    "title": "A reference guide to Tamil studies",
+    "first_publish_date": "1966",
+    "editions": [
+      {
+        "key": "/books/OL13904M",
+        "publish_date": "1966",
+        "publishers": [
+          "University of Malaya Press; [sole distributors: Oxford University Press, London]"
+        ],
+        "pagination": "viii, 122 p.",
+        "number_of_pages": 122,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": "[by] Xavier S. Thani Nayagam.",
+        "publish_places": [
+          "Kuala Lumpur"
+        ],
+        "subtitle": "books",
+        "title": "A reference guide to Tamil studies"
+      }
+    ],
+    "subjects": [
+      "Bibliography",
+      "Tamil (Indic people)",
+      "Tamil philology"
+    ]
+  },
+  "tamil_culture_civ": {
+    "title": "Tamil culture and civilization",
+    "first_publish_date": "1971",
+    "editions": [
+      {
+        "key": "/books/OL4553853M",
+        "publish_date": "1971",
+        "publishers": [
+          "Asia Pub. House",
+          "Asia Publishing House"
+        ],
+        "pagination": "ix, 233 p.",
+        "number_of_pages": 233,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": "Selected and introduced by X. S. Thani Nayagam.",
+        "publish_places": [
+          "New York"
+        ],
+        "subtitle": "readings: the classical period.",
+        "title": "Tamil culture and civilization"
+      }
+    ],
+    "subjects": [
+      "Tamil (Indic people)"
+    ]
+  },
+  "tamil_humanism": {
+    "title": "Tamil humanism, the classical period",
+    "first_publish_date": "1972",
+    "editions": [
+      {
+        "key": "/books/OL50329373M",
+        "publish_date": "1972",
+        "publishers": [
+          "Jaffna College"
+        ],
+        "pagination": "57, iii, [2] p.",
+        "number_of_pages": 57,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          },
+          {
+            "key": "/languages/tam"
+          }
+        ],
+        "by_statement": "Xavier S. Thani Nayagam",
+        "publish_places": [
+          "Jaffna, Sri Lanka]"
+        ],
+        "subtitle": null,
+        "title": "Tamil humanism, the classical period"
+      },
+      {
+        "key": "/books/OL3010086M",
+        "publish_date": "1972",
+        "publishers": [
+          "Jaffna College"
+        ],
+        "pagination": "57, iii, [2] p. ;",
+        "number_of_pages": 57,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": "Xavier S. Thani Nayagam.",
+        "publish_places": [
+          "Jaffna"
+        ],
+        "subtitle": null,
+        "title": "Tamil humanism, the classical period"
+      }
+    ],
+    "subjects": null
+  },
+  "tiruvalluvar": {
+    "title": "Tiruvaḷḷuvar",
+    "first_publish_date": "1967",
+    "editions": [
+      {
+        "key": "/books/OL22309M",
+        "publish_date": "1967",
+        "publishers": null,
+        "pagination": "4, 60 p.",
+        "number_of_pages": 60,
+        "languages": [
+          {
+            "key": "/languages/tam"
+          }
+        ],
+        "by_statement": null,
+        "publish_places": [
+          "Annamalai University"
+        ],
+        "subtitle": null,
+        "title": "Tiruvaḷḷuvar"
+      }
+    ],
+    "subjects": null
+  },
+  "tamilttutu": {
+    "title": "Tamil̲ttūtu",
+    "first_publish_date": "1962",
+    "editions": [
+      {
+        "key": "/books/OL5157M",
+        "publish_date": "1962",
+        "publishers": null,
+        "pagination": "5, 126 p.",
+        "number_of_pages": 126,
+        "languages": [
+          {
+            "key": "/languages/tam"
+          }
+        ],
+        "by_statement": null,
+        "publish_places": null,
+        "subtitle": null,
+        "title": "Tamil̲ttūtu"
+      },
+      {
+        "key": "/books/OL155664M",
+        "publish_date": "1998",
+        "publishers": [
+          "Ulakat Tamil̲ārāycci Nir̲uvan̲am"
+        ],
+        "pagination": "v, 81 p. ;",
+        "number_of_pages": 81,
+        "languages": [
+          {
+            "key": "/languages/tam"
+          }
+        ],
+        "by_statement": "Tan̲ināyaka Aṭikaḷ.",
+        "publish_places": [
+          "Cen̲n̲ai"
+        ],
+        "subtitle": "kaṭṭuraik kottu",
+        "title": "Tamil̲t tūtu"
+      }
+    ],
+    "subjects": [
+      "Tamil literature"
+    ]
+  },
+  "tamil_studies_abroad": {
+    "title": "Tamil Studies Abroad",
+    "first_publish_date": null,
+    "editions": [
+      {
+        "key": "/books/OL59068263M",
+        "publish_date": "1968",
+        "publishers": [
+          "The International Association of Tamil Research"
+        ],
+        "pagination": null,
+        "number_of_pages": 288,
+        "languages": [
+          {
+            "key": "/languages/eng"
+          }
+        ],
+        "by_statement": null,
+        "publish_places": null,
+        "subtitle": "a Symposium",
+        "title": "Tamil Studies Abroad"
+      }
+    ],
+    "subjects": [
+      "Tamil language"
+    ]
+  }
+}

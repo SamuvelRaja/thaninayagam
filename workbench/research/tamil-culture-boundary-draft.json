@@ -1,0 +1,199 @@
+{
+  "generated": "2026-08-07",
+  "item": "tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008",
+  "leaves_page_numbers_json": 4768,
+  "leaves_scandata": 4769,
+  "method": "OCR regex anchors + linear char→leaf estimate; NOT image-verified",
+  "status": "partially image-verified for Vol. I priority targets",
+  "cc0": {
+    "licenseurl": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "uploader_email": "ingersol.selvaraj@gmail.com",
+    "collections": [
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "subject_tags_include": "வள்ளுவர் வள்ளலார் வட்டம் / இங்கர்சால்",
+    "decision": "Title-leaf hosting already approved 3 Aug 2026; full-text republication still held pending authority of uploader CC0 over contributed articles"
+  },
+  "vol1_priority_targets": {
+    "note": "Superseded by image_verified on 2026-08-10",
+    "previous_ocr_estimates": {
+      "editor_opening": {
+        "ocr_heading": "IHE EDITOE (= THE EDITOR)",
+        "incipit_ocr": "The... disappearance of dominant cultures is one of the most painful observations in the study of history.",
+        "charPos": 588,
+        "estLeaf": 1,
+        "note": "Appears after early Vol. I masthead and before the Vol. I Nos. 3–4 marker; confirm issue number and printed pagination on images"
+      },
+      "nature_in_ancient_tamil_poetry_article": {
+        "ocr_heading": "Mature in .>4nctent ^am.li.._Poelru (= Nature in Ancient Tamil Poetry)",
+        "byline_ocr": "DE. XAVIEE S. THANI NAYAGAM, m-a^m-litt. (= Rev. Dr. Xavier S. Thani Nayagam)",
+        "incipit_ocr": "IT IS a favourite point with writers on India to say that the historical sense is wanting...",
+        "charPos_heading": 181150,
+        "estLeaf": 102,
+        "note": "Located after Vol. I Nos. 3–4 September marker in OCR stream; image-check before any public page range"
+      }
+    }
+  },
+  "anchors_est": [
+    {
+      "id": "reprint_cover_volume_1_to_12",
+      "charPos": 56,
+      "estLeaf": 1,
+      "match": "VOLUME 1 TO 12"
+    },
+    {
+      "id": "vol1_1952_label",
+      "charPos": 209,
+      "estLeaf": 1,
+      "match": "Vol. I - 1952"
+    },
+    {
+      "id": "vol1_possible_no1_masthead",
+      "charPos": 478,
+      "estLeaf": 1,
+      "match": "VOL. I KO. S"
+    },
+    {
+      "id": "vol1_editor_opening_ocr",
+      "charPos": 588,
+      "estLeaf": 1,
+      "match": "IHE EDITOE"
+    },
+    {
+      "id": "vol1_nos_3_4_september_ocr",
+      "charPos": 171573,
+      "estLeaf": 97,
+      "match": "VOL. I XOS. 3-4"
+    },
+    {
+      "id": "vol1_nature_article_heading_ocr",
+      "charPos": 181167,
+      "estLeaf": 102,
+      "match": "Mature in .>4nctent"
+    },
+    {
+      "id": "vol1_nature_byline_ocr",
+      "charPos": 181206,
+      "estLeaf": 102,
+      "match": "DE. XAVIEE S. THANI NAYAGAM"
+    },
+    {
+      "id": "vol1_nature_heading_garbled",
+      "charPos": 181167,
+      "estLeaf": 102,
+      "match": "Mature in .>4nctent ^am.li.._Poelru"
+    }
+  ],
+  "issue_openers_clean_est": [
+    {
+      "charPos": 171573,
+      "estLeaf": 97,
+      "text": "VOL. I XOS. 3-4, SE:pa:£MJ3£R, losa "
+    },
+    {
+      "charPos": 2076794,
+      "estLeaf": 1161,
+      "text": "VoL. IV No. 2 APRIL. 1955 "
+    },
+    {
+      "charPos": 2076794,
+      "estLeaf": 1161,
+      "text": "VoL. IV No. 2 APRIL. 1955"
+    },
+    {
+      "charPos": 2249212,
+      "estLeaf": 1257,
+      "text": "Vol. IV. No. 3 JULX* 1955 "
+    },
+    {
+      "charPos": 2251253,
+      "estLeaf": 1259,
+      "text": "Vol. IV. No. 3 JULY, 1955 "
+    },
+    {
+      "charPos": 2602405,
+      "estLeaf": 1455,
+      "text": "Vol. V. No. 1 JANUARY, 1956 "
+    },
+    {
+      "charPos": 3032870,
+      "estLeaf": 1695,
+      "text": "Vol. V. No. 3 JULY, 1956 "
+    },
+    {
+      "charPos": 3175101,
+      "estLeaf": 1775,
+      "text": "Vol. V. No. 4 OCTOBER, 1956 "
+    },
+    {
+      "charPos": 3317378,
+      "estLeaf": 1854,
+      "text": "Vol. VI. No. 1 January, 19s7 "
+    },
+    {
+      "charPos": 3481271,
+      "estLeaf": 1946,
+      "text": "Vol. VL No. 2 APRIL, 1957 "
+    },
+    {
+      "charPos": 3481271,
+      "estLeaf": 1946,
+      "text": "Vol. VL No. 2 APRIL, 1957"
+    },
+    {
+      "charPos": 3483402,
+      "estLeaf": 1947,
+      "text": "Vol. VI. No. 2 APRIL, 1957 "
+    },
+    {
+      "charPos": 3622934,
+      "estLeaf": 2025,
+      "text": "Vol. VI. No. 3 JULY. 1957 "
+    },
+    {
+      "charPos": 3693973,
+      "estLeaf": 2065,
+      "text": "Vol. II. No. 10, July 1937 (Editor). "
+    },
+    {
+      "charPos": 6660759,
+      "estLeaf": 3722,
+      "text": "Vol. X, No. 3 JULY—SEPT. 1963"
+    },
+    {
+      "charPos": 8018379,
+      "estLeaf": 4480,
+      "text": "Vol. XII Nos. 2 & 3 APRIL —JUNE 1966 "
+    }
+  ],
+  "updated": "2026-08-10",
+  "image_verified": {
+    "leaf_indexing": "0-based IA page/leafN and IIIF $N",
+    "vol1_no2_june_1952_editor_essay": {
+      "title": "The Survival of Tamil Culture",
+      "signed": "THE EDITOR",
+      "leaves": "3 to at least 9",
+      "printed_pages_seen": [
+        99,
+        100,
+        103
+      ],
+      "ia_url": "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008/page/n3/mode/1up"
+    },
+    "vol1_nos_3_4_september_1952": {
+      "masthead_leaf": 89,
+      "subscriber_notice_leaf": 88,
+      "ia_url": "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008/page/n89/mode/1up"
+    },
+    "ethical_interpretation_nature_article": {
+      "title": "The Ethical Interpretation of Nature in Ancient Tamil Poetry",
+      "author": "Dr. Xavier S. Thani Nayagam",
+      "leaves": "94-104",
+      "printed_pages": "186-196",
+      "next_article_leaf": 105,
+      "ia_url": "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008/page/n94/mode/1up",
+      "also_listed_in": "Collected Papers (1995) contents"
+    }
+  }
+}
