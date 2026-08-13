@@ -1,5 +1,4 @@
 import { Citation, ExternalLink } from "./Links";
-import { KolamCorners } from "./Ornaments";
 import { sources } from "@/app/lib/data";
 import { sourcesTa } from "@/app/lib/data.ta";
 
@@ -19,8 +18,7 @@ export default function Figure({
     image.sourceId != null ? sourceList[image.sourceId - 1] : undefined;
 
   return (
-    <figure className={`doc-figure kolam-frame ${className}`.trim()}>
-      <KolamCorners />
+    <figure className={`doc-figure ${className}`.trim()}>
       <div className="figure-media">
         <img
           src={image.src}
@@ -38,15 +36,13 @@ export default function Figure({
           <span>
             {image.description}
             {captionExtra ? <> {captionExtra}</> : null}
-            {citeIds ? <Citation ids={citeIds} /> : null}
+            {citeIds ? <Citation ids={citeIds} lang={lang} /> : null}
           </span>
-        {source ? (
-          <ExternalLink href={source.url} lang={lang}>
-            {image.credit}
-          </ExternalLink>
-        ) : image.credit ? (
-          <span className="figure-credit">{image.credit}</span>
-        ) : null}
+          {source ? (
+            <ExternalLink href={source.url} lang={lang}>{image.credit}</ExternalLink>
+          ) : (
+            <span className="figure-credit">{image.credit}</span>
+          )}
         </figcaption>
       )}
     </figure>

@@ -89,12 +89,180 @@ export const sources = [
     type: "Internet Archive reading copy of the 1968 IATR publication",
     url: "https://archive.org/details/dli.jZY9lup2kZl6TuXGlZQdjZM9kuxy.TVA_BOK_0009170",
   },
+  {
+    id: 16,
+    title: "Thani Nayagam Adigal at the Second International Conference of Tamil Studies",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:இரண்டாவது_உலகத்தமிழாராய்ச்சி_மாநாட்டில்_தனிநாயகம்_அடிகள்.png",
+  },
+  {
+    id: 17,
+    title: "Thani Nayagam Adigal with a colleague",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:தனிநாயகம்_அடிகள்4.png",
+  },
+  {
+    id: 18,
+    title: "Outdoor photograph of Xavier Thani Nayagam Adigal",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:சேவியர்_தனிநாயகம்_அடிகள்2.png",
+  },
+  {
+    id: 19,
+    title: "Archival portrait of Xavier Thani Nayagam Adigal",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:சேவியர்_தனிநாயகம்_அடிகள்.png",
+  },
+  {
+    id: 20,
+    title: "A Reference Guide to Tamil Studies",
+    type: "Open Library edition OL13904M · University of Malaya Press, 1966",
+    url: "https://openlibrary.org/books/OL13904M",
+  },
+  {
+    id: 21,
+    title: "A Reference Guide to Tamil Studies (controlled lending)",
+    type: "Internet Archive in-library / print-disabled item",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    id: 22,
+    title: "Tamilttutu (தமிழ்த் தூது), 1962 edition",
+    type: "Open Library edition OL5157M",
+    url: "https://openlibrary.org/books/OL5157M",
+  },
+  {
+    id: 23,
+    title: "தமிழ்த் தூது: கட்டுரைக் கொத்து",
+    type: "Tamil Digital Library bibliographic record 21987",
+    url: "https://tamildigitallibrary.in/Articles/%E0%AE%A8%E0%AF%82%E0%AE%B2%E0%AF%8D-21987-%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D%E0%AE%A4%E0%AF%8D%20%E0%AE%A4%E0%AF%82%E0%AE%A4%E0%AF%81-%E0%AE%95%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%B0%E0%AF%88%E0%AE%95%E0%AF%8D%20%E0%AE%95%E0%AF%8A%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81",
+  },
+  {
+    id: 24,
+    title: "தமிழ்த் தூது: கட்டுரைக் கொத்து (IA mirror)",
+    type: "Internet Archive reading copy · tdl.21987",
+    url: "https://archive.org/details/tdl.21987-nuul-tmilllt-tuutu-ktttturaik-kottu",
+  },
+  {
+    id: 25,
+    title: "Collected speeches of Thani Nayagam Adigal (1999)",
+    type: "Open Library edition OL169610M",
+    url: "https://openlibrary.org/books/OL169610M",
+  },
+  {
+    id: 26,
+    title: "Collected speeches of Thani Nayagam Adigal (IA mirror)",
+    type: "Internet Archive reading copy · tdl.18049",
+    url: "https://archive.org/details/tdl.18049-nuul-tnnninaaykm-attikllaarinnn-corrpolllivukll",
+  },
+  {
+    id: 27,
+    title: "Tamil Digital Library disclaimer",
+    type: "Site rights / all-rights-reserved statement",
+    url: "https://tamildigitallibrary.in/disclaimer",
+  },
+  {
+    id: 28,
+    title: "Collected Papers of Thani Nayagam Adigalar",
+    type: "Internet Archive reading copy · tdl.17933",
+    url: "https://archive.org/details/tdl.17933-collected-papers-of-thani-nayagam-adigalar",
+  },
+  {
+    id: 29,
+    title: "Nature in Ancient Tamil Poetry: Concept and Interpretation",
+    type: "Internet Archive reading copy · tdl.27397",
+    url: "https://archive.org/details/tdl.27397-nature-in-ancient-tamil-poetry-concept-and-interpretation",
+  },
+  {
+    id: 30,
+    title: "Landscape and Poetry: A Study of Nature in Classical Tamil Poetry",
+    type: "Internet Archive reading copy · tdl.17918",
+    url: "https://archive.org/details/tdl.17918-landscape-and-poetry-a-study-of-nature-in-classical-tamil-poetry",
+  },
+  {
+    id: 31,
+    title: "திருவள்ளுவர்",
+    type: "Internet Archive reading copy · tdl.25823",
+    url: "https://archive.org/details/tdl.25823-nuul-tiruvlllluvr",
+  },
+  {
+    id: 32,
+    title: "Tamil Studies Abroad: A Symposium",
+    type: "Internet Archive controlled-lending / print-disabled item",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
+  },
+  {
+    id: 33,
+    title: "International Association of Tamil Research — contact",
+    type: "IATR official site contact page",
+    url: "https://iatrofficial.org/contact/",
+  },
+  {
+    id: 34,
+    title: "The Carthaginian clergy during the episcopate of Saint Cyprian",
+    type: "Open Library edition OL16592045M · Tamil Literature Society, 1950",
+    url: "https://openlibrary.org/books/OL16592045M",
+  },
+  {
+    id: 35,
+    title: "The Carthaginian clergy (controlled lending)",
+    type: "Internet Archive in-library / print-disabled item",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    id: 36,
+    title: "ஒரே உலகம் (On̲r̲ē ulakam)",
+    type: "Open Library edition OL26211M",
+    url: "https://openlibrary.org/books/OL26211M",
+  },
+  {
+    id: 37,
+    title: "Tamil culture and civilization: readings, the classical period",
+    type: "Open Library edition OL4553853M · Asia Publishing House, 1971",
+    url: "https://openlibrary.org/books/OL4553853M",
+  },
+  {
+    id: 38,
+    title: "Tamil humanism, the classical period",
+    type: "Open Library edition OL3010086M · Jaffna College, 1972",
+    url: "https://openlibrary.org/books/OL3010086M",
+  },
+  {
+    id: 39,
+    title: "திருவள்ளுவர் (Tiruvaḷḷuvar)",
+    type: "Open Library edition OL22309M · Annamalai University, 1967",
+    url: "https://openlibrary.org/books/OL22309M",
+  },
+  {
+    id: 40,
+    title: "Nature in ancient Tamil poetry, concept and interpretation",
+    type: "Open Library edition OL5484411M · Tamil Literature Society, 1953",
+    url: "https://openlibrary.org/books/OL5484411M",
+  },
+  {
+    id: 41,
+    title: "அமுதன் அடிகள்",
+    type: "Tamil Wiki biographical article",
+    url: "https://tamil.wiki/wiki/%E0%AE%85%E0%AE%AE%E0%AF%81%E0%AE%A4%E0%AE%A9%E0%AF%8D_%E0%AE%85%E0%AE%9F%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D",
+  },
+  {
+    id: 42,
+    title: "File:Amudhan Adikal Image.jpg",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:Amudhan_Adikal_Image.jpg",
+  },
+  {
+    id: 43,
+    title: "File:Amudhan Adigal Book.jpg",
+    type: "Tamil Wiki photographic record · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:Amudhan_Adigal_Book.jpg",
+  },
 ];
 
 /**
  * Only images with a direct documentary link to him or work he initiated:
- * his portrait, early Tamil print he recovered, the Tamil Culture quarterly
- * he founded, and the 1966 conference proceedings he organised.
+ * his portrait and archival photographs, early Tamil print he recovered,
+ * the Tamil Culture quarterly he founded, and the 1966 conference proceedings.
  */
 export const images = {
   portrait: {
@@ -109,6 +277,30 @@ export const images = {
     credit: "",
     sourceId: null,
   },
+  amudhanAdigal: {
+    title: "Rev. Dr. Amudhan Adigal",
+    shortTitle: "Amudhan Adigal",
+    description:
+      "Priest, writer, and editor; general secretary of the Thani Nayagam Adigal centenary committee and author of a major Tamil biography of him.",
+    src: "/images/amudhan-adigal.jpg",
+    alt: "Portrait photograph of Rev. Dr. Amudhan Adigal",
+    width: 355,
+    height: 449,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 42,
+  },
+  amudhanThaniBook: {
+    title: "Thani Nayagam Adigal — biography by Amudhan Adigal",
+    shortTitle: "Amudhan’s biography",
+    description:
+      "Cover of Amudhan Adigal’s book on Thani Nayagam Adigal (Tamil Digital Library bibliographic record, 1993). Link-only access to the TDL record; cover image from Tamil Wiki.",
+    src: "/images/amudhan-adigal-book.jpg",
+    alt: "Cover of Amudhan Adigal’s biographical book on Thani Nayagam Adigal",
+    width: 528,
+    height: 800,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 43,
+  },
   portraitSecondary: {
     title: "Rev. Dr. Xavier S. Thani Nayagam Adigal",
     shortTitle: "Thani Nayagam Adigal",
@@ -120,6 +312,54 @@ export const images = {
     height: 614,
     credit: "Tamil Wikipedia / Tamil Nation",
     sourceId: 11,
+  },
+  conferenceSecond: {
+    title: "At the Second International Conference of Tamil Studies",
+    shortTitle: "Second International Conference",
+    description:
+      "Thani Nayagam Adigal at the ceremonial lamp during the Second International Conference of Tamil Studies.",
+    src: "https://tamil.wiki/images/8/8e/இரண்டாவது_உலகத்தமிழாராய்ச்சி_மாநாட்டில்_தனிநாயகம்_அடிகள்.png",
+    alt: "Thani Nayagam Adigal standing at a ceremonial lamp and microphone during the Second International Conference of Tamil Studies",
+    width: 359,
+    height: 418,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 16,
+  },
+  withColleague: {
+    title: "Thani Nayagam Adigal with a colleague",
+    shortTitle: "An archival photograph",
+    description:
+      "An archival photograph of the young priest and scholar; the accompanying record does not identify the man beside him.",
+    src: "https://tamil.wiki/images/b/bd/தனிநாயகம்_அடிகள்4.png",
+    alt: "A young Thani Nayagam Adigal in clerical dress standing beside an unidentified man in a suit",
+    width: 518,
+    height: 402,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 17,
+  },
+  outdoorPortrait: {
+    title: "An outdoor photograph",
+    shortTitle: "Thani Nayagam Adigal outdoors",
+    description:
+      "An undated archival photograph of Thani Nayagam Adigal outdoors; the source record supplies no location or occasion.",
+    src: "https://tamil.wiki/images/5/53/சேவியர்_தனிநாயகம்_அடிகள்2.png",
+    alt: "Thani Nayagam Adigal in white clerical dress standing outdoors beside water and vegetation",
+    width: 218,
+    height: 371,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 18,
+  },
+  archivalPortrait: {
+    title: "An archival portrait",
+    shortTitle: "Archival portrait",
+    description:
+      "An undated period portrait preserved in the Tamil Wiki photographic record.",
+    src: "https://tamil.wiki/images/c/c2/சேவியர்_தனிநாயகம்_அடிகள்.png",
+    alt: "Archival head-and-shoulders portrait of Xavier Thani Nayagam Adigal in white clerical dress",
+    width: 355,
+    height: 433,
+    credit: "Tamil Wiki · CC BY-SA",
+    sourceId: 19,
   },
   bioTop: {
     title: "Rev. Dr. Xavier S. Thani Nayagam Adigal",
@@ -199,6 +439,68 @@ export const homeFacts = [
   { term: "Vocation", detail: "Catholic priest, linguist, editor, and scholar of Tamil" },
   { term: "Founded", detail: "Tamil Culture quarterly (1952) and the International Association for Tamil Research (1964)" },
   { term: "Organised", detail: "First International Conference-Seminar of Tamil Studies, Kuala Lumpur, 1966" },
+];
+
+/**
+ * Curated home preview — readable on-site texts only (no finding aids).
+ * Order = recommended first opens.
+ */
+export const featuredHoldingSlugs = [
+  "landscape-and-poetry",
+  "ethical-interpretation-nature",
+  "collected-papers",
+  "tamilttutu",
+  "tiruvalluvar",
+  "indian-thought-roman-stoicism",
+  "tamil-humanism",
+  "research-in-tamil-studies",
+];
+
+/** Home “start reading” paths into the archive. */
+export const homeArchivePaths = [
+  {
+    slug: "landscape-and-poetry",
+    labelEn: "Classical study",
+    labelTa: "செவ்வியல் ஆய்வு",
+    titleEn: "Landscape and Poetry",
+    titleTa: "Landscape and Poetry",
+    blurbEn: "Nature in classical Tamil poetry—his lasting scholarly theme.",
+    blurbTa: "செவ்வியல் தமிழ்க் கவிதையில் இயற்கை—அவரது நீடித்த ஆய்வுப் பொருள்.",
+  },
+  {
+    slug: "ethical-interpretation-nature",
+    labelEn: "Journal essay",
+    labelTa: "இதழ்க் கட்டுரை",
+    titleEn: "The Ethical Interpretation of Nature",
+    titleTa: "இயற்கையின் ஒழுக்க வாசிப்பு",
+    blurbEn: "A cleaned 1952 Tamil Culture essay—short and ready to read.",
+    blurbTa: "1952 Tamil Culture கட்டுரை—சுத்தம் செய்யப்பட்ட, வாசிக்கத் தயார்.",
+  },
+  {
+    slug: "collected-papers",
+    labelEn: "Collected essays",
+    labelTa: "தொகுப்புக் கட்டுரைகள்",
+    titleEn: "Collected Papers (1995)",
+    titleTa: "Collected Papers (1995)",
+    blurbEn: "English essays from Tamil Culture, gathered in one volume.",
+    blurbTa: "Tamil Culture ஆங்கிலக் கட்டுரைகளின் தொகுப்புத் தொகுதி.",
+  },
+];
+
+/** Short chronology teaser for the home portal. */
+export const homeMilestones = [
+  { year: "1913", titleEn: "Born in Jaffna", titleTa: "யாழ்ப்பாணத்தில் பிறப்பு" },
+  { year: "1952", titleEn: "Tamil Culture founded", titleTa: "Tamil Culture தொடக்கம்" },
+  { year: "1964", titleEn: "IATR established", titleTa: "உலகத் தமிழாராய்ச்சி மன்றம்" },
+  { year: "1966", titleEn: "Kuala Lumpur conference", titleTa: "கோலாலம்பூர் மாநாடு" },
+  { year: "1980", titleEn: "Death in Jaffna", titleTa: "யாழ்ப்பாணத்தில் மறைவு" },
+];
+
+/** Catalogue slugs kept only as external/lending links (not on-site holdings). */
+export const unavailableExternalSlugs = [
+  "carthaginian-clergy",
+  "reference-guide-tamil-studies-1966",
+  "tamil-studies-abroad",
 ];
 
 export const timeline = [
@@ -382,10 +684,10 @@ export const contributions = [
     type: "Reference works",
     title: "A guide to world Tamil scholarship",
     paragraphs: [
-      "His Reference Guide to Tamil Studies (1966) gathered some 1,335 titles published about Tamil in Latin, French, German, Russian, Malay, and English into a 122-page guide, so that scholars anywhere could enter the field.",
+      "His Reference Guide to Tamil Studies (1966), issued by the University of Malaya Press, is an English-language bibliography of eight preliminary pages and 122 numbered pages, prepared so that scholars anywhere could enter the field.",
       "He also arranged for Simon Casie Chetty’s Tamil Plutarch to be corrected, expanded by T. P. Meenakshisundaram, and republished—an act of scholarly stewardship typical of his method.",
     ],
-    sources: [7, 10, 11],
+    sources: [7, 20, 10, 11],
   },
   {
     type: "International teaching",
@@ -398,158 +700,340 @@ export const contributions = [
   },
 ];
 
+/** Selected writings shown in archive/contributions. Prefer `slug` (internal archive page). */
 export const publications = [
+  {
+    year: "1950",
+    title: "The Carthaginian Clergy",
+    detail:
+      "Tamil Literature Society · xviii, 112 p. · from his Roman doctoral research · IA controlled lending only",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    year: "1952–1966",
+    title: "Tamil Culture, volumes 1–12",
+    detail: "English quarterly he founded and edited · bound IA scan",
+    slug: "tamil-culture-vols-1-12",
+    url: "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008",
+  },
   {
     year: "1952",
     title: "தமிழ்த் தூது",
-    detail: "His first collection of Tamil literary essays, recorded in Tamil Wikipedia",
-    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+    detail: "Tamil essay collection · Open Library editions 1962 / 1998",
+    slug: "tamilttutu",
+    url: "https://openlibrary.org/books/OL5157M",
   },
   {
     year: "1953",
     title: "Nature in Ancient Tamil Poetry",
-    detail: "Tamil Literature Society · from his M.Litt. research",
-    url: "https://openlibrary.org/works/OL326636W",
-  },
-  {
-    year: "1960",
-    title: "The Carthaginian Clergy",
-    detail: "Published form of his Roman doctoral research",
-    url: "https://en.wikipedia.org/wiki/Xavier_Thaninayagam",
+    detail: "Tamil Literature Society · xxii, 185 p. · from his M.Litt. research",
+    slug: "nature-ancient-tamil-poetry",
+    url: "https://openlibrary.org/books/OL5484411M",
   },
   {
     year: "1963",
+    title: "Nature Poetry in Tamil",
+    detail: "Open Library work · related nature-poetry study; edition leaf not yet verified",
+    slug: "nature-poetry-in-tamil",
+    url: "https://openlibrary.org/works/OL326637W",
+  },
+  {
+    year: "1964",
+    title: "Antao De Proenca’s Tamil-Portuguese Dictionary, 1679",
+    detail:
+      "Tamil Culture XI.2 · introduction + Knowlton/Thani preface translation + Knowlton Indo-Portuguese study",
+    slug: "antao-de-proenca-dictionary",
+    url: "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008/page/n4091/mode/1up",
+  },
+  {
+    year: "1966",
     title: "ஒரே உலகம்",
-    detail: "Travel reflections from his world lecture tours, recorded in Tamil Wikipedia",
-    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+    detail: "Tamil travel reflections · Open Library vii, 230 p.",
+    slug: "ore-ulakam",
+    url: "https://openlibrary.org/books/OL26211M",
   },
   {
     year: "1966",
     title: "A Reference Guide to Tamil Studies",
-    detail: "University of Malaya Press · 1,335 titles across six languages",
-    url: "https://openlibrary.org/works/OL34688930W",
+    detail:
+      "University of Malaya Press · viii, 122 p. · IA controlled lending only",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    year: "1966 / 1968",
+    title: "First International Conference-Seminar Proceedings",
+    detail: "IATR · Kuala Lumpur 1966 · published 1968",
+    slug: "conference-1966-proceedings",
+    url: "https://archive.org/details/dli.jZY9lup2kZl6TuXGlZQdjZM9kuxy.TVA_BOK_0009170",
   },
   {
     year: "1967",
     title: "Landscape and Poetry",
     detail: "A study of nature in classical Tamil poetry",
+    slug: "landscape-and-poetry",
     url: "https://openlibrary.org/works/OL326645W",
   },
   {
     year: "1967",
-    title: "Tiruvalluvar",
-    detail: "Lectures delivered at Annamalai University, published in Tamil",
-    url: "https://openlibrary.org/works/OL326644W",
+    title: "திருவள்ளுவர்",
+    detail: "Annamalai University lectures · Tamil · 4, 60 p.",
+    slug: "tiruvalluvar",
+    url: "https://openlibrary.org/books/OL22309M",
   },
   {
     year: "1968",
     title: "Tamil Studies Abroad",
-    detail: "International Association for Tamil Research",
-    url: "https://openlibrary.org/works/OL43368360W",
+    detail: "IATR symposium · ~288 p. · IA controlled lending only",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
   },
   {
     year: "1971",
     title: "Tamil Culture and Civilization",
-    detail: "Readings from the classical period",
-    url: "https://openlibrary.org/works/OL326641W",
+    detail: "Asia Publishing House · readings, classical period · ix, 233 p.",
+    slug: "tamil-culture-and-civilization",
+    url: "https://openlibrary.org/books/OL4553853M",
   },
   {
     year: "1972",
-    title: "Tamil Humanism",
-    detail: "Jaffna College",
-    url: "https://openlibrary.org/works/OL326642W",
+    title: "Tamil Humanism, the Classical Period",
+    detail: "Jaffna College · 57 p.",
+    slug: "tamil-humanism",
+    url: "https://openlibrary.org/books/OL3010086M",
+  },
+  {
+    year: "1972",
+    title: "Aspects of Tamil Humanism",
+    detail: "Title listed in Tamil Wikipedia · related to the 1972 Jaffna College volume",
+    slug: "aspects-tamil-humanism",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "Indian Thought and Roman Stoicism",
+    detail: "Title listed in Tamil Wikipedia · edition not yet verified",
+    slug: "indian-thought-roman-stoicism",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "Educational Thoughts in Ancient Tamil Literature",
+    detail: "Title listed in Tamil Wikipedia · edition not yet verified",
+    slug: "educational-thoughts-ancient-tamil",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "தமிழர் பண்பாடு நேற்றும் இன்றும் நாளையும்",
+    detail: "Title listed in Tamil Wikipedia · edition not yet verified",
+    slug: "tamilar-panpatu",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "உலக ஒழுக்கவியலில் திருக்குறள்",
+    detail: "Title listed in Tamil Wikipedia · edition not yet verified",
+    slug: "ulaga-ozhakkaviyalil-tirukkural",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
   },
   {
     year: "1980",
     title: "Research in Tamil Studies",
     detail: "Thanthai Chelva Memorial Lecture",
+    slug: "research-in-tamil-studies",
     url: "https://openlibrary.org/works/OL326640W",
+  },
+  {
+    year: "1983",
+    title: "Tamilāram (memorial volume)",
+    detail: "Tributes dedicated to his memory · edited by Rajan Philipupillai · not authored by him",
+    slug: "tamilaram",
+    url: "https://archive.org/details/tamilaaram",
+  },
+  {
+    year: "1995",
+    title: "Collected Papers of Thani Nayagam Adigalar",
+    detail: "IITS · posthumous English collection",
+    slug: "collected-papers",
+    url: "https://archive.org/details/tdl.17933-collected-papers-of-thani-nayagam-adigalar",
+  },
+  {
+    year: "1999",
+    title: "Collected speeches of Thani Nayagam Adigal",
+    detail: "Posthumous Tamil speech volume · OL / TDL",
+    slug: "collected-speeches-1999",
+    url: "https://openlibrary.org/books/OL169610M",
+  },
+  {
+    year: "2013",
+    title: "Complete works of Thani Nayaga Adigalaar",
+    detail: "Open Library compilation record · contents not yet leaf-verified",
+    slug: "complete-works",
+    url: "https://openlibrary.org/works/OL23266030W",
   },
 ];
 
+/**
+ * Unavailable on this site — external controlled-lending / print-disabled scans only.
+ * Shown last on the archive page; not part of on-site holdings.
+ */
 export const furtherTitles = [
-  "Aspects of Tamil Humanism",
-  "Indian Thought and Roman Stoicism",
-  "Educational Thoughts in Ancient Tamil Literature",
-  "தமிழர் பண்பாடு நேற்றும் இன்றும் நாளையும் (Tamil culture: yesterday, today, and tomorrow)",
-  "உலக ஒழுக்கவியலில் திருக்குறள் (The Tirukkural in world ethics)",
+  {
+    year: "1950",
+    title: "The Carthaginian Clergy",
+    detail:
+      "Tamil Literature Society · Roman doctoral research · Internet Archive controlled lending",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    year: "1966",
+    title: "A Reference Guide to Tamil Studies",
+    detail:
+      "University of Malaya Press · viii, 122 p. · Internet Archive controlled lending",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    year: "1968",
+    title: "Tamil Studies Abroad: A Symposium",
+    detail:
+      "IATR symposium · ~288 p. · Internet Archive controlled lending",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
+  },
 ];
 
+/**
+ * Sponsors page (நன்றிகள் pattern — numbered register + support details).
+ * Fill `sponsors` and `sponsorSupport` before public fundraising.
+ */
+export const sponsorSupport = {
+  accountName: "To be confirmed",
+  accountNumber: "To be confirmed",
+  bank: "To be confirmed",
+  branch: "To be confirmed",
+  ifsc: "To be confirmed",
+  chequeName: "Thani Nayagam Digital Archive",
+  note: "Cheques or demand drafts may be issued in the name above. Update bank fields when the receiving account is ready.",
+};
+
+/** @type {{ name: string, place?: string, amount?: string }[]} */
+export const sponsors = [];
+
+/** Primary header destinations (Home is the brand mark only). */
 export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about/", label: "About" },
-  { href: "/timeline/", label: "Timeline" },
-  { href: "/contributions/", label: "Contributions" },
   { href: "/archive/", label: "Archive" },
+  { href: "/about/", label: "About" },
+  { href: "/contributions/", label: "Contributions" },
+  { href: "/sponsors/", label: "Support" },
   { href: "/sources/", label: "Sources" },
 ];
 
 export const explorePages = [
   {
-    href: "/about/",
-    label: "About",
-    title: "Who he was",
-    summary:
-      "Family background, schooling, priesthood, Tamil vocation, and an international academic career.",
-  },
-  {
-    href: "/timeline/",
-    label: "Timeline",
-    title: "What happened when",
-    summary:
-      "Seventeen documented milestones from his birth in 1913 through posthumous honours in 1981.",
-  },
-  {
     href: "/contributions/",
     label: "Contributions",
-    title: "What he built",
+    title: "Work and chronology",
     summary:
-      "Publishing, IATR, the 1966 conference, archival finds, reference works, and selected writings.",
+      "Publishing, IATR, the 1966 conference, selected writings, and seventeen documented milestones.",
   },
   {
     href: "/archive/",
     label: "Archive",
-    title: "What you can still read",
+    title: "Writings and documents",
     summary:
-      "Document scans in the public domain and links to library records for journals, speeches, and proceedings.",
+      "Documents, journals, proceedings, and library records connected with his work for Tamil.",
+  },
+  {
+    href: "/about/",
+    label: "About",
+    title: "Biographical essay",
+    summary:
+      "Family background, schooling, priesthood, Tamil vocation, and an international academic career.",
+  },
+  {
+    href: "/sponsors/",
+    label: "Support",
+    title: "Support",
+    summary:
+      "Mission, how to support the archive, and a numbered register of helpers.",
   },
   {
     href: "/sources/",
     label: "Sources",
-    title: "How we know",
+    title: "Bibliography",
     summary:
       "Government biographies, newspaper profiles, library records, and English and Tamil Wikipedia.",
   },
 ];
 
+/** Text index groups for the archive page (no thumbnail gallery). */
+export const archiveIndex = [
+  {
+    id: "founded",
+    title: "Tamil publications and conferences",
+    items: [
+      {
+        year: "1952",
+        title: "Tamil Culture",
+        detail: "English-language quarterly · volume 1, nos. 3–4",
+        urlIndex: 3,
+        cite: true,
+      },
+      {
+        year: "1952–",
+        title: "Tamil Culture collection",
+        detail: "Digitised volumes 1–12",
+        urlIndex: 5,
+        cite: true,
+      },
+      {
+        year: "1966",
+        title: "First International Conference-Seminar of Tamil Studies",
+        detail: "Kuala Lumpur proceedings · published 1968",
+        urlIndex: 4,
+      },
+    ],
+  },
+  {
+    id: "speeches",
+    title: "Speeches and biography",
+    items: [
+      {
+        year: "1999",
+        title: "Collected speeches",
+        detail: "International Institute of Tamil Studies",
+        urlIndex: 8,
+      },
+      {
+        year: "1993",
+        title: "Thani Nayagam Adigal",
+        detail: "Biographical study by Amudhan Adigal",
+        urlIndex: 2,
+        cite: true,
+      },
+    ],
+  },
+  {
+    id: "early-print",
+    title: "Related early Tamil print (secondary)",
+    items: [
+      {
+        year: "1554",
+        title: "Luso-Tamil Catechism",
+        detail: "Lisbon · historical work he helped return to scholarly notice",
+        urlIndex: 7,
+        cite: true,
+      },
+      {
+        year: "1578",
+        title: "Thambiran Vanakkam",
+        detail: "Early Tamil print · public-domain scan",
+        urlIndex: 13,
+        cite: true,
+      },
+    ],
+  },
+];
+
 export const archiveRecords = [
-  {
-    title: "Tamil Culture",
-    detail: "Volume 1, numbers 3–4 · September 1952",
-    urlIndex: 3,
-    cite: true,
-  },
-  {
-    title: "First conference proceedings",
-    detail: "Kuala Lumpur, April 1966 · published 1968",
-    urlIndex: 4,
-  },
-  {
-    title: "Tamil Culture collection",
-    detail: "Digitised volumes 1–12",
-    urlIndex: 5,
-    cite: true,
-  },
-  {
-    title: "Collected speeches",
-    detail: "Published by the International Institute of Tamil Studies, 1999",
-    urlIndex: 8,
-  },
-  {
-    title: "Biographical study",
-    detail: "Amudhan Adigal · 1993",
-    urlIndex: 2,
-  },
   {
     title: "English Wikipedia biography",
     detail: "Xavier Thaninayagam",
@@ -557,7 +1041,12 @@ export const archiveRecords = [
   },
   {
     title: "Tamil Wikipedia biography",
-    detail: "சேவியர் தனிநாயகம் · includes a portrait photograph",
+    detail: "சேவியர் தனிநாயகம்",
     urlIndex: 10,
+  },
+  {
+    title: "Anna Centenary Library biography",
+    detail: "Tamil Nadu Government library page",
+    urlIndex: 0,
   },
 ];

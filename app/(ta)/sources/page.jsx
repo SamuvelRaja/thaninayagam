@@ -1,8 +1,7 @@
 import PageIntro from "@/app/components/PageIntro";
-import PageLinks from "@/app/components/PageLinks";
 import { ExternalLink } from "@/app/components/Links";
 import Figure from "@/app/components/Figure";
-import { KolamCorners } from "@/app/components/Ornaments";
+import SectionNext from "@/app/components/SectionNext";
 import { sourcesTa, imagesTa } from "@/app/lib/data.ta";
 
 export const metadata = {
@@ -14,22 +13,18 @@ export const metadata = {
 export default function SourcesPage() {
   return (
     <main id="main">
-      <div className="content-section page-shell">
-        <PageIntro
-          label="மூலங்களும் மேலும் வாசிப்பும்"
-          title="இந்தக் கணக்கு எப்படி நிறுவப்பட்டது"
-          titleId="sources-title"
-          summary="தளம் முழுவதும் உள்ள மூல எண்கள் இந்தப் பட்டியலுக்கு இட்டுச் செல்கின்றன. வெளிப்புறப் பதிவுகள் புதிய தாவலில் திறக்கும். கலைக்களஞ்சியக் கட்டுரைகள் முரண்படும் போது அரசு நூலகம் மற்றும் நூல்பதிவு மூலங்களுக்கு முன்னுரிமை அளிக்கப்படுகிறது."
-        />
-
+      <PageIntro
+        label="மூலங்களும் மேலும் வாசிப்பும்"
+        title="இந்தக் கணக்கு எப்படி நிறுவப்பட்டது"
+        titleId="sources-title"
+        summary="தளம் முழுவதும் உள்ள மூலச்சான்று இணைப்புகள் இந்த நூற்பட்டியலுக்கு இட்டுச் செல்கின்றன. கலைக்களஞ்சியக் கட்டுரைகள் முரண்படும் போது அரசு நூலகம் மற்றும் நூல்பதிவு மூலங்களுக்கு முன்னுரிமை அளிக்கப்படுகிறது."
+      />
+      <div className="content-section page-shell section-page">
         <Figure image={imagesTa.portrait} className="section-figure" lang="ta" />
 
-        <ol className="source-list">
+        <ul className="source-list">
           {sourcesTa.map((source) => (
             <li id={`source-${source.id}`} key={source.id}>
-              <span className="source-number" aria-hidden="true">
-                {source.id}
-              </span>
               <div>
                 <ExternalLink href={source.url} lang="ta">
                   {source.title}
@@ -38,13 +33,9 @@ export default function SourcesPage() {
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
 
-        <aside
-          className="research-note kolam-frame"
-          aria-labelledby="research-note-title"
-        >
-          <KolamCorners />
+        <aside className="research-note ui-panel" aria-labelledby="research-note-title">
           <h2 id="research-note-title">ஆய்வுக் குறிப்பு</h2>
           <p>
             சில மூலங்கள் <cite>Tamil Culture</cite>-இன் தொடக்க ஆண்டு, பல்கலைக்கழக
@@ -66,7 +57,12 @@ export default function SourcesPage() {
           </p>
         </aside>
 
-        <PageLinks current="/sources/" lang="ta" />
+        <SectionNext
+          lang="ta"
+          href="/"
+          label="முகப்பு"
+          title="ஆவணக முகப்புக்குத் திரும்புக"
+        />
       </div>
     </main>
   );

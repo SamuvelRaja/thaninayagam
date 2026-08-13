@@ -94,6 +94,174 @@ export const sourcesTa = [
     type: "Internet Archive வாசிப்புப் பிரதி · 1968 IATR வெளியீடு",
     url: "https://archive.org/details/dli.jZY9lup2kZl6TuXGlZQdjZM9kuxy.TVA_BOK_0009170",
   },
+  {
+    id: 16,
+    title: "இரண்டாவது உலகத் தமிழாராய்ச்சி மாநாட்டில் தனிநாயகம் அடிகள்",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:இரண்டாவது_உலகத்தமிழாராய்ச்சி_மாநாட்டில்_தனிநாயகம்_அடிகள்.png",
+  },
+  {
+    id: 17,
+    title: "தனிநாயகம் அடிகள் உடன் ஓர் உடனுழைப்பாளர்",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:தனிநாயகம்_அடிகள்4.png",
+  },
+  {
+    id: 18,
+    title: "வெளிப்புறத்தில் சேவியர் தனிநாயகம் அடிகளார்",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:சேவியர்_தனிநாயகம்_அடிகள்2.png",
+  },
+  {
+    id: 19,
+    title: "சேவியர் தனிநாயகம் அடிகளாரின் ஆவண உருவப்படம்",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:சேவியர்_தனிநாயகம்_அடிகள்.png",
+  },
+  {
+    id: 20,
+    title: "A Reference Guide to Tamil Studies",
+    type: "Open Library பதிப்பு OL13904M · மலாயாப் பல்கலைக்கழக அச்சகம், 1966",
+    url: "https://openlibrary.org/books/OL13904M",
+  },
+  {
+    id: 21,
+    title: "A Reference Guide to Tamil Studies (கட்டுப்படுத்தப்பட்ட இரவல்)",
+    type: "Internet Archive நூலக / அச்சு-முடக்கப்பட்ட படி",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    id: 22,
+    title: "தமிழ்த் தூது, 1962 பதிப்பு",
+    type: "Open Library பதிப்பு OL5157M",
+    url: "https://openlibrary.org/books/OL5157M",
+  },
+  {
+    id: 23,
+    title: "தமிழ்த் தூது: கட்டுரைக் கொத்து",
+    type: "தமிழ் எண்ணிம நூலக நூல்பதிவு 21987",
+    url: "https://tamildigitallibrary.in/Articles/%E0%AE%A8%E0%AF%82%E0%AE%B2%E0%AF%8D-21987-%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D%E0%AE%A4%E0%AF%8D%20%E0%AE%A4%E0%AF%82%E0%AE%A4%E0%AF%81-%E0%AE%95%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%B0%E0%AF%88%E0%AE%95%E0%AF%8D%20%E0%AE%95%E0%AF%8A%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81",
+  },
+  {
+    id: 24,
+    title: "தமிழ்த் தூது: கட்டுரைக் கொத்து (IA பிரதி)",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.21987",
+    url: "https://archive.org/details/tdl.21987-nuul-tmilllt-tuutu-ktttturaik-kottu",
+  },
+  {
+    id: 25,
+    title: "தனிநாயகம் அடிகளாரின் சொற்பொழிவுகள் (1999)",
+    type: "Open Library பதிப்பு OL169610M",
+    url: "https://openlibrary.org/books/OL169610M",
+  },
+  {
+    id: 26,
+    title: "தனிநாயகம் அடிகளாரின் சொற்பொழிவுகள் (IA பிரதி)",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.18049",
+    url: "https://archive.org/details/tdl.18049-nuul-tnnninaaykm-attikllaarinnn-corrpolllivukll",
+  },
+  {
+    id: 27,
+    title: "தமிழ் எண்ணிம நூலக பொறுப்புத்துறப்பு",
+    type: "தள உரிமை / அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை அறிவிப்பு",
+    url: "https://tamildigitallibrary.in/disclaimer",
+  },
+  {
+    id: 28,
+    title: "Collected Papers of Thani Nayagam Adigalar",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.17933",
+    url: "https://archive.org/details/tdl.17933-collected-papers-of-thani-nayagam-adigalar",
+  },
+  {
+    id: 29,
+    title: "Nature in Ancient Tamil Poetry: Concept and Interpretation",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.27397",
+    url: "https://archive.org/details/tdl.27397-nature-in-ancient-tamil-poetry-concept-and-interpretation",
+  },
+  {
+    id: 30,
+    title: "Landscape and Poetry: A Study of Nature in Classical Tamil Poetry",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.17918",
+    url: "https://archive.org/details/tdl.17918-landscape-and-poetry-a-study-of-nature-in-classical-tamil-poetry",
+  },
+  {
+    id: 31,
+    title: "திருவள்ளுவர்",
+    type: "Internet Archive வாசிப்புப் பிரதி · tdl.25823",
+    url: "https://archive.org/details/tdl.25823-nuul-tiruvlllluvr",
+  },
+  {
+    id: 32,
+    title: "Tamil Studies Abroad: A Symposium",
+    type: "Internet Archive கட்டுப்படுத்தப்பட்ட இரவல் / அச்சு-முடக்கப்பட்ட படி",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
+  },
+  {
+    id: 33,
+    title: "உலகத் தமிழாராய்ச்சி மன்றம் — தொடர்பு",
+    type: "IATR அதிகாரப்பூர்வ தளத் தொடர்புப் பக்கம்",
+    url: "https://iatrofficial.org/contact/",
+  },
+  {
+    id: 34,
+    title: "The Carthaginian clergy during the episcopate of Saint Cyprian",
+    type: "Open Library பதிப்பு OL16592045M · தமிழ் இலக்கியச் சங்கம், 1950",
+    url: "https://openlibrary.org/books/OL16592045M",
+  },
+  {
+    id: 35,
+    title: "The Carthaginian clergy (கட்டுப்படுத்தப்பட்ட இரவல்)",
+    type: "Internet Archive நூலக / அச்சு-முடக்கப்பட்ட படி",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    id: 36,
+    title: "ஒரே உலகம்",
+    type: "Open Library பதிப்பு OL26211M",
+    url: "https://openlibrary.org/books/OL26211M",
+  },
+  {
+    id: 37,
+    title: "Tamil culture and civilization: readings, the classical period",
+    type: "Open Library பதிப்பு OL4553853M · Asia Publishing House, 1971",
+    url: "https://openlibrary.org/books/OL4553853M",
+  },
+  {
+    id: 38,
+    title: "Tamil humanism, the classical period",
+    type: "Open Library பதிப்பு OL3010086M · யாழ்ப்பாணக் கல்லூரி, 1972",
+    url: "https://openlibrary.org/books/OL3010086M",
+  },
+  {
+    id: 39,
+    title: "திருவள்ளுவர்",
+    type: "Open Library பதிப்பு OL22309M · அண்ணாமலைப் பல்கலைக்கழகம், 1967",
+    url: "https://openlibrary.org/books/OL22309M",
+  },
+  {
+    id: 40,
+    title: "Nature in ancient Tamil poetry, concept and interpretation",
+    type: "Open Library பதிப்பு OL5484411M · தமிழ் இலக்கியச் சங்கம், 1953",
+    url: "https://openlibrary.org/books/OL5484411M",
+  },
+  {
+    id: 41,
+    title: "அமுதன் அடிகள்",
+    type: "தமிழ் விக்கி வாழ்க்கை வரலாற்றுக் கட்டுரை",
+    url: "https://tamil.wiki/wiki/%E0%AE%85%E0%AE%AE%E0%AF%81%E0%AE%A4%E0%AE%A9%E0%AF%8D_%E0%AE%85%E0%AE%9F%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D",
+  },
+  {
+    id: 42,
+    title: "File:Amudhan Adikal Image.jpg",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:Amudhan_Adikal_Image.jpg",
+  },
+  {
+    id: 43,
+    title: "File:Amudhan Adigal Book.jpg",
+    type: "தமிழ் விக்கி புகைப்படப் பதிவு · CC BY-SA",
+    url: "https://tamil.wiki/wiki/File:Amudhan_Adigal_Book.jpg",
+  },
 ];
 
 export const imagesTa = {
@@ -109,6 +277,30 @@ export const imagesTa = {
     credit: "",
     sourceId: null,
   },
+  amudhanAdigal: {
+    title: "அமுதன் அடிகள்",
+    shortTitle: "அமுதன் அடிகள்",
+    description:
+      "குரு, எழுத்தாளர், இதழாசிரியர்; தனிநாயகம் அடிகளார் நூற்றாண்டு விழாக் குழுவின் பொதுச் செயலாளர்; அவரது முதன்மை வாழ்க்கை வரலாற்று நூலின் ஆசிரியர்.",
+    src: "/images/amudhan-adigal.jpg",
+    alt: "அமுதன் அடிகளாரின் உருவப்படப் புகைப்படம்",
+    width: 355,
+    height: 449,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 42,
+  },
+  amudhanThaniBook: {
+    title: "தனிநாயகம் அடிகளார் — அமுதன் அடிகளாரின் நூல்",
+    shortTitle: "அமுதன் நூல்",
+    description:
+      "அமுதன் அடிகளார் எழுதிய தனிநாயகம் அடிகளார் வாழ்க்கை வரலாற்று நூலின் அட்டை (தமிழ் டிஜிட்டல் நூலகப் பதிவு, 1993). TDL பதிவுக்கு இணைப்பு மட்டும்; அட்டைப் படிமம் தமிழ் விக்கியிலிருந்து.",
+    src: "/images/amudhan-adigal-book.jpg",
+    alt: "அமுதன் அடிகளார் எழுதிய தனிநாயகம் அடிகளார் நூலின் அட்டை",
+    width: 528,
+    height: 800,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 43,
+  },
   portraitSecondary: {
     title: "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளார்",
     shortTitle: "தனிநாயகம் அடிகளார்",
@@ -119,6 +311,54 @@ export const imagesTa = {
     height: 614,
     credit: "தமிழ் விக்கிப்பீடியா / Tamil Nation",
     sourceId: 11,
+  },
+  conferenceSecond: {
+    title: "இரண்டாவது உலகத் தமிழாராய்ச்சி மாநாட்டில்",
+    shortTitle: "இரண்டாவது உலகத் தமிழாராய்ச்சி மாநாடு",
+    description:
+      "இரண்டாவது உலகத் தமிழாராய்ச்சி மாநாட்டில் குத்துவிளக்கு மற்றும் ஒலிவாங்கி அருகே தனிநாயகம் அடிகளார்.",
+    src: "https://tamil.wiki/images/8/8e/இரண்டாவது_உலகத்தமிழாராய்ச்சி_மாநாட்டில்_தனிநாயகம்_அடிகள்.png",
+    alt: "இரண்டாவது உலகத் தமிழாராய்ச்சி மாநாட்டில் குத்துவிளக்கு மற்றும் ஒலிவாங்கி அருகே நிற்கும் தனிநாயகம் அடிகளார்",
+    width: 359,
+    height: 418,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 16,
+  },
+  withColleague: {
+    title: "உடனுழைப்பாளர் ஒருவருடன் தனிநாயகம் அடிகளார்",
+    shortTitle: "ஓர் ஆவணப் புகைப்படம்",
+    description:
+      "இளம் குருவும் அறிஞருமான தனிநாயகம் அடிகளாரின் ஆவணப் புகைப்படம்; அருகில் நிற்பவரின் பெயர் மூலப் பதிவில் குறிப்பிடப்படவில்லை.",
+    src: "https://tamil.wiki/images/b/bd/தனிநாயகம்_அடிகள்4.png",
+    alt: "குருத்துவ உடையில் இளம் தனிநாயகம் அடிகளார், பெயர் தெரியாத சூட் அணிந்த ஒருவருடன் நிற்கும் ஆவணப் புகைப்படம்",
+    width: 518,
+    height: 402,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 17,
+  },
+  outdoorPortrait: {
+    title: "வெளிப்புறத்தில் ஓர் ஆவணப் புகைப்படம்",
+    shortTitle: "வெளிப்புறத்தில் தனிநாயகம் அடிகளார்",
+    description:
+      "வெளிப்புறத்தில் தனிநாயகம் அடிகளார் நிற்கும் தேதியிடப்படாத ஆவணப் புகைப்படம்; இடமும் நிகழ்வும் மூலப் பதிவில் குறிப்பிடப்படவில்லை.",
+    src: "https://tamil.wiki/images/5/53/சேவியர்_தனிநாயகம்_அடிகள்2.png",
+    alt: "வெள்ளை குருத்துவ உடையில் நீரும் தாவரங்களும் உள்ள வெளிப்புறத்தில் நிற்கும் தனிநாயகம் அடிகளார்",
+    width: 218,
+    height: 371,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 18,
+  },
+  archivalPortrait: {
+    title: "ஓர் ஆவண உருவப்படம்",
+    shortTitle: "ஆவண உருவப்படம்",
+    description:
+      "தமிழ் விக்கி புகைப்படப் பதிவில் பாதுகாக்கப்பட்ட தேதியிடப்படாத காலத்தைய உருவப்படம்.",
+    src: "https://tamil.wiki/images/c/c2/சேவியர்_தனிநாயகம்_அடிகள்.png",
+    alt: "வெள்ளை குருத்துவ உடையில் சேவியர் தனிநாயகம் அடிகளாரின் தலை மற்றும் தோள் ஆவண உருவப்படம்",
+    width: 355,
+    height: 433,
+    credit: "தமிழ் விக்கி · CC BY-SA",
+    sourceId: 19,
   },
   bioTop: {
     title: "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளார்",
@@ -191,28 +431,6 @@ export const imagesTa = {
     sourceId: 15,
   },
 };
-
-export const homeFactsTa = [
-  {
-    term: "பிறப்பு",
-    detail: "2 ஆகஸ்ட் 1913, கரம்பொன், ஊர்காவற்றுறை அருகில், யாழ்ப்பாணம்",
-  },
-  { term: "இறப்பு", detail: "1 செப்டம்பர் 1980, யாழ்ப்பாணம்" },
-  {
-    term: "தொழில்",
-    detail: "கத்தோலிக்க குரு, மொழியியலாளர், இதழாசிரியர், தமிழ் அறிஞர்",
-  },
-  {
-    term: "நிறுவியவை",
-    detail:
-      "Tamil Culture காலாண்டிதழ் (1952) மற்றும் உலகத் தமிழாராய்ச்சி மன்றம் (1964)",
-  },
-  {
-    term: "ஒருங்கிணைத்தவை",
-    detail:
-      "முதல் உலகத் தமிழாராய்ச்சி மாநாடு, கோலாலம்பூர், 1966",
-  },
-];
 
 export const timelineTa = [
   {
@@ -395,10 +613,10 @@ export const contributionsTa = [
     type: "குறிப்பு நூல்கள்",
     title: "உலகத் தமிழாய்வுக்கான வழிகாட்டி",
     paragraphs: [
-      "அவரது Reference Guide to Tamil Studies (1966) லத்தீன், பிரெஞ்சு, ஜெர்மன், ரஷ்யன், மலாய், ஆங்கிலம் ஆகிய மொழிகளில் தமிழ் பற்றி வெளியிடப்பட்ட சுமார் 1,335 தலைப்புகளை 122 பக்க வழிகாட்டியாகத் தொகுத்தது—எங்கும் உள்ள அறிஞர்கள் இந்தத் துறைக்குள் நுழையும் வகையில்.",
+      "அவரது Reference Guide to Tamil Studies (1966) மலாயாப் பல்கலைக்கழக அச்சக வெளியீடு; எட்டு முன்னிலைப் பக்கங்களையும் 122 எண்ணிடப்பட்ட பக்கங்களையும் கொண்ட ஆங்கில நூலியல் வழிகாட்டி—எங்கும் உள்ள அறிஞர்கள் இந்தத் துறைக்குள் நுழையும் வகையில்.",
       "சைமன் கேசி செட்டியின் Tamil Plutarch-ஐத் திருத்தி, தி. பொ. மீனாட்சிசுந்தரம் விரிவுபடுத்த, மறுபதிப்பு செய்யவும் ஏற்பாடு செய்தார்—அவரது முறைக்குரிய அறிஞர் பராமரிப்புச் செயல்.",
     ],
-    sources: [7, 10, 11],
+    sources: [7, 20, 10, 11],
   },
   {
     type: "சர்வதேசக் கற்பித்தல்",
@@ -411,158 +629,330 @@ export const contributionsTa = [
   },
 ];
 
+/** தேர்ந்தெடுத்த எழுத்துகள் — `slug` இருந்தால் உள் ஆவணகப் பக்கம். */
 export const publicationsTa = [
+  {
+    year: "1950",
+    title: "The Carthaginian Clergy",
+    detail:
+      "தமிழ் இலக்கியச் சங்கம் · xviii, 112 பக். · ரோம் முனைவர் ஆய்விலிருந்து · IA கட்டுப்படுத்தப்பட்ட இரவல் மட்டும்",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    year: "1952–1966",
+    title: "Tamil Culture, தொகுதிகள் 1–12",
+    detail: "அவர் தொடங்கி தொகுத்த ஆங்கிலக் காலாண்டிதழ் · IA கட்டுப் பிரதி",
+    slug: "tamil-culture-vols-1-12",
+    url: "https://archive.org/details/tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008",
+  },
   {
     year: "1952",
     title: "தமிழ்த் தூது",
-    detail: "அவரது முதல் தமிழ் இலக்கியக் கட்டுரைத் தொகுப்பு · தமிழ் விக்கிப்பீடியாவில் பதிவு",
-    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+    detail: "தமிழ்க் கட்டுரைத் தொகுப்பு · Open Library பதிப்புகள் 1962 / 1998",
+    slug: "tamilttutu",
+    url: "https://openlibrary.org/books/OL5157M",
   },
   {
     year: "1953",
     title: "Nature in Ancient Tamil Poetry",
-    detail: "தமிழ் இலக்கியச் சங்கம் · எம்.லிட். ஆய்விலிருந்து",
-    url: "https://openlibrary.org/works/OL326636W",
-  },
-  {
-    year: "1960",
-    title: "The Carthaginian Clergy",
-    detail: "ரோம் முனைவர் ஆய்வின் வெளியிடப்பட்ட வடிவம்",
-    url: "https://en.wikipedia.org/wiki/Xavier_Thaninayagam",
+    detail: "தமிழ் இலக்கியச் சங்கம் · xxii, 185 பக். · எம்.லிட். ஆய்விலிருந்து",
+    slug: "nature-ancient-tamil-poetry",
+    url: "https://openlibrary.org/books/OL5484411M",
   },
   {
     year: "1963",
+    title: "Nature Poetry in Tamil",
+    detail: "Open Library பணி · தொடர்புடைய இயற்கைக் கவிதை ஆய்வு; பதிப்பு இலை உறுதிப்பாடு நிலுவை",
+    slug: "nature-poetry-in-tamil",
+    url: "https://openlibrary.org/works/OL326637W",
+  },
+  {
+    year: "1966",
     title: "ஒரே உலகம்",
-    detail: "உலக உரைச் சுற்றுப்பயணங்களின் பயண நினைவுகள் · தமிழ் விக்கிப்பீடியாவில் பதிவு",
-    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+    detail: "தமிழ்ப் பயண நினைவுகள் · Open Library vii, 230 பக்.",
+    slug: "ore-ulakam",
+    url: "https://openlibrary.org/books/OL26211M",
   },
   {
     year: "1966",
     title: "A Reference Guide to Tamil Studies",
-    detail: "மலேயாப் பல்கலைக்கழகப் பதிப்பகம் · ஆறு மொழிகளில் 1,335 தலைப்புகள்",
-    url: "https://openlibrary.org/works/OL34688930W",
+    detail:
+      "மலாயாப் பல்கலைக்கழக அச்சகம் · viii, 122 பக். · IA கட்டுப்படுத்தப்பட்ட இரவல் மட்டும்",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    year: "1966 / 1968",
+    title: "முதல் உலகத் தமிழாய்வு மாநாட்டு நடவடிக்கைகள்",
+    detail: "IATR · கோலாலம்பூர் 1966 · வெளியீடு 1968",
+    slug: "conference-1966-proceedings",
+    url: "https://archive.org/details/dli.jZY9lup2kZl6TuXGlZQdjZM9kuxy.TVA_BOK_0009170",
   },
   {
     year: "1967",
     title: "Landscape and Poetry",
     detail: "செவ்வியல் தமிழ் கவிதையில் இயற்கை பற்றிய ஆய்வு",
+    slug: "landscape-and-poetry",
     url: "https://openlibrary.org/works/OL326645W",
   },
   {
     year: "1967",
-    title: "Tiruvalluvar",
-    detail: "அண்ணாமலைப் பல்கலைக்கழகத்தில் நிகழ்த்திய உரைகள் · தமிழில் வெளியீடு",
-    url: "https://openlibrary.org/works/OL326644W",
+    title: "திருவள்ளுவர்",
+    detail: "அண்ணாமலைப் பல்கலைக்கழக உரைகள் · தமிழ் · 4, 60 பக்.",
+    slug: "tiruvalluvar",
+    url: "https://openlibrary.org/books/OL22309M",
   },
   {
     year: "1968",
     title: "Tamil Studies Abroad",
-    detail: "உலகத் தமிழாராய்ச்சி மன்றம்",
-    url: "https://openlibrary.org/works/OL43368360W",
+    detail:
+      "IATR கருத்தரங்கு · ~288 பக். · IA கட்டுப்படுத்தப்பட்ட இரவல் மட்டும்",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
   },
   {
     year: "1971",
     title: "Tamil Culture and Civilization",
-    detail: "செவ்வியல் கால வாசிப்புகள்",
-    url: "https://openlibrary.org/works/OL326641W",
+    detail: "Asia Publishing House · செவ்வியல் கால வாசிப்புகள் · ix, 233 பக்.",
+    slug: "tamil-culture-and-civilization",
+    url: "https://openlibrary.org/books/OL4553853M",
   },
   {
     year: "1972",
-    title: "Tamil Humanism",
-    detail: "யாழ்ப்பாணக் கல்லூரி",
-    url: "https://openlibrary.org/works/OL326642W",
+    title: "Tamil Humanism, the Classical Period",
+    detail: "யாழ்ப்பாணக் கல்லூரி · 57 பக்.",
+    slug: "tamil-humanism",
+    url: "https://openlibrary.org/books/OL3010086M",
+  },
+  {
+    year: "1972",
+    title: "Aspects of Tamil Humanism",
+    detail: "தமிழ் விக்கிப்பீடியாப் பட்டியல் · 1972 யாழ்ப்பாணக் கல்லூரி நூலுடன் தொடர்பு",
+    slug: "aspects-tamil-humanism",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "Indian Thought and Roman Stoicism",
+    detail: "தமிழ் விக்கிப்பீடியாப் பட்டியல் · பதிப்பு இன்னும் உறுதிசெய்யப்படவில்லை",
+    slug: "indian-thought-roman-stoicism",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "Educational Thoughts in Ancient Tamil Literature",
+    detail: "தமிழ் விக்கிப்பீடியாப் பட்டியல் · பதிப்பு இன்னும் உறுதிசெய்யப்படவில்லை",
+    slug: "educational-thoughts-ancient-tamil",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "தமிழர் பண்பாடு நேற்றும் இன்றும் நாளையும்",
+    detail: "தமிழ் விக்கிப்பீடியாப் பட்டியல் · பதிப்பு இன்னும் உறுதிசெய்யப்படவில்லை",
+    slug: "tamilar-panpatu",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
+  },
+  {
+    year: "",
+    title: "உலக ஒழுக்கவியலில் திருக்குறள்",
+    detail: "தமிழ் விக்கிப்பீடியாப் பட்டியல் · பதிப்பு இன்னும் உறுதிசெய்யப்படவில்லை",
+    slug: "ulaga-ozhakkaviyalil-tirukkural",
+    url: "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%A4%E0%AE%A9%E0%AE%BF%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%AE%E0%AF%8D",
   },
   {
     year: "1980",
     title: "Research in Tamil Studies",
     detail: "தந்தை செல்வா நினைவு உரை",
+    slug: "research-in-tamil-studies",
     url: "https://openlibrary.org/works/OL326640W",
+  },
+  {
+    year: "1983",
+    title: "தமிழாரம் (நினைவுத் தொகுதி)",
+    detail: "அஞ்சலிகள் · தொகுப்பு: ராஜன் பிலிப்புப்பிள்ளை · அவரது ஆக்கம் அல்ல",
+    slug: "tamilaram",
+    url: "https://archive.org/details/tamilaaram",
+  },
+  {
+    year: "1995",
+    title: "Collected Papers of Thani Nayagam Adigalar",
+    detail: "உலகத் தமிழாராய்ச்சி நிறுவனம் · பின்மரபு ஆங்கிலத் தொகுப்பு",
+    slug: "collected-papers",
+    url: "https://archive.org/details/tdl.17933-collected-papers-of-thani-nayagam-adigalar",
+  },
+  {
+    year: "1999",
+    title: "தனிநாயகம் அடிகளாரின் சொற்பொழிவுகள்",
+    detail: "பின்மரபுத் தமிழ் உரைத் தொகுதி · OL / TDL",
+    slug: "collected-speeches-1999",
+    url: "https://openlibrary.org/books/OL169610M",
+  },
+  {
+    year: "2013",
+    title: "Complete works of Thani Nayaga Adigalaar",
+    detail: "Open Library தொகுப்புப் பதிவு · உள்ளடக்கம் இன்னும் உறுதிசெய்யப்படவில்லை",
+    slug: "complete-works",
+    url: "https://openlibrary.org/works/OL23266030W",
   },
 ];
 
+/**
+ * இத்தளத்தில் கிடைக்காதவை — வெளிக் கட்டுப்படுத்தப்பட்ட இரவல் ஸ்கேன்கள் மட்டும்.
+ * ஆவணகப் பக்கத்தின் இறுதியில் காட்டப்படும்; உள் ஆவணப் பட்டியலில் இல்லை.
+ */
 export const furtherTitlesTa = [
-  "Aspects of Tamil Humanism",
-  "Indian Thought and Roman Stoicism",
-  "Educational Thoughts in Ancient Tamil Literature",
-  "தமிழர் பண்பாடு நேற்றும் இன்றும் நாளையும்",
-  "உலக ஒழுக்கவியலில் திருக்குறள்",
+  {
+    year: "1950",
+    title: "The Carthaginian Clergy",
+    detail:
+      "தமிழ் இலக்கியச் சங்கம் · ரோம் முனைவர் ஆய்வு · Internet Archive கட்டுப்படுத்தப்பட்ட இரவல்",
+    url: "https://archive.org/details/bwb_W8-ANY-806",
+  },
+  {
+    year: "1966",
+    title: "A Reference Guide to Tamil Studies",
+    detail:
+      "மலாயாப் பல்கலைக்கழக அச்சகம் · viii, 122 பக். · Internet Archive கட்டுப்படுத்தப்பட்ட இரவல்",
+    url: "https://archive.org/details/referenceguideto0000xavi",
+  },
+  {
+    year: "1968",
+    title: "Tamil Studies Abroad: A Symposium",
+    detail:
+      "IATR கருத்தரங்கு · ~288 பக். · Internet Archive கட்டுப்படுத்தப்பட்ட இரவல்",
+    url: "https://archive.org/details/tamilstudiesabro0000unse",
+  },
 ];
 
+/** நன்கொடையாளர் பக்கம் — வங்கி விவரங்களை வெளியிடும் முன் நிரப்பவும். */
+export const sponsorSupportTa = {
+  accountName: "உறுதிப்படுத்தப்படும்",
+  accountNumber: "உறுதிப்படுத்தப்படும்",
+  bank: "உறுதிப்படுத்தப்படும்",
+  branch: "உறுதிப்படுத்தப்படும்",
+  ifsc: "உறுதிப்படுத்தப்படும்",
+  chequeName: "தனிநாயகம் அடிகளார் டிஜிட்டல் ஆவணகம்",
+  note: "காசோலை அல்லது வரைவோலையை மேலே உள்ள பெயரில் வழங்கலாம். பெறும் கணக்கு தயாரானதும் வங்கிப் புலங்களைப் புதுப்பிக்கவும்.",
+};
+
+/** @type {{ name: string, place?: string, amount?: string }[]} */
+export const sponsorsTa = [];
+
+/** முதன்மை மேல் பட்டியல் (முகப்பு என்பது பிராண்ட் மட்டும்). */
 export const navItemsTa = [
-  { href: "/", label: "முகப்பு" },
-  { href: "/about/", label: "அவரைப் பற்றி" },
-  { href: "/timeline/", label: "காலக்கோடு" },
-  { href: "/contributions/", label: "பங்களிப்புகள்" },
   { href: "/archive/", label: "ஆவணகம்" },
+  { href: "/about/", label: "அவரைப் பற்றி" },
+  { href: "/contributions/", label: "பங்களிப்புகள்" },
+  { href: "/sponsors/", label: "உதவி" },
   { href: "/sources/", label: "மூலங்கள்" },
 ];
 
 export const explorePagesTa = [
   {
-    href: "/about/",
-    label: "அவரைப் பற்றி",
-    title: "அவர் யார்",
-    summary:
-      "குடும்பப் பின்னணி, பள்ளிப்படிப்பு, குருத்துவம், தமிழ் அழைப்பு, சர்வதேசக் கல்விப் பணி.",
-  },
-  {
-    href: "/timeline/",
-    label: "காலக்கோடு",
-    title: "எப்போது என்ன நடந்தது",
-    summary:
-      "1913 பிறப்பு முதல் 1981 பின்மரபுச் சிறப்புகள் வரை ஆவணப்படுத்தப்பட்ட பதினேழு மைல்கற்கள்.",
-  },
-  {
     href: "/contributions/",
     label: "பங்களிப்புகள்",
-    title: "அவர் கட்டியவை",
+    title: "பணியும் காலவரிசையும்",
     summary:
-      "வெளியீடு, IATR, 1966 மாநாடு, ஆவண மீட்புகள், குறிப்பு நூல்கள், தேர்ந்தெடுத்த எழுத்துகள்.",
+      "வெளியீடு, IATR, 1966 மாநாடு, தேர்ந்தெடுத்த எழுத்துகள், பதினேழு ஆவணப்படுத்தப்பட்ட மைல்கற்கள்.",
   },
   {
     href: "/archive/",
     label: "ஆவணகம்",
-    title: "இன்னும் வாசிக்கக் கிடைப்பவை",
+    title: "எழுத்துகளும் ஆவணங்களும்",
     summary:
-      "பொது உரிமைப் பரப்பில் உள்ள ஆவண ஸ்கேன்கள் மற்றும் இதழ், உரைகள், நடவடிக்கைகளுக்கான நூலகப் பதிவு இணைப்புகள்.",
+      "தமிழுக்கான அவரது பணியுடன் தொடர்புடைய ஆவணங்கள், இதழ்கள், நடவடிக்கைகள், நூலகப் பதிவுகள்.",
+  },
+  {
+    href: "/about/",
+    label: "அவரைப் பற்றி",
+    title: "வாழ்க்கை வரலாற்றுக் கட்டுரை",
+    summary:
+      "குடும்பப் பின்னணி, பள்ளிப்படிப்பு, குருத்துவம், தமிழ் அழைப்பு, சர்வதேசக் கல்விப் பணி.",
+  },
+  {
+    href: "/sponsors/",
+    label: "உதவி",
+    title: "உதவி",
+    summary:
+      "நோக்கம், ஆவணகத்திற்கு உதவும் வழி, உதவியாளர்களின் எண்ணிடப்பட்ட பட்டியல்.",
   },
   {
     href: "/sources/",
     label: "மூலங்கள்",
-    title: "எப்படி அறிகிறோம்",
+    title: "நூற்பட்டியல்",
     summary:
       "அரசு வாழ்க்கை வரலாறுகள், செய்தித்தாள் சுயவிவரங்கள், நூலகப் பதிவுகள், ஆங்கில மற்றும் தமிழ் விக்கிப்பீடியா.",
   },
 ];
 
+/** ஆவணகப் பக்கத்திற்கான உரைப் பட்டியல் தொகுப்புகள் (சிறுபடக் காட்சி இல்லை). */
+export const archiveIndexTa = [
+  {
+    id: "founded",
+    title: "தமிழ் வெளியீடுகளும் மாநாடுகளும்",
+    items: [
+      {
+        year: "1952",
+        title: "Tamil Culture",
+        detail: "ஆங்கில காலாண்டிதழ் · தொகுதி 1, எண்கள் 3–4",
+        urlIndex: 3,
+        cite: true,
+      },
+      {
+        year: "1952–",
+        title: "Tamil Culture தொகுப்பு",
+        detail: "டிஜிட்டல் தொகுதிகள் 1–12",
+        urlIndex: 5,
+        cite: true,
+      },
+      {
+        year: "1966",
+        title: "முதல் உலகத் தமிழ் ஆராய்ச்சி மாநாடு",
+        detail: "கோலாலம்பூர் நடவடிக்கைகள் · வெளியீடு 1968",
+        urlIndex: 4,
+      },
+    ],
+  },
+  {
+    id: "speeches",
+    title: "உரைகளும் வாழ்க்கை வரலாறும்",
+    items: [
+      {
+        year: "1999",
+        title: "தொகுக்கப்பட்ட உரைகள்",
+        detail: "உலகத் தமிழாராய்ச்சி நிறுவனம்",
+        urlIndex: 8,
+      },
+      {
+        year: "1993",
+        title: "தனிநாயகம் அடிகளார்",
+        detail: "அமுதன் அடிகளாரின் வாழ்க்கை வரலாற்று ஆய்வு",
+        urlIndex: 2,
+        cite: true,
+      },
+    ],
+  },
+  {
+    id: "early-print",
+    title: "தொடர்புடைய ஆரம்பகால அச்சுத் தமிழ் (துணை)",
+    items: [
+      {
+        year: "1554",
+        title: "லூசோ-தமிழ் கார்த்திலா",
+        detail: "லிஸ்பன் · அவர் ஆய்வுலகக் கவனத்திற்குக் கொண்டுவந்த வரலாற்று நூல்",
+        urlIndex: 7,
+        cite: true,
+      },
+      {
+        year: "1578",
+        title: "தம்பிரான் வணக்கம்",
+        detail: "ஆரம்பகால அச்சுத் தமிழ் · பொது உரிமைப் பரப்பு ஸ்கேன்",
+        urlIndex: 13,
+        cite: true,
+      },
+    ],
+  },
+];
+
 export const archiveRecordsTa = [
-  {
-    title: "Tamil Culture",
-    detail: "தொகுதி 1, எண்கள் 3–4 · செப்டம்பர் 1952",
-    urlIndex: 3,
-    cite: true,
-  },
-  {
-    title: "முதல் மாநாட்டு நடவடிக்கைகள்",
-    detail: "கோலாலம்பூர், ஏப்ரல் 1966 · வெளியீடு 1968",
-    urlIndex: 4,
-  },
-  {
-    title: "Tamil Culture தொகுப்பு",
-    detail: "டிஜிட்டல் தொகுதிகள் 1–12",
-    urlIndex: 5,
-    cite: true,
-  },
-  {
-    title: "தொகுக்கப்பட்ட உரைகள்",
-    detail: "உலகத் தமிழாராய்ச்சி நிறுவன வெளியீடு, 1999",
-    urlIndex: 8,
-  },
-  {
-    title: "வாழ்க்கை வரலாற்று ஆய்வு",
-    detail: "அமுதன் அடிகளார் · 1993",
-    urlIndex: 2,
-  },
   {
     title: "ஆங்கில விக்கிப்பீடியா வாழ்க்கை வரலாறு",
     detail: "Xavier Thaninayagam",
@@ -570,7 +960,12 @@ export const archiveRecordsTa = [
   },
   {
     title: "தமிழ் விக்கிப்பீடியா வாழ்க்கை வரலாறு",
-    detail: "சேவியர் தனிநாயகம் · உருவப்படப் புகைப்படத்துடன்",
+    detail: "சேவியர் தனிநாயகம்",
     urlIndex: 10,
+  },
+  {
+    title: "அண்ணா நூற்றாண்டு நூலக வாழ்க்கை வரலாறு",
+    detail: "தமிழ்நாடு அரசு நூலகப் பக்கம்",
+    urlIndex: 0,
   },
 ];

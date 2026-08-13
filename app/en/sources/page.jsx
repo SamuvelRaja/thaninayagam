@@ -1,8 +1,7 @@
 import PageIntro from "@/app/components/PageIntro";
-import PageLinks from "@/app/components/PageLinks";
 import { ExternalLink } from "@/app/components/Links";
 import Figure from "@/app/components/Figure";
-import { KolamCorners } from "@/app/components/Ornaments";
+import SectionNext from "@/app/components/SectionNext";
 import { sources, images } from "@/app/lib/data";
 
 export const metadata = {
@@ -14,35 +13,27 @@ export const metadata = {
 export default function SourcesPage() {
   return (
     <main id="main">
-      <div className="content-section page-shell">
-        <PageIntro
-          label="Sources and further reading"
-          title="How this account was established"
-          titleId="sources-title"
-          summary="Source numbers throughout the site lead back to this list. External records open in a new tab. Government-library and bibliographic sources are preferred when encyclopaedia articles disagree."
-        />
-
+      <PageIntro
+        label="Sources and further reading"
+        title="How this account was established"
+        titleId="sources-title"
+        summary="Source links throughout the site lead back to this bibliography. Government-library and bibliographic records are preferred when encyclopaedia articles disagree."
+      />
+      <div className="content-section page-shell section-page">
         <Figure image={images.portrait} className="section-figure" />
 
-        <ol className="source-list">
+        <ul className="source-list">
           {sources.map((source) => (
             <li id={`source-${source.id}`} key={source.id}>
-              <span className="source-number" aria-hidden="true">
-                {source.id}
-              </span>
               <div>
                 <ExternalLink href={source.url}>{source.title}</ExternalLink>
                 <p>{source.type}</p>
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
 
-        <aside
-          className="research-note kolam-frame"
-          aria-labelledby="research-note-title"
-        >
-          <KolamCorners />
+        <aside className="research-note ui-panel" aria-labelledby="research-note-title">
           <h2 id="research-note-title">Research note</h2>
           <p>
             Some sources differ on the inaugural year of <cite>Tamil Culture</cite>,
@@ -63,7 +54,12 @@ export default function SourcesPage() {
           </p>
         </aside>
 
-        <PageLinks current="/sources/" />
+        <SectionNext
+          lang="en"
+          href="/en/"
+          label="Home"
+          title="Return to the archive portal"
+        />
       </div>
     </main>
   );

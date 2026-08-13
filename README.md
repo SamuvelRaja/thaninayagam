@@ -5,11 +5,12 @@ A statically exported, multipage Next.js archive about Rev. Dr. Xavier S. Thani 
 ## Pages
 
 - `/` — Home
-- `/biography/` — Verified biography
-- `/timeline/` — Chronology
-- `/contributions/` — Work and selected writings
-- `/archive/` — Licensed images and library records
+- `/about/` — Biography
+- `/contributions/` — Work themes, chronology, and selected writings
+- `/archive/` — On-site holdings and external library links
+- `/sponsors/` — Support (உதவி): how to help, helper register
 - `/sources/` — Source list
+- `/timeline/` — Redirects to `/contributions/#timeline`
 
 ## Development
 

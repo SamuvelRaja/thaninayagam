@@ -1,7 +1,7 @@
 import PageIntro from "@/app/components/PageIntro";
-import PageLinks from "@/app/components/PageLinks";
 import Figure from "@/app/components/Figure";
-import { KolamCorners } from "@/app/components/Ornaments";
+import SectionNext from "@/app/components/SectionNext";
+import OnThisPage from "@/app/components/OnThisPage";
 import { images } from "@/app/lib/data";
 
 export const metadata = {
@@ -22,30 +22,60 @@ const onThisPage = [
 export default function BiographyPage() {
   return (
     <main id="main">
-      <div className="content-section page-shell">
-        <PageIntro
-          label="About"
-          title="A scholar who worked across languages and borders"
-          titleId="about-title"
-          summary="This account draws on government-library biographies, contemporary journalism, and both English and Tamil Wikipedia, with primary sources preferred where they disagree."
-        >
-          <nav
-            className="on-this-page kolam-frame"
-            aria-label="On this page"
-          >
-            <KolamCorners />
-            <h2 className="on-this-page-title">On this page</h2>
-            <ul>
-              {onThisPage.map((item) => (
-                <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </PageIntro>
+      <PageIntro
+        label="About"
+        title="A scholar who worked across languages and borders"
+        titleId="about-title"
+        summary="A sourced biographical essay drawn from government-library records, contemporary journalism, and bibliographic sources. Primary records are preferred when accounts disagree."
+      />
+      <div className="content-section page-shell biography-page">
+        <aside className="at-a-glance" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <dl>
+            <div>
+              <dt>Lifespan</dt>
+              <dd>2 August 1913 – 1 September 1980</dd>
+            </div>
+            <div>
+              <dt>Birthplace</dt>
+              <dd>Karampon, near Kayts, Jaffna</dd>
+            </div>
+            <div>
+              <dt>Name</dt>
+              <dd>
+                Born Xavier Nicholas Stanislaus; “Thani Nayagam” means “lone
+                hero”
+              </dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>
+                Tamil, English, Latin, and several other European and classical
+                languages
+              </dd>
+            </div>
+            <div>
+              <dt>Two doctorates</dt>
+              <dd>Theology in Rome and education in London</dd>
+            </div>
+            <div>
+              <dt>1952</dt>
+              <dd>
+                <cite>Tamil Culture</cite> quarterly founded
+              </dd>
+            </div>
+            <div>
+              <dt>1964</dt>
+              <dd>International Association for Tamil Research established</dd>
+            </div>
+            <div>
+              <dt>1966</dt>
+              <dd>First international conference-seminar in Kuala Lumpur</dd>
+            </div>
+          </dl>
+        </aside>
 
-        <div className="biography-layout">
+        <div className="section-with-toc">
           <div className="biography-sections">
             <section aria-labelledby="early-life-title">
               <h2 id="early-life-title">Early life and family</h2>
@@ -144,14 +174,34 @@ export default function BiographyPage() {
                 </p>
               </div>
 
-              <Figure
-                image={images.portraitSecondary}
-                className="section-figure small-portrait"
-              />
+              <div
+                className="photographic-record"
+                aria-labelledby="photographic-record-title"
+              >
+                <header className="photographic-record-head">
+                  <p className="section-label">Photographic record</p>
+                  <h3 id="photographic-record-title">
+                    The scholar in public life
+                  </h3>
+                  <p>
+                    Period portraits and documentary photographs place the
+                    formal likeness in a wider record of travel, collaboration,
+                    and international gathering.
+                  </p>
+                </header>
+                <div className="photographic-record-grid">
+                  <Figure image={images.withColleague} />
+                  <Figure image={images.outdoorPortrait} />
+                  <Figure image={images.conferenceSecond} />
+                  <Figure image={images.archivalPortrait} />
+                </div>
+              </div>
             </section>
 
             <section aria-labelledby="legacy-work-title">
-              <h2 id="legacy-work-title">Publishing, archives, and institutions</h2>
+              <h2 id="legacy-work-title">
+                Publishing, archives, and institutions
+              </h2>
               <div className="reading-copy">
                 <p>
                   He established <cite>Tamil Culture</cite>, an English-language
@@ -163,11 +213,9 @@ export default function BiographyPage() {
                 <p>
                   European library research brought early Tamil print and
                   manuscripts back into scholarly view, including the 1554
-                  Luso-Tamil Catechism, identified in Lisbon in 1950. The{" "}
-                  <a href="/archive/">archive page</a> reproduces the
-                  public-domain documents, and the{" "}
-                  <a href="/contributions/">contributions page</a> describes the
-                  wider recovery work.
+                  Luso-Tamil Catechism, identified in Lisbon in 1950. Early
+                  issues of <cite>Tamil Culture</cite> and related holdings are
+                  catalogued in this archive.
                 </p>
                 <p>
                   In January 1964, working with Kamil Zvelebil and V. I.
@@ -200,58 +248,15 @@ export default function BiographyPage() {
             </section>
           </div>
 
-          <aside
-            className="at-a-glance kolam-frame"
-            aria-labelledby="glance-title"
-          >
-            <KolamCorners />
-            <h2 id="glance-title">At a glance</h2>
-            <dl>
-              <div>
-                <dt>Lifespan</dt>
-                <dd>2 August 1913 – 1 September 1980</dd>
-              </div>
-              <div>
-                <dt>Birthplace</dt>
-                <dd>Karampon, near Kayts, Jaffna</dd>
-              </div>
-              <div>
-                <dt>Name</dt>
-                <dd>Born Xavier Nicholas Stanislaus; “Thani Nayagam” means “lone hero”</dd>
-              </div>
-              <div>
-                <dt>Languages</dt>
-                <dd>Tamil, English, Latin, and several other European and classical languages</dd>
-              </div>
-              <div>
-                <dt>Two doctorates</dt>
-                <dd>Theology in Rome and education in London</dd>
-              </div>
-              <div>
-                <dt>1952</dt>
-                <dd>
-                  <cite>Tamil Culture</cite> quarterly founded
-                </dd>
-              </div>
-              <div>
-                <dt>1964</dt>
-                <dd>International Association for Tamil Research established</dd>
-              </div>
-              <div>
-                <dt>1966</dt>
-                <dd>First international conference-seminar in Kuala Lumpur</dd>
-              </div>
-            </dl>
-
-            <p className="aside-actions">
-              <a className="button button-secondary" href="/timeline/">
-                Open the full timeline
-              </a>
-            </p>
-          </aside>
+          <OnThisPage items={onThisPage} lang="en" />
         </div>
 
-        <PageLinks current="/about/" />
+        <SectionNext
+          lang="en"
+          href="/en/contributions/#timeline"
+          label="Contributions"
+          title="Work themes and seventeen milestones"
+        />
       </div>
     </main>
   );
