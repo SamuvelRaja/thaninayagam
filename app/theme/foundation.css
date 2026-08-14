@@ -1788,7 +1788,8 @@ a.button-secondary:focus-visible {
   list-style: none;
 }
 
-.archive-subnav a {
+.archive-subnav a,
+.archive-filter-pill-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -1801,33 +1802,59 @@ a.button-secondary:focus-visible {
   font-size: var(--text-sm);
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--ease, 160ms ease);
 }
 
-.archive-subnav a span {
+.archive-subnav a span,
+.archive-filter-pill-btn .pill-count {
   padding: 0.1rem 0.35rem;
   border-radius: var(--radius-sm);
   background: var(--paper-deep);
   color: var(--muted);
   font-size: 0.8em;
+  font-weight: 700;
 }
 
 .archive-subnav a:hover,
-.archive-subnav a:focus-visible {
+.archive-subnav a:focus-visible,
+.archive-filter-pill-btn:hover,
+.archive-filter-pill-btn:focus-visible {
   border-color: var(--accent);
   background: var(--accent-soft);
 }
 
 .archive-subnav a.is-active,
-.archive-subnav a[aria-current="page"] {
+.archive-subnav a[aria-current="page"],
+.archive-filter-pill-btn.is-active,
+.archive-filter-pill-btn[aria-pressed="true"] {
   border-color: var(--accent);
   background: var(--accent);
   color: #ffffff;
 }
 
 .archive-subnav a.is-active span,
-.archive-subnav a[aria-current="page"] span {
+.archive-subnav a[aria-current="page"] span,
+.archive-filter-pill-btn.is-active .pill-count,
+.archive-filter-pill-btn[aria-pressed="true"] .pill-count {
   background: rgb(255 255 255 / 0.2);
   color: #ffffff;
+}
+
+.archive-subnav-nested {
+  padding: var(--space-2) 0;
+  border-top: none;
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.archive-filter-pill-btn.sub-pill {
+  min-height: 2.1rem;
+  padding: 0.25rem 0.65rem;
+  font-size: var(--text-xs);
 }
 
 .archive-view-toggle {

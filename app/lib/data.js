@@ -922,7 +922,7 @@ export const navItems = [
   { href: "/archive/", label: "Archive" },
   { href: "/about/", label: "About" },
   { href: "/contributions/", label: "Contributions" },
-  { href: "/sponsors/", label: "Support" },
+  { href: "/timeline/", label: "Timeline" },
   { href: "/sources/", label: "Sources" },
 ];
 

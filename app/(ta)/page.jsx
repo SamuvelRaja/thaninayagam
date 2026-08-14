@@ -1,40 +1,272 @@
+import { Citation } from "@/app/components/Links";
+import { archiveTaxonomy, taxonomyFor, taxonomyLabel } from "@/app/lib/archiveMeta";
+import {
+  featuredHoldingSlugs,
+  homeArchivePaths,
+  homeFacts,
+  homeMilestones,
+} from "@/app/lib/data";
+import { getDocuments } from "@/app/lib/documents";
 
-'use client';
+export const metadata = {
+  title: {
+    absolute: "தனிநாயகம் அடிகளார் ஆவணகம்",
+  },
+  description:
+    "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளாரின் (1913–1980) வாழ்வு, எழுத்துகள் மற்றும் ஆவணங்களுக்கான ஆய்வு ஆவணகம்.",
+};
 
-import { useEffect } from 'react';
+export default function HomePage() {
+  const documents = getDocuments("ta");
+  const bySlug = new Map(documents.map((doc) => [doc.slug, doc]));
+  const featured = featuredHoldingSlugs
+    .map((slug) => bySlug.get(slug))
+    .filter(Boolean);
+  const readableCount = documents.filter((doc) => doc.status === "readable").length;
 
-export default function LegacyPage() {
-  useEffect(() => {
-    window.MM_preloadImages = function() {
-      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-        var i,j=d.MM_p.length,a=window.MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+  const collections = archiveTaxonomy.map((category) => {
+    const count = documents.filter(
+      (doc) => taxonomyFor(doc).categoryId === category.id,
+    ).length;
+    return {
+      id: category.id,
+      label: category.ta.label,
+      hint: category.ta.hint,
+      count,
     };
+  });
 
-    window.MM_swapImgRestore = function() {
-      var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-    };
-
-    window.MM_findObj = function(n, d) {
-      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=window.MM_findObj(n,d.layers[i].document);
-      if(!x && d.getElementById) x=d.getElementById(n); return x;
-    };
-
-    window.MM_swapImage = function() {
-      var i,j=0,x,a=window.MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-       if ((x=window.MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-    };
-    
-    // trigger preload if needed (we'll just let hover fetch it for simplicity, or we could parse the body)
-  }, []);
+  const startPaths = homeArchivePaths
+    .map((path) => {
+      const doc = bySlug.get(path.slug);
+      if (!doc) return null;
+      return { ...path, doc };
+    })
+    .filter(Boolean);
 
   return (
-    <div 
-      style={{ backgroundColor: '#660000', margin: 0, minHeight: '100vh', padding: 0 }}
-      dangerouslySetInnerHTML={{ __html: "\n<br>\n<br>\n<br>\n<table width=\"779\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\">\n  <tr>\n    <td><img src=\"images/titlepage/title-1.jpg\" width=\"130\" height=\"137\"></td>\n    <td><img src=\"images/titlepage/title-2.jpg\" width=\"128\" height=\"137\"></td>\n    <td><img src=\"images/titlepage/title-3.jpg\" width=\"129\" height=\"137\"></td>\n    <td><img src=\"images/titlepage/title-4.jpg\" width=\"127\" height=\"137\"></td>\n    <td><img src=\"images/titlepage/title-5.jpg\" width=\"129\" height=\"137\"></td>\n    <td><img src=\"images/titlepage/title-6.jpg\" width=\"136\" height=\"137\"></td>\n  </tr>\n  <tr>\n    <td><a href=\"home.htm\" onMouseOver=\"MM_swapImage('Image1','','images/titlepage/mugapu-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/mugappu.jpg\" name=\"Image1\" width=\"130\" height=\"43\" border=\"0\" id=\"Image1\"></a></td>\n    <td><a href=\"writings.htm\" onMouseOver=\"MM_swapImage('Image2','','images/titlepage/ezhuthu-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/ezhuthu.jpg\" name=\"Image2\" width=\"128\" height=\"43\" border=\"0\" id=\"Image2\"></a></td>\n    <td><a href=\"speech.htm\" onMouseOver=\"MM_swapImage('Image3','','images/titlepage/pechu-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/pechu.jpg\" name=\"Image3\" width=\"129\" height=\"43\" border=\"0\" id=\"Image3\"></a></td>\n    <td><a href=\"photos.htm\" onMouseOver=\"MM_swapImage('Image4','','images/titlepage/pugaipadam-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/pugaipadam.jpg\" name=\"Image4\" width=\"127\" height=\"43\" border=\"0\" id=\"Image4\"></a></td>\n    <td><a href=\"oaviyam.htm\" onMouseOver=\"MM_swapImage('Image5','','images/titlepage/ovium-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/ovium.jpg\" name=\"Image5\" width=\"129\" height=\"43\" border=\"0\" id=\"Image5\"></a></td>\n    <td><a href=\"contact.htm\" onMouseOver=\"MM_swapImage('Image6','','images/titlepage/thodarpu-1.jpg',1)\" onMouseOut=\"MM_swapImgRestore()\"><img src=\"images/titlepage/thodarpu.jpg\" name=\"Image6\" width=\"136\" height=\"43\" border=\"0\" id=\"Image6\"></a></td>\n  </tr>\n  <tr>\n    <td><a href=\"nandrigal.htm\" target=\"_blank\"><img src=\"images/titlepage/content-1.jpg\" width=\"130\" height=\"278\" border=\"0\"></a></td>\n    <td><a href=\"nandrigal.htm\" target=\"_blank\"><img src=\"images/titlepage/content-2.jpg\" width=\"128\" height=\"278\" border=\"0\"></a></td>\n    <td><img src=\"images/titlepage/content-3.jpg\" width=\"129\" height=\"278\" border=\"0\" usemap=\"#Map\"></td>\n    <td><img src=\"images/titlepage/content-4.jpg\" width=\"127\" height=\"278\" border=\"0\" usemap=\"#Map2\"></td>\n    <td><img src=\"images/titlepage/content-5.jpg\" width=\"129\" height=\"278\" border=\"0\" usemap=\"#Map3\"></td>\n    <td><img src=\"images/titlepage/content-6.jpg\" width=\"136\" height=\"278\" border=\"0\" usemap=\"#Map4\"></td>\n  </tr>\n  <tr> \n    <td><img src=\"images/titlepage/bottom-1.jpg\" width=\"130\" height=\"24\"></td>\n    <td background=\"images/titlepage/bottom-2.jpg\"><div align='center'><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=MTE4NjA1Nw==' border='0' alt='Free Hit Counter'></a>\n    </div></td>\n    <td><a href=\"contact.htm\"><img src=\"images/titlepage/bottom-3.jpg\" width=\"129\" height=\"24\" border=\"0\"></a></td>\n    <td><a href=\"contact.htm\"><img src=\"images/titlepage/bottom-4.jpg\" width=\"127\" height=\"24\" border=\"0\"></a></td>\n    <td><img src=\"images/titlepage/bottom-5.jpg\" width=\"129\" height=\"24\"></td>\n    <td><img src=\"images/titlepage/bottom-6.jpg\" width=\"136\" height=\"24\"></td>\n  </tr>\n</table>\n<map name=\"Map\">\n  <area shape=\"rect\" coords=\"22,94,111,118\" href=\"annavin_kadithangal.htm\">\n  <area shape=\"rect\" coords=\"21,118,112,138\" href=\"annavin_katturaigal.htm\">\n  <area shape=\"rect\" coords=\"20,139,112,162\" href=\"annavin_sirukathaigal.htm\">\n  <area shape=\"rect\" coords=\"20,163,113,184\" href=\"annavin_navalgal.htm\">\n  <area shape=\"rect\" coords=\"19,185,113,207\" href=\"annavin_nadagangal.htm\">\n  <area shape=\"rect\" coords=\"19,207,113,229\" href=\"annavin_kavithaigal.htm\">\n</map>\n<map name=\"Map2\">\n  <area shape=\"rect\" coords=\"12,85,115,105\" href=\"speech_maedai.htm\">\n  <area shape=\"rect\" coords=\"14,108,112,128\" href=\"speech_sattamandram.htm\">\n  <area shape=\"rect\" coords=\"11,132,115,150\" href=\"speech_paralumandram.htm\">\n  <area shape=\"rect\" coords=\"9,151,119,172\" href=\"speech_pallikalluri.htm\">\n  <area shape=\"rect\" coords=\"12,199,115,218\" href=\"speech_paettigal.htm\">\n  <area shape=\"rect\" coords=\"14,174,113,198\" href=\"speech_mandram.htm\">\n  <area shape=\"rect\" coords=\"16,219,111,242\" href=\"speech_vaanoli.htm\">\n</map>\n<map name=\"Map3\">\n  <area shape=\"rect\" coords=\"20,97,110,115\" href=\"annavin_pugaipadangal_1909_19.htm\">\n  <area shape=\"rect\" coords=\"20,121,115,138\" href=\"annavin_pugaipadangal_1920_29.htm\">\n  <area shape=\"rect\" coords=\"20,143,115,160\" href=\"annavin_pugaipadangal_1930_39.htm\">\n  <area shape=\"rect\" coords=\"19,165,116,184\" href=\"annavin_pugaipadangal_1940_49.htm\">\n  <area shape=\"rect\" coords=\"19,190,116,207\" href=\"annavin_pugaipadangal_1950_59.htm\">\n  <area shape=\"rect\" coords=\"20,211,113,230\" href=\"annavin_pugaipadangal_1960_69.htm\">\n</map>\n<map name=\"Map4\">\n  <area shape=\"rect\" coords=\"16,92,116,115\" href=\"annavin_oviyam_kpadam.htm\">\n  <area shape=\"rect\" coords=\"16,118,118,139\" href=\"annavin_oviyam_attai.htm\">\n  <area shape=\"rect\" coords=\"18,140,115,164\" href=\"annavin_oviyam_kaiezhuthu.htm\">\n  <area shape=\"rect\" coords=\"19,164,113,185\" href=\"annavin_oviyam_vilambaram.htm\">\n  <area shape=\"rect\" coords=\"21,187,112,209\" href=\"annavin_oviyam_suvarotti.htm\">\n  <area shape=\"rect\" coords=\"10,209,126,234\" href=\"annavin_oviyam_pathirikai.htm\">\n</map>\n" }} 
-    />
+    <main id="main" className="portal-home">
+      <section className="portal-hero" aria-labelledby="hero-title">
+        <div className="portal-hero-media" aria-hidden="true">
+          <img src="/tna.webp" alt="" width="1024" height="1295" />
+        </div>
+        <div className="portal-hero-panel">
+          <p className="section-label">டிஜிட்டல் ஆவணகம்</p>
+          <h1 id="hero-title">தனிநாயகம் அடிகளார்</h1>
+          <p className="portal-hero-meta">1913–1980</p>
+          <p className="portal-hero-lead">
+            குரு, மொழியியலாளர், இதழாசிரியர் — <cite>Tamil Culture</cite>,
+            உலகத் தமிழாராய்ச்சி மன்றம், 1966 கோலாலம்பூர் மாநாடு வழியாகத் தமிழாய்வை
+            சர்வதேசக் கல்வி உரையாடலாக எடுத்தவர்.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="/archive/">
+              ஆவணகத்தைப் பார்வையிட
+            </a>
+            <a className="button button-secondary" href="/about/">
+              வாழ்க்கை வரலாறு
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="portal-section portal-section-alt"
+        aria-labelledby="archive-collections-title"
+      >
+        <div className="portal-shell">
+          <header className="portal-section-head">
+            <p className="section-label">ஆவணகம்</p>
+            <h2 id="archive-collections-title">தொகுப்பு வாரியாக உலாவுக</h2>
+            <p>
+              தற்போது இத்தளத்தில் {documents.length} ஆவணங்கள்
+              {readableCount ? `, ${readableCount} வாசிக்கத் தயார்` : ""}. ஒரு
+              தொகுப்பைத் திறக்கவும், அல்லது முழுப் பட்டியலுக்குச் செல்லவும்.
+            </p>
+            <p className="archive-growing-note">
+              இது இறுதி எண்ணிக்கையோ அடிகளாரின் முழுப் படைப்புப் பட்டியலோ அல்ல. அவரது
+              இலக்கியப் படைப்புகளைத் தேடி உறுதிப்படுத்தித் தொடர்ந்து சேர்த்துக்
+              கொண்டிருக்கிறோம்.
+            </p>
+          </header>
+          <ul className="portal-collections">
+            {collections.map((collection) => (
+              <li key={collection.id}>
+                <a href={`/archive/?category=${collection.id}#holdings`}>
+                  <span className="portal-collections-count">
+                    {collection.count}
+                  </span>
+                  <strong>{collection.label}</strong>
+                  <span>{collection.hint}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="section-action">
+            <a className="button button-primary" href="/archive/#holdings">
+              முழுப் பட்டியலையும் திறக்க
+            </a>
+            <a className="button button-secondary" href="/archive/#catalogue-title">
+              வெளி நூலகங்கள்
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="portal-section"
+        aria-labelledby="start-reading-title"
+      >
+        <div className="portal-shell">
+          <header className="portal-section-head">
+            <p className="section-label">வாசிக்கத் தொடங்குக</p>
+            <h2 id="start-reading-title">ஆவணகத்திற்கு மூன்று நுழைவுகள்</h2>
+            <p>
+              செவ்வியல் நூல், சுத்தம் செய்யப்பட்ட இதழ்க் கட்டுரை, அல்லது ஆங்கிலத்
+              தொகுப்புக் கட்டுரைகள்—மூன்றும் இத்தளத்தில் வாசிக்கத் தயார்.
+            </p>
+          </header>
+          <ul className="portal-paths">
+            {startPaths.map((path) => (
+              <li key={path.slug}>
+                <a href={`/archive/documents/${path.slug}/`}>
+                  <span className="section-label">{path.labelTa}</span>
+                  <strong>{path.titleTa}</strong>
+                  <span>{path.blurbTa}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section
+        className="portal-section portal-section-alt"
+        aria-labelledby="holdings-preview-title"
+      >
+        <div className="portal-shell">
+          <header className="portal-section-head">
+            <p className="section-label">தேர்ந்தெடுத்த ஆவணங்கள்</p>
+            <h2 id="holdings-preview-title">முதலில் திறக்க வேண்டியவை</h2>
+            <p>
+              முதலில் வாசிக்கத் தகுந்தவை: செவ்வியல் ஆய்வு, இதழ்க் கட்டுரைகள்,
+              தமிழ்த் தொகுப்புகள், 1995 ஆங்கிலத் தொகுப்புக் கட்டுரைகள்.
+            </p>
+          </header>
+          <ol className="portal-holdings">
+            {featured.map((doc) => (
+              <li key={doc.slug}>
+                <a href={`/archive/documents/${doc.slug}/`}>
+                  <span className="portal-holdings-kind">
+                    {taxonomyLabel(doc, "ta", { compact: true })}
+                  </span>
+                  <span className="portal-holdings-copy">
+                    <strong>{doc.title}</strong>
+                    <span>{doc.summary}</span>
+                  </span>
+                  <span className="portal-holdings-open">வாசி</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+          <p className="section-action">
+            <a className="button button-primary" href="/archive/#holdings">
+              முழு ஆவணகத்தை உலாவுக
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="portal-section"
+        aria-labelledby="known-for-title"
+      >
+        <div className="portal-shell">
+          <header className="portal-section-head">
+            <p className="section-label">பணி</p>
+            <h2 id="known-for-title">மூன்று முக்கிய பங்களிப்புகள்</h2>
+            <p>முழு விவரத்திற்குப் பங்களிப்புகள் பக்கத்தைத் திறக்கவும்.</p>
+          </header>
+          <ul className="portal-contrib">
+            <li>
+              <a href="/contributions/">
+                <strong>ஆய்வும் வெளியீடும்</strong>
+                <span>
+                  செவ்வியல் தமிழாய்வும் ஆங்கிலக் காலாண்டிதழ் <cite>Tamil Culture</cite> உம்.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="/contributions/">
+                <strong>உலக ஒத்துழைப்பு</strong>
+                <span>
+                  1964 இல் IATR நிறுவலும் 1966 முதல் உலகத் தமிழாய்வு மாநாடும்.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="/contributions/">
+                <strong>குறிப்பு ஆய்வு</strong>
+                <span>
+                  <cite>A Reference Guide to Tamil Studies</cite> மற்றும் தொடர்புடைய
+                  நூலியல் பணி.
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        className="portal-section portal-section-alt"
+        aria-labelledby="milestones-title"
+      >
+        <div className="portal-shell">
+          <header className="portal-section-head">
+            <p className="section-label">காலவரிசை</p>
+            <h2 id="milestones-title">மைல்கற்கள்</h2>
+            <p>பிறப்பு முதல் அவர் விட்டுச் சென்ற நிறுவனங்கள் வரை ஐந்து அடையாளங்கள்.</p>
+          </header>
+          <ol className="portal-milestones">
+            {homeMilestones.map((item) => (
+              <li key={item.year}>
+                <a href="/timeline/">
+                  <time>{item.year}</time>
+                  <span>{item.titleTa}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+          <p className="section-action">
+            <a className="button button-secondary" href="/timeline/">
+              முழுக் காலக்கோடு
+            </a>
+            <a className="button button-secondary" href="/about/">
+              வாழ்க்கை வரலாறு
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="portal-section"
+        aria-labelledby="quote-title"
+      >
+        <div className="portal-shell">
+          <h2 id="quote-title" className="visually-hidden">
+            பத்திரிகையில்
+          </h2>
+          <blockquote className="portal-quote">
+            <p>
+              “தமிழ் ஒரு செவ்வியல் மொழி என்று உலகத்தை நம்பவைத்தவர்”
+            </p>
+            <footer>
+              — <cite>The Hindu</cite>, நூற்றாண்டு நினைவு, 2013
+              <Citation ids={[2]} lang="ta" />
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+    </main>
   );
 }

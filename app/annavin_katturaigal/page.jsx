@@ -1,253 +1,577 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo, useEffect, Suspense } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import AnnaArchiveHeader from '@/app/components/AnnaArchiveHeader';
+import AnnaArchiveFooter from '@/app/components/AnnaArchiveFooter';
+import { annaWritingsSubNav, allEssaysData } from '@/app/lib/annaArchiveData';
 
-const essaysData = [
-  { no: 1, title: "மாணவர் தந்தை", url: "katturaigal/manavar_thanthai.htm", date: "2-Jun-30", journal: "&nbsp;" },
-  { no: 2, title: "பார்ப்பனர்களும் - யூதர்களும்", url: "katturaigal/parpanargalum.htm", date: "29-Aug-37", journal: "&nbsp;" },
-  { no: 3, title: "கார்ப்பரேஷன் அலங்கோலம்", url: "katturaigal/corp_alangolam.htm", date: "10-Nov-37", journal: "&nbsp;" },
-  { no: 4, title: "எது பெரிது? மானமா? பதவியா?", url: "katturaigal/ethu.htm", date: "21-Nov-37", journal: "&nbsp;" },
-  { no: 5, title: "ஆச்சாரியார் அடைந்த படுதோல்விகள்", url: "katturaigal/aachariyar_adaintha.htm", date: "26-Dec-37", journal: "&nbsp;" },
-  { no: 6, title: "ஊர் சிரிக்கும் ஊடல்", url: "katturaigal/oorsirikkum.htm", date: "5-Feb-38", journal: "&nbsp;" },
-  { no: 7, title: "பித்தம் தெளிய மருந்தொன்றிருக்குது", url: "katturaigal/pitham_theliya.htm", date: "13-Feb-38", journal: "&nbsp;" },
-  { no: 8, title: "எல்லாம் ஈசன் செயல்", url: "katturaigal/ellam_eesan.htm", date: "20-Feb-38", journal: "&nbsp;" },
-  { no: 9, title: "குற்றால நீர்வீழ்ச்சி", url: "katturaigal/kutrala_neer.htm", date: "27-Feb-38", journal: "&nbsp;" },
-  { no: 10, title: "இருண்ட இந்தியாவில் இன்று நடப்பது", url: "katturaigal/irunda_indiavil.htm", date: "3-Apr-38", journal: "&nbsp;" },
-  { no: 11, title: "குப்பை மேட்டு நாயும் குச்சுக்காரி வீட்டுக் கிளியும்", url: "katturaigal/kuppai_maettu.htm", date: "3-Apr-38", journal: "&nbsp;" },
-  { no: 12, title: "அபேதவாதமும் சீர்திருத்தமும்", url: "katturaigal/abethavetham.htm", date: "1-Oct-38", journal: "&nbsp;" },
-  { no: 13, title: "கல்கத்தா காய்ச்சல்", url: "katturaigal/culcutta_kaichal.htm", date: "4-May-39", journal: "&nbsp;" },
-  { no: 14, title: "பரதன் எழுதிய பகிரங்கக் கடிதங்கள் - 1", url: "katturaigal/bharathan_ezhuthiya.htm", date: "10-May-39", journal: "&nbsp;" },
-  { no: 15, title: "பரதன் எழுதிய பகிரங்கக் கடிதங்கள் - 2", url: "katturaigal/bharathan_ezhuthiya2.htm", date: "13-May-39", journal: "&nbsp;" },
-  { no: 16, title: "சேரவாரும் தமிழர்களே", url: "katturaigal/saeravaarum.htm", date: "14-May-39", journal: "&nbsp;" },
-  { no: 17, title: "கத்கத்தா சரகுல்லா!", url: "katturaigal/culcutta_rasagulla.htm", date: "14-May-39", journal: "&nbsp;" },
-  { no: 18, title: "ரிப்பன் மண்டபத்து மகான்கள்", url: "katturaigal/ribbon_mandapathu.htm", date: "10-Jun-39", journal: "&nbsp;" },
-  { no: 19, title: "தமிழ்நாடு தமிழருக்கே!", url: "katturaigal/tn_tamilarukkae_1.html", date: "23-Nov-39", journal: "&nbsp;" },
-  { no: 20, title: "சமய விளக்கம்", url: "katturaigal/samaya_vila.htm", date: "24-Nov-39", journal: "&nbsp;" },
-  { no: 21, title: "ஆரிய சமயம்", url: "katturaigal/aariyar_samayam.htm", date: "25-Nov-39", journal: "&nbsp;" },
-  { no: 22, title: "பெரியாரும் பிறரும்", url: "katturaigal/periyarum_pirarum.htm", date: "24-Dec-39", journal: "&nbsp;" },
-  { no: 23, title: "பரிவாரத்தின் பதட்டம்", url: "katturaigal/parivarathin.htm", date: "24-Dec-39", journal: "&nbsp;" },
-  { no: 24, title: "பொங்குக புதுமை!", url: "katturaigal/ponguga_puthumai.htm", date: "13-Jan-40", journal: "விடுதலை" },
-  { no: 25, title: "நமது செல்வம்", url: "katturaigal/namadhu_selvam.htm", date: "20-Jan-40", journal: "விடுதலை" },
-  { no: 26, title: "மறைந்தாயோ செல்வமே!", url: "katturaigal/marainthayo.htm", date: "17-Mar-40", journal: "&nbsp;" },
-  { no: 27, title: "அவரும் தமிழர்தானாம்!", url: "katturaigal/avarum_thamizhar.htm", date: "29-Jun-40", journal: "&nbsp;" },
-  { no: 28, title: "அல்லாடுகிறார்", url: "katturaigal/alladugirar.htm", date: "18-Jul-40", journal: "&nbsp;" },
-  { no: 29, title: "வெற்றியில் வீழ்ச்சி - பூனா போர்ப் படலம்", url: "katturaigal/vetriyil_veezhchi_pune.htm", date: "30-Jul-40", journal: "&nbsp;" },
-  { no: 30, title: "டிவேலரா திணறல்", url: "katturaigal/thivelara_thinaral.htm", date: "31-Jul-40", journal: "&nbsp;" },
-  { no: 31, title: "வெற்றியின் வீழ்ச்சி - அடித்த லாபம் ஆரியருக்கே", url: "katturaigal/vetriyil_veezhchi2_aditha.htm", date: "3-Aug-40", journal: "&nbsp;" },
-  { no: 32, title: "மது விலக்கு நாடகம் ஒழியுமா?", url: "katturaigal/mathuvilakku_naadag.htm", date: "2-Aug-40", journal: "&nbsp;" },
-  { no: 33, title: "நமது போர்ப் பாதை 1", url: "katturaigal/namathu_poar_paathai_1.htm", date: "09-Aug-40", journal: "&nbsp;" },
-  { no: 34, title: "நமது போர்ப் பாதை 2", url: "katturaigal/namathu_poar_paathai_2.htm", date: "10-Aug-40", journal: "&nbsp;" },
-  { no: 35, title: "நமது போர்ப் பாதை 3", url: "katturaigal/namathu_poar_paathai_3.htm", date: "12-Aug-40", journal: "&nbsp;" },
-  { no: 38, title: "நாட்டின் நாயகர்கள்", url: "katturaigal/naatin_nayagargal.htm", date: "1942", journal: "&nbsp;" },
-  { no: 39, title: "ரோமாபுரி ராணிகள்", url: "katturaigal/romapuri_ranigal_1.htm", date: "1942", journal: "&nbsp;" },
-  { no: 40, title: "வரட்டுமே வள்ளலார்!", url: "katturaigal/varattumae_vallalar.htm", date: "6-Feb-42", journal: "&nbsp;" },
-  { no: 41, title: "அவசரமாகத் தேவை", url: "katturaigal/avasaramaga_thaevai.htm", date: "&nbsp;", journal: "&nbsp;" },
-  { no: 42, title: "இலட்சார்ச்சனை", url: "katturaigal/latcharchanai.htm", date: "15-Mar-42", journal: "திராவிடநாடு" },
-  { no: 43, title: "புத்தர் புன்னகை", url: "katturaigal/budhar_punnagai.htm", date: "15-Mar-42", journal: "திராவிடநாடு" },
-  { no: 44, title: "கிட்கிந்தையில் கிரிப்ஸ்", url: "katturaigal/kitkinthayil_grips.htm", date: "22-Mar-42", journal: "திராவிடநாடு" },
-  { no: 45, title: "ஹிந்துஸ்தான் ஹமாரா", url: "katturaigal/hindustan_hamara.htm", date: "22-Mar-42", journal: "திராவிடநாடு" },
-  { no: 46, title: "இந்து இட்லரிசம்", url: "katturaigal/indhu_hitlarism.htm", date: "29-Mar-42", journal: "திராவிடநாடு" },
-  { no: 47, title: "ஆளுக்கொரு துப்பாக்கி", url: "katturaigal/aalukkoru_thuppakki.htm", date: "29-Mar-42", journal: "திராவிடநாடு" },
-  { no: 48, title: "அந்தோ நெஞ்சுவேகிறது!", url: "katturaigal/antho_nenchu_vegirathu.htm", date: "29-Mar-42", journal: "திராவிடநாடு" },
-  { no: 49, title: "புன்சிரிப்பு", url: "katturaigal/punsirippu.htm", date: "29-Mar-42", journal: "திராவிடநாடு" },
-  { no: 51, title: "மறைந்த மறத்தமிழர்", url: "katturaigal/maraintha_marath.htm", date: "29-Mar-42", journal: "&nbsp;" },
-  { no: 52, title: "வந்தேனே நானே", url: "katturaigal/vanthaene_nanae.htm", date: "5-Apr-42", journal: "திராவிடநாடு" },
-  { no: 53, title: "கனவில் கண்ட கன்னிகை!", url: "katturaigal/kanavil_kanda_kannigai.htm", date: "5-Apr-42", journal: "திராவிடநாடு" },
-  { no: 54, title: "எனது ஆசிரியரை இழந்தேன்", url: "katturaigal/enathu_aasiriyarai.htm", date: "12-Apr-42", journal: "திராவிடநாடு" },
-  { no: 56, title: "சங்கராச்சாரி பதவி தற்கொலை!", url: "katturaigal/sankarachari_pathavi_tharkolai.htm", date: "19-Apr-42", journal: "திராவிடநாடு" },
-  { no: 57, title: "தீட்சிதர் வீட்டில்", url: "katturaigal/theetchithar_veetil.htm", date: "19-Apr-42", journal: "திராவிடநாடு" },
-  { no: 58, title: "தேன் சுரக்கப் பேசி", url: "katturaigal/thaensurakka_paesi.htm", date: "26-Apr-42", journal: "திராவிடநாடு" },
-  { no: 59, title: "காந்திஸ்தான் மர்கயா!", url: "katturaigal/gandhistan_margaya.htm", date: "26-Apr-42", journal: "திராவிடநாடு" },
-  { no: 60, title: "நச்சுப் பொய்கை", url: "katturaigal/nachuppoygai.htm", date: "3-May-42", journal: "திராவிடநாடு" },
-  { no: 61, title: "அவர் அவ்வளவு முட்டாளல்ல!", url: "katturaigal/avar_avvalavu_muttalalla.htm", date: "17-May-42", journal: "திராவிடநாடு" },
-  { no: 62, title: "பெரியார் - ஆச்சாரியார் சந்திப்பு", url: "katturaigal/periyar_achariyar_santhippu.htm", date: "24-May-42", journal: "திராவிடநாடு" },
-  { no: 63, title: "ஆண்டவனை அழைக்கிறார்!", url: "katturaigal/aandavanai_alikkirar.htm", date: "24-May-42", journal: "திராவிடநாடு" },
-  { no: 64, title: "ஐயன் சிங்காரங்களைப் பாரும்!", url: "katturaigal/ayyan_singarangalai_paarum.htm", date: "24-May-42", journal: "திராவிடநாடு" },
-  { no: 65, title: "எதிரொலி", url: "katturaigal/ethiroli.htm", date: "24-May-42", journal: "திராவிடநாடு" },
-  { no: 66, title: "லண்டனில் லெனின்", url: "katturaigal/londonil_lenin.htm", date: "31-May-42", journal: "திராவிடநாடு" },
-  { no: 67, title: "தூக்குவீர் கத்தியை!", url: "katturaigal/thookuveer_katthiyai.htm", date: "31-May-42", journal: "திராவிடநாடு" },
-  { no: 68, title: "இஃதன்றோ தோழமை!", url: "katturaigal/ithandro_tholamai.htm", date: "31-May-42", journal: "திராவிடநாடு" },
-  { no: 69, title: "மணி மறைந்தார்", url: "katturaigal/mani_marainthar.htm", date: "31-May-42", journal: "திராவிடநாடு" },
-  { no: 70, title: "பாகிஸ்தான்! 24 ஆண்டுகளுக்கு முன்பு", url: "katturaigal/pakistan_24_years_munbu.htm", date: "7-Jun-42", journal: "திராவிடநாடு" },
-  { no: 71, title: "தேனுடன் வேம்பு!", url: "katturaigal/thaenudan_vaembu.htm", date: "7-Jun-42", journal: "திராவிடநாடு" },
-  { no: 72, title: "இந்துமதமும் தமிழரும்!", url: "katturaigal/indhumathamum.htm", date: "7-Jun-42", journal: "&nbsp;" },
-  { no: 73, title: "எந்த ‘ஜீ’யும் நமக்கு வேண்டாம்", url: "katturaigal/entha_jeeyum_namakku_vaendam.htm", date: "14-Jun-42", journal: "திராவிடநாடு" },
-  { no: 74, title: "கடல் கடக்கும் கண்கள்", url: "katturaigal/kadal_kadakkum_kangal.htm", date: "14-Jun-42", journal: "திராவிடநாடு" },
-  { no: 75, title: "இரண்டு மூளைகள்", url: "katturaigal/irandu_moolaigal.htm", date: "21-Jun-42", journal: "திராவிடநாடு" },
-  { no: 76, title: "சீறும் சில்லறைகள்", url: "katturaigal/seerum_sillaraigal.htm", date: "28-Jun-42", journal: "திராவிடநாடு" },
-  { no: 77, title: "கேய்ரோவில் கழுகு!", url: "katturaigal/keirovil_kazhugu.htm", date: "28-Jun-42", journal: "திராவிடநாடு" },
-  { no: 78, title: "பிராயச்சித்தம்", url: "katturaigal/prayachittham.htm", date: "28-Jun-42", journal: "திராவிடநாடு" },
-  { no: 79, title: "ஆடுராட்டே! ஆனால் இங்கு!", url: "katturaigal/aaduraattey.htm", date: "28-Jun-42", journal: "திராவிடநாடு" },
-  { no: 81, title: "ஆறுமுகமும் அழுகுரலும்", url: "katturaigal/arumugamum_azhukuralum.htm", date: "12-Jul-42", journal: "திராவிடநாடு" },
-  { no: 82, title: "பலி பீடம்", url: "katturaigal/bali_peedam.htm", date: "12-Jul-42", journal: "திராவிடநாடு" },
-  { no: 83, title: "ஆசிரியர் கடிதம்", url: "katturaigal/aasiriyar_kaditham.htm", date: "12-Jul-42", journal: "திராவிடநாடு" },
-  { no: 84, title: "கூண்டிலிருந்து வெளியேவாருங்கள்!", url: "katturaigal/koondilirunthu_veliyae.htm", date: "19-Jul-42", journal: "திராவிடநாடு" },
-  { no: 86, title: "அந்தராத்மாவே அவருக்குக்கூறு!", url: "katturaigal/antharathmavae_avarukku.htm", date: "19-Jul-42", journal: "திராவிடநாடு" },
-  { no: 87, title: "ஆங்கிலேயர் மீது பாயுமுன்", url: "katturaigal/aangilar_meethu_paayumun.htm", date: "26-Jul-42", journal: "திராவிடநாடு" },
-  { no: 88, title: "கண்ணன் காட்டிய வழி!", url: "katturaigal/kannan_kaatiya_vazhi.htm", date: "26-Jul-42", journal: "திராவிடநாடு" },
-  { no: 89, title: "இருவீரர் - ஒருதாசர்!", url: "katturaigal/iruveerar_oruthasar.htm", date: "26-Jul-42", journal: "திராவிடநாடு" },
-  { no: 90, title: "முத்தமிழ் கற்றோரே!", url: "katturaigal/muthamizh_katrorae.htm", date: "2-Aug-42", journal: "திராவிடநாடு" },
-  { no: 91, title: "அச்சு முறிந்த வண்டி", url: "katturaigal/achi_murintha_vandi.htm", date: "2-Aug-42", journal: "திராவிடநாடு" },
-  { no: 92, title: "வார்த்தா முனிவர் யாகம் செய்தால்!", url: "katturaigal/vaartha_munivar.htm", date: "9-Aug-42", journal: "திராவிடநாடு" },
-  { no: 93, title: "மானங்கெட்டது!", url: "katturaigal/manankettathu.htm", date: "9-Aug-42", journal: "திராவிடநாடு" },
-  { no: 94, title: "ஊரார் உரையாடல் - காகசஸ்", url: "katturaigal/oorar_urayadal_kagasas.htm", date: "9-Aug-42", journal: "திராவிடநாடு" },
-  { no: 95, title: "புலியூர் புகுவதா!", url: "katturaigal/puliyur_puguvatha.htm", date: "16-Aug-42", journal: "திராவிடநாடு" },
-  { no: 96, title: "இஞ்சிபத்தனே மேல்!", url: "katturaigal/injipatthanae_mael.htm", date: "16-Aug-42", journal: "திராவிடநாடு" },
-  { no: 97, title: "24 மணி நேரத்தில் சுயராச்யம்!", url: "katturaigal/24_maninerathil_suyarajyam.htm", date: "23-Aug-42", journal: "திராவிடநாடு" },
-  { no: 98, title: "1942-ல் மாஸ்கோ!", url: "katturaigal/1942_masco.htm", date: "23-Aug-42", journal: "திராவிடநாடு" },
-  { no: 99, title: "குளிர்ந்த காற்று", url: "katturaigal/kulirntha_kaatru.htm", date: "30-Aug-42", journal: "திராவிடநாடு" },
-  { no: 100, title: "ஐந்து அரசுகள்", url: "katturaigal/ainthu_arasugal.htm", date: "30-Aug-42", journal: "திராவிடநாடு" }
-];
+function KatturaigalRegister() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
-export default function AnnavinKatturaigalPage() {
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 15;
-  const maxPages = 15; // Hardcoded to 15 to match the original pagination
-  
-  const paginatedEssays = essaysData.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+  const initialPart = Number(searchParams.get('part')) || 1;
+  const initialSearch = searchParams.get('search') || '';
+  const initialJournal = searchParams.get('journal') || 'all';
+  const initialHighlight = Number(searchParams.get('highlight')) || null;
 
-  const topNavItems = [
-    { id: 'home', label: 'முகப்பு', href: '/home.htm' },
-    { id: 'writings', label: 'எழுத்து', href: '/writings.htm' },
-    { id: 'speech', label: 'பேச்சு', href: '/speech.htm' },
-    { id: 'photos', label: 'புகைப்படம்', href: '/photos.htm' },
-    { id: 'paintings', label: 'ஓவியம்', href: '/oaviyam.htm' },
-    { id: 'contact', label: 'தொடர்பு', href: '/contact.htm' },
-  ];
+  const [selectedPart, setSelectedPart] = useState(initialPart);
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
+  const [selectedJournal, setSelectedJournal] = useState(initialJournal);
+  const [fontSize, setFontSize] = useState('normal'); // 'normal' (20px), 'large' (24px), 'xlarge' (28px)
+  const [pageSize, setPageSize] = useState(25); // 25, 50, 100
+  const [subPage, setSubPage] = useState(1);
+  const [activeModalEssay, setActiveModalEssay] = useState(null);
 
-  const subNavItems = [
-    { id: 'letters', label: 'கடிதங்கள்', href: '/annavin_kadithangal.htm' },
-    { id: 'essays', label: 'கட்டுரைகள்', href: '/annavin_katturaigal' },
-    { id: 'short_stories', label: 'சிறுகதைகள்', href: '/annavin_sirukathaigal.htm' },
-    { id: 'novels', label: 'நாவல்கள்', href: '/annavin_navalgal.htm' },
-    { id: 'short_novels', label: 'குறுநாவல்கள்', href: '/annavin_kavithaigal.htm' },
-    { id: 'dramas', label: 'நாடகங்கள்', href: '/annavin_nadagangal.htm' },
-  ];
+  // Sync state if URL searchParams change
+  useEffect(() => {
+    const p = Number(searchParams.get('part'));
+    if (p && p >= 1 && p <= 15) setSelectedPart(p);
+    const s = searchParams.get('search');
+    if (s !== null) setSearchQuery(s);
+    const j = searchParams.get('journal');
+    if (j !== null) setSelectedJournal(j);
+    const h = Number(searchParams.get('highlight'));
+    if (h) {
+      const match = allEssaysData.find(e => e.no === h);
+      if (match) {
+        setActiveModalEssay(match);
+        if (match.part) setSelectedPart(match.part);
+      }
+    }
+  }, [searchParams]);
+
+  // Extract unique journal publications for filter dropdown
+  const uniqueJournals = useMemo(() => {
+    const set = new Set();
+    allEssaysData.forEach(e => {
+      if (e.journal && e.journal.trim() !== '' && e.journal !== '&nbsp;') {
+        set.add(e.journal.trim());
+      }
+    });
+    return Array.from(set).sort();
+  }, []);
+
+  // Filtered essays based on part, search query, and journal filter
+  const filteredEssays = useMemo(() => {
+    let result = allEssaysData;
+
+    // If there is no search query and no journal filter, show the selected part (1..15)
+    if (!searchQuery.trim() && selectedJournal === 'all') {
+      result = result.filter(e => e.part === selectedPart);
+    } else {
+      // If searching or filtering, search across ALL 1,443 essays!
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase().trim();
+        result = result.filter(e => 
+          e.title.toLowerCase().includes(q) ||
+          e.date.toLowerCase().includes(q) ||
+          (e.journal && e.journal.toLowerCase().includes(q)) ||
+          e.no.toString() === q
+        );
+      }
+      if (selectedJournal !== 'all') {
+        result = result.filter(e => e.journal && e.journal.trim() === selectedJournal);
+      }
+    }
+
+    return result;
+  }, [selectedPart, searchQuery, selectedJournal]);
+
+  // Pagination within filtered result
+  const totalPages = Math.ceil(filteredEssays.length / pageSize) || 1;
+  const paginatedEssays = useMemo(() => {
+    const start = (subPage - 1) * pageSize;
+    return filteredEssays.slice(start, start + pageSize);
+  }, [filteredEssays, subPage, pageSize]);
+
+  // Reset subPage on filter change
+  useEffect(() => {
+    setSubPage(1);
+  }, [selectedPart, searchQuery, selectedJournal, pageSize]);
+
+  const maxParts = 15;
 
   return (
-    <main id="main" className="anna-archive-page">
-      <div className="content-section page-shell">
-        
-        {/* Modern 6-Item Top Visual Grid Navigation */}
-        <nav className="anna-top-nav" aria-label="Main Categories">
-          <ul className="anna-top-grid">
-            {topNavItems.map((item) => {
-              const isActive = item.id === 'writings';
-              return (
-                <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    className={`anna-top-card ${isActive ? "is-active" : ""}`}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+    <div className={`site-shell anna-theme font-scale-${fontSize}`}>
+      <AnnaArchiveHeader activePillar="writings" />
 
-        {/* Horizontal Sub-Navigation */}
-        <nav className="anna-sub-nav" aria-label="Sub Categories">
-          <ul className="anna-sub-bar">
-            {subNavItems.map((item) => {
-              const isActive = item.id === 'essays';
-              return (
-                <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    className={isActive ? "is-active" : undefined}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+      <main id="main" className="anna-main-content">
+        <div className="anna-container">
+          
+          {/* Sub-Navigation for Writings / Literature formats */}
+          <nav className="anna-subtabs-nav" aria-label="எழுத்து வடிவங்கள் (Writing Formats)">
+            <ul className="anna-subtabs-list" role="list">
+              {annaWritingsSubNav.map((sub) => {
+                const isActive = sub.id === 'essays';
+                return (
+                  <li key={sub.id}>
+                    <Link
+                      href={sub.href}
+                      className={`anna-subtab-pill ${isActive ? 'is-active' : ''}`}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      <span className="anna-subtab-label">{sub.label}</span>
+                      <span className="anna-subtab-count" aria-label={`${sub.count} ஆவணங்கள்`}>
+                        {sub.count}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
 
-        <div className="anna-table-container">
-          {/* Title and Part No */}
-          <div className="anna-table-header">
-            <h1 className="anna-table-title">அறிஞர் அண்ணாவின் கட்டுரைகள்</h1>
-            <p className="anna-table-part">
-              <strong>பகுதி</strong> {page}
-            </p>
+          {/* Archive Title & Register Header */}
+          <header className="anna-register-header">
+            <div className="anna-register-title-block">
+              <span className="section-label">ஆவணப் பதிவேடு · Historical Register</span>
+              <h1 className="anna-register-title">
+                அறிஞர் அண்ணாவின் ஆய்வுக் கட்டுரைகள்
+              </h1>
+              <p className="anna-register-lead">
+                1930 முதல் பேரறிஞர் அண்ணா அவர்கள் பல்வேறு நாளிதழ்கள் மற்றும் இதழ்களில் எழுதிய 1,443 கட்டுரைகளின் முழுமையான காலவரிசைப் பதிவேடு.
+              </p>
+            </div>
+
+            {/* Accessibility Reading Toolbar: Font Scaling & Contrast */}
+            <div className="anna-reading-toolbar" aria-label="வாசிப்பு வசதிகள் (Reading Accessibility Controls)">
+              <div className="anna-toolbar-group">
+                <span className="anna-toolbar-label">எழுத்து அளவு (Font Size):</span>
+                <div className="anna-font-buttons" role="group" aria-label="Font Size Controls">
+                  <button
+                    type="button"
+                    className={`anna-tool-btn ${fontSize === 'normal' ? 'is-active' : ''}`}
+                    onClick={() => setFontSize('normal')}
+                    aria-pressed={fontSize === 'normal'}
+                    title="இயல்பான எழுத்து அளவு (20px)"
+                  >
+                    அ <small>(இயல்பு)</small>
+                  </button>
+                  <button
+                    type="button"
+                    className={`anna-tool-btn ${fontSize === 'large' ? 'is-active' : ''}`}
+                    onClick={() => setFontSize('large')}
+                    aria-pressed={fontSize === 'large'}
+                    title="பெரிய எழுத்து அளவு (24px)"
+                  >
+                    அ+ <small>(பெரியது)</small>
+                  </button>
+                  <button
+                    type="button"
+                    className={`anna-tool-btn ${fontSize === 'xlarge' ? 'is-active' : ''}`}
+                    onClick={() => setFontSize('xlarge')}
+                    aria-pressed={fontSize === 'xlarge'}
+                    title="மிகப் பெரிய எழுத்து அளவு (28px - Senior Friendly)"
+                  >
+                    அ++ <small>(மிகப் பெரியது)</small>
+                  </button>
+                </div>
+              </div>
+
+              <div className="anna-toolbar-group">
+                <span className="anna-toolbar-label">பக்கத்திற்கு (Page size):</span>
+                <select
+                  className="anna-select-input"
+                  value={pageSize}
+                  onChange={(e) => setPageSize(Number(e.target.value))}
+                  aria-label="பக்கத்திற்கு காட்டப்படும் கட்டுரைகளின் எண்ணிக்கை"
+                >
+                  <option value={25}>25 கட்டுரைகள்</option>
+                  <option value={50}>50 கட்டுரைகள்</option>
+                  <option value={100}>100 கட்டுரைகள் (முழுப் பகுதி)</option>
+                </select>
+              </div>
+            </div>
+          </header>
+
+          {/* Interactive Search, Filter & Part Switcher Bar */}
+          <div className="anna-search-filter-card" role="search" aria-label="கட்டுரைகளைத் தேடுக மற்றும் வடிகட்டுக">
+            <div className="anna-filter-grid">
+              {/* Search input */}
+              <div className="anna-search-field">
+                <label htmlFor="essay-search" className="anna-field-label">
+                  🔍 தலைப்பு, ஆண்டு அல்லது எண் மூலம் தேடுக:
+                </label>
+                <div className="anna-input-wrapper">
+                  <input
+                    id="essay-search"
+                    type="search"
+                    className="anna-text-input"
+                    placeholder="எ.கா: ரோமாபுரி ராணிகள், 1942, திராவிடநாடு, 5..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      className="anna-input-clear-btn"
+                      onClick={() => setSearchQuery('')}
+                      aria-label="தேடலை நீக்குக"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Journal dropdown */}
+              <div className="anna-filter-field">
+                <label htmlFor="journal-filter" className="anna-field-label">
+                  📰 இதழ் வாரியாக வடிகட்டுக:
+                </label>
+                <select
+                  id="journal-filter"
+                  className="anna-select-input"
+                  value={selectedJournal}
+                  onChange={(e) => setSelectedJournal(e.target.value)}
+                >
+                  <option value="all">அனைத்து இதழ்களும் ({uniqueJournals.length} இதழ்கள்)</option>
+                  {uniqueJournals.map((j) => (
+                    <option key={j} value={j}>{j}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Live Results Status Bar */}
+            <div className="anna-status-bar" aria-live="polite">
+              <span className="anna-status-text">
+                {searchQuery || selectedJournal !== 'all' ? (
+                  <>
+                    தேடல் முடிவுகள்: <strong>{filteredEssays.length}</strong> கட்டுரைகள் கண்டறியப்பட்டன (மொத்தம் 1,443-ல்).
+                  </>
+                ) : (
+                  <>
+                    தற்போது காட்சியளிப்பது: <strong>பகுதி {selectedPart}</strong> (இப்பகுதியில் {filteredEssays.length} கட்டுரைகள்).
+                  </>
+                )}
+              </span>
+              {(searchQuery || selectedJournal !== 'all') && (
+                <button
+                  type="button"
+                  className="button button-secondary button-small"
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedJournal('all');
+                  }}
+                >
+                  வடிகட்டலை மீட்டமைக்க (Reset)
+                </button>
+              )}
+            </div>
           </div>
 
-          {/* Structural Copy 3: Top Pagination */}
-          <nav className="anna-pagination" aria-label="Pagination Top">
-            <ul>
-              {Array.from({ length: maxPages }, (_, i) => i + 1).map((p) => (
-                <li key={p}>
-                  <button
-                    type="button"
-                    className={page === p ? "is-active" : undefined}
-                    aria-current={page === p ? "page" : undefined}
-                    onClick={() => setPage(p)}
-                  >
-                    {p}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          {/* 15-Part Pagination Bar (When not in global search mode) */}
+          {(!searchQuery && selectedJournal === 'all') && (
+            <nav className="anna-part-nav" aria-label="கட்டுரைப் பகுதிகள் 1 முதல் 15">
+              <div className="anna-part-nav-header">
+                <span className="anna-part-nav-title">பகுதிகள் (Parts 1 to 15):</span>
+                <span className="anna-part-nav-current">தற்போதைய பகுதி: <strong>{selectedPart}</strong></span>
+              </div>
+              <ul className="anna-part-buttons-list" role="list">
+                {Array.from({ length: maxParts }, (_, i) => i + 1).map((p) => {
+                  const isCurrent = selectedPart === p;
+                  return (
+                    <li key={p}>
+                      <button
+                        type="button"
+                        className={`anna-part-btn ${isCurrent ? 'is-active' : ''}`}
+                        aria-current={isCurrent ? 'page' : undefined}
+                        onClick={() => setSelectedPart(p)}
+                        aria-label={`பகுதி ${p}`}
+                      >
+                        {p}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          )}
 
-          {/* Structural Copy 4: 4-Column Table */}
-          <table className="anna-archive-register">
-            <thead>
-              <tr>
-                <th scope="col" className="col-no">எண்</th>
-                <th scope="col" className="col-title">பொருள்</th>
-                <th scope="col" className="col-year">காலம்</th>
-                <th scope="col" className="col-source">இதழ்</th>
-              </tr>
-            </thead>
-            <tbody>
-              {paginatedEssays.length > 0 ? (
-                paginatedEssays.map((essay) => (
-                  <tr key={essay.no}>
-                    <td className="col-no">{essay.no}</td>
-                    <td className="col-title">
-                      <Link href={`/${essay.url}`} className="anna-table-link">
-                        {essay.title.replace(/\s+/g, ' ')}
-                      </Link>
-                    </td>
-                    <td className="col-year">{essay.date.replace('&nbsp;', '—')}</td>
-                    <td className="col-source">{essay.journal.replace('&nbsp;', '—')}</td>
+          {/* Accessible Table Container */}
+          <div className="anna-table-card">
+            <div className="anna-table-header-bar">
+              <h2 className="anna-table-caption">
+                {searchQuery || selectedJournal !== 'all'
+                  ? `தேடல் முடிவுகள் பட்டியல் (${filteredEssays.length} கட்டுரைகள்)`
+                  : `அறிஞர் அண்ணாவின் கட்டுரைகள் — பகுதி ${selectedPart}`}
+              </h2>
+              <span className="anna-page-indicator">
+                பக்கம் {subPage} / {totalPages}
+              </span>
+            </div>
+
+            <div className="anna-table-responsive-wrapper">
+              <table className="anna-register-table" aria-label="அண்ணாவின் கட்டுரைகள் பதிவேடு">
+                <caption className="sr-only">
+                  அறிஞர் அண்ணாவின் ஆய்வுக் கட்டுரைகள், வெளியான காலம் மற்றும் இதழ் விவரங்கள்
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" className="col-no">எண்</th>
+                    <th scope="col" className="col-title">பொருள் / கட்டுரைத் தலைப்பு</th>
+                    <th scope="col" className="col-date">காலம்</th>
+                    <th scope="col" className="col-journal">வெளியான இதழ்</th>
+                    <th scope="col" className="col-action">ஆவணம்</th>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="4" className="anna-empty">No essays found for this page.</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                </thead>
+                <tbody>
+                  {paginatedEssays.length > 0 ? (
+                    paginatedEssays.map((essay) => {
+                      const displayDate = essay.date && essay.date !== '&nbsp;' ? essay.date : '—';
+                      const displayJournal = essay.journal && essay.journal !== '&nbsp;' ? essay.journal : '—';
+                      const isDravidaNadu = displayJournal.includes('திராவிடநாடு');
+                      const isViduthalai = displayJournal.includes('விடுதலை');
 
-          {/* Bottom Pagination */}
-          <nav className="anna-pagination" aria-label="Pagination Bottom">
-            <ul>
-              {Array.from({ length: maxPages }, (_, i) => i + 1).map((p) => (
-                <li key={p}>
-                  <button
-                    type="button"
-                    className={page === p ? "is-active" : undefined}
-                    aria-current={page === p ? "page" : undefined}
-                    onClick={() => setPage(p)}
-                  >
-                    {p}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                      return (
+                        <tr key={essay.no} className="anna-table-row">
+                          <td className="col-no">
+                            <span className="anna-num-badge">#{essay.no}</span>
+                          </td>
+                          <td className="col-title">
+                            <button
+                              type="button"
+                              className="anna-essay-title-btn"
+                              onClick={() => setActiveModalEssay(essay)}
+                              aria-label={`கட்டுரை விவரங்களை காண்க: ${essay.title}`}
+                            >
+                              {essay.title}
+                            </button>
+                            {essay.part && (
+                              <span className="anna-row-part-hint">பகுதி {essay.part}</span>
+                            )}
+                          </td>
+                          <td className="col-date">
+                            <time className="anna-date-text">{displayDate}</time>
+                          </td>
+                          <td className="col-journal">
+                            {displayJournal !== '—' ? (
+                              <span className={`anna-journal-pill ${isDravidaNadu ? 'pill-dravida' : isViduthalai ? 'pill-viduthalai' : ''}`}>
+                                {displayJournal}
+                              </span>
+                            ) : (
+                              <span className="anna-journal-empty">—</span>
+                            )}
+                          </td>
+                          <td className="col-action">
+                            <button
+                              type="button"
+                              className="anna-row-view-btn"
+                              onClick={() => setActiveModalEssay(essay)}
+                              aria-label={`விவரம்: ${essay.title}`}
+                            >
+                              காண்க 👁️
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  ) : (
+                    <tr>
+                      <td colSpan="5" className="anna-empty-cell">
+                        <div className="anna-empty-state">
+                          <p className="anna-empty-title">கட்டுரைகள் எதுவும் கண்டறியப்படவில்லை.</p>
+                          <p className="anna-empty-hint">உங்கள் தேடல் சொற்களை மாற்றி முயற்சிக்கவும் அல்லது வடிகட்டலை மீட்டமைக்கவும்.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Bottom Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="anna-sub-pagination" aria-label="பக்கப் பட்டியல்">
+                <button
+                  type="button"
+                  className="button button-secondary button-small"
+                  disabled={subPage <= 1}
+                  onClick={() => setSubPage(p => Math.max(1, p - 1))}
+                  aria-label="முந்தைய பக்கம்"
+                >
+                  ← முந்தைய பக்கம்
+                </button>
+                <div className="anna-page-numbers">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                    <button
+                      key={p}
+                      type="button"
+                      className={`anna-page-number-btn ${subPage === p ? 'is-active' : ''}`}
+                      aria-current={subPage === p ? 'page' : undefined}
+                      onClick={() => setSubPage(p)}
+                      aria-label={`பக்கம் ${p}`}
+                    >
+                      {p}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  className="button button-secondary button-small"
+                  disabled={subPage >= totalPages}
+                  onClick={() => setSubPage(p => Math.min(totalPages, p + 1))}
+                  aria-label="அடுத்த பக்கம்"
+                >
+                  அடுத்த பக்கம் →
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Next / Previous Part Switcher Navigation */}
+          {(!searchQuery && selectedJournal === 'all') && (
+            <div className="anna-part-switcher-bottom">
+              <button
+                type="button"
+                className="button button-secondary"
+                disabled={selectedPart <= 1}
+                onClick={() => setSelectedPart(p => Math.max(1, p - 1))}
+              >
+                ← முந்தைய பகுதி ({selectedPart > 1 ? selectedPart - 1 : 1})
+              </button>
+              <span className="anna-part-status-badge">
+                பகுதி {selectedPart} / 15 (100 கட்டுரைகள்)
+              </span>
+              <button
+                type="button"
+                className="button button-primary"
+                disabled={selectedPart >= maxParts}
+                onClick={() => setSelectedPart(p => Math.min(maxParts, p + 1))}
+              >
+                அடுத்த பகுதி ({selectedPart < maxParts ? selectedPart + 1 : maxParts}) →
+              </button>
+            </div>
+          )}
+
+          {/* Archival Research Notes Box */}
+          <section className="anna-info-box" aria-labelledby="archive-notes-title">
+            <h3 id="archive-notes-title" className="anna-info-title">
+              📌 ஆவணக் குறிப்பு (Archival Note)
+            </h3>
+            <p>
+              இக்கட்டுரைகள் யாவும் பேரறிஞர் அண்ணா அவர்கள் திராவிட நாடு, விடுதலை, குடியரசு உள்ளிட்ட பல்வேறு இதழ்களில் எழுதிய வரலாற்றுச் சிறப்புமிக்க மூலப் பதிவுகளாகும். ஆய்வாளர்கள், பேராசிரியர்கள் மற்றும் வாசகர்களின் வசதிக்காக காலவரிசைப்படி எண்ணிடப்பட்டு பாதுகாத்து வழங்கப்பட்டுள்ளன.
+            </p>
+          </section>
 
         </div>
+      </main>
+
+      {/* Accessible Modal Drawer for Article Details */}
+      {activeModalEssay && (
+        <div
+          className="anna-modal-backdrop"
+          onClick={() => setActiveModalEssay(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-essay-title"
+        >
+          <div
+            className="anna-modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="anna-modal-header">
+              <div className="anna-modal-badges">
+                <span className="anna-badge">கட்டுரை #{activeModalEssay.no}</span>
+                {activeModalEssay.part && (
+                  <span className="anna-badge-gold">பகுதி {activeModalEssay.part}</span>
+                )}
+              </div>
+              <button
+                type="button"
+                className="anna-modal-close-btn"
+                onClick={() => setActiveModalEssay(null)}
+                aria-label="விண்டோவை மூடுக (Close modal)"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="anna-modal-body">
+              <h2 id="modal-essay-title" className="anna-modal-title">
+                {activeModalEssay.title}
+              </h2>
+
+              <dl className="anna-modal-meta-list">
+                <div className="anna-modal-meta-row">
+                  <dt>வெளியான காலம் (Date):</dt>
+                  <dd>{activeModalEssay.date || 'வரலாற்று ஆவணம்'}</dd>
+                </div>
+                <div className="anna-modal-meta-row">
+                  <dt>வெளியான இதழ் (Journal):</dt>
+                  <dd>{activeModalEssay.journal || 'நாளிதழ் / இதழ் பதிவு'}</dd>
+                </div>
+                <div className="anna-modal-meta-row">
+                  <dt>ஆசிரியர் (Author):</dt>
+                  <dd>பேரறிஞர் சி. என். அண்ணாதுரை</dd>
+                </div>
+                <div className="anna-modal-meta-row">
+                  <dt>பதிவு எண் (Register ID):</dt>
+                  <dd>ANNA-ESSAY-{String(activeModalEssay.no).padStart(4, '0')}</dd>
+                </div>
+              </dl>
+
+              <div className="anna-modal-quote-box">
+                <p>
+                  &ldquo;பேரறிஞர் அண்ணாவின் எழுத்துகள் தமிழ் உரைநடை வரலாற்றின் பொற்காலப் பதிவுகளாகும். இவ்வாவணம் அசல் இதழ் பதிவேட்டின்படி துல்லியமாக வரிசைப்படுத்தப்பட்டுள்ளது.&rdquo;
+                </p>
+              </div>
+
+              <div className="anna-modal-citation-box">
+                <strong>மேற்கோள் வடிவம் (Citation):</strong>
+                <p className="anna-citation-text">
+                  அண்ணாதுரை, சி. என். &ldquo;{activeModalEssay.title}&rdquo;, <em>{activeModalEssay.journal || 'இதழ்'}</em>, {activeModalEssay.date || 'காலம்'}. பேரறிஞர் அண்ணாவின் படைப்புகள் எண்ணிம ஆவணகம் (எண் #{activeModalEssay.no}).
+                </p>
+              </div>
+            </div>
+
+            <div className="anna-modal-footer">
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() => setActiveModalEssay(null)}
+              >
+                மூடுக (Close)
+              </button>
+              <button
+                type="button"
+                className="button button-primary"
+                onClick={() => {
+                  navigator.clipboard?.writeText(
+                    `அண்ணாதுரை, சி. என். "${activeModalEssay.title}", ${activeModalEssay.journal}, ${activeModalEssay.date}.`
+                  );
+                  alert('மேற்கோள் நகலெடுக்கப்பட்டது (Citation copied to clipboard)!');
+                }}
+              >
+                📋 மேற்கோளை நகலெடு
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <AnnaArchiveFooter />
+    </div>
+  );
+}
+
+export default function AnnavinKatturaigalPage() {
+  return (
+    <Suspense fallback={
+      <div className="site-shell anna-theme">
+        <AnnaArchiveHeader activePillar="writings" />
+        <main id="main" className="anna-main-content">
+          <div className="anna-container">
+            <p className="anna-loading-text">ஆவணப் பதிவேடு ஏற்றப்படுகிறது...</p>
+          </div>
+        </main>
+        <AnnaArchiveFooter />
       </div>
-    </main>
+    }>
+      <KatturaigalRegister />
+    </Suspense>
   );
 }

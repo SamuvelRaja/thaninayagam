@@ -841,7 +841,7 @@ export const navItemsTa = [
   { href: "/archive/", label: "ஆவணகம்" },
   { href: "/about/", label: "அவரைப் பற்றி" },
   { href: "/contributions/", label: "பங்களிப்புகள்" },
-  { href: "/sponsors/", label: "உதவி" },
+  { href: "/timeline/", label: "காலக்கோடு" },
   { href: "/sources/", label: "மூலங்கள்" },
 ];
 
