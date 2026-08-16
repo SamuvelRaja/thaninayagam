@@ -67,7 +67,9 @@ export default function DocumentReader({
           ) : null}
         </p>
         <h1 id="document-title">{doc.title}</h1>
-        <p className="document-summary">{doc.summary}</p>
+        {doc.summary ? (
+          <p className="document-summary">{doc.summary}</p>
+        ) : null}
         {doc.status && doc.status !== "readable" ? (
           <p className={`document-status-badge is-${doc.status}`}>
             {statusLabel(doc.status, lang)}

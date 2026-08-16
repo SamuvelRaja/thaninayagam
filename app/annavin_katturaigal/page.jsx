@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import AnnaArchiveHeader from '@/app/components/AnnaArchiveHeader';
 import AnnaArchiveFooter from '@/app/components/AnnaArchiveFooter';
@@ -9,7 +9,6 @@ import { annaWritingsSubNav, allEssaysData } from '@/app/lib/annaArchiveData';
 
 function KatturaigalRegister() {
   const searchParams = useSearchParams();
-  const router = useRouter();
 
   const initialPart = Number(searchParams.get('part')) || 1;
   const initialSearch = searchParams.get('search') || '';
@@ -20,7 +19,7 @@ function KatturaigalRegister() {
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [selectedJournal, setSelectedJournal] = useState(initialJournal);
   const [fontSize, setFontSize] = useState('normal'); // 'normal' (20px), 'large' (24px), 'xlarge' (28px)
-  const [pageSize, setPageSize] = useState(25); // 25, 50, 100
+  const [pageSize, setPageSize] = useState(50); // 25, 50, 100
   const [subPage, setSubPage] = useState(1);
   const [activeModalEssay, setActiveModalEssay] = useState(null);
 
@@ -100,8 +99,8 @@ function KatturaigalRegister() {
       <main id="main" className="anna-main-content">
         <div className="anna-container">
           
-          {/* Sub-Navigation for Writings / Literature formats */}
-          <nav className="anna-subtabs-nav" aria-label="எழுத்து வடிவங்கள் (Writing Formats)">
+          {/* Sub-Navigation for Writings */}
+          <nav className="anna-subtabs-nav" aria-label="எழுத்து வடிவங்கள்">
             <ul className="anna-subtabs-list" role="list">
               {annaWritingsSubNav.map((sub) => {
                 const isActive = sub.id === 'essays';
@@ -123,83 +122,68 @@ function KatturaigalRegister() {
             </ul>
           </nav>
 
-          {/* Archive Title & Register Header */}
-          <header className="anna-register-header">
+          {/* Clean Register Header */}
+          <header className="anna-register-header" style={{ marginBottom: '1.25rem', paddingBottom: '1rem' }}>
             <div className="anna-register-title-block">
-              <span className="section-label">ஆவணப் பதிவேடு · Historical Register</span>
-              <h1 className="anna-register-title">
+              <span className="section-label">ஆவணப் பதிவேடு</span>
+              <h1 className="anna-register-title" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}>
                 அறிஞர் அண்ணாவின் ஆய்வுக் கட்டுரைகள்
               </h1>
-              <p className="anna-register-lead">
-                1930 முதல் பேரறிஞர் அண்ணா அவர்கள் பல்வேறு நாளிதழ்கள் மற்றும் இதழ்களில் எழுதிய 1,443 கட்டுரைகளின் முழுமையான காலவரிசைப் பதிவேடு.
+              <p className="anna-register-lead" style={{ fontSize: '0.95rem' }}>
+                1930 முதல் அண்ணா எழுதிய 1,443 கட்டுரைகளின் முழுமையான காலவரிசைப் பதிவேடு.
               </p>
             </div>
 
-            {/* Accessibility Reading Toolbar: Font Scaling & Contrast */}
-            <div className="anna-reading-toolbar" aria-label="வாசிப்பு வசதிகள் (Reading Accessibility Controls)">
+            {/* Reading Accessibility Font Scaler */}
+            <div className="anna-reading-toolbar" aria-label="வாசிப்பு எழுத்து அளவு">
               <div className="anna-toolbar-group">
-                <span className="anna-toolbar-label">எழுத்து அளவு (Font Size):</span>
-                <div className="anna-font-buttons" role="group" aria-label="Font Size Controls">
+                <span className="anna-toolbar-label">எழுத்து அளவு:</span>
+                <div className="anna-font-buttons" role="group" aria-label="Font Controls">
                   <button
                     type="button"
                     className={`anna-tool-btn ${fontSize === 'normal' ? 'is-active' : ''}`}
                     onClick={() => setFontSize('normal')}
                     aria-pressed={fontSize === 'normal'}
-                    title="இயல்பான எழுத்து அளவு (20px)"
+                    title="20px"
                   >
-                    அ <small>(இயல்பு)</small>
+                    அ
                   </button>
                   <button
                     type="button"
                     className={`anna-tool-btn ${fontSize === 'large' ? 'is-active' : ''}`}
                     onClick={() => setFontSize('large')}
                     aria-pressed={fontSize === 'large'}
-                    title="பெரிய எழுத்து அளவு (24px)"
+                    title="24px"
                   >
-                    அ+ <small>(பெரியது)</small>
+                    அ+
                   </button>
                   <button
                     type="button"
                     className={`anna-tool-btn ${fontSize === 'xlarge' ? 'is-active' : ''}`}
                     onClick={() => setFontSize('xlarge')}
                     aria-pressed={fontSize === 'xlarge'}
-                    title="மிகப் பெரிய எழுத்து அளவு (28px - Senior Friendly)"
+                    title="28px (முதியோர் வசதி)"
                   >
-                    அ++ <small>(மிகப் பெரியது)</small>
+                    அ++
                   </button>
                 </div>
-              </div>
-
-              <div className="anna-toolbar-group">
-                <span className="anna-toolbar-label">பக்கத்திற்கு (Page size):</span>
-                <select
-                  className="anna-select-input"
-                  value={pageSize}
-                  onChange={(e) => setPageSize(Number(e.target.value))}
-                  aria-label="பக்கத்திற்கு காட்டப்படும் கட்டுரைகளின் எண்ணிக்கை"
-                >
-                  <option value={25}>25 கட்டுரைகள்</option>
-                  <option value={50}>50 கட்டுரைகள்</option>
-                  <option value={100}>100 கட்டுரைகள் (முழுப் பகுதி)</option>
-                </select>
               </div>
             </div>
           </header>
 
-          {/* Interactive Search, Filter & Part Switcher Bar */}
-          <div className="anna-search-filter-card" role="search" aria-label="கட்டுரைகளைத் தேடுக மற்றும் வடிகட்டுக">
-            <div className="anna-filter-grid">
-              {/* Search input */}
+          {/* Unified Compact Search & Journal Filter */}
+          <div className="anna-search-filter-card" role="search" aria-label="கட்டுரைகளைத் தேடுக">
+            <div className="anna-filter-grid" style={{ marginBottom: '0.5rem' }}>
               <div className="anna-search-field">
                 <label htmlFor="essay-search" className="anna-field-label">
-                  🔍 தலைப்பு, ஆண்டு அல்லது எண் மூலம் தேடுக:
+                  🔍 தேடல் (தலைப்பு, ஆண்டு, எண்):
                 </label>
                 <div className="anna-input-wrapper">
                   <input
                     id="essay-search"
                     type="search"
                     className="anna-text-input"
-                    placeholder="எ.கா: ரோமாபுரி ராணிகள், 1942, திராவிடநாடு, 5..."
+                    placeholder="எ.கா: ரோமாபுரி ராணிகள், 1942, திராவிடநாடு..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
@@ -216,10 +200,9 @@ function KatturaigalRegister() {
                 </div>
               </div>
 
-              {/* Journal dropdown */}
               <div className="anna-filter-field">
                 <label htmlFor="journal-filter" className="anna-field-label">
-                  📰 இதழ் வாரியாக வடிகட்டுக:
+                  📰 இதழ் வடிகட்டல்:
                 </label>
                 <select
                   id="journal-filter"
@@ -227,7 +210,7 @@ function KatturaigalRegister() {
                   value={selectedJournal}
                   onChange={(e) => setSelectedJournal(e.target.value)}
                 >
-                  <option value="all">அனைத்து இதழ்களும் ({uniqueJournals.length} இதழ்கள்)</option>
+                  <option value="all">அனைத்து இதழ்களும் ({uniqueJournals.length})</option>
                   {uniqueJournals.map((j) => (
                     <option key={j} value={j}>{j}</option>
                   ))}
@@ -235,41 +218,38 @@ function KatturaigalRegister() {
               </div>
             </div>
 
-            {/* Live Results Status Bar */}
+            {/* Live Results Status */}
             <div className="anna-status-bar" aria-live="polite">
               <span className="anna-status-text">
                 {searchQuery || selectedJournal !== 'all' ? (
                   <>
-                    தேடல் முடிவுகள்: <strong>{filteredEssays.length}</strong> கட்டுரைகள் கண்டறியப்பட்டன (மொத்தம் 1,443-ல்).
+                    தேடல் முடிவுகள்: <strong>{filteredEssays.length}</strong> கட்டுரைகள் (மொத்தம் 1,443-ல்).
                   </>
                 ) : (
                   <>
-                    தற்போது காட்சியளிப்பது: <strong>பகுதி {selectedPart}</strong> (இப்பகுதியில் {filteredEssays.length} கட்டுரைகள்).
+                    தற்போது காட்சியளிப்பது: <strong>பகுதி {selectedPart}</strong> ({filteredEssays.length} கட்டுரைகள்).
                   </>
                 )}
               </span>
               {(searchQuery || selectedJournal !== 'all') && (
                 <button
                   type="button"
-                  className="button button-secondary button-small"
+                  className="button button-ghost button-small"
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedJournal('all');
                   }}
+                  style={{ fontSize: '0.8rem' }}
                 >
-                  வடிகட்டலை மீட்டமைக்க (Reset)
+                  வடிகட்டலை மீட்டமைக்க (Reset) ✕
                 </button>
               )}
             </div>
           </div>
 
-          {/* 15-Part Pagination Bar (When not in global search mode) */}
+          {/* 15-Part Navigation Bar (When in default Part mode) */}
           {(!searchQuery && selectedJournal === 'all') && (
-            <nav className="anna-part-nav" aria-label="கட்டுரைப் பகுதிகள் 1 முதல் 15">
-              <div className="anna-part-nav-header">
-                <span className="anna-part-nav-title">பகுதிகள் (Parts 1 to 15):</span>
-                <span className="anna-part-nav-current">தற்போதைய பகுதி: <strong>{selectedPart}</strong></span>
-              </div>
+            <nav className="anna-part-nav" aria-label="கட்டுரைப் பகுதிகள் 1 முதல் 15" style={{ marginBottom: '1rem', padding: '0.75rem 1rem' }}>
               <ul className="anna-part-buttons-list" role="list">
                 {Array.from({ length: maxParts }, (_, i) => i + 1).map((p) => {
                   const isCurrent = selectedPart === p;
@@ -291,19 +271,8 @@ function KatturaigalRegister() {
             </nav>
           )}
 
-          {/* Accessible Table Container */}
+          {/* Accessible Table */}
           <div className="anna-table-card">
-            <div className="anna-table-header-bar">
-              <h2 className="anna-table-caption">
-                {searchQuery || selectedJournal !== 'all'
-                  ? `தேடல் முடிவுகள் பட்டியல் (${filteredEssays.length} கட்டுரைகள்)`
-                  : `அறிஞர் அண்ணாவின் கட்டுரைகள் — பகுதி ${selectedPart}`}
-              </h2>
-              <span className="anna-page-indicator">
-                பக்கம் {subPage} / {totalPages}
-              </span>
-            </div>
-
             <div className="anna-table-responsive-wrapper">
               <table className="anna-register-table" aria-label="அண்ணாவின் கட்டுரைகள் பதிவேடு">
                 <caption className="sr-only">
@@ -315,7 +284,6 @@ function KatturaigalRegister() {
                     <th scope="col" className="col-title">பொருள் / கட்டுரைத் தலைப்பு</th>
                     <th scope="col" className="col-date">காலம்</th>
                     <th scope="col" className="col-journal">வெளியான இதழ்</th>
-                    <th scope="col" className="col-action">ஆவணம்</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -336,7 +304,7 @@ function KatturaigalRegister() {
                               type="button"
                               className="anna-essay-title-btn"
                               onClick={() => setActiveModalEssay(essay)}
-                              aria-label={`கட்டுரை விவரங்களை காண்க: ${essay.title}`}
+                              aria-label={`விவரங்களைக் காண்க: ${essay.title}`}
                             >
                               {essay.title}
                             </button>
@@ -356,25 +324,15 @@ function KatturaigalRegister() {
                               <span className="anna-journal-empty">—</span>
                             )}
                           </td>
-                          <td className="col-action">
-                            <button
-                              type="button"
-                              className="anna-row-view-btn"
-                              onClick={() => setActiveModalEssay(essay)}
-                              aria-label={`விவரம்: ${essay.title}`}
-                            >
-                              காண்க 👁️
-                            </button>
-                          </td>
                         </tr>
                       );
                     })
                   ) : (
                     <tr>
-                      <td colSpan="5" className="anna-empty-cell">
+                      <td colSpan="4" className="anna-empty-cell">
                         <div className="anna-empty-state">
                           <p className="anna-empty-title">கட்டுரைகள் எதுவும் கண்டறியப்படவில்லை.</p>
-                          <p className="anna-empty-hint">உங்கள் தேடல் சொற்களை மாற்றி முயற்சிக்கவும் அல்லது வடிகட்டலை மீட்டமைக்கவும்.</p>
+                          <p className="anna-empty-hint">தேடல் சொற்களை மாற்றி முயற்சிக்கவும் அல்லது வடிகட்டலை மீட்டமைக்கவும்.</p>
                         </div>
                       </td>
                     </tr>
@@ -383,7 +341,7 @@ function KatturaigalRegister() {
               </table>
             </div>
 
-            {/* Bottom Pagination Controls */}
+            {/* Bottom Sub-Pagination if needed */}
             {totalPages > 1 && (
               <div className="anna-sub-pagination" aria-label="பக்கப் பட்டியல்">
                 <button
@@ -422,23 +380,23 @@ function KatturaigalRegister() {
             )}
           </div>
 
-          {/* Next / Previous Part Switcher Navigation */}
+          {/* Part Switcher Bottom */}
           {(!searchQuery && selectedJournal === 'all') && (
-            <div className="anna-part-switcher-bottom">
+            <div className="anna-part-switcher-bottom" style={{ marginTop: '1rem' }}>
               <button
                 type="button"
-                className="button button-secondary"
+                className="button button-secondary button-small"
                 disabled={selectedPart <= 1}
                 onClick={() => setSelectedPart(p => Math.max(1, p - 1))}
               >
                 ← முந்தைய பகுதி ({selectedPart > 1 ? selectedPart - 1 : 1})
               </button>
               <span className="anna-part-status-badge">
-                பகுதி {selectedPart} / 15 (100 கட்டுரைகள்)
+                பகுதி {selectedPart} / 15
               </span>
               <button
                 type="button"
-                className="button button-primary"
+                className="button button-primary button-small"
                 disabled={selectedPart >= maxParts}
                 onClick={() => setSelectedPart(p => Math.min(maxParts, p + 1))}
               >
@@ -447,20 +405,20 @@ function KatturaigalRegister() {
             </div>
           )}
 
-          {/* Archival Research Notes Box */}
-          <section className="anna-info-box" aria-labelledby="archive-notes-title">
-            <h3 id="archive-notes-title" className="anna-info-title">
+          {/* Archival Research Note */}
+          <section className="anna-info-box" aria-labelledby="archive-notes-title" style={{ marginTop: '2rem' }}>
+            <h2 id="archive-notes-title" className="anna-info-title" style={{ fontSize: '1rem', margin: '0 0 0.35rem' }}>
               📌 ஆவணக் குறிப்பு (Archival Note)
-            </h3>
-            <p>
-              இக்கட்டுரைகள் யாவும் பேரறிஞர் அண்ணா அவர்கள் திராவிட நாடு, விடுதலை, குடியரசு உள்ளிட்ட பல்வேறு இதழ்களில் எழுதிய வரலாற்றுச் சிறப்புமிக்க மூலப் பதிவுகளாகும். ஆய்வாளர்கள், பேராசிரியர்கள் மற்றும் வாசகர்களின் வசதிக்காக காலவரிசைப்படி எண்ணிடப்பட்டு பாதுகாத்து வழங்கப்பட்டுள்ளன.
+            </h2>
+            <p style={{ fontSize: '0.9rem' }}>
+              இக்கட்டுரைகள் யாவும் பேரறிஞர் அண்ணா அவர்கள் திராவிட நாடு, விடுதலை, குடியரசு உள்ளிட்ட பல்வேறு இதழ்களில் எழுதிய வரலாற்றுச் சிறப்புமிக்க மூலப் பதிவுகளாகும். காலவரிசைப்படி எண்ணிடப்பட்டு பாதுகாத்து வழங்கப்பட்டுள்ளன.
             </p>
           </section>
 
         </div>
       </main>
 
-      {/* Accessible Modal Drawer for Article Details */}
+      {/* Accessible Modal Drawer */}
       {activeModalEssay && (
         <div
           className="anna-modal-backdrop"
@@ -484,7 +442,7 @@ function KatturaigalRegister() {
                 type="button"
                 className="anna-modal-close-btn"
                 onClick={() => setActiveModalEssay(null)}
-                aria-label="விண்டோவை மூடுக (Close modal)"
+                aria-label="மூடுக (Close)"
               >
                 ✕
               </button>
@@ -497,33 +455,23 @@ function KatturaigalRegister() {
 
               <dl className="anna-modal-meta-list">
                 <div className="anna-modal-meta-row">
-                  <dt>வெளியான காலம் (Date):</dt>
+                  <dt>வெளியான காலம்:</dt>
                   <dd>{activeModalEssay.date || 'வரலாற்று ஆவணம்'}</dd>
                 </div>
                 <div className="anna-modal-meta-row">
-                  <dt>வெளியான இதழ் (Journal):</dt>
-                  <dd>{activeModalEssay.journal || 'நாளிதழ் / இதழ் பதிவு'}</dd>
+                  <dt>வெளியான இதழ்:</dt>
+                  <dd>{activeModalEssay.journal || 'நாளிதழ் / இதழ்'}</dd>
                 </div>
                 <div className="anna-modal-meta-row">
-                  <dt>ஆசிரியர் (Author):</dt>
+                  <dt>ஆசிரியர்:</dt>
                   <dd>பேரறிஞர் சி. என். அண்ணாதுரை</dd>
                 </div>
-                <div className="anna-modal-meta-row">
-                  <dt>பதிவு எண் (Register ID):</dt>
-                  <dd>ANNA-ESSAY-{String(activeModalEssay.no).padStart(4, '0')}</dd>
-                </div>
               </dl>
-
-              <div className="anna-modal-quote-box">
-                <p>
-                  &ldquo;பேரறிஞர் அண்ணாவின் எழுத்துகள் தமிழ் உரைநடை வரலாற்றின் பொற்காலப் பதிவுகளாகும். இவ்வாவணம் அசல் இதழ் பதிவேட்டின்படி துல்லியமாக வரிசைப்படுத்தப்பட்டுள்ளது.&rdquo;
-                </p>
-              </div>
 
               <div className="anna-modal-citation-box">
                 <strong>மேற்கோள் வடிவம் (Citation):</strong>
                 <p className="anna-citation-text">
-                  அண்ணாதுரை, சி. என். &ldquo;{activeModalEssay.title}&rdquo;, <em>{activeModalEssay.journal || 'இதழ்'}</em>, {activeModalEssay.date || 'காலம்'}. பேரறிஞர் அண்ணாவின் படைப்புகள் எண்ணிம ஆவணகம் (எண் #{activeModalEssay.no}).
+                  அண்ணாதுரை, சி. என். &ldquo;{activeModalEssay.title}&rdquo;, <em>{activeModalEssay.journal || 'இதழ்'}</em>, {activeModalEssay.date || 'காலம்'}. (எண் #{activeModalEssay.no}).
                 </p>
               </div>
             </div>
@@ -531,22 +479,22 @@ function KatturaigalRegister() {
             <div className="anna-modal-footer">
               <button
                 type="button"
-                className="button button-secondary"
+                className="button button-secondary button-small"
                 onClick={() => setActiveModalEssay(null)}
               >
-                மூடுக (Close)
+                மூடுக
               </button>
               <button
                 type="button"
-                className="button button-primary"
+                className="button button-primary button-small"
                 onClick={() => {
                   navigator.clipboard?.writeText(
                     `அண்ணாதுரை, சி. என். "${activeModalEssay.title}", ${activeModalEssay.journal}, ${activeModalEssay.date}.`
                   );
-                  alert('மேற்கோள் நகலெடுக்கப்பட்டது (Citation copied to clipboard)!');
+                  alert('மேற்கோள் நகலெடுக்கப்பட்டது (Citation copied)!');
                 }}
               >
-                📋 மேற்கோளை நகலெடு
+                📋 மேற்கோளை நகலெடுக்க
               </button>
             </div>
           </div>
@@ -565,7 +513,7 @@ export default function AnnavinKatturaigalPage() {
         <AnnaArchiveHeader activePillar="writings" />
         <main id="main" className="anna-main-content">
           <div className="anna-container">
-            <p className="anna-loading-text">ஆவணப் பதிவேடு ஏற்றப்படுகிறது...</p>
+            <p className="anna-loading-text">ஏற்றப்படுகிறது...</p>
           </div>
         </main>
         <AnnaArchiveFooter />

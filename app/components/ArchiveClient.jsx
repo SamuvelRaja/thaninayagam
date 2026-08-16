@@ -10,13 +10,6 @@ import {
 } from "@/app/lib/archiveMeta";
 import ArchiveExplorer from "@/app/components/ArchiveExplorer";
 
-const START_READING_SLUGS = [
-  "landscape-and-poetry",
-  "ethical-interpretation-nature",
-  "collected-papers",
-  "tamilttutu",
-];
-
 export default function ArchiveClient({
   documents = [],
   indexGroups = [],
@@ -102,12 +95,6 @@ export default function ArchiveClient({
 
   const docCount = filteredDocs.length;
 
-  // Starting reads
-  const startDocs = useMemo(() => {
-    const docMap = new Map(documents.map((d) => [d.slug, d]));
-    return START_READING_SLUGS.map((slug) => docMap.get(slug)).filter(Boolean);
-  }, [documents]);
-
   const handleCategoryClick = (catId) => {
     if (selectedCategory === catId && !selectedSub) {
       // Toggle off if already selected
@@ -129,43 +116,7 @@ export default function ArchiveClient({
 
   return (
     <div className="content-section page-shell archive-shell">
-      <section className="archive-holdings" id="holdings" aria-labelledby="holdings-title">
-        
-        {/* Recommended Entry Points: First Opens */}
-        <aside className="archive-start" aria-labelledby="archive-start-title">
-          <div className="archive-start-head">
-            <p className="section-label">{isTa ? "முதலில் திறக்க" : "First opens"}</p>
-            <h3 id="archive-start-title">{isTa ? "சிறந்த நுழைவுகள்" : "Best entry points"}</h3>
-            <p>
-              {isTa
-                ? "ஆவணகத்திற்குள் நுழைய இவற்றிலிருந்து தொடங்குங்கள்."
-                : "Recommended starting points for exploring the digital archive."}
-            </p>
-          </div>
-          <ol className="archive-start-list">
-            {startDocs.map((doc) => (
-              <li key={doc.slug}>
-                <Link href={`${docBasePath}/${doc.slug}/`}>
-                  <span className="archive-start-meta">{doc.year}</span>
-                  <strong>{doc.title}</strong>
-                  <span>{doc.summary}</span>
-                  <span className="archive-start-open">{isTa ? "வாசி" : "Read"}</span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </aside>
-
-        {/* Section Heading */}
-        <div className="section-heading" style={{ marginTop: "2rem" }}>
-          <p className="section-label">{isTa ? "இத்தள ஆவணங்கள்" : "On this site"}</p>
-          <h2 id="holdings-title">{isTa ? "ஆவணப் பதிவேடு" : "Holdings register"}</h2>
-          <p>
-            {isTa
-              ? "வகை வாரியாக வடிகட்ட கீழே உள்ள பிரிவுகளைத் தேர்ந்தெடுக்கவும். அல்லது தேடல் மூலம் நேரடியாகத் திறக்கவும்."
-              : "Filter by collection below or use search to find any holding directly."}
-          </p>
-        </div>
+      <section className="archive-holdings" id="holdings" aria-label={isTa ? "ஆவணப் பதிவேடு" : "Holdings register"}>
 
         {/* Primary Category Filter Pills */}
         <nav className="archive-subnav" aria-label={isTa ? "தொகுப்பு வகைகள்" : "Collection categories"}>
@@ -351,7 +302,9 @@ export default function ArchiveClient({
                       <td>
                         <Link href={`${docBasePath}/${doc.slug}/`}>
                           <strong>{doc.title}</strong>
-                          <span className="archive-register-summary">{doc.summary}</span>
+                          {doc.summary ? (
+                            <span className="archive-register-summary">{doc.summary}</span>
+                          ) : null}
                         </Link>
                       </td>
                       <td>{doc.year || "—"}</td>
@@ -362,7 +315,7 @@ export default function ArchiveClient({
                       </td>
                       <td className="archive-register-action">
                         <Link className="archive-register-open" href={`${docBasePath}/${doc.slug}/`}>
-                          {isTa ? "வாசி →" : "Read →"}
+                          {isTa ? "வாசிக்க →" : "Read →"}
                         </Link>
                       </td>
                     </tr>

@@ -465,7 +465,7 @@ export const homeArchivePaths = [
     titleEn: "Landscape and Poetry",
     titleTa: "Landscape and Poetry",
     blurbEn: "Nature in classical Tamil poetry—his lasting scholarly theme.",
-    blurbTa: "செவ்வியல் தமிழ்க் கவிதையில் இயற்கை—அவரது நீடித்த ஆய்வுப் பொருள்.",
+    blurbTa: "சங்க இலக்கியத்தில் இயற்கைப் பின்னணி குறித்த விரிவான செவ்வியல் ஆய்வு.",
   },
   {
     slug: "ethical-interpretation-nature",

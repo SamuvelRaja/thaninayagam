@@ -69,24 +69,29 @@ export const archivePillars = [
 /**
  * Context taxonomy for literary & academic holdings.
  * Categories = scholarly domain; subcategories = finer subject/form within that domain.
- * Assignment is by slug (subject context), not by year.
+ * Easy to understand:
+ * 1. தமிழ் இலக்கியக் கட்டுரைகள் (Tamil Literary Essays)
+ * 2. தமிழ் கலாச்சாரம் & பண்பாடு (Tamil Culture & Heritage)
+ * 3. தமிழாய்வுக் கட்டுரைகள் (Tamil Research & Studies)
+ * 4. தத்துவம் & மெய்யியல் (Philosophy & Thought)
+ * 5. நூல்கள் & ஆய்வுத் தொகுப்புகள் (Collected Works & Speeches)
  */
 export const archiveTaxonomy = [
   {
-    id: "classical-literature",
+    id: "tamil-literature",
     en: {
-      label: "Classical Tamil literature",
-      hint: "Nature, humanism, ethics, and Tirukkural studies",
+      label: "Tamil Literary Essays",
+      hint: "Classical poetry, nature, Tirukkural, and educational thought",
     },
     ta: {
-      label: "செவ்வியல் தமிழ் இலக்கியம்",
-      hint: "இயற்கை, மானுடவியல், ஒழுக்கம், திருக்குறள் ஆய்வுகள்",
+      label: "தமிழ் இலக்கியக் கட்டுரைகள்",
+      hint: "சங்க இலக்கியம், இயற்கை, கவிதையியல், திருக்குறள், கல்வி",
     },
     subcategories: [
       {
         id: "nature-poetics",
-        en: { label: "Nature & landscape poetics" },
-        ta: { label: "இயற்கை மற்றும் நிலவியல் கவிதையியல்" },
+        en: { label: "Nature & Sangam poetics" },
+        ta: { label: "சங்கக் கவிதையியலும் இயற்கையும்" },
         slugs: [
           "landscape-and-poetry",
           "nature-ancient-tamil-poetry",
@@ -94,142 +99,155 @@ export const archiveTaxonomy = [
         ],
       },
       {
-        id: "humanism-ethics",
-        en: { label: "Tamil humanism & ethics" },
-        ta: { label: "தமிழ் மானுடவியலும் ஒழுக்கமும்" },
-        slugs: ["tamil-humanism", "aspects-tamil-humanism"],
+        id: "tirukkural-ethics",
+        en: { label: "Tirukkural & ethics" },
+        ta: { label: "திருக்குறளும் நீதி இலக்கியமும்" },
+        slugs: [
+          "tiruvalluvar",
+          "ulaga-ozhakkaviyalil-tirukkural",
+        ],
       },
       {
-        id: "tirukkural",
-        en: { label: "Tirukkural & Tiruvalluvar" },
-        ta: { label: "திருக்குறளும் திருவள்ளுவரும்" },
-        slugs: ["tiruvalluvar", "ulaga-ozhakkaviyalil-tirukkural"],
-      },
-      {
-        id: "education-thought",
-        en: { label: "Education in ancient literature" },
-        ta: { label: "பண்டை இலக்கியத்தில் கல்விச் சிந்தனை" },
-        slugs: ["educational-thoughts-ancient-tamil"],
+        id: "education-prose",
+        en: { label: "Education & literary prose" },
+        ta: { label: "கல்வி & உரைநடைச் சிந்தனை" },
+        slugs: [
+          "educational-thoughts-ancient-tamil",
+          "tamilttutu",
+        ],
       },
     ],
   },
   {
-    id: "tamil-culture-journal",
+    id: "tamil-culture",
     en: {
-      label: "Tamil Culture journal",
-      hint: "The English quarterly he founded and edited",
+      label: "Tamil Culture & Heritage",
+      hint: "Tamil civilization, cultural essays, journal writings, and travel",
     },
     ta: {
-      label: "Tamil Culture இதழ்",
-      hint: "அவர் தொடங்கி தொகுத்த ஆங்கிலக் காலாண்டிதழ்",
+      label: "தமிழ் கலாச்சாரம் & பண்பாடு",
+      hint: "தமிழர் பண்பாடு, நாகரிகம், இதழியல், பயணக் குறிப்புகள்",
     },
     subcategories: [
       {
-        id: "journal-issues",
-        en: { label: "Bound volumes" },
-        ta: { label: "கட்டுப் பிரதிகள்" },
-        slugs: ["tamil-culture-vols-1-12"],
-      },
-      {
-        id: "journal-essays",
-        en: { label: "Essays in the journal" },
-        ta: { label: "இதழ்க் கட்டுரைகள்" },
+        id: "culture-civilization",
+        en: { label: "Culture & civilization" },
+        ta: { label: "பண்பாடும் நாகரிகமும்" },
         slugs: [
-          "ethical-interpretation-nature",
-          "indian-thought-roman-stoicism",
+          "tamilar-panpatu",
           "tamil-culture-and-civilization",
         ],
       },
-    ],
-  },
-  {
-    id: "international-studies",
-    en: {
-      label: "International Tamil studies",
-      hint: "Conferences, symposia, and field guides",
-    },
-    ta: {
-      label: "உலகத் தமிழாய்வு",
-      hint: "மாநாடுகள், கருத்தரங்குகள், துறை வழிகாட்டிகள்",
-    },
-    subcategories: [
       {
-        id: "conferences",
-        en: { label: "Conference proceedings" },
-        ta: { label: "மாநாட்டு நடவடிக்கைகள்" },
-        slugs: ["conference-1966-proceedings"],
-      },
-      {
-        id: "reference-guides",
-        en: { label: "Reference guides" },
-        ta: { label: "குறிப்பு வழிகாட்டிகள்" },
-        slugs: ["research-in-tamil-studies", "antao-de-proenca-dictionary"],
-      },
-      {
-        id: "external-lending",
-        en: { label: "External / lending only" },
-        ta: { label: "வெளி / கடன் வாங்கல் மட்டும்" },
+        id: "journal-writings",
+        en: { label: "Tamil Culture journal essays" },
+        ta: { label: "Tamil Culture இதழ்க் கட்டுரைகள்" },
         slugs: [
-          "carthaginian-clergy",
-          "reference-guide-tamil-studies-1966",
-          "tamil-studies-abroad",
+          "tamil-culture-vols-1-12",
+          "ethical-interpretation-nature",
+        ],
+      },
+      {
+        id: "travel-global",
+        en: { label: "Travel & global connections" },
+        ta: { label: "பயணமும் உலகத் தொடர்பும்" },
+        slugs: [
+          "ore-ulakam",
         ],
       },
     ],
   },
   {
-    id: "essays-address",
+    id: "tamil-studies",
     en: {
-      label: "Essays, travel & public address",
-      hint: "Tamil and English essays, travel writing, speeches",
+      label: "Tamil Research & Studies",
+      hint: "International conferences, research guides, and bibliographies",
     },
     ta: {
-      label: "கட்டுரைகள், பயணம், பொதுவுரை",
-      hint: "தமிழ்/ஆங்கிலக் கட்டுரைகள், பயண நூல், உரைகள்",
+      label: "தமிழாய்வுக் கட்டுரைகள்",
+      hint: "உலகத் தமிழாய்வு மாநாடுகள், ஆய்வுக் குறிப்பேடுகள், நூலியல்",
     },
     subcategories: [
       {
-        id: "essay-collections",
-        en: { label: "Essay collections" },
-        ta: { label: "கட்டுரைத் தொகுப்புகள்" },
-        slugs: ["tamilttutu", "tamilar-panpatu"],
+        id: "conferences-iatr",
+        en: { label: "Conferences & IATR proceedings" },
+        ta: { label: "மாநாடுகளும் ஆய்வுத் திட்டங்களும்" },
+        slugs: [
+          "conference-1966-proceedings",
+          "tamil-studies-abroad",
+        ],
       },
       {
-        id: "travel-writing",
-        en: { label: "Travel writing" },
-        ta: { label: "பயண இலக்கியம்" },
-        slugs: ["ore-ulakam"],
+        id: "reference-guides",
+        en: { label: "Reference guides & bibliographies" },
+        ta: { label: "குறிப்பு வழிகாட்டிகளும் அகராதிகளும்" },
+        slugs: [
+          "research-in-tamil-studies",
+          "reference-guide-tamil-studies-1966",
+          "antao-de-proenca-dictionary",
+          "carthaginian-clergy",
+        ],
+      },
+    ],
+  },
+  {
+    id: "philosophy-thought",
+    en: {
+      label: "Philosophy & Thought",
+      hint: "Tamil humanism, comparative philosophy, and moral thought",
+    },
+    ta: {
+      label: "தத்துவம் & மெய்யியல்",
+      hint: "தமிழ் மானுடவியல், உரோமானிய தத்துவம், அறவியல் கோட்பாடுகள்",
+    },
+    subcategories: [
+      {
+        id: "tamil-humanism",
+        en: { label: "Tamil humanism" },
+        ta: { label: "தமிழ் மானுடவியல்" },
+        slugs: [
+          "tamil-humanism",
+          "aspects-tamil-humanism",
+        ],
       },
       {
-        id: "speeches-lectures",
-        en: { label: "Speeches & lecture volumes" },
-        ta: { label: "உரைகளும் விரிவுரைத் தொகுதிகளும்" },
-        slugs: ["collected-speeches-1999"],
+        id: "comparative-philosophy",
+        en: { label: "Comparative philosophy & ethics" },
+        ta: { label: "ஒப்பீட்டுத் தத்துவமும் அறவியலும்" },
+        slugs: [
+          "indian-thought-roman-stoicism",
+        ],
       },
     ],
   },
   {
     id: "collected-editions",
     en: {
-      label: "Collected editions",
-      hint: "Posthumous and compiled scholarly volumes",
+      label: "Collected Works & Speeches",
+      hint: "Complete scholarly papers, public addresses, and tributes",
     },
     ta: {
-      label: "தொகுப்புப் பதிப்புகள்",
-      hint: "பின்மரபு மற்றும் தொகுக்கப்பட்ட ஆய்வுத் தொகுதிகள்",
+      label: "நூல்கள் & ஆய்வுத் தொகுப்புகள்",
+      hint: "முழுமையான ஆய்வுக் கட்டுரைகள், சொற்பொழிவுகள், நினைவு மலர்கள்",
     },
     subcategories: [
       {
         id: "collected-papers",
-        en: { label: "Collected papers" },
-        ta: { label: "தொகுக்கப்பட்ட கட்டுரைகள்" },
-        slugs: ["collected-papers", "complete-works"],
+        en: { label: "Collected research papers" },
+        ta: { label: "ஆய்வுக் கட்டுரைக் கொத்து" },
+        slugs: [
+          "collected-papers",
+          "complete-works",
+        ],
       },
       {
-        id: "memorial-volumes",
-        en: { label: "Memorial & tribute volumes" },
-        ta: { label: "நினைவு / அஞ்சலித் தொகுதிகள்" },
-        slugs: ["tamilaram"],
+        id: "speeches-memorials",
+        en: { label: "Speeches & memorial volumes" },
+        ta: { label: "சொற்பொழிவுகளும் நினைவுத் தொகுதிகளும்" },
+        slugs: [
+          "collected-speeches-1999",
+          "tamilaram",
+        ],
       },
     ],
   },
@@ -237,19 +255,19 @@ export const archiveTaxonomy = [
 
 /** Kind-based fallback when a slug is not yet mapped. */
 const kindFallback = {
-  "journal-issue": ["tamil-culture-journal", "journal-issues"],
-  "journal-article": ["tamil-culture-journal", "journal-essays"],
-  proceedings: ["international-studies", "conferences"],
-  symposium: ["international-studies", "conferences"],
-  bibliography: ["international-studies", "reference-guides"],
-  monograph: ["classical-literature", "nature-poetics"],
+  "journal-issue": ["tamil-culture", "journal-writings"],
+  "journal-article": ["tamil-culture", "journal-writings"],
+  proceedings: ["tamil-studies", "conferences-iatr"],
+  symposium: ["tamil-studies", "conferences-iatr"],
+  bibliography: ["tamil-studies", "reference-guides"],
+  monograph: ["tamil-literature", "nature-poetics"],
   "collected-papers": ["collected-editions", "collected-papers"],
-  "travel-writing": ["essays-address", "travel-writing"],
-  "speech-collection": ["essays-address", "speeches-lectures"],
-  lectures: ["essays-address", "speeches-lectures"],
-  anthology: ["essays-address", "speeches-lectures"],
-  "essay-collection": ["essays-address", "essay-collections"],
-  "title-note": ["essays-address", "essay-collections"],
+  "travel-writing": ["tamil-culture", "travel-global"],
+  "speech-collection": ["collected-editions", "speeches-memorials"],
+  lectures: ["collected-editions", "speeches-memorials"],
+  anthology: ["collected-editions", "speeches-memorials"],
+  "essay-collection": ["tamil-culture", "culture-civilization"],
+  "title-note": ["tamil-culture", "culture-civilization"],
 };
 
 const slugIndex = (() => {
@@ -271,8 +289,8 @@ export function taxonomyFor(doc) {
 
   if (!categoryId) {
     const fallback = kindFallback[doc?.kind] || [
-      "essays-address",
-      "essay-collections",
+      "tamil-literature",
+      "nature-poetics",
     ];
     categoryId = fallback[0];
     subcategoryId = fallback[1];

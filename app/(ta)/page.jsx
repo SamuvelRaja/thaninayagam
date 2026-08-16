@@ -164,7 +164,7 @@ export default function HomePage() {
                     <strong>{doc.title}</strong>
                     <span>{doc.summary}</span>
                   </span>
-                  <span className="portal-holdings-open">வாசி</span>
+                  <span className="portal-holdings-open">வாசிக்க</span>
                 </a>
               </li>
             ))}

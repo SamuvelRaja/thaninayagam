@@ -109,7 +109,7 @@ export default function SponsorsPage() {
           {bookRecord ? (
             <p>
               <ExternalLink href={bookRecord.url} lang="ta">
-                TDL பதிவைத் திற: {bookRecord.title}
+                TDL பதிவைத் திறக்க: {bookRecord.title}
               </ExternalLink>
             </p>
           ) : null}
