@@ -1,3 +1,4 @@
+import { BrushText } from "@/components/ui/BrushText";
 import React from "react";
 
 interface SectionHeadProps {
@@ -10,7 +11,7 @@ export const SectionHead: React.FC<SectionHeadProps> = ({ num, title, scope }) =
   return (
     <div className="section-head">
       <span className="section-index">{num}</span>
-      <h2>{title}</h2>
+      <h2><BrushText>{title}</BrushText></h2>
       {scope && <span className="section-scope">{scope}</span>}
     </div>
   );

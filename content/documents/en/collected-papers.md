@@ -7,9 +7,7 @@ pillar: reference
 kind: collected-papers
 status: readable
 lang: en
-summary: >-
-  Posthumous English collection (IITS 1995) of major *Tamil Culture* essays—best
-  single volume for on-site reading.
+summary: "Posthumous English collection published by IITS in 1995; later edition metadata comes from the collection’s own record."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives. Essays
   re-OCR’d and synced where noted; prefer the scan for footnotes. Rights remain
@@ -30,3 +28,7 @@ bookMd: collected-papers
 ## How to read
 
 Front matter and cleaned essays follow on this page. Start from the contents list; open the IA scan when a footnote or plate is unclear.
+
+## Edition evidence
+
+This edition is later than the 1993 biography; its year, publisher and contents require the later collection’s own bibliographical evidence.

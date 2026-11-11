@@ -1,8 +1,10 @@
 # Thani Nayagam Digital Archive — research source ledger
 
-Last reviewed: 10 August 2026 (catalogue stubs extended)
+Last reviewed: 8 October 2026 (current bilingual website checked against the 1993 biography)
 
 This ledger distinguishes verified historical claims from interpretive or commemorative material. It should be updated whenever site copy or imagery changes.
+
+The 8 October 2026 review uses the locally converted biography and selected original scan pages. [The fact-check report](workbench/research/BIOGRAPHY-FACT-CHECK.md) records supported claims, contradictions, source-internal conflicts, and unsupported details across the current Tamil and English routes. The website applies these findings to both language versions, qualifies edition conflicts in the catalogue, and exposes the biography as runtime source S44 (TN1993). Earlier source assessments below have been qualified where they conflict with this review.
 
 ## Source register
 
@@ -48,6 +50,7 @@ This ledger distinguishes verified historical claims from interpretive or commem
 | S38 | [Tamil Humanism, OL3010086M](https://openlibrary.org/books/OL3010086M) | Open Library · Jaffna College, 1972 · 57 p. | Bibliographic |
 | S39 | [திருவள்ளுவர், OL22309M](https://openlibrary.org/books/OL22309M) | Open Library · Annamalai University, 1967 · 4, 60 p. | Bibliographic |
 | S40 | [Nature in ancient Tamil poetry, OL5484411M](https://openlibrary.org/books/OL5484411M) | Open Library · TLS Tuticorin, 1953 · xxii, 185 p. | Preferred bibliographic record for the monograph |
+| S44 | [தவத்திரு தனிநாயகம் அடிகளார் — local converted text](public/books/TVA_BOK_0009080_தனிநாயகம்_அடிகளார்.md) | Amudhan Adigal; IITS, first edition July 1993, pub. no. 173; local verification source | Page-cited verification of life, education, conferences, journals, discoveries and bibliography. S44 is integrated into the runtime source register as TN1993 with a local Markdown link. The large PDF scan is excluded from the project; an archival copy is retained outside the repository. Converted OCR requires comparison with an original scan for uncertain details. |
 
 Removed from the active register (no longer used as runtime source IDs):
 
@@ -62,25 +65,25 @@ Removed from the active register (no longer used as runtime source IDs):
 | --- | --- | --- | --- |
 | Born 2 August 1913 in Karampon/Kayts, Jaffna | S1, S2, S3 | High | Prefer “Karampon, near Kayts, in the Jaffna district” to reconcile place naming. |
 | Died 1 September 1980 in Jaffna | S1, S3 | High | Use the complete date, not only the year. |
-| Born Xavier Nicholas Stanislaus | S1 | High | “Thani Nayagam” was adopted later. |
+| Birth name Xavier, subsequently Xavier Stanislaus | S44 p. 1; earlier S1 gives Nicholas | Supported by biography; source conflict | S44 names Xavier and the addition of his father's Stanislaus; it does not establish Nicholas. Parents: Henry Stanislaus Ganapathipillai and Cecil Rasamma Vastiampillai. Original printed p. 1 visually verified 8 October 2026. |
 | Studied theology in Rome, 1934–1939, earning a Doctor of Divinity | S1 | High | The dissertation concerned the Carthaginian clergy. |
 | Began formal Tamil study while teaching at Vadakkankulam, 1940–1945 | S1, S2 | High | Avoid saying he had no Tamil at all before adulthood; sources phrase this differently. |
-| Entered Annamalai University in 1945 | S1, S2 | High | His M.Litt. concerned nature in ancient Tamil poetry. |
+| Entered Annamalai University in 1945; M.A. in 1947 and M.Litt. in 1949 | S44 pp. 9–11; earlier S1, S2 | Supported by main narrative; foreword chronology differs | The narrative separates M.A. 1947 from M.Litt. 1949 and identifies research supervision by A. Chidambaranathan. Do not date the M.Litt. to 1947. See detailed life audit for the foreword's earlier recollection. |
 | Lecturer at the University of Ceylon from 1952 | S1, S11 | Medium-high | End year varies by source presentation; use 1952–1961 unless a university record supersedes it. |
 | Head of Indian Studies at the University of Malaya from 1961 | S1, S2 | High | End year appears as 1968 or 1969; say “during the 1960s” in summary copy. |
-| Founded and edited the English-language journal Tamil Culture | S1, S2, S4 | High | Sources differ between 1951 and 1952 for inception. The surviving 1952 issue is primary evidence; avoid an unsupported exact launch day. |
+| Founded and edited the English-language journal Tamil Culture, 1952–1966 | S44 pp. 40, 108, 190; S4 | Supported by biography | The Tamil Literature Society was founded in 1948, not 1952. S44 records journal gaps in 1960, 1962 and 1965 and twelve publishing years; do not call the span fourteen continuous years. |
 | Helped establish IATR in New Delhi in January 1964 | S1, S2 | High | Name Kamil Zvelebil and V. I. Subramaniam where space allows. |
-| Organised the first International Conference-Seminar of Tamil Studies in Kuala Lumpur, 16–23 April 1966 | S1, S5 | High | The proceedings were published in 1968. |
-| Rediscovered the 1554 Luso-Tamil Catechism in the 1950s | S1, S8 | High | Wikimedia's file record explicitly makes this connection. |
-| Lectured in Japan and across the Americas, giving more than 200 lectures in one year | S1 | Medium-high | Retain attribution through a source citation. |
-| Taught in Paris and Naples after leaving Malaysia | S1 | Medium-high | Add precise appointment dates only after university-level confirmation. |
-| Received a posthumous honorary doctorate from the University of Jaffna in 1981 | S1 | Medium-high | A University of Jaffna record would strengthen this claim. |
-| IATR founded by 26 scholars on 7 January 1964 in New Delhi; Filliozat first president; Thani Nayagam and Zvelebil joint secretaries | S11 | Medium-high | Officer list currently rests on Tamil Wikipedia; confirm against IATR records. |
+| Led scholarly organisation of the first International Conference-Seminar of Tamil Studies in Kuala Lumpur, April 1966 | S44 pp. 70–71; S5 | Leadership supported; exact date range needs reconciliation | S44 gives 17–23 April; earlier website/source wording says 16–23. The book names Thani Nayagam deputy chairman and V. Selvanayagam General Secretary. Proceedings published 1968. Do not extend the same organiser role to all four conferences: S44 pp. 73–75 separates scholarly participation from Chennai arrangements. |
+| Connection with the 1554 Luso-Tamil Catechism | S44 pp. 125–126; earlier S1, S8 | Discovery attribution/location require qualification | The biography credits Pinto's rediscovery and places the original at a Belém ethnological museum; it describes Thani Nayagam's research and attempted photographic access. Sole discovery credit and a National Library location are not supported by this account. |
+| Delivered more than 200 lectures in one year in the United States during the 1949–50 journey | S44 pp. 12–15 | Supported by biography; scan-verified | Do not assign the count to a 1954–55 world tour or describe all venues as universities. Printed pp. 13 and 15 visually verified 8 October 2026. |
+| Taught at Collège de France, Paris, in 1970 and Naples in 1971 | S44 p. 199; earlier S1 | Supported by biography; scan-verified | This differs from current Sorbonne/1969 wording. |
+| Posthumous honorary doctorate | S44 foreword pp. xxvi–xxvii; earlier S1 | Institution/year conflict unresolved | The biography discusses Tamil University at a later convocation without a precise award year. The claimed University of Jaffna award in 1981 needs a separate institutional record and is not verified by this book. |
+| IATR founded by 26 scholars on 7 January 1964 in New Delhi; Filliozat first president; Thani Nayagam and Zvelebil joint secretaries | S44 pp. 66–67; S11 | Supported by biography; final officer list and foreword recollection differ | Twenty-six refers to scholars, not countries. Chapter 5 lists vice-presidents Burrow, Kuiper, T. P. Meenakshisundaram and Mu. Varadarajan; a foreword proposed list differs. Prefer explicit elected officers while recording the source conflict. |
 | 1966 Kuala Lumpur conference presided over by Tunku Abdul Rahman, attended by M. Bhaktavatsalam; Proença dictionary reprint released there | S5, S11 | Medium-high | Proceedings are primary; ministerial attendance from Tamil Wikipedia. |
-| Catechism identified in Lisbon in 1950 | S11, S12 | Medium | English sources say “the 1950s”; keep “1950” only with the Tamil-Wikipedia attribution nearby. |
-| Arte da Lingua Malabar (1549) associated with his finds; Hein English translation 2013 | S11 | Medium | Single-source encyclopaedia claim; verify against the Harvard volume. |
+| Catechism identified in Lisbon in 1950 | Earlier S11, S12; S44 pp. 125–126 | Not verified by biography | The biography's account does not establish this precise discovery year or sole discovery attribution. See the discoveries audit before retaining this statement. |
+| Arte da Lingua Malabar associated with his finds | S44 p. 124; earlier S11 | Discovery supported; composition dating differs | S44 gives his National Library discovery as 1954 and cites a letter dated 6 November 1550 describing completion. The site's precise 1549 date and later translation metadata need separate evidence. |
 | Reference Guide to Tamil Studies (1966) is an English University of Malaya Press bibliography of `viii, 122 p.` | S20, S21 | High | Edition facts from Open Library; IA copy is controlled lending. |
-| Reference Guide lists about 1,335 titles across six languages | S11 | Medium — do not treat as verified | Count currently rests on Tamil Wikipedia. Removed from public contributions/publications copy on 7 August 2026 pending page verification. |
+| Reference Guide lists 1,355 book records; 122 main pages, with vi preliminary pages in the bibliography | S44 pp. 178–179, 211; earlier S11 gives 1,335 | Supported by biography; earlier count differs | Replace the earlier 1,335 count if following this source. The contribution summary's 130 could include viii preliminaries from S20; clarify convention/edition rather than equating it with the biography's vi+122. Six-language scope needs its own passage/source. |
 | Statue unveiled at the 1981 Madurai conference | S11, S13 | Medium | Confirm with conference records when available. |
 | 1968 proceedings name him on the board of editors; authored “Chairman's Introductory Remarks” (pp. 3–5 / leaves 43–45) and “The Identification of Kataaram” (pp. 67–71 / leaves 107–111) | S15 | High | Verified from contents and page text 7 August 2026; do not reproduce article prose without permission. |
 | *Tamil Culture* IA item has 4,768 page-numbered scan leaves and public PDF/JP2/OCR derivatives | S6 | High | Holding/access fact from IA metadata and page-number JSON (7 August 2026). |
@@ -117,7 +120,7 @@ Removed from the active register (no longer used as runtime source IDs):
 | --- | --- | --- |
 | Former `public/thaninayagan.webp` | No source, creator, or licence was recorded | Removed from the project on 2 August 2026. |
 | Former 3D model and Draco decoders | Interpretive media with no source or rights record | Removed from the project on 2 August 2026. |
-| 1554 Luso-Tamil Catechism scan | Wikimedia Commons marks the file public domain | Approved; hero and archive image: a document he rediscovered. |
+| 1554 Luso-Tamil Catechism scan | Wikimedia Commons marks the file public domain | Approved; hero and archive image: a document he researched. Historical caption qualified 8 October 2026 against S44; rights approval retained. |
 | Thambiran Vanakkam 1578 scan | Wikimedia Commons marks the file public domain | Approved 2 August 2026; archive and home page: a work associated with his recovery effort. |
 | Annamalai University gate (mujeebcpy) | CC BY-SA 4.0 | Removed 3 August 2026: present-day campus photo; replaced by documentary pages from work he initiated. |
 | University of Malaya gate (*angys*) | CC BY-SA 4.0 | Removed 3 August 2026: present-day campus photo; replaced by the 1966 conference proceedings title page. |
@@ -147,7 +150,7 @@ Removed from the active register (no longer used as runtime source IDs):
 - Verify the legal authority behind the IA *Tamil Culture* CC0 dedication for underlying contributions (uploader `ingersol.selvaraj@gmail.com` / Valluvar Vallalar Vattam).
 - Send reviewed drafts in `workbench/research/PERMISSION-LETTERS-DRAFT.md` to IATR (S33) and IITS/TDL.
 - Ask the World Institute of Tamil Research / TDL for permission to republish reviewed Tamil text from *தமிழ்த் தூது* and the collected speeches.
-- Verify the claimed 1,335-title / six-language count in *A Reference Guide to Tamil Studies* against an authorised copy.
+- Reconcile the biography's 1,355-book count in *A Reference Guide to Tamil Studies* with the earlier 1,335 claim; verify six-language scope and the differing vi/viii preliminary-page counts against the represented edition.
 - Confirm the exact end dates and titles of University of Ceylon and University of Malaya appointments.
 - Obtain an institutional record for the posthumous University of Jaffna doctorate.
 - Check contents of *Tamil Studies Abroad* through permitted loan access without copying restricted pages (292 images recorded).

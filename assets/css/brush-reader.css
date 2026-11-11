@@ -1,0 +1,125 @@
+/* The archive's paint and typography continue into every document reader. */
+.brush-reader {
+  --paper: #faf9f6;
+  --paper-raised: #fff;
+  --paper-deep: #f1efea;
+  --ink: #171715;
+  --ink-2: #52504b;
+  --ink-3: #6b665d;
+  --line: #ded9ce;
+  --line-strong: #c7c0b2;
+  --accent: var(--preview-accent);
+  --accent-ink: var(--preview-accent);
+  --accent-wash: var(--preview-accent-wash);
+}
+.brush-reader.theme-sepia {
+  --paper: #f5f1e8;
+  --paper-raised: #fffdf8;
+  --paper-deep: #ede6d9;
+  --line: #ded6c7;
+}
+.brush-reader.theme-dark {
+  --paper: #141719;
+  --paper-raised: #1c2023;
+  --paper-deep: #101214;
+  --ink: #f3f2ed;
+  --ink-2: #c3c0b9;
+  --ink-3: #aba69e;
+  --line: #353a3e;
+  --line-strong: #565c61;
+  --accent: var(--preview-accent-light);
+  --accent-ink: var(--preview-accent-light);
+  --accent-wash: color-mix(in srgb,var(--preview-accent) 18%,#1c2023);
+}
+.brush-reader .reader-workspace { padding-top: 48px; gap: 44px; }
+.brush-reader .reader-sidebar {
+  border: 1px solid var(--line); border-top: 3px solid var(--preview-accent);
+  border-radius: 0; background: var(--paper-raised); box-shadow: none;
+}
+.brush-reader .rs-fixed-top { padding: 16px; }
+.brush-reader .rs-controls { padding: 12px; border-radius: 0; background: var(--paper); }
+.brush-reader .rs-doc-card { border: 0; border-radius: 0; padding: 6px 0 20px; background: transparent; border-bottom: 1px solid var(--line); }
+.brush-reader .rs-scrollable-body { padding: 20px 18px; gap: 22px; }
+.brush-reader .rs-toc-li a { border-radius: 0; }
+.brush-reader .rs-toc-li.active a { border-left-width: 3px; }
+.brush-reader .rs-progress-track { height: 3px; border-radius: 0; }
+.brush-reader .living-header .site-header-progress { background: var(--preview-accent); }
+.brush-reader .rs-source-chip { border-radius: 0; }
+.brush-reader .reader-floating-toggle { background: var(--paper-raised); border-color: var(--accent); color: var(--accent); border-radius: 0; }
+.brush-reader .reader-floating-toggle.sidebar-is-open { visibility: hidden; }
+.brush-reader .cr-doc-header { position: relative; padding-bottom: 28px; margin-bottom: 28px; }
+.brush-reader .cr-cat-name { color: var(--accent); font-weight: 600; }
+.brush-reader .cr-status { border-radius: 0; padding: 2px 7px; }
+.brush-reader .cr-source-link { color: var(--accent); }
+.clean-reader.brush-reader .cr-title { color: var(--ink); margin-bottom: 22px; transform: rotate(-1.5deg); transform-origin: left center; overflow-wrap: anywhere; }
+.clean-reader.brush-reader .cr-title[lang="ta"] {
+  font: 700 clamp(2rem,3.2vw,3rem)/1.55 "Kavivanar","Noto Serif Tamil",serif;
+  -webkit-text-stroke: .65px currentColor; letter-spacing: 0;
+}
+.clean-reader.brush-reader .cr-title[lang="en"] {
+  font: 400 clamp(2.1rem,2.8vw,2.6rem)/1.4 var(--font-brush-en);
+  text-transform: none; letter-spacing: 0;
+}
+.clean-reader.brush-reader .cr-title[lang="ta"] .brush-heading-ink { filter: url(#tamil-dry-brush-small); }
+.clean-reader.brush-reader .cr-title[lang="en"] .brush-heading-ink { filter: none; }
+.clean-reader.brush-reader .cr-title .brush-heading-mark { color: inherit; }
+.clean-reader.brush-reader .cr-title .brush-heading-mark::before { opacity: .16; }
+.brush-reader .cr-reading-info { border: 0; border-left: 3px solid var(--preview-accent); padding: 14px 18px; margin-block: 0 32px; background: var(--accent-wash); }
+.brush-reader .cr-reading-info p { color: var(--ink-2); }
+.brush-reader .cr-plate { position: relative; isolation: isolate; padding: 28px 24px; background: var(--paper-raised); border-block: 1px solid var(--line); }
+.brush-reader .cr-plate::before {
+  content: ""; position: absolute; z-index: -1; inset: 20px;
+  background: url('/images/brush/brush-oval.webp') center/contain no-repeat;
+  filter: var(--preview-blue-art-filter); opacity: .16; pointer-events: none;
+}
+.brush-reader .cr-plate img { max-height: 440px; width: auto; max-width: 100%; border-radius: 0; object-fit: contain; }
+.brush-reader .cr-plate figcaption { font: 400 .75rem/1.8 var(--font-ui); margin-top: 16px; }
+.brush-reader .cr-body h2 { position: relative; isolation: isolate; border-bottom: 0; padding-bottom: 0; line-height: 1.65; }
+.brush-reader .cr-body h2::before {
+  content: ""; position: absolute; z-index: -1; left: -8px; top: -.1em;
+  width: min(240px,85%); height: 1.9em; background: url('/images/brush/brush-sweep.webp') center/100% 100% no-repeat;
+  filter: var(--preview-blue-art-filter); opacity: .12; pointer-events: none;
+}
+.brush-reader .cr-body h3 { line-height: 1.6; }
+.brush-reader .cr-body blockquote { background: var(--accent-wash); border-radius: 0; }
+.brush-reader .cr-notice { border: 0; border-left: 3px solid var(--preview-accent); border-radius: 0; color: var(--ink-2); }
+.brush-reader .cr-pager-link { border-radius: 0; padding: 20px; }
+.brush-reader .cr-pager-hint { color: var(--accent); }
+.brush-reader.theme-dark .living-header .brand-name.brush-heading-mark { color: var(--ink); }
+.brush-reader.theme-dark .living-header :is(.nav-overview,.lang-toggle a[aria-current="true"]) { color: var(--preview-accent-light); }
+.brush-reader.theme-dark .cr-title .brush-heading-mark::before { opacity: .35; }
+@media (max-width: 1100px) and (min-width: 1024px) {
+  .brush-reader { --header-h: 126px; }
+  .brush-reader .reader-sidebar { width: 260px; }
+  .brush-reader .reader-workspace { gap: 28px; }
+}
+@media (max-width: 1023px) {
+  body:has(.reader-sidebar.open) { overflow: hidden; }
+  .brush-reader .reader-workspace { padding-top: 76px; gap: 0; }
+  .brush-reader .reader-sidebar { top: 0; height: 100dvh; border-top: 3px solid var(--preview-accent); }
+  .brush-reader .reader-floating-toggle.sidebar-is-open { visibility: visible; }
+  .clean-reader.brush-reader :is(.rs-close-btn,.rs-zoom-btn,.rs-theme-btn) { width: 44px; height: 44px; min-height: 44px; flex-shrink: 0; }
+  .brush-reader .rs-swatch { width: 18px; height: 18px; }
+}
+@media (max-width: 639px) {
+  .brush-reader .reader-workspace { padding: 72px 20px 48px; }
+  .clean-reader.brush-reader .cr-title[lang="ta"] { font-size: 2rem; }
+  .clean-reader.brush-reader .cr-title[lang="en"] { font-size: 2.1rem; line-height: 1.4; }
+  .brush-reader .cr-meta-line { font-size: .68rem; line-height: 1.9; gap: 5px; }
+  .brush-reader .cr-author { font-size: .79rem; line-height: 1.9; }
+  .brush-reader .cr-reading-info { padding: 12px 14px; }
+  .brush-reader .cr-body h2 { font-size: 1.35rem; }
+  .brush-reader .cr-body h3 { font-size: 1.15rem; }
+  .brush-reader .cr-pager { gap: 12px; }
+}
+@media print {
+  .brush-reader, .brush-reader.theme-dark, .brush-reader.theme-sepia {
+    --paper: #fff; --paper-raised: #fff; --paper-deep: #fff;
+    --ink: #111; --ink-2: #333; --ink-3: #555; --line: #ccc;
+    --accent: #1558e8; --accent-wash: transparent;
+  }
+  .clean-reader.brush-reader .cr-title .brush-heading-mark::before,
+  .brush-reader .cr-body h2::before, .brush-reader .cr-plate::before { display: none; }
+  .clean-reader.brush-reader .cr-title { transform: none; }
+  .brush-reader .reader-workspace { padding: 0; }
+}

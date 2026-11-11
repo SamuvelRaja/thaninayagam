@@ -115,8 +115,9 @@ export const PaymentCards: React.FC<PaymentCardsProps> = ({ lang }) => {
               <th>{isTa ? "சர்வதேச நன்கொடைகள்" : "International Donors"}</th>
               <td>
                 {isTa
-                  ? "SWIFT / IBAN விவரங்களுக்கு: donations@thaninayagam.org"
-                  : "For SWIFT / Wire details: donations@thaninayagam.org"}
+                  ? "SWIFT / IBAN விவரங்களுக்கு: "
+                  : "For SWIFT / Wire details: "}
+                <a href="mailto:kesavan@alarveliyeedu.com">kesavan@alarveliyeedu.com</a>
               </td>
             </tr>
           </tbody>

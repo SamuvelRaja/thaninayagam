@@ -2,14 +2,12 @@
 id: indian-thought-roman-stoicism
 slug: indian-thought-roman-stoicism
 title: Indian Thought and Roman Stoicism
-year: '1963'
+year: "1963"
 pillar: publishing
 kind: journal-article
 status: readable
 lang: en
-summary: >-
-  Cleaned *Tamil Culture* essay (1963) comparing Indian thought and Roman
-  Stoicism—sectioned for on-site reading.
+summary: "English comparative essay published in 1963, following his University of Malaya inaugural lecture of 14 December 1962."
 rights: >-
   Re-OCR’d from Internet Archive page images (*Tamil Culture*, Vol. X No. 3; IA
   leaves 3717–3752). Prefer the scan for disputed footnotes. Rights remain with
@@ -21,12 +19,13 @@ images: []
 cite:
   - 11
   - 7
+  - 44
 bookMd: indian-thought-roman-stoicism
 ---
 ## Bibliographic record
 
-*Tamil Culture*, Vol. X No. 3 (July–September 1963), pp. 1–36. Also in *Collected Papers* (Comparative Studies; inaugural lecture context: University of Malaya, 14 Dec. 1962).
+*Indian Thought and Roman Stoicism* was delivered at the University of Malaya on 14 December 1962, published in 1963, and reprinted in *Tamil Culture* 10(3), July–September 1963, pp. 1–36. Amudhan’s biography distinguishes delivery and publication on printed p. 209.
 
-## How to read
+## Reading here
 
-Full cleaned essay with restored section headings follows below. Use the scan when a footnote looks uncertain.
+The English journal essay follows below. Its 1963 date describes publication, rather than the lecture’s delivery. Consult the scan for uncertain footnotes.

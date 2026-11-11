@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
-import { DocumentData, DocHeading } from "@/lib/documents";
+import { BrushText } from "@/components/ui/BrushText";
+import type { DocumentData, DocHeading } from "@/lib/documents";
 import { CAT_BY, SUB_BY, SRC_BY, STRINGS } from "@/lib/data";
 
 interface SiblingWork {
@@ -28,12 +29,13 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
   const isTa = lang === "ta";
   const S = STRINGS[lang];
   const pfx = isTa ? "" : "/en";
-  const oppositeLangPfx = isTa ? "/en" : "";
 
   // Core reading preferences
   const [scaleIndex, setScaleIndex] = useState(1); // 0: 90%, 1: 100%, 2: 112%, 3: 125%
   const [theme, setTheme] = useState<"sepia" | "light" | "dark">("sepia");
-  const [tocOpen, setTocOpen] = useState(true);
+  const [tocOpen, setTocOpen] = useState(false);
+  const sidebarRef = useRef<HTMLElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const [progress, setProgress] = useState(0);
   const [activeHeadingId, setActiveHeadingId] = useState<string>("");
 
@@ -44,6 +46,20 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
   const catName = isTa ? cat.ta : cat.en;
   const subName = isTa ? sub.ta : sub.en;
   const title = isTa && work.titleTa ? work.titleTa : work.title;
+  const titleLanguage = /[\u0B80-\u0BFF]/.test(title) ? "ta" : "en";
+  const kindLabel = isTa
+    ? { text: "வாசிப்பு உரை", related: "தொடர்புடைய வாசிப்பு", guide: "நூல் வழிகாட்டி" }[work.readingKind]
+    : { text: "Reading text", related: "Related reading", guide: "Catalogue guide" }[work.readingKind];
+  const languageLabel = isTa
+    ? { Tamil: "தமிழ்", English: "ஆங்கிலம்", Bilingual: "தமிழ் / ஆங்கிலம்" }[work.readingLanguage]
+    : { Tamil: "Tamil", English: "English", Bilingual: "Tamil / English" }[work.readingLanguage];
+  const sourceLabel = (id: string) => id === "S44"
+    ? `${isTa ? "வாழ்க்கை வரலாறு" : "Biography"}${work.biographyPages ? `${isTa ? " · ப. " : " · pp. "}${work.biographyPages}` : ""}`
+    : id;
+  const sourceTitle = (id: string) => {
+    const source = SRC_BY[id];
+    return isTa && source?.titleTa ? source.titleTa : source?.title || id;
+  };
 
   // Headings for TOC
   const tocList = useMemo(() => {
@@ -85,24 +101,47 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
       }
 
       // Default sidebar to closed on tablet/mobile screens
-      if (window.innerWidth < 1024) {
-        setTocOpen(false);
-      }
+      setTocOpen(window.innerWidth >= 1024);
     } catch {
       // Ignore SSR/storage errors
     }
+    return () => {
+      // Reading preferences belong to the document canvas, not other pages.
+      document.body.removeAttribute("data-theme");
+    };
   }, []);
 
   // Escape key handler to close sidebar/drawer
   useEffect(() => {
+    if (tocOpen && window.matchMedia("(max-width: 1023px)").matches) {
+      sidebarRef.current?.querySelector<HTMLButtonElement>(".rs-close-btn")?.focus({ preventScroll: true });
+    }
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && tocOpen) {
         setTocOpen(false);
+        requestAnimationFrame(() => toggleRef.current?.focus({ preventScroll: true }));
+      }
+      if (e.key === "Tab" && tocOpen && window.matchMedia("(max-width: 1023px)").matches) {
+        const controls = Array.from(sidebarRef.current?.querySelectorAll<HTMLElement>("a[href], button:not(:disabled)") || []);
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [tocOpen]);
+
+  const closeSidebar = () => {
+    setTocOpen(false);
+    requestAnimationFrame(() => toggleRef.current?.focus({ preventScroll: true }));
+  };
 
   const handleThemeChange = (newTheme: "sepia" | "light" | "dark") => {
     setTheme(newTheme);
@@ -164,7 +203,7 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
   }, [work.bodyHtml]);
 
   return (
-    <div className={`clean-reader theme-${theme}`}>
+    <div className={`clean-reader brush-page brush-reader theme-${theme}`}>
       {/* 1. Common Site Header with Reading Progress Bar along bottom edge */}
       <Header
         lang={lang}
@@ -179,6 +218,7 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
       {/* 2. Floating Sidebar Toggle - Accessible when sidebar is collapsed */}
       <button
         type="button"
+        ref={toggleRef}
         className={`reader-floating-toggle ${tocOpen ? "sidebar-is-open" : ""}`}
         onClick={() => setTocOpen(!tocOpen)}
         aria-label={
@@ -191,6 +231,7 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
             : "Show Table of Contents"
         }
         aria-expanded={tocOpen}
+        aria-controls="reader-sidebar"
         title={isTa ? "பொருளடக்கம் & வாசிப்பு அமைப்புகள்" : "Contents & Reading Settings"}
       >
         <svg
@@ -224,7 +265,7 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
       {tocOpen && (
         <div
           className="reader-sidebar-backdrop"
-          onClick={() => setTocOpen(false)}
+          onClick={closeSidebar}
           aria-hidden="true"
         />
       )}
@@ -233,8 +274,12 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
       <div className={`reader-workspace ${tocOpen ? "with-sidebar" : "sidebar-collapsed"}`}>
         {/* 5. Unified Curatorial Desk Sidebar */}
         <aside
+          id="reader-sidebar"
+          ref={sidebarRef}
           className={`reader-sidebar ${tocOpen ? "open" : "collapsed"}`}
           aria-label={S.contents}
+          aria-hidden={!tocOpen}
+          inert={!tocOpen}
         >
           {/* Fixed Top Section: Navigation & Fixed Reading Controls */}
           <div className="rs-fixed-top">
@@ -248,7 +293,7 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
               <button
                 type="button"
                 className="rs-close-btn"
-                onClick={() => setTocOpen(false)}
+                onClick={closeSidebar}
                 aria-label={isTa ? "பக்கப்பட்டியை மறைக்க" : "Hide sidebar"}
                 title={isTa ? "பக்கப்பட்டியை மறைக்க" : "Hide sidebar"}
               >
@@ -338,13 +383,10 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
               </h2>
               <div className="rs-meta-row">
                 {work.year && <span className="rs-year">{work.year}</span>}
-                {work.year && work.status && <span className="rs-meta-sep">·</span>}
-                {work.status && (
-                  <span className="rs-status">
-                    {work.status === "readable" ? S.readable : S.lending}
-                  </span>
-                )}
+                {work.year && <span className="rs-meta-sep">·</span>}
+                <span className="rs-status">{kindLabel}</span>
               </div>
+              <p className="rs-reading-language">{languageLabel}</p>
 
               {/* Visual reading progress indicator */}
               <div className="rs-progress-box">
@@ -409,20 +451,20 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
                 <div className="rs-sources-chips">
                   {work.sources.map((s) => {
                     const src = SRC_BY[s];
-                    return src?.url ? (
+                    return src?.url ? <React.Fragment key={s}>
                       <a
-                        key={s}
                         href={src.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="rs-source-chip"
+                        title={sourceTitle(s)}
                       >
-                        <span>{s}</span>
+                        <span>{sourceLabel(s)}</span>
                         <span aria-hidden="true">↗</span>
                       </a>
-                    ) : (
+                    </React.Fragment> : (
                       <span key={s} className="rs-source-chip plain">
-                        {s}
+                        {sourceLabel(s)}
                       </span>
                     );
                   })}
@@ -438,11 +480,11 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
             className="reader-article"
             id="doc-top"
             role="document"
-            lang={work.lang || (isTa ? "ta" : "en")}
+            lang={work.lang}
             style={{ ["--reader-scale" as string]: scaleSteps[scaleIndex] }}
           >
             {/* Clean, Compact Article Header */}
-            <header className="cr-doc-header">
+            <header className="cr-doc-header" lang={lang}>
               <div className="cr-meta-line">
                 <span className="cr-cat-name">{catName}</span>
                 {subName && (
@@ -457,32 +499,28 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
                     <span className="cr-year">{work.year}</span>
                   </>
                 )}
-                {work.status && (
-                  <>
-                    <span className="cr-dot-sep">·</span>
-                    <span className="cr-status">
-                      {work.status === "readable" ? S.readable : S.lending}
-                    </span>
-                  </>
-                )}
+                <span className="cr-dot-sep">·</span>
+                <span className="cr-status">{kindLabel}</span>
+                <span className="cr-dot-sep">·</span>
+                <span className="cr-reading-language">{languageLabel}</span>
                 {work.sources && work.sources.length > 0 && (
                   <>
                     <span className="cr-dot-sep">·</span>
                     <span className="cr-sources">
                       {work.sources.map((s) => {
                         const src = SRC_BY[s];
-                        return src?.url ? (
+                        return src?.url ? <React.Fragment key={s}>
                           <a
-                            key={s}
                             href={src.url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="cr-source-link"
+                            title={sourceTitle(s)}
                           >
-                            {s} ↗
+                            {sourceLabel(s)} ↗
                           </a>
-                        ) : (
-                          <span key={s}>{s}</span>
+                        </React.Fragment> : (
+                          <span key={s}>{sourceLabel(s)}</span>
                         );
                       })}
                     </span>
@@ -490,14 +528,22 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
                 )}
               </div>
 
-              <h1 className="cr-title">{title}</h1>
+              <h1 className="cr-title" lang={titleLanguage}><BrushText>{title}</BrushText></h1>
 
               <p className="cr-author">
-                {isTa
+                {work.slug === "tamilaram" ? (isTa ? "தனிநாயக அடிகளார் நினைவுத் தொகுப்பு" : "A memorial volume about Thani Nayagam") : isTa
                   ? "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகள்"
                   : "Rev. Dr. Xavier S. Thani Nayagam Adigal"}
               </p>
             </header>
+
+            <div className={`cr-reading-info cr-reading-info-${work.readingKind}`} lang={lang}>
+              <p>{work.readingKind === "guide"
+                ? isTa ? "இந்தப் பதிவு நூல் விவரங்களுக்கும் கிடைக்கக்கூடிய மூலப் படிகளுக்கும் ஒரு வழிகாட்டி." : "A guide to the publication and its available source copies."
+                : work.readingKind === "related"
+                  ? isTa ? "இங்கு தொடர்புடைய கட்டுரைகளோ தொகுக்கப்பட்ட வாசிப்பு உரையோ உள்ளது. குறிப்பிட்ட பதிப்பின் விவரங்களுக்கு நூல் குறிப்புகளையும் மூலப் படியையும் பார்க்கவும்." : "This view offers related essays or a reconstructed reading collection. See the publication notes and source scan for edition details."
+                  : isTa ? `வாசிப்பு உரையின் மொழி: ${languageLabel}.` : `Reading text in ${languageLabel}.`}</p>
+            </div>
 
             {/* Archival Scan / Plate Image if present */}
             {work.plate && (
@@ -533,15 +579,16 @@ export const ReaderApparatus: React.FC<ReaderApparatusProps> = ({
                   <dt>{isTa ? "ஆண்டு" : "Year"}:</dt>
                   <dd>{work.year}</dd>
                   <dt>{isTa ? "நிலை" : "Status"}:</dt>
-                  <dd>{work.status === "readable" ? S.readable : S.lending}</dd>
+                  <dd>{kindLabel}</dd>
+                  <dt>{isTa ? "வாசிப்பு மொழி" : "Reading language"}:</dt>
+                  <dd>{languageLabel}</dd>
                 </dl>
               </div>
             )}
 
-            {/* In-progress notice if partial text */}
-            {!work.isFullText && (
-              <div className="cr-notice">
-                <p>{S.notice}</p>
+            {work.readingKind !== "guide" && (
+              <div className="cr-notice" lang={lang}>
+                <p>{isTa ? "உரை மாற்றத்தில் பிழைகள் இருக்கலாம். மேற்கோள்களுக்கு மூலப் படியை ஒப்பிடுங்கள்." : "Converted reading text may contain errors. Compare the source scan when quoting."}</p>
               </div>
             )}
           </article>

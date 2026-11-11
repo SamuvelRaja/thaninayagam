@@ -2,7 +2,22 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import { WORKS, CAT_BY, SUB_BY, SOURCES } from "./data";
+import { WORKS } from "./data";
+
+export interface ReadingAvailability {
+  kind: "text" | "related" | "guide";
+  language: "Tamil" | "English" | "Bilingual";
+  lang: "ta" | "en" | "mul";
+}
+
+// The hosted material for these records is an essay dossier, a related edition,
+// or a reconstructed collection rather than a scan of the named publication.
+const RELATED_READING = new Set([
+  "landscape-and-poetry", "nature-poetry-in-tamil", "tamilar-panpatu",
+  "tamil-culture-and-civilization", "educational-thoughts-ancient-tamil",
+  "research-in-tamil-studies", "antao-de-proenca-dictionary",
+  "tamil-humanism", "aspects-tamil-humanism", "collected-papers",
+]);
 
 export interface DocHeading {
   href: string;
@@ -19,6 +34,9 @@ export interface DocumentData {
   sub: string;
   status: string;
   lang: string;
+  readingKind: ReadingAvailability["kind"];
+  readingLanguage: ReadingAvailability["language"];
+  biographyPages?: string;
   summary: string;
   details?: string;
   sourceUrl?: string;
@@ -128,24 +146,42 @@ function readBookMarkdown(bookMdName?: string): string {
   return fs.readFileSync(filePath, "utf8");
 }
 
+function readDocumentSource(slug: string, lang: "ta" | "en") {
+  let filePath = path.join(ROOT_DOCS, lang, `${slug}.md`);
+  if (!fs.existsSync(filePath)) {
+    filePath = path.join(ROOT_DOCS, lang === "ta" ? "en" : "ta", `${slug}.md`);
+  }
+  const document = fs.existsSync(filePath) ? matter(fs.readFileSync(filePath, "utf8")) : null;
+  const bookContent = readBookMarkdown(document?.data.bookMd || slug);
+  return { document, bookContent };
+}
+
+function describeReading(slug: string, text: string): ReadingAvailability {
+  const isGuide = !text.trim() || /finding aid|context note only|catalogue entry|reading index|lending-only holding/i.test(text.slice(0, 650));
+  const tamilLetters = (text.match(/[\u0B80-\u0BFF]/g) || []).length;
+  const latinLetters = (text.match(/[a-z]/gi) || []).length;
+  const tamilRatio = tamilLetters / Math.max(tamilLetters + latinLetters, 1);
+  const language = tamilRatio > 0.5 ? "Tamil" : isGuide && tamilRatio > 0.1 ? "Bilingual" : "English";
+  return {
+    kind: isGuide ? "guide" : RELATED_READING.has(slug) ? "related" : "text",
+    language,
+    lang: language === "Tamil" ? "ta" : language === "English" ? "en" : "mul",
+  };
+}
+
+// Use the same actual-material description in catalogue and reader. Frontmatter
+// lang has historically described the interface, so it cannot identify the text.
+export function getReadingAvailability(slug: string, lang: "ta" | "en" = "ta"): ReadingAvailability {
+  return describeReading(slug, readDocumentSource(slug, lang).bookContent);
+}
+
 export function getDocument(slug: string, lang: "ta" | "en" = "ta"): DocumentData | null {
   const work = WORKS.find((w) => w.slug === slug);
-  const langDir = path.join(ROOT_DOCS, lang);
-  let filePath = path.join(langDir, `${slug}.md`);
+  const { document, bookContent } = readDocumentSource(slug, lang);
+  const availability = describeReading(slug, bookContent);
 
-  if (!fs.existsSync(filePath)) {
-    // Fallback to opposite lang
-    const altLang = lang === "ta" ? "en" : "ta";
-    const altPath = path.join(ROOT_DOCS, altLang, `${slug}.md`);
-    if (fs.existsSync(altPath)) {
-      filePath = altPath;
-    }
-  }
-
-  if (fs.existsSync(filePath)) {
-    const raw = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(raw);
-    const bookContent = readBookMarkdown(data.bookMd || slug);
+  if (document) {
+    const { data, content } = document;
 
     let combinedMarkdown = content.trim();
     if (bookContent.trim()) {
@@ -155,7 +191,7 @@ export function getDocument(slug: string, lang: "ta" | "en" = "ta"): DocumentDat
     }
 
     const { html, headings } = renderMarkdown(combinedMarkdown);
-    const isFullText = !!(bookContent.trim() || content.trim().length > 300);
+    const isFullText = availability.kind === "text";
 
     return {
       slug,
@@ -164,8 +200,11 @@ export function getDocument(slug: string, lang: "ta" | "en" = "ta"): DocumentDat
       year: String(data.year || work?.year || ""),
       cat: work?.cat || "tamil-literature",
       sub: work?.sub || "",
-      status: work?.status || data.status || "readable",
-      lang: data.lang || work?.lang || (lang === "ta" ? "Tamil" : "English"),
+      status: availability.kind === "text" ? "readable" : availability.kind,
+      lang: availability.lang,
+      readingKind: availability.kind,
+      readingLanguage: availability.language,
+      biographyPages: work?.biographyPages,
       summary: data.summary || work?.details || "",
       details: work?.details || "",
       sourceUrl: data.sourceUrl || "",
@@ -191,8 +230,11 @@ export function getDocument(slug: string, lang: "ta" | "en" = "ta"): DocumentDat
       year: String(work.year),
       cat: work.cat,
       sub: work.sub,
-      status: work.status || "readable",
-      lang: work.lang || (lang === "ta" ? "Tamil" : "English"),
+      status: "guide",
+      lang: availability.lang,
+      readingKind: "guide",
+      readingLanguage: availability.language,
+      biographyPages: work.biographyPages,
       summary: work.details,
       details: work.details,
       sources: work.sources || [],

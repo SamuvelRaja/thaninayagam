@@ -1,15 +1,13 @@
 ---
 id: nature-poetry-in-tamil
 slug: nature-poetry-in-tamil
-title: Nature Poetry in Tamil
-year: '1963'
+title: "Nature Poetry in Tamil: The Classical Period"
+year: "1963"
 pillar: lectures
-kind: journal-article
+kind: "edition-record"
 status: readable
 lang: en
-summary: >-
-  1963 revision in the Nature / Landscape monograph lineage, with edition note
-  and a related Tamil Culture nature essay as on-site markdown.
+summary: "Record of the 1963 Singapore edition in the nature-poetry study lineage. The reading here is the related 1953 monograph, not the separately verified 1963 edition."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives and
   cleaned OCR where noted. Machine OCR may contain errors. Rights remain with
@@ -20,16 +18,13 @@ images: []
 cite:
   - 7
   - 40
+  - 44
 bookMd: nature-poetry-in-tamil
 ---
 ## Bibliographic record
 
-Open Library records *Nature poetry in Tamil* (first listed 1963) as a separate work from *Nature in Ancient Tamil Poetry* (1953). Relationship between the two editions needs leaf-level confirmation when a reading copy is available.
+Amudhan identifies *Nature Poetry in Tamil: The Classical Period*, Singapore, Dewan Bahasa dan Kebudayaan Kebangsaan, 1963, xvii + 153 p., as a later edition in the same research lineage as *Nature in Ancient Tamil Poetry* and *Landscape and Poetry* (biography pp. 171, 210).
 
-## About this article
+## Reading here
 
-*Nature Poetry in Tamil* (1963) sits between the 1953 *Nature in Ancient Tamil Poetry* monograph and the 1966 *Landscape and Poetry* revision. Article text below includes the edition lineage and a related *Tamil Culture* nature essay.
-
-## How to read
-
-Book text follows from `content/books/nature-poetry-in-tamil.md` (1953 monograph body, synced with `nature-ancient-tamil-poetry`: full re-OCR). Prefer the scan for citations.
+The attached reading is the related 1953 monograph text. It is not a separately verified transcription of the 1963 edition; consult that edition’s scan for its own wording and pagination. This is a book-edition record, rather than a journal article bearing the same title.

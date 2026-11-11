@@ -2,14 +2,12 @@
 id: carthaginian-clergy
 slug: carthaginian-clergy
 title: The Carthaginian Clergy
-year: '1950'
+year: "1950"
 pillar: reference
 kind: monograph
 status: lending
 lang: en
-summary: >-
-  Published form of Thani Nayagam's Roman doctoral research on the Carthaginian
-  clergy under Saint Cyprian — lending-only on Internet Archive.
+summary: "Finding aid to his Roman doctoral research, first published in 1947 and reissued as the second edition in 1950."
 rights: >-
   Internet Archive controlled lending only. Full book OCR is not hosted on this
   site; use the external borrowable scan. Rights remain with the original
@@ -20,13 +18,14 @@ images: []
 cite:
   - 34
   - 35
+  - 44
 iaId: bwb_W8-ANY-806
 bookMd: carthaginian-clergy
 ---
 ## Bibliographic record
 
-Open Library records the English edition *The Carthaginian clergy during the episcopate of Saint Cyprian* as published in 1950 by the Tamil Literature Society, Tuticorin, with eighteen preliminary pages and 112 numbered pages. The work grows out of his Doctor of Divinity research in Rome. An Internet Archive copy is available only as controlled lending (142 images).
+*The Carthaginian Clergy* developed from his 1939 D.D. research in Rome. Amudhan records first publication in 1947 and a second edition in 1950, Tamil Literature Society, 112 numbered pages (biography pp. 168–169, 206). The linked catalogue separately lists xviii + 112 pages for the 1950 issue.
 
-## Read on this site
+## Reading here
 
-Archive article markdown (publication note + memorial-volume context) is available below. A full OCR of the controlled-lending Internet Archive scan is not yet hosted locally.
+This page supplies a publication note and related context, not the full doctoral monograph. The linked Internet Archive scan uses controlled lending.

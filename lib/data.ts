@@ -18,7 +18,8 @@ export const CATS: Category[] = [
     "ta": "தமிழ் இலக்கியக் கட்டுரைகள்",
     "en": "Tamil Literary Essays",
     "hintTa": "சங்க இலக்கியம், இயற்கை, கவிதையியல், திருக்குறள், கல்வியியல் சிந்தனைகள்",
-    "hintEn": "Classical poetry, nature, Tirukkural, and educational thought"
+    "hintEn": "Classical poetry, nature, Tirukkural, and educational thought",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "tamil-culture",
@@ -26,7 +27,8 @@ export const CATS: Category[] = [
     "ta": "தமிழர் பண்பாடும் நாகரிகமும்",
     "en": "Tamil Culture & Civilization",
     "hintTa": "பண்பாட்டு வரலாறு, சமுதாயக் கட்டுரைகள், ஆய்வு இதழியல், உலகப் பயணங்கள்",
-    "hintEn": "Tamil civilization, cultural essays, journal writings, and travel reflections"
+    "hintEn": "Tamil civilization, cultural essays, journal writings, and travel reflections",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "tamil-studies",
@@ -34,7 +36,8 @@ export const CATS: Category[] = [
     "ta": "தமிழாய்வுக் கட்டுரைகளும் நூலியலும்",
     "en": "Tamil Research & Bibliographies",
     "hintTa": "சர்வதேச மாநாடுகள், ஆய்வுக் குறிப்பேடுகள், ஆவண வரலாற்று வழிகாட்டிகள்",
-    "hintEn": "International conferences, research guides, and bibliographies"
+    "hintEn": "International conferences, research guides, and bibliographies",
+    "image": "/images/conference-1966-proceedings.jpg"
   },
   {
     "slug": "philosophy-thought",
@@ -42,7 +45,8 @@ export const CATS: Category[] = [
     "ta": "மெய்யியலும் தமிழ் மானுடவியலும்",
     "en": "Philosophy & Tamil Humanism",
     "hintTa": "செவ்வியல் தமிழ் மானுடவியல், ஒப்பீட்டுத் தத்துவக் கோட்பாடுகள், அறவியல்",
-    "hintEn": "Tamil humanism, comparative philosophy, and moral thought"
+    "hintEn": "Tamil humanism, comparative philosophy, and moral thought",
+    "image": "/images/thambiran-vanakkam-1578.jpg"
   },
   {
     "slug": "collected-editions",
@@ -50,7 +54,8 @@ export const CATS: Category[] = [
     "ta": "முழுமைத் தொகுப்புகளும் சொற்பொழிவுகளும்",
     "en": "Collected Works & Addresses",
     "hintTa": "முழு ஆய்வுக் கட்டுரைகள், வரலாற்றுப் பேருரைகள், நூற்றாண்டு நினைவுத் தொகுப்புகள்",
-    "hintEn": "Complete scholarly papers, public addresses, and tributes"
+    "hintEn": "Complete scholarly papers, public addresses, and tributes",
+    "image": "/images/amudhan-adigal-book.jpg"
   }
 ];
 
@@ -59,73 +64,109 @@ export const SUBS: Subcategory[] = [
     "slug": "nature-poetics",
     "cat": "tamil-literature",
     "ta": "இயற்கையும் கவிதையியலும்",
-    "en": "Nature & Poetics"
+    "en": "Nature & Poetics",
+    "hintTa": "சங்க இலக்கியத்தில் இயற்கை வனப்பு, முல்லை-குறிஞ்சி-நெய்தல் திணையியல் மற்றும் செவ்வியல் தமிழ்க் கவிதைகளின் அழகியல் கோட்பாடுகள்.",
+    "hintEn": "Landscape, environmental aesthetics, and classical poetic conventions in ancient Tamil Sangam poetry.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "tirukkural-ethics",
     "cat": "tamil-literature",
-    "ta": "திருக்குறளும் அறவியலும்",
-    "en": "Tirukkural & Ethics"
+    "ta": "திருக்குறள், அறவியல்",
+    "en": "Tirukkural & Ethics",
+    "hintTa": "திருவள்ளுவர் கண்ட உலகப் பொதுமறை அறக் கோட்பாடுகள், மானுட விழுமியங்கள் மற்றும் சமுதாய நீதி நெறிமுறைகள்.",
+    "hintEn": "Universal ethics, moral philosophy, and humanist justice in the Tirukkural.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "education-prose",
     "cat": "tamil-literature",
     "ta": "கல்வியியலும் உரைநடையும்",
-    "en": "Education & Prose"
+    "en": "Education & Prose",
+    "hintTa": "தனிநாயக அடிகளாரின் கல்வியியல் சிந்தனைகள், தாய்மொழி வழிக் கல்வி வளர்ச்சி மற்றும் தமிழ் உரைநடை வரலாறு.",
+    "hintEn": "Educational philosophy, the role of the mother tongue, and the historical development of Tamil prose.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "culture-civilization",
     "cat": "tamil-culture",
     "ta": "பண்பாடும் நாகரிகமும்",
-    "en": "Culture & Civilization"
+    "en": "Culture & Civilization",
+    "hintTa": "பழந்தமிழர் நாகரிகச் சிறப்பு, உலகப் பண்பாடுகளுடன் ஒப்பீடு மற்றும் தமிழர் வாழ்வியல் கலை மரபுகள்.",
+    "hintEn": "Ancient Tamil civilization, cultural heritage, world comparisons, and living traditions.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "journal-essays",
     "cat": "tamil-culture",
     "ta": "இதழியல் ஆய்வுக் கட்டுரைகள்",
-    "en": "Journal Essays"
+    "en": "Journal Essays",
+    "hintTa": "அடிகளார் நிறுவி ஆசிரியராக இயக்கிய 'Tamil Culture' சர்வதேசக் காலாண்டிதழில் வெளிவந்த முதன்மை ஆய்வுக் கட்டுரைகள்.",
+    "hintEn": "Seminal research papers published in the international quarterly journal 'Tamil Culture' founded by Fr. Thani Nayagam.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "travel-global",
     "cat": "tamil-culture",
     "ta": "உலகப் பயணக் குறிப்புகள்",
-    "en": "Travel & Global Reflections"
+    "en": "Travel & Global Reflections",
+    "hintTa": "அடிகளார் உலகம் சுற்றிய ஆய்வுப் பயணங்களின் பதிவுகள் ('ஒன்றே உலகம்'), கிழக்காசியா, ஐரோப்பா, அமெரிக்க நாடுகளில் தமிழ்ப் பண்பாட்டுப் பரவல்.",
+    "hintEn": "Travel reflections from his global journeys ('One World'), tracing Tamil heritage across East Asia, Europe, and the Americas.",
+    "image": "/images/tamil-culture-1952.jpg"
   },
   {
     "slug": "conferences-iatr",
     "cat": "tamil-studies",
     "ta": "சர்வதேச மாநாடுகளும் IATR அமைப்பும்",
-    "en": "Conferences & IATR"
+    "en": "Conferences & IATR",
+    "hintTa": "உலகத் தமிழாராய்ச்சி மன்றம் (IATR) நிறுவல் வரலாறு, கோலாலம்பூர், சென்னை, பாரிஸ் உலகத் தமிழ் மாநாடுகளின் ஆய்வு ஆவணங்கள்.",
+    "hintEn": "The founding of the International Association of Tamil Research (IATR) and historic proceedings of global Tamil conferences.",
+    "image": "/images/conference-1966-proceedings.jpg"
   },
   {
     "slug": "reference-guides",
     "cat": "tamil-studies",
     "ta": "ஆய்வு நூலியல்களும் வழிகாட்டிகளும்",
-    "en": "Reference Guides & Bibliographies"
+    "en": "Reference Guides & Bibliographies",
+    "hintTa": "உலகளாவிய நூலகங்கள் மற்றும் ஆவணகங்களில் உள்ள தமிழ் நூல்களின் வழிகாட்டிகள், ஆய்வு நூலியல் குறிப்பேடுகள்.",
+    "hintEn": "Research bibliographies and archival guides documenting Tamil materials across European and world libraries.",
+    "image": "/images/catechism-1554.jpg"
   },
   {
     "slug": "tamil-humanism",
     "cat": "philosophy-thought",
     "ta": "செவ்வியல் தமிழ் மானுடவியல்",
-    "en": "Tamil Humanism"
+    "en": "Tamil Humanism",
+    "hintTa": "'யாதும் ஊரே யாவரும் கேளிர்' எனும் உலகளாவிய தமிழ்ச் செவ்வியல் மானுடநேயக் கோட்பாடுகள் மற்றும் அறவியல் சிந்தனைகள்.",
+    "hintEn": "Classical Tamil humanist philosophy ('Every city is home, all are kin'), universal fellowship, and moral thought.",
+    "image": "/images/thambiran-vanakkam-1578.jpg"
   },
   {
     "slug": "comparative-philosophy",
     "cat": "philosophy-thought",
     "ta": "ஒப்பீட்டுத் தத்துவவியல்",
-    "en": "Comparative Philosophy"
+    "en": "Comparative Philosophy",
+    "hintTa": "கீழைநாட்டு, மேலைநாட்டு தத்துவ மரபுகளுடன் தமிழ் அறவியல் மற்றும் மெய்யியல் கருத்துகளின் ஆழமான ஒப்பாய்வு.",
+    "hintEn": "Comparative studies bridging Western, Indian, and classical Tamil philosophical traditions.",
+    "image": "/images/thambiran-vanakkam-1578.jpg"
   },
   {
     "slug": "collected-papers",
     "cat": "collected-editions",
     "ta": "ஆங்கில ஆய்வுக் கட்டுரைகளின் முழுத்தொகுப்பு",
-    "en": "Collected Research Papers"
+    "en": "Collected Research Papers",
+    "hintTa": "தனிநாயக அடிகளார் சர்வதேச மாநாடுகளிலும் ஆய்வு இதழ்களிலும் ஆங்கிலத்தில் வெளியிட்ட முதன்மை ஆய்வுக் கட்டுரைகளின் முழுமைத் தொகுப்பு.",
+    "hintEn": "Comprehensive collected research papers written in English for international conferences and journals.",
+    "image": "/images/amudhan-adigal-book.jpg"
   },
   {
     "slug": "speeches-memorial",
     "cat": "collected-editions",
     "ta": "வரலாற்றுப் பேருரைகளும் நினைவு மலர்களும்",
-    "en": "Speeches & Memorial Volumes"
+    "en": "Speeches & Memorial Volumes",
+    "hintTa": "அடிகளார் ஆற்றிய வரலாற்றுச் சிறப்புமிக்க சொற்பொழிவுகள், வானொலி உரைகள், நூற்றாண்டு நினைவு மலர்க் கட்டுரைகள்.",
+    "hintEn": "Keynote addresses, radio lectures, memorial tributes, and centennial commemorative writings.",
+    "image": "/images/amudhan-adigal-book.jpg"
   }
 ];
 
@@ -137,11 +178,16 @@ export const WORKS: Work[] = [
     "year": "1967",
     "yearStart": 1967,
     "title": "Landscape and Poetry",
-    "details": "Classical study of nature in Tamil poetry · 157 leaves",
+    "details": "Nature in classical Tamil poetry · catalogued 1967 edition; 157 scan leaves",
     "status": "readable",
     "sources": [
-      "S30"
-    ]
+      "S30",
+      "S44"
+    ],
+    "biographyPages": "171, 211",
+    "biographyNoteEn": "Amudhan records a 1966 Asia Publishing House edition. The catalogue retains its 1967 edition date; the digitised scan contains 157 leaves.",
+    "biographyNoteTa": "அமுதன் அடிகளார் 1966 ஆசியா பதிப்பகப் பதிப்பைக் குறிப்பிடுகிறார். இப்பட்டியலின் 1967 பதிப்புக் குறிப்பு தனியாகப் பாதுகாக்கப்பட்டுள்ளது; இங்குள்ள பிரதியில் 157 பக்கங்கள் உள்ளன.",
+    "detailsTa": "செவ்வியல் தமிழ் இலக்கியத்தில் இயற்கை · 1967 பதிப்பு; 157 பக்கங்கள் கொண்ட நூல்"
   },
   {
     "slug": "nature-ancient-tamil-poetry",
@@ -150,12 +196,17 @@ export const WORKS: Work[] = [
     "year": "1953",
     "yearStart": 1953,
     "title": "Nature in Ancient Tamil Poetry",
-    "details": "M.Litt. research monograph · Tamil Literature Society, 185 p.",
+    "details": "1949 M.Litt. research · Tamil Literature Society, xxii + 185 p.",
     "status": "readable",
     "sources": [
       "S29",
-      "S40"
-    ]
+      "S40",
+      "S44"
+    ],
+    "biographyPages": "11, 171, 206",
+    "biographyNoteEn": "Based on his 1949 M.Litt. thesis. The biography gives 1952 in its narrative and 1953 in its bibliography; this record retains the bibliography-listed edition.",
+    "biographyNoteTa": "1949 எம்.லிட். ஆய்வின் நூல் வடிவம். வாழ்க்கை வரலாற்றில் 1952 என்றும் நூற்பட்டியலில் 1953 என்றும் குறிப்பிடப்பட்டுள்ளது; இங்கு நூற்பட்டியலின் பதிப்பாண்டு பாதுகாக்கப்பட்டுள்ளது.",
+    "detailsTa": "1949 எம்.லிட். ஆய்வின் நூல் வடிவம் · தமிழ் இலக்கியக் கழகம், xxii + 185 பக்கங்கள்"
   },
   {
     "slug": "nature-poetry-in-tamil",
@@ -163,10 +214,16 @@ export const WORKS: Work[] = [
     "sub": "nature-poetics",
     "year": "1963",
     "yearStart": 1963,
-    "title": "Nature Poetry in Tamil",
-    "details": "Nature study work",
+    "title": "Nature Poetry in Tamil: The Classical Period",
+    "details": "1963 edition of the nature-poetry study · xvii + 153 p.",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "171, 210",
+    "biographyNoteEn": "The 1963 edition in the same research lineage as Nature in Ancient Tamil Poetry and Landscape and Poetry.",
+    "biographyNoteTa": "பழந்தமிழ் இலக்கியத்தில் இயற்கை குறித்த ஆய்வின் 1963 பதிப்பு; Nature in Ancient Tamil Poetry, Landscape and Poetry ஆகியவற்றுடன் தொடர்புடையது.",
+    "detailsTa": "இயற்கைக் கவிதை ஆய்வின் 1963 பதிப்பு · xvii + 153 பக்கங்கள்"
   },
   {
     "slug": "tiruvalluvar",
@@ -176,34 +233,52 @@ export const WORKS: Work[] = [
     "yearStart": 1967,
     "title": "Tiruvalluvar",
     "titleTa": "திருவள்ளுவர்",
-    "details": "Annamalai University lectures · 64 p.",
+    "details": "1961 lectures on comparative ethics · published by Annamalai University, 1967",
     "status": "readable",
     "sources": [
       "S31",
-      "S39"
-    ]
+      "S39",
+      "S44"
+    ],
+    "biographyPages": "155, 214",
+    "biographyNoteEn": "Three Sornammal lectures delivered in February 1961 and published in 1967. Amudhan gives 60 numbered pages; the linked catalogue gives 64.",
+    "biographyNoteTa": "1961 பெப்ருவரியில் நிகழ்த்திய மூன்று சொர்ணம்மாள் அறக்கட்டளைச் சொற்பொழிவுகள்; 1967 நூல் பதிப்பு. அமுதன் அடிகளார் 60 பக்கங்களையும் இணைக்கப்பட்ட நூற்பட்டியல் 64 பக்கங்களையும் குறிப்பிடுகின்றன.",
+    "detailsTa": "திருக்குறள் ஒப்பியல் அறவியல் குறித்த 1961 உரைகள் · அண்ணாமலைப் பல்கலைக்கழக வெளியீடு, 1967"
   },
   {
     "slug": "ulaga-ozhakkaviyalil-tirukkural",
     "cat": "tamil-literature",
     "sub": "tirukkural-ethics",
-    "year": "1967",
-    "yearStart": 1967,
+    "year": "n.d.",
+    "yearStart": 9999,
     "title": "Ulaga Ozhakkaviyalil Tirukkural",
-    "details": "Moral philosophy treatise",
+    "details": "Related Tirukkural reading · separate publication details unverified",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "155, 214",
+    "biographyNoteEn": "This topic is discussed in Tiruvalluvar. The biography does not establish a separate publication under this title or its date.",
+    "biographyNoteTa": "இப்பொருள் திருவள்ளுவர் நூலில் விவாதிக்கப்படுகிறது. இத்தலைப்பில் தனி நூல் வெளியானதையோ அதன் ஆண்டையோ வாழ்க்கை வரலாறு உறுதிப்படுத்தவில்லை.",
+    "detailsTa": "திருக்குறள் குறித்த தொடர்புடைய வாசிப்பு · தனிப் பதிப்பின் விவரங்கள் உறுதிப்படுத்தப்படவில்லை"
   },
   {
     "slug": "educational-thoughts-ancient-tamil",
     "cat": "tamil-literature",
     "sub": "education-prose",
-    "year": "n.d.",
-    "yearStart": 9999,
-    "title": "Educational Thoughts in Ancient Tamil",
-    "details": "Educational essays",
+    "year": "1956–57",
+    "yearStart": 1956,
+    "title": "Education in Ancient Tamil Literature: Essays",
+    "details": "Three related Tamil Culture essays · 1956–1957",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "yearEnd": 1957,
+    "biographyPages": "174, 207–208",
+    "biographyNoteEn": "The reading copy groups related Tamil Culture essays from 1956 and 1957. His separately titled Educational Thought in Ancient Tamil Literature was an unpublished 1957 Ph.D. thesis.",
+    "biographyNoteTa": "வாசிப்புப் பிரதியில் 1956, 1957 ஆண்டுகளின் தொடர்புடைய Tamil Culture கட்டுரைகள் தொகுக்கப்பட்டுள்ளன. Educational Thought in Ancient Tamil Literature என்பது தனியான, வெளியிடப்படாத 1957 முனைவர் பட்ட ஆய்வேடு.",
+    "detailsTa": "தொடர்புடைய மூன்று Tamil Culture கல்விக் கட்டுரைகள் · 1956–1957"
   },
   {
     "slug": "tamilttutu",
@@ -213,13 +288,18 @@ export const WORKS: Work[] = [
     "yearStart": 1952,
     "title": "Tamilttūtu",
     "titleTa": "தமிழ்த் தூது",
-    "details": "Tamil essay collection · Open Library, 114 p.",
+    "details": "Tamil essays · first published 1952; later editions separately catalogued",
     "status": "readable",
     "sources": [
       "S22",
       "S23",
-      "S24"
-    ]
+      "S24",
+      "S44"
+    ],
+    "biographyPages": "134, 213",
+    "biographyNoteEn": "First published in 1952. The biography records 110 pages for that issue and 126 pages for the revised fourth edition of 1962; scan and catalogue counts are edition-specific.",
+    "biographyNoteTa": "முதற்பதிப்பு 1952. வாழ்க்கை வரலாறு அப்பதிப்புக்கு 110 பக்கங்களையும், 1962 திருத்திய நான்காம் பதிப்புக்கு 126 பக்கங்களையும் குறிப்பிடுகிறது; பிரதிகளின் பக்கக் கணக்குகள் பதிப்புக்கு ஏற்ப வேறுபடுகின்றன.",
+    "detailsTa": "தமிழ்க் கட்டுரைகள் · முதற்பதிப்பு 1952; பிந்தைய பதிப்புகள் தனியாகப் பதிவாகியுள்ளன"
   },
   {
     "slug": "tamilar-panpatu",
@@ -229,9 +309,15 @@ export const WORKS: Work[] = [
     "yearStart": 1965,
     "title": "Tamilar Panpatu",
     "titleTa": "தமிழர் பண்பாடு",
-    "details": "Tamil cultural essays",
+    "details": "Tamil cultural essays · publication details require corroboration",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "133, 215",
+    "biographyNoteEn": "The biography does not verify this 1965 title. It records the distinct 1980 memorial lecture Tamilar Panpadum Athan Sirappiyalpugalum.",
+    "biographyNoteTa": "இந்த 1965 தலைப்பு வாழ்க்கை வரலாற்றில் உறுதிப்படுத்தப்படவில்லை. தமிழர் பண்பாடும் அதன் சிறப்பியல்புகளும் என்னும் தனியான 1980 நினைவுச் சொற்பொழிவு அதில் பதிவாகியுள்ளது.",
+    "detailsTa": "தமிழ்ப் பண்பாட்டுக் கட்டுரைகள் · வெளியீட்டு விவரங்களுக்கு மேலும் ஆதாரம் தேவை"
   },
   {
     "slug": "tamil-culture-and-civilization",
@@ -240,11 +326,16 @@ export const WORKS: Work[] = [
     "year": "1971",
     "yearStart": 1971,
     "title": "Tamil Culture and Civilization",
-    "details": "Asia Publishing House readings · 233 p.",
+    "details": "Compiled readings from the classical period · catalogue edition 1971, 233 p.",
     "status": "readable",
     "sources": [
-      "S37"
-    ]
+      "S37",
+      "S44"
+    ],
+    "biographyPages": "181, 212",
+    "biographyNoteEn": "Amudhan records a 1970 issue, x + 233 pages, compiled from readings used in his teaching. The linked catalogue independently lists 1971.",
+    "biographyNoteTa": "அமுதன் அடிகளார் 1970 பதிப்பையும், கற்பித்தலுக்காகத் தொகுக்கப்பட்ட x + 233 பக்க வாசிப்புகளையும் குறிப்பிடுகிறார். இணைக்கப்பட்ட நூற்பட்டியலில் 1971 பதிப்பு பதிவாகியுள்ளது.",
+    "detailsTa": "செவ்வியல் கால வாசிப்புகளின் தொகுப்பு · நூற்பட்டியல் பதிப்பு 1971, 233 பக்கங்கள்"
   },
   {
     "slug": "tamil-culture-vols-1-12",
@@ -253,14 +344,19 @@ export const WORKS: Work[] = [
     "year": "1952–66",
     "yearStart": 1952,
     "title": "Tamil Culture (Vols. 1–12)",
-    "details": "Quarterly research journal · bound scan & cleaned text",
+    "details": "Quarterly research journal · digitized volumes and reading text",
     "status": "readable",
     "sources": [
       "S4",
-      "S6"
+      "S6",
+      "S44"
     ],
     "image": "/images/tamil-culture-1952.jpg",
-    "imageCaption": "Tamil Culture, Vol. 1 title leaf (1952)"
+    "imageCaption": "Tamil Culture, Vol. 1 title leaf (1952)",
+    "biographyPages": "97–108, 190",
+    "biographyNoteEn": "The journal began in February 1952 and ended after 1966. The biography records publication gaps in 1960, 1962 and 1965.",
+    "biographyNoteTa": "இதழ் 1952 பெப்ருவரியில் தொடங்கி 1966 வரை வெளிவந்தது. 1960, 1962, 1965 ஆண்டுகளில் வெளியீட்டு இடைவெளிகள் இருந்ததாக வாழ்க்கை வரலாறு குறிப்பிடுகிறது.",
+    "detailsTa": "காலாண்டு ஆய்விதழ் · முழுத் தொகுதிகளும் வாசிப்புக் கட்டுரைகளும்"
   },
   {
     "slug": "ethical-interpretation-nature",
@@ -268,14 +364,19 @@ export const WORKS: Work[] = [
     "sub": "journal-essays",
     "year": "1952",
     "yearStart": 1952,
-    "title": "The Ethical Interpretation of Nature",
-    "details": "Cleaned 1952 Tamil Culture essay · concise and ready to read",
+    "title": "The Ethical Interpretation of Nature in Ancient Tamil Poetry",
+    "details": "An essay on nature and ethics in Tamil poetry · Tamil Culture, 1952",
     "status": "readable",
     "sources": [
-      "S6"
+      "S6",
+      "S44"
     ],
     "image": "/images/tamil-culture-1952.jpg",
-    "imageCaption": "Tamil Culture, Vol. 1 title leaf (1952)"
+    "imageCaption": "Tamil Culture, Vol. 1 title leaf (1952)",
+    "biographyPages": "207",
+    "biographyNoteEn": "Tamil Culture, volume 1, numbers 3–4, September–December 1952, pp. 186–196.",
+    "biographyNoteTa": "Tamil Culture, தொகுதி 1, இதழ்கள் 3–4, செப்டம்பர்–டிசம்பர் 1952, பக். 186–196.",
+    "detailsTa": "தமிழ்க் கவிதையில் இயற்கையும் அறமும் · Tamil Culture, 1952"
   },
   {
     "slug": "ore-ulakam",
@@ -283,13 +384,18 @@ export const WORKS: Work[] = [
     "sub": "travel-global",
     "year": "1966",
     "yearStart": 1966,
-    "title": "Ore Ulakam",
-    "titleTa": "ஒரே உலகம்",
-    "details": "Tamil travel reflections · 230 p.",
+    "title": "Ondre Ulagam",
+    "titleTa": "ஒன்றே உலகம்",
+    "details": "Tamil travel reflections · bibliography-listed 1966 issue, 230 p.",
     "status": "readable",
     "sources": [
-      "S36"
-    ]
+      "S36",
+      "S44"
+    ],
+    "biographyPages": "149, 214",
+    "biographyNoteEn": "The narrative dates first publication to 1963 and a revised second edition to 1974. Its bibliography also lists the 1966 issue represented here.",
+    "biographyNoteTa": "வாழ்க்கை வரலாற்றின் உரை முதற்பதிப்பை 1963 என்றும் திருத்திய இரண்டாம் பதிப்பை 1974 என்றும் குறிப்பிடுகிறது. நூற்பட்டியலில் இங்குள்ள 1966 பதிப்பும் பதிவாகியுள்ளது.",
+    "detailsTa": "உலகப் பயண அனுபவங்கள் · நூற்பட்டியலில் பதிவான 1966 பதிப்பு, 230 பக்கங்கள்"
   },
   {
     "slug": "conference-1966-proceedings",
@@ -298,14 +404,19 @@ export const WORKS: Work[] = [
     "year": "1966/68",
     "yearStart": 1966,
     "title": "1st International Conference Proceedings",
-    "details": "IATR Kuala Lumpur conference papers · two volumes",
+    "details": "Kuala Lumpur conference, 1966 · proceedings published 1968, two volumes",
     "status": "readable",
     "sources": [
       "S5",
-      "S15"
+      "S15",
+      "S44"
     ],
     "image": "/images/conference-1966-proceedings.jpg",
-    "imageCaption": "Proceedings title page, Kuala Lumpur 1966"
+    "imageCaption": "Proceedings of the 1966 Kuala Lumpur conference, published 1968",
+    "biographyPages": "72–75, 211",
+    "biographyNoteEn": "The conference was held in 1966; its proceedings appeared in two volumes in 1968, with an editorial committee led by Thani Nayagam.",
+    "biographyNoteTa": "மாநாடு 1966 இல் நடைபெற்றது; தனிநாயக அடிகளார் தலைமையிலான பதிப்புக் குழுவின் நடவடிக்கைத் தொகுப்புகள் 1968 இல் இரு தொகுதிகளாக வெளிவந்தன.",
+    "detailsTa": "1966 கோலாலம்பூர் மாநாடு · 1968 இல் வெளியான இரு நடவடிக்கைத் தொகுதிகள்"
   },
   {
     "slug": "tamil-studies-abroad",
@@ -313,12 +424,17 @@ export const WORKS: Work[] = [
     "sub": "conferences-iatr",
     "year": "1968",
     "yearStart": 1968,
-    "title": "Tamil Studies Abroad",
-    "details": "IATR symposium volume · 288 p.",
+    "title": "Tamil Studies Abroad: A Symposium",
+    "details": "Edited symposium volume · IATR, 1968",
     "status": "lending",
     "sources": [
-      "S32"
-    ]
+      "S32",
+      "S44"
+    ],
+    "biographyPages": "179, 212",
+    "biographyNoteEn": "Amudhan gives 268 pages in the narrative and vii + 269 pages in the bibliography. The existing linked catalogue is a separate edition record.",
+    "biographyNoteTa": "அமுதன் அடிகளார் உரையில் 268 பக்கங்கள் என்றும் நூற்பட்டியலில் vii + 269 பக்கங்கள் என்றும் குறிப்பிடுகிறார். இணைக்கப்பட்ட நூற்பட்டியல் தனிப் பதிப்புப் பதிவாகும்.",
+    "detailsTa": "தொகுக்கப்பட்ட ஆய்வுக் கட்டுரைகள் · உலகத் தமிழாராய்ச்சி மன்றம், 1968"
   },
   {
     "slug": "research-in-tamil-studies",
@@ -326,10 +442,16 @@ export const WORKS: Work[] = [
     "sub": "conferences-iatr",
     "year": "1980",
     "yearStart": 1980,
-    "title": "Research in Tamil Studies",
-    "details": "Thanthai Chelva Memorial Lecture, Colombo",
+    "title": "Research in Tamil Studies: Retrospect and Prospect",
+    "details": "Thanthai Chelva memorial lecture · Jaffna publication, 1980, 15 p.",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "201, 213",
+    "biographyNoteEn": "The English Thanthai Chelva memorial lecture was delivered on 28 April 1980. The biography gives Jaffna as the publication imprint; it does not establish Colombo as the lecture venue.",
+    "biographyNoteTa": "ஆங்கிலத் தந்தை செல்வா நினைவுச் சொற்பொழிவு 1980 ஏப்ரல் 28 அன்று நிகழ்த்தப்பட்டது. வாழ்க்கை வரலாறு வெளியீட்டு இடமாக யாழ்ப்பாணத்தைக் குறிப்பிடுகிறது; உரை நிகழ்ந்த இடம் கொழும்பு என்பதை அது உறுதிப்படுத்தவில்லை.",
+    "detailsTa": "தந்தை செல்வா நினைவுச் சொற்பொழிவு · யாழ்ப்பாண வெளியீடு, 1980, 15 பக்கங்கள்"
   },
   {
     "slug": "reference-guide-tamil-studies-1966",
@@ -338,12 +460,17 @@ export const WORKS: Work[] = [
     "year": "1966",
     "yearStart": 1966,
     "title": "A Reference Guide to Tamil Studies",
-    "details": "University of Malaya Press bibliography · 122 p.",
+    "details": "University of Malaya Press bibliography · vi + 122 p.",
     "status": "lending",
     "sources": [
       "S20",
-      "S21"
-    ]
+      "S21",
+      "S44"
+    ],
+    "biographyPages": "178–179, 211",
+    "biographyNoteEn": "Compiled during 1961–1963 and published in 1966. The biography gives vi + 122 pages and 1,355 book records.",
+    "biographyNoteTa": "1961–1963 காலத்தில் தொகுக்கப்பட்டு 1966 இல் வெளியானது. வாழ்க்கை வரலாற்றில் vi + 122 பக்கங்களும் 1,355 நூற்பதிவுகளும் குறிப்பிடப்பட்டுள்ளன.",
+    "detailsTa": "மலேயாப் பல்கலைக்கழக நூற்பட்டியல் · vi + 122 பக்கங்கள்"
   },
   {
     "slug": "antao-de-proenca-dictionary",
@@ -351,12 +478,16 @@ export const WORKS: Work[] = [
     "sub": "reference-guides",
     "year": "1964",
     "yearStart": 1964,
-    "title": "Antão de Proença's Dictionary (1679)",
-    "details": "17th-century Tamil-Portuguese dictionary reprint & commentary",
+    "title": "Antão de Proença’s Dictionary: Introduction and Preface",
+    "details": "Tamil Culture XI.2, 1964 · introduction and translated preface to the 1679 dictionary",
     "status": "readable",
-    "sources": [],
-    "image": "/images/thambiran-vanakkam-1578.jpg",
-    "imageCaption": "Thambiran Vanakkam, Quilon 1578"
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "128, 210–211",
+    "biographyNoteEn": "This reading dossier contains the 1964 journal introduction and co-translated preface. The photographic edition of the dictionary itself was published in 1966.",
+    "biographyNoteTa": "இவ்வாசிப்புத் தொகுப்பில் 1964 இதழின் அறிமுகக் கட்டுரையும் இணைந்து மொழிபெயர்த்த முன்னுரையும் உள்ளன. அகராதியின் ஒளிப்படப் பதிப்பு தனியாக 1966 இல் வெளியானது.",
+    "detailsTa": "Tamil Culture XI.2, 1964 · 1679 அகராதியின் அறிமுகமும் முன்னுரை மொழிபெயர்ப்பும்"
   },
   {
     "slug": "carthaginian-clergy",
@@ -365,12 +496,17 @@ export const WORKS: Work[] = [
     "year": "1950",
     "yearStart": 1950,
     "title": "The Carthaginian Clergy",
-    "details": "Roman doctoral research · Tamil Literature Society, 112 p.",
+    "details": "1939 doctoral research · second edition 1950, 112 p.",
     "status": "lending",
     "sources": [
       "S34",
-      "S35"
-    ]
+      "S35",
+      "S44"
+    ],
+    "biographyPages": "168–169, 206",
+    "biographyNoteEn": "D.D. thesis, Rome, 1939. The biography records first publication in 1947 and identifies the 1950 issue as the second edition.",
+    "biographyNoteTa": "ரோம், 1939 இறையியல் முனைவர் பட்ட ஆய்வு. வாழ்க்கை வரலாறு முதற்பதிப்பை 1947 என்றும் இங்குள்ள 1950 பதிப்பை இரண்டாம் பதிப்பு என்றும் குறிப்பிடுகிறது.",
+    "detailsTa": "1939 முனைவர் பட்ட ஆய்வு · இரண்டாம் பதிப்பு 1950, 112 பக்கங்கள்"
   },
   {
     "slug": "tamil-humanism",
@@ -379,33 +515,51 @@ export const WORKS: Work[] = [
     "year": "1972",
     "yearStart": 1972,
     "title": "Tamil Humanism, the Classical Period",
-    "details": "Jaffna College lectures · 57 p.",
+    "details": "Bunker memorial lectures · Jaffna, 1972",
     "status": "readable",
     "sources": [
-      "S38"
-    ]
+      "S38",
+      "S44"
+    ],
+    "biographyPages": "200, 212",
+    "biographyNoteEn": "The 1972 Bunker memorial lectures are distinct from Aspects of Tamil Humanism, a 1961 Sornammal lecture. The catalogue lists 57 pages; the biography’s section references extend to page 60.",
+    "biographyNoteTa": "1972 பங்க்கர் நினைவுச் சொற்பொழிவுகள், 1961 சொர்ணம்மாள் உரையான Aspects of Tamil Humanism என்பதிலிருந்து வேறுபட்டவை. நூற்பட்டியலில் 57 பக்கங்கள் உள்ளன; வாழ்க்கை வரலாற்றின் பகுதிக் குறிப்புகள் பக்கம் 60 வரை செல்கின்றன.",
+    "detailsTa": "பங்க்கர் நினைவுச் சொற்பொழிவுகள் · யாழ்ப்பாணம், 1972"
   },
   {
     "slug": "aspects-tamil-humanism",
     "cat": "philosophy-thought",
     "sub": "tamil-humanism",
-    "year": "1972",
-    "yearStart": 1972,
+    "year": "1961",
+    "yearStart": 1961,
     "title": "Aspects of Tamil Humanism",
-    "details": "Humanism study volume",
+    "details": "1961 Sornammal lecture record · related Tamil Culture essay available",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "209",
+    "biographyNoteEn": "The biography identifies this title with a February 1961 Sornammal lecture in Annals of Oriental Research. The on-site reading is a related 1957 Tamil Culture essay, not that lecture text.",
+    "biographyNoteTa": "வாழ்க்கை வரலாறு இத்தலைப்பை Annals of Oriental Research இதழில் வெளியான 1961 பெப்ருவரி சொர்ணம்மாள் உரையாகக் குறிப்பிடுகிறது. இங்குள்ள வாசிப்புப் பிரதி தொடர்புடைய 1957 Tamil Culture கட்டுரை; அந்த உரையின் மூலப் பிரதி அன்று.",
+    "detailsTa": "1961 சொர்ணம்மாள் உரைப் பதிவு · தொடர்புடைய Tamil Culture கட்டுரை வாசிப்பிற்கு"
   },
   {
     "slug": "indian-thought-roman-stoicism",
     "cat": "philosophy-thought",
     "sub": "comparative-philosophy",
-    "year": "1962",
+    "year": "1962/63",
     "yearStart": 1962,
     "title": "Indian Thought and Roman Stoicism",
-    "details": "Comparative philosophy paper",
+    "details": "1962 inaugural lecture · 1963 publication and journal reprint",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "yearEnd": 1963,
+    "biographyPages": "209",
+    "biographyNoteEn": "Delivered at the University of Malaya on 14 December 1962; published in 1963 and reprinted in Tamil Culture that year.",
+    "biographyNoteTa": "மலேயாப் பல்கலைக்கழகத்தில் 1962 டிசம்பர் 14 அன்று நிகழ்த்தப்பட்டது; 1963 இல் நூலாகவும் அதே ஆண்டு Tamil Culture இதழிலும் வெளிவந்தது.",
+    "detailsTa": "1962 தொடக்கப் பேருரை · 1963 நூல் பதிப்பும் இதழ் மறுபதிப்பும்"
   },
   {
     "slug": "collected-papers",
@@ -418,7 +572,10 @@ export const WORKS: Work[] = [
     "status": "readable",
     "sources": [
       "S28"
-    ]
+    ],
+    "biographyNoteEn": "This posthumous compilation is later than Amudhan’s 1993 biography and is recorded from separate catalogue evidence.",
+    "biographyNoteTa": "இந்த மறைவுக்குப் பிந்தைய தொகுப்பு அமுதன் அடிகளாரின் 1993 வாழ்க்கை வரலாற்றிற்குப் பிந்தியது; தனி நூற்பட்டியல் ஆதாரங்களின் அடிப்படையில் பதிவு செய்யப்பட்டுள்ளது.",
+    "detailsTa": "உலகத் தமிழாராய்ச்சி நிறுவனத்தின் மறைவுக்குப் பிந்தைய ஆங்கிலத் தொகுப்பு · 523 பக்கங்கள்"
   },
   {
     "slug": "complete-works",
@@ -429,7 +586,10 @@ export const WORKS: Work[] = [
     "title": "Complete Works of Thani Nayaga Adigalaar",
     "details": "Compilation record",
     "status": "readable",
-    "sources": []
+    "sources": [],
+    "biographyNoteEn": "This posthumous compilation is later than Amudhan’s 1993 biography and is recorded from separate catalogue evidence.",
+    "biographyNoteTa": "இந்த மறைவுக்குப் பிந்தைய தொகுப்பு அமுதன் அடிகளாரின் 1993 வாழ்க்கை வரலாற்றிற்குப் பிந்தியது; தனி நூற்பட்டியல் ஆதாரங்களின் அடிப்படையில் பதிவு செய்யப்பட்டுள்ளது.",
+    "detailsTa": "முழுப் படைப்புகளின் தொகுப்புப் பதிவு"
   },
   {
     "slug": "collected-speeches-1999",
@@ -444,7 +604,10 @@ export const WORKS: Work[] = [
       "S9",
       "S25",
       "S26"
-    ]
+    ],
+    "biographyNoteEn": "This posthumous compilation is later than Amudhan’s 1993 biography and is recorded from separate catalogue evidence.",
+    "biographyNoteTa": "இந்த மறைவுக்குப் பிந்தைய தொகுப்பு அமுதன் அடிகளாரின் 1993 வாழ்க்கை வரலாற்றிற்குப் பிந்தியது; தனி நூற்பட்டியல் ஆதாரங்களின் அடிப்படையில் பதிவு செய்யப்பட்டுள்ளது.",
+    "detailsTa": "மறைவுக்குப் பிந்தைய தமிழ்ச் சொற்பொழிவுத் தொகுப்பு · 178 பக்கங்கள்"
   },
   {
     "slug": "tamilaram",
@@ -456,7 +619,13 @@ export const WORKS: Work[] = [
     "titleTa": "தமிழாரம்",
     "details": "Memorial tribute volume",
     "status": "readable",
-    "sources": []
+    "sources": [
+      "S44"
+    ],
+    "biographyPages": "220",
+    "biographyNoteEn": "A memorial volume with recollections by his colleagues, rather than an original work authored by Thani Nayagam.",
+    "biographyNoteTa": "அவரது நண்பர்களின் நினைவுக் குறிப்புகள் அடங்கிய மலர்; தனிநாயக அடிகளார் எழுதிய மூலப் படைப்பு அன்று.",
+    "detailsTa": "நண்பர்களும் அறிஞர்களும் எழுதிய நினைவு மலர்"
   }
 ];
 
@@ -718,6 +887,15 @@ export const SOURCES: Source[] = [
     "title": "Amudhan Adigal Biography Book Cover",
     "type": "Tamil Wiki Photo (CC BY-SA)",
     "url": "https://tamil.wiki/wiki/File:Amudhan_Adigal_Book"
+  },
+  {
+      "id": "S44",
+      "citationKey": "TN1993",
+      "title": "Amudhan Adigal, Thani Nayagam Adigalar (1993)",
+      "titleTa": "அமுதன் அடிகள், தவத்திரு தனிநாயகம் அடிகளார் (1993)",
+      "type": "International Institute of Tamil Studies · first edition, July 1993 · publication no. 173",
+      "url": "/books/TVA_BOK_0009080_தனிநாயகம்_அடிகளார்.md",
+      "printedPageOffset": 35
   }
 ];
 
@@ -727,10 +905,10 @@ export const SRC_BY = Object.fromEntries(SOURCES.map((s) => [s.id, s]));
 
 export const STRINGS = {
   ta: {
-    title: "தனிநாயக அடிகள் — எண்மிய ஆவணகமும் ஆய்வுப் பதிப்பும்",
-    desc: "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளாரின் (1913–1980) வாழ்வு, எழுத்துகள் மற்றும் உலகளாவிய தமிழியல் பணிகளின் திறந்தவெளி எண்மிய ஆவணகம்.",
+    title: "தனிநாயக அடிகள் — ஆவணகம்",
+    desc: "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளாரின் (1913–1980) வாழ்வு, எழுத்துகள் மற்றும் உலகளாவிய தமிழியல் பணிகளின் திறந்தவெளி ஆவணகம்.",
     nav: ["முகப்பு", "அவரைப் பற்றி", "பங்களிப்புகள்", "ஆவணகம்", "உதவி"],
-    brandSub: "எண்மிய நூலகமும் ஆய்வுப் பதிப்பும்",
+    brandSub: "",
     menu: "பட்டியல்",
     menuClose: "மூடு",
     skip: "முதன்மை உள்ளடக்கத்திற்குத் தாவுக",
@@ -748,9 +926,9 @@ export const STRINGS = {
     emptyHint: "வடிகட்டிகளை மாற்றி மீண்டும் முயற்சிக்கவும்.",
     sources: "ஆவண மூலங்கள்",
     keyFacts: "வாழ்வியல் பதிவுக் குறிப்புகள்",
-    route: "உலகளாவிய தமிழ்ப்பயணம்: 9 முக்கிய வாழ்வியல் களங்கள்",
+    route: "அவரது பணிக்கு வடிவம் தந்த இடங்கள்",
     supportTitle: "அடிகளாரின் தமிழ்ப்பணியை உலகறியச் செய்வோம்",
-    supportSummary: "அருள்திரு. முனைவர் அமுதன் அடிகள் காட்டிய வழியிலும் வழிகாட்டலிலும் முன்னெடுக்கப்படும் இவ்வெண்மிய ஆவணகத்திற்கு உங்கள் ஆதரவும் பங்களிப்பும் துணைநிற்கட்டும்.",
+    supportSummary: "அருள்திரு. முனைவர் அமுதன் அடிகள் காட்டிய வழியிலும் வழிகாட்டலிலும் முன்னெடுக்கப்படும் இந்த ஆவணகத்திற்கு உங்கள் ஆதரவும் பங்களிப்பும் துணைநிற்கட்டும்.",
     readerZoom: "எழுத்தளவு",
     readerMeasure: "அகலம்",
     readerTheme: "தோற்றம்",
@@ -764,14 +942,14 @@ export const STRINGS = {
     preface: "நூல் முன்னுரை",
     record: "ஆவண விவரங்கள்",
     sourcesSec: "மூலங்கள்",
-    plate: "ஆவண ஏடு",
-    notice: "இப்படைப்பின் முழு ஆவணப் பிரதி ஆய்வாளர்களின் வாசிப்பிற்காக எண்மியப்படுத்தப்பட்டு வருகிறது. தற்போதைக்கு நூல் விவரங்களும் குறிப்புகளும் வழங்கப்பட்டுள்ளன.",
+    plate: "அசல் ஆவணப் படம்",
+    notice: "இப்படைப்பின் முழு நூல் வாசகர்களின் வாசிப்பிற்காகத் தொகுக்கப்பட்டு வருகிறது. தற்போதைக்கு நூல் விவரங்களும் மூல இணைப்புகளும் வழங்கப்பட்டுள்ளன.",
   },
   en: {
-    title: "Father Thani Nayagam — Digital Archive & Research Edition",
-    desc: "A comprehensive open-access digital archive dedicated to the life, scholarship, and global cultural diplomacy of Rev. Dr. Xavier S. Thani Nayagam (1913–1980).",
+    title: "Thani Nayagam Adigal — Open Archive",
+    desc: "Explore the life and writings of Rev. Dr. Xavier S. Thani Nayagam Adigal (1913–1980), with books, research essays, journals and conference records.",
     nav: ["Home", "About", "Contributions", "Archive", "Support"],
-    brandSub: "Digital Library & Research Edition",
+    brandSub: "",
     menu: "Menu",
     menuClose: "Close",
     skip: "Skip to main content",
@@ -789,7 +967,7 @@ export const STRINGS = {
     emptyHint: "Try adjusting your filters or search terms.",
     sources: "Archival Sources",
     keyFacts: "Key Biographical Records",
-    route: "Global Tamil Journey: 9 Key Centres",
+    route: "Places that shaped his work",
     supportTitle: "Showcasing Father Thani Nayagam’s Legacy to the World",
     supportSummary: "Guided by the lifelong archival work of Rev. Dr. Amudhan Adigal, this open-access initiative preserves and shares Father Thani Nayagam’s global scholarship.",
     readerZoom: "Zoom",
@@ -819,140 +997,413 @@ export const ROUTES = [
 ];
 
 export const KEY_FACTS: KeyFact[] = [
-  { label: "Born / பிறப்பு", num: "01", en: "2 August 1913, Karampon, near Kayts, Jaffna", ta: "1913 ஆகஸ்ட் 2 — காரம்பொன், ஊர்காவற்றுறை, யாழ்ப்பாணம்", icon: "🏛️" },
-  { label: "Died / மறைவு", num: "02", en: "1 September 1980, Jaffna (Aged 67)", ta: "1980 செப்டம்பர் 1 — யாழ்ப்பாணம் (அகவை 67)", icon: "🕊️" },
-  { label: "Vocation / பணி & ஆளுமை", num: "03", en: "Catholic priest, linguist, editor, and global cultural ambassador", ta: "கத்தோலிக்க குரு, பன்மொழியியலாளர், பேராசிரியர், சர்வதேசத் தமிழ்த் தூதுவர்", icon: "🎓" },
-  { label: "Doctorates / முனைவர் பட்டங்கள்", num: "04", en: "D.D. in Rome (1939); Ph.D. in London (1957)", ta: "இறையியல் முனைவர் (D.D., ரோம், 1939); கல்வியியல் முனைவர் (Ph.D., லண்டன், 1957)", icon: "📜" },
-  { label: "Founded / நிறுவிய அமைப்புகள்", num: "05", en: "Tamil Culture quarterly (1952) & IATR (1964)", ta: "‘Tamil Culture’ காலாண்டிதழ் (1952) & உலகத் தமிழாராய்ச்சி மன்றம் (IATR, 1964)", icon: "🌐" },
-  { label: "Organised / முதன்மை மாநாடு", num: "06", en: "1st World Conference of Tamil Studies, Kuala Lumpur (1966)", ta: "முதல் உலகத் தமிழாராய்ச்சி மாநாடு, கோலாலம்பூர் (1966)", icon: "🌏" },
+  {
+    "label": "Born / பிறப்பு",
+    "num": "01",
+    "en": "2 August 1913, Karampon, Jaffna",
+    "ta": "1913 ஆகஸ்ட் 2 — காரம்பொன், யாழ்ப்பாணம்",
+    "icon": "🏛️"
+  },
+  {
+    "label": "Died / மறைவு",
+    "num": "02",
+    "en": "1 September 1980, Pandatharippu, Jaffna (aged 67)",
+    "ta": "1980 செப்டம்பர் 1 — பண்டத்தரிப்பு, யாழ்ப்பாணம் (அகவை 67)",
+    "icon": "🕊️"
+  },
+  {
+    "label": "Vocation / பணி",
+    "num": "03",
+    "en": "Catholic priest, teacher, scholar and editor",
+    "ta": "கத்தோலிக்க குரு, ஆசிரியர், ஆய்வாளர், இதழாசிரியர்",
+    "icon": "🎓"
+  },
+  {
+    "label": "Doctorates / முனைவர் பட்டங்கள்",
+    "num": "04",
+    "en": "D.D., Rome (1939); Ph.D., London (1957)",
+    "ta": "இறையியல் முனைவர், ரோம் (1939); கல்வியியல் முனைவர், லண்டன் (1957)",
+    "icon": "📜"
+  },
+  {
+    "label": "Publishing / இதழியல்",
+    "num": "05",
+    "en": "Founded Tamil Culture in February 1952; co-founded IATR in 1964",
+    "ta": "Tamil Culture இதழ் தொடக்கம் — 1952 பெப்ருவரி; உலகத் தமிழாராய்ச்சி மன்றம் — 1964",
+    "icon": "🌐"
+  },
+  {
+    "label": "Conference / மாநாடு",
+    "num": "06",
+    "en": "Helped organise the first international Tamil research conference, Kuala Lumpur (1966)",
+    "ta": "முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டின் ஏற்பாட்டில் முன்னின்றார் — கோலாலம்பூர் (1966)",
+    "icon": "🌏"
+  }
 ];
 
 export const JOURNEY_STOPS: JourneyStop[] = [
-  { year: "1913", placeEn: "Karampon, Jaffna", noteEn: "Born on Kayts island.", placeTa: "காரம்பொன்", noteTa: "ஊர்காவற்றுறை அருகிலுள்ள தீவுக்கிராமத்தில் பிறப்பு." },
-  { year: "1934–39", placeEn: "Rome", noteEn: "Pontifical Urban University, Doctor of Divinity (The Carthaginian Clergy).", placeTa: "ரோம்", noteTa: "அர்பன் பல்கலைக்கழகத்தில் இறையியல் முனைவர் (D.D.) பட்டம்." },
-  { year: "1945–47", placeEn: "Annamalai University", noteEn: "Master of Letters research (Nature in Ancient Tamil Poetry).", placeTa: "சிதம்பரம்", noteTa: "அண்ணாமலைப் பல்கலைக்கழகத்தில் சங்க இலக்கிய இயற்கை பற்றிய எம்.லிட். ஆய்வு." },
-  { year: "1950", placeEn: "Lisbon", noteEn: "Rediscovered the 1554 Cartilha, the earliest printed work containing an Indian language.", placeTa: "லிஸ்பன்", noteTa: "ஐரோப்பிய நூலகத்தில் 1554 'கார்த்தீலா' முதல் தமிழ் அச்சு நூலைக் கண்டறிதல்." },
-  { year: "1952–61", placeEn: "Ceylon & Tuticorin", noteEn: "Lecturer at University of Ceylon; founded Tamil Culture quarterly.", placeTa: "இலங்கை / தூத்துக்குடி", noteTa: "பேராதனைப் பல்கலைக்கழக விரிவுரை; வரலாற்றுச் சிறப்புமிக்க 'Tamil Culture' ஆய்விதழ் தொடக்கம்." },
-  { year: "1955–57", placeEn: "London", noteEn: "Ph.D. in Education at the University of London.", placeTa: "லண்டன்", noteTa: "லண்டன் பல்கலைக்கழகத்தில் தமிழ்க் கல்வியியல் குறித்த இரண்டாவது முனைவர் (Ph.D.) பட்டம்." },
-  { year: "1961–69", placeEn: "Kuala Lumpur", noteEn: "Head of Indian Studies, University of Malaya; organized 1966 KL Conference.", placeTa: "கோலாலம்பூர்", noteTa: "மலேயாப் பல்கலைக்கழக இந்திய ஆய்வியல் துறைத் தலைவர்; முதல் உலகத் தமிழ் மாநாட்டு ஒருங்கிணைப்பு." },
-  { year: "1969", placeEn: "Paris & Naples", noteEn: "Visiting Professor at the Sorbonne and University of Naples.", placeTa: "பாரிஸ் & நேப்பிள்ஸ்", noteTa: "புகழ்பெற்ற சோர்போன் மற்றும் நேப்பிள்ஸ் பல்கலைக்கழகங்களில் வருகைப் பேராசிரியர் பணி." },
-  { year: "1980", placeEn: "Jaffna", noteEn: "Returned home; final lectures and passing.", placeTa: "யாழ்ப்பாணம்", noteTa: "தாயகம் திரும்புதல்; இறுதிப் பேருரைகள் மற்றும் நிறைவு." },
+  {
+    "year": "1913",
+    "placeEn": "Karampon, Jaffna",
+    "noteEn": "His birthplace in northern Sri Lanka.",
+    "placeTa": "காரம்பொன், யாழ்ப்பாணம்",
+    "noteTa": "இலங்கையின் வடபகுதியில் அவரது பிறப்பிடம்."
+  },
+  {
+    "year": "1934–39",
+    "placeEn": "Rome",
+    "noteEn": "Priestly formation, languages and a theology doctorate in 1939.",
+    "placeTa": "ரோம்",
+    "noteTa": "குருத்துவப் பயிற்சி, மொழிக் கல்வி, 1939 இறையியல் முனைவர் பட்டம்."
+  },
+  {
+    "year": "1945–49",
+    "placeEn": "Annamalai University",
+    "noteEn": "M.A. in 1947 and M.Litt. in 1949; research on nature in Tamil poetry.",
+    "placeTa": "அண்ணாமலைப் பல்கலைக்கழகம்",
+    "noteTa": "1947 எம்.ஏ., 1949 எம்.லிட்.; தமிழ் இலக்கியத்தில் இயற்கை பற்றிய ஆய்வு."
+  },
+  {
+    "year": "1952–61",
+    "placeEn": "Ceylon & Tuticorin",
+    "noteEn": "Education lecturer at Peradeniya; Tamil Culture connected readers abroad.",
+    "placeTa": "இலங்கை / தூத்துக்குடி",
+    "noteTa": "பேராதனையில் கல்வித்துறை விரிவுரையாளர்; உலக வாசகர்களை இணைத்த Tamil Culture இதழ்."
+  },
+  {
+    "year": "1954",
+    "placeEn": "Lisbon",
+    "noteEn": "Found Henriques’s sixteenth-century Tamil grammar manuscript in the National Library.",
+    "placeTa": "லிஸ்பன்",
+    "noteTa": "தேசிய நூலகத்தில் என்ரீக்கஸ் அடிகளாரின் பதினாறாம் நூற்றாண்டுத் தமிழ் இலக்கணச் சுவடியைக் கண்டறிந்தார்."
+  },
+  {
+    "year": "1955–57",
+    "placeEn": "London",
+    "noteEn": "Doctoral research on educational thought in ancient Tamil literature.",
+    "placeTa": "லண்டன்",
+    "noteTa": "பழந்தமிழ் இலக்கியங்களில் கல்விச் சிந்தனைகள் குறித்த முனைவர் பட்ட ஆய்வு."
+  },
+  {
+    "year": "1961–69",
+    "placeEn": "Kuala Lumpur",
+    "noteEn": "Led Indian Studies at Malaya; helped organise the 1966 Tamil conference.",
+    "placeTa": "கோலாலம்பூர்",
+    "noteTa": "மலேயாப் பல்கலைக்கழக இந்தியத் துறைத் தலைமை; 1966 தமிழ் மாநாட்டு ஏற்பாடு."
+  },
+  {
+    "year": "1970–71",
+    "placeEn": "Paris & Naples",
+    "noteEn": "Taught at Collège de France in 1970 and the University of Naples in 1971.",
+    "placeTa": "பாரிஸ் / நேப்பிள்ஸ்",
+    "noteTa": "1970 பிரான்சுக் கல்லூரியிலும், 1971 நேப்பிள்ஸ் பல்கலைக்கழகத்திலும் கற்பித்தார்."
+  },
+  {
+    "year": "1972–80",
+    "placeEn": "Jaffna",
+    "noteEn": "Teaching, public lectures and the 1974 conference; his final years.",
+    "placeTa": "யாழ்ப்பாணம்",
+    "noteTa": "கற்பித்தல், பொது உரைகள், 1974 மாநாடு ஆகிய பணிகளுடன் நிறைவு வாழ்வு."
+  }
 ];
 
 export const BIO_SECTIONS: BioSection[] = [
   {
-    en: "Early Life and Family",
-    ta: "தொடக்க வாழ்வும் குடும்பப் பின்னணியும்",
-    enBody: "Born Xavier Nicholas Stanislaus on 2 August 1913 in Karampon, near Kayts (Ūr kāvaṟtuṟai) in the Jaffna district, he later took the name Xavier S. Thani Nayagam after becoming a Roman Catholic priest. “Thani Nayagam” translates as “lone hero.” His parents were Naganathan Stanislaus and Cecilia Bastiampillai; his paternal grandfather, Thaninayaga Mudali, came from Delft Island (Neduntheevu). He studied at St. Anthony’s College, Kayts, and then at St. Patrick’s College, Jaffna (1920–1922), receiving an English-medium education.",
-    taBody: "1913 ஆகஸ்ட் 2 அன்று யாழ்ப்பாணத்தின் ஊர்காவற்றுறை அருகே காரம்பொன் கிராமத்தில் நாகநாதன் ஸ்ரனிஸ்லாஸ் மற்றும் சிசிலியா பாஸ்தியம்பிள்ளை இணையருக்கு மகனாகப் பிறந்தார். இயற்பெயர் சேவியர் நிக்கோலஸ் ஸ்ரனிஸ்லாஸ். பாட்டனார் தனிநாயக முதலி நெடுந்தீவைச் சேர்ந்த பெருமதிப்புமிக்க மரபினர். பின்னர் கத்தோலிக்கத் துறவியானதும் ‘சேவியர் தனிநாயகம்’ என்ற பெயரை ஏற்றுக்கொண்டார். காரம்பொன் புனித அந்தோனியார் கல்லூரி, யாழ்ப்பாணம் புனித பத்தரிசியார் கல்லூரி ஆகியவற்றில் தனது ஆரம்ப ஆங்கில வழிக் கல்வியைப் பயின்றார்.",
-    fig: "FrThaninayagam-highres.jpg",
-    figCap: "தனிநாயக அடிகள் — வரலாற்று ஆவணப் பதிவு",
-    figCapEn: "Rev. Dr. Xavier S. Thani Nayagam — Archival Retrospective Plate",
-    src: "S2",
+    "en": "A wider world",
+    "ta": "உலகை அறிந்த மாணவர்",
+    "enBody": "His early ambition was to write and speak English well. Training in Colombo and Rome introduced him to classical and European languages, and to fellow students from many countries. His interest in Tamil also grew during these years. The outlook he later brought to Tamil scholarship took shape through this experience of a wider world.",
+    "taBody": "இளமையில் ஆங்கிலத்தைச் சிறப்பாக எழுதவும் பேசவும் வேண்டும் என்பதே அவரது விருப்பம். கொழும்பிலும் ரோமிலும் பெற்ற கல்வி, பல மொழிகளையும் பல நாடுகளைச் சேர்ந்த மாணவர்களையும் அவருக்கு அறிமுகப்படுத்தியது. இக்காலத்திலேயே தமிழின் மீது அவரது ஆர்வமும் வளர்ந்தது. பின்னாளில் தமிழாய்வுக்குள் அவர் கொண்டு வந்த உலகப் பார்வை இந்த அனுபவங்களின் வழியே உருவானது.",
+    "fig": null,
+    "src": "S44"
   },
   {
-    en: "Priestly Formation and Education in Rome",
-    ta: "ரோமில் ஆன்மிகப் பயிற்சியும் இறையியல் முனைவர் பட்டமும்",
-    enBody: "From 1934 to 1939, he resided at the Pontifical Urban University in Rome, earning a Doctor of Divinity degree with his dissertation The Carthaginian Clergy. Ordained a priest in Rome on 19 March 1938, he traveled widely across Western Europe, learning Italian, French, German, Spanish, and Portuguese alongside Latin and Greek, establishing the polyglot foundation that underpinned his later scholarly career.",
-    taBody: "1934 முதல் 1939 வரை ரோம் நகரின் புகழ்பெற்ற அர்பன் பல்கலைக்கழகத்தில் பயின்று ‘The Carthaginian Clergy’ என்ற தலைப்பில் இறையியல் முனைவர் (D.D.) பட்டம் பெற்றார். 1938 மார்ச் 19 அன்று ரோம் நகரில் கத்தோலிக்க குருவாகத் திருநிலைப்படுத்தப்பட்டார். இத்தாலிய, பிரெஞ்சு, ஜெர்மன், ஸ்பானிஷ், போர்த்துக்கீசிய, லத்தீன் மற்றும் கிரேக்க மொழிகளைக் கற்றுத் தேர்ந்ததன் மூலம் பன்மொழிப் புலமை பெற்றார்.",
-    fig: null,
+    "en": "Tamil becomes a vocation",
+    "ta": "வாழ்வின் பணியாக மாறிய தமிழ்",
+    "enBody": "While teaching at St. Theresa’s High School in Vadakangulam, he studied Tamil with Pandit Gurusami Subramania Iyer. Classical poetry drew him towards further study. At Annamalai University he earned an M.A. in 1947 and an M.Litt. in 1949, researching nature in ancient Tamil poetry with A. Chidambaranathan. That research became the basis of books through which readers could encounter the relationship between poetry, landscape and life.",
+    "taBody": "வடக்கன்குளம் புனித தெரசாள் உயர்நிலைப் பள்ளியில் ஆசிரியராகப் பணியாற்றியபோது, பண்டிதர் குருசாமி சுப்பிரமணிய ஐயரிடம் தமிழ் பயின்றார். பழந்தமிழ் இலக்கியத்தின் கருத்து வளம் அவரைத் தொடர்ந்து படிக்கத் தூண்டியது. அண்ணாமலைப் பல்கலைக்கழகத்தில் 1947 இல் எம்.ஏ., 1949 இல் எம்.லிட். பட்டங்களைப் பெற்றார். அ. சிதம்பரநாதனாரின் வழிகாட்டலில் மேற்கொண்ட இயற்கை பற்றிய ஆய்வு, கவிதைக்கும் நிலத்துக்கும் வாழ்வுக்கும் உள்ள தொடர்பை வாசகர்களுக்கு அறிமுகப்படுத்தும் நூல்களாக வெளிவந்தது.",
+    "fig": null,
+    "src": "S44"
   },
   {
-    en: "Southern India and Tamil Awakening",
-    ta: "தமிழக வருகையும் செவ்வியல் தமிழ் ஆய்வும்",
-    enBody: "Arriving in South India in 1940, he served at St. Joseph’s High School in Vadakangulam (Tirunelveli) and began studying Tamil systematically with local pandits. From 1945 to 1947, he conducted research at Annamalai University under the guidance of S. Somasundara Bharati, earning a Master of Letters (M.Litt.) degree with his thesis Nature in Ancient Tamil Poetry.",
-    taBody: "1940-இல் தென்னிந்தியாவிற்கு வருகை தந்து திருநெல்வேலி மாவட்டம் வடக்கன்குளம் புனித வளனார் பள்ளியில் பணியாற்றினார். அங்குத் தமிழ்ப் பண்டிதர்களிடம் சங்க இலக்கியங்களை முறையாகக் கற்றார். 1945 முதல் 1947 வரை சிதம்பரம் அண்ணாமலைப் பல்கலைக்கழகத்தில் நாவலர் ச. சோமசுந்தர பாரதியாரின் வழிகாட்டலில் ஆய்வு மேற்கொண்டு, ‘Nature in Ancient Tamil Poetry’ என்ற தலைப்பில் எம்.லிட். ஆய்வுப் பட்டம் பெற்றார்.",
-    fig: null,
+    "en": "A shared conversation",
+    "ta": "அறிஞர்களை இணைத்த உரையாடல்",
+    "enBody": "He wanted Tamil research to reach people who could not read Tamil. The English-language quarterly Tamil Culture, launched in 1952, made room for studies of language, literature, history and society. With fellow scholars he helped form IATR in 1964 and organise the first international Tamil research conference in Kuala Lumpur in 1966. The journal and meetings gave scholars in different countries ways to read, discuss and build on one another’s work.",
+    "taBody": "தமிழ் அறியாதவர்களுக்கும் தமிழாய்வு சென்றடைய வேண்டும் என்று அவர் விரும்பினார். 1952 இல் தொடங்கிய Tamil Culture ஆங்கிலக் காலாண்டிதழில் மொழி, இலக்கியம், வரலாறு, சமூகம் பற்றிய ஆய்வுகள் இடம்பெற்றன. பிற அறிஞர்களுடன் இணைந்து 1964 இல் உலகத் தமிழாராய்ச்சி மன்றத்தை உருவாக்கவும், 1966 இல் கோலாலம்பூரில் முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டை நடத்தவும் முன்னின்றார். பல நாடுகளின் அறிஞர்கள் ஒருவருடைய ஆய்வை மற்றவர் படித்து விவாதிக்க இந்த இதழும் மாநாடுகளும் வாய்ப்பளித்தன.",
+    "fig": "conference-1966-proceedings.jpg",
+    "figCap": "1966 கோலாலம்பூர் முதல் உலகத் தமிழாராய்ச்சி மாநாட்டு நடவடிக்கைகள்",
+    "figCapEn": "1966 Kuala Lumpur First International Conference of Tamil Studies proceedings",
+    "src": "S44"
   },
   {
-    en: "Academic Careers in Ceylon, London, and Malaya",
-    ta: "பல்கலைக்கழகப் பேராசிரியப் பணிகளும் உலக விரிவுரைகளும்",
-    enBody: "From 1952 to 1961, he served as a Lecturer in Education at the University of Ceylon, Peradeniya. During this time, he pursued a second doctorate at the University of London Institute of Education, awarded a Ph.D. in 1957. In 1961, he was appointed Professor and Head of the Department of Indian Studies at the University of Malaya in Kuala Lumpur. He also taught as a Visiting Professor at the Sorbonne and the University of Naples.",
-    taBody: "1952 முதல் 1961 வரை பேராதனை இலங்கைப் பல்கலைக்கழகத்தில் விரிவுரையாளராகப் பணியாற்றினார். அதே காலகட்டத்தில் லண்டன் பல்கலைக்கழகக் கல்வி நிறுவனத்தில் தமிழ்க் கல்வியியல் சிந்தனைகள் குறித்து ஆய்வு மேற்கொண்டு தமது இரண்டாவது முனைவர் பட்டத்தைப் (Ph.D.) பெற்றார். 1961 இல் மலேசியாவின் மலேயாப் பல்கலைக்கழகத்தில் இந்திய ஆய்வியல் துறைத் தலைவராகவும் தமிழ்ப் பேராசிரியராகவும் நியமிக்கப்பட்டார். தொடர்ந்து பாரிஸ் சோர்போன் மற்றும் இத்தாலியின் நேப்பிள்ஸ் பல்கலைக்கழகங்களில் வருகைப் பேராசிரியராகக் கற்பித்தார். ஓராண்டு உலகச் சுற்றுப்பயணத்தில் மட்டும் அமெரிக்கா, ஐரோப்பா, ஆசிய நாடுகள் எங்கும் 200-க்கும் மேற்பட்ட பல்கலைக்கழக விரிவுரைகளை ஆற்றி உலக அரங்கில் தமிழின் பெருமையை நிலைநாட்டினார்.",
-    fig: "conference-1966-proceedings.jpg",
-    figCap: "முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டு ஆவணம் (கோலாலம்பூர், 1966)",
-    figCapEn: "First International Conference-Seminar Proceedings (Kuala Lumpur, 1966)",
-    src: "S5",
-  },
-  {
-    en: "Publishing, Archives, and Institutions",
-    ta: "ஆய்விதழியல், உலக மாநாடுகள், அச்சு மீட்டெடுப்பு",
-    enBody: "In 1952 in Tuticorin, he founded the Tamil Literature Society and launched Tamil Culture, an English-language quarterly. In Lisbon in 1950, he identified the 1554 Cartilha (Luso-Tamil Catechism) — the first book printed containing an Indian language. On 7 January 1964 in New Delhi, alongside Jean Filliozat, Kamil Zvelebil, and V. I. Subramaniam, he co-founded the International Association for Tamil Research (IATR). In April 1966, he organized the First International Conference-Seminar of Tamil Studies in Kuala Lumpur.",
-    taBody: "1952 இல் தூத்துக்குடியில் தமிழ் இலக்கியக் கழகத்தை நிறுவி, உலகத் தரம் வாய்ந்த ‘Tamil Culture’ ஆங்கிலக் காலாண்டு ஆய்விதழைத் தொடங்கினார். 1950 இல் லிஸ்பன் தேசிய நூலகத்தில் 1554-இல் அச்சிடப்பட்ட ‘கார்த்தீலா’ என்ற முதல் தமிழ் அச்சு நூலைக் கண்டறிந்தார். 1964 ஜனவரி 7 அன்று புதுதில்லியில் உலகளாவிய பேராசிரியர்களை ஒன்றிணைத்து சர்வதேசத் தமிழாராய்ச்சி மன்றத்தை (IATR) நிறுவினார். 1966 ஏப்ரலில் மலேசியத் தலைநகர் கோலாலம்பூரில் முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டைத் திறம்பட ஒருங்கிணைத்துத் தமிழ் ஆய்வை உலகளாவிய இயக்கமாக மாற்றினார்.",
-    fig: null,
-  },
-  {
-    en: "Final Years and Honours",
-    ta: "நிறைவு வாழ்வும் வரலாற்று நினைவேந்தலும்",
-    enBody: "In April 1980, he delivered the Thanthai Chelva Memorial Lecture in Colombo on Research in Tamil Studies. He passed away in Jaffna on the evening of 1 September 1980. At the 5th World Tamil Conference in Madurai (1981), a commemorative statue was unveiled in his honour, and the University of Jaffna conferred a posthumous doctorate.",
-    taBody: "1980 ஏப்ரலில் கொழும்பில் தந்தை செல்வா நினைவுப் பேருரையை ஆற்றித் தமிழாய்வு நெறிகளை முன்வைத்தார். 1980 செப்டம்பர் 1 அன்று மாலை யாழ்ப்பாணத்தில் இயற்கை எய்தினார். 1981 இல் மதுரையில் நடைபெற்ற ஐந்தாவது உலகத் தமிழாராய்ச்சி மாநாட்டில் அவரது நினைவாக முழு உருவச் சிலை நிறுவப்பட்டது; யாழ்ப்பாணப் பல்கலைக்கழகம் அவருக்கு மரணத்திற்குப் பின் கௌரவ முனைவர் பட்டம் வழங்கிச் சிறப்பித்தது.",
-    fig: null,
-  },
+    "en": "The work continues",
+    "ta": "தொடர்ந்த தமிழ்ப்பணி",
+    "enBody": "After retiring from Malaya in 1969, he continued teaching in Paris and Naples before returning to Sri Lanka. In Jaffna he taught, served on the university council and helped organise the 1974 Tamil conference. His final public appearance was at a Tirukkural conference in Velanai in May 1980. He died on 1 September that year. His later work remained close to students, readers and the public life of his community.",
+    "taBody": "1969 இல் மலேயாப் பல்கலைக்கழகத்திலிருந்து ஓய்வு பெற்றபின் பாரிஸ், நேப்பிள்ஸ் நகரங்களில் கற்பித்தார்; பின்னர் இலங்கை திரும்பினார். யாழ்ப்பாணத்தில் கற்பித்தல், பல்கலைக்கழக ஆட்சிக்குழுப் பணி, 1974 தமிழ் மாநாட்டின் ஏற்பாடு ஆகியவற்றில் ஈடுபட்டார். 1980 மே மாதம் வேலணையில் நடைபெற்ற திருக்குறள் மாநாடே அவர் கலந்துகொண்ட இறுதிப் பொது நிகழ்ச்சி. அதே ஆண்டு செப்டம்பர் 1 அன்று இயற்கை எய்தினார். அவரது நிறைவு வாழ்விலும் மாணவர்களும் வாசகர்களும் சமுதாயப் பணியும் இடம் பெற்றிருந்தன.",
+    "fig": "amudhan-adigal-book.jpg",
+    "figCap": "அமுதன் அடிகள் எழுதிய 'தனிநாயகம் அடிகளார்' வாழ்க்கை வரலாற்று நூல் (1993)",
+    "figCapEn": "Biography of Father Thani Nayagam by Amudhan Adigal (1993)",
+    "src": "S44"
+  }
 ];
 
 export const MILESTONE_ERAS: MilestoneEra[] = [
-  { en: "Formative Era (1913–1939)", ta: "தொடக்கக் காலமும் கல்வியும் (1913–1939)", items: [0, 1, 2, 3] },
-  { en: "Indian Research & Literary Foundations (1940–1947)", ta: "இந்திய வருகையும் தமிழாய்வு அடித்தளமும் (1940–1947)", items: [4, 5] },
-  { en: "Global Archival Discoveries & Journal Publishing (1950–1961)", ta: "அச்சு மீட்டெடுப்பும் ஆய்விதழியலும் (1950–1961)", items: [6, 7, 8, 9] },
-  { en: "International Conferences & Academic Chairs (1961–1969)", ta: "உலக மாநாடுகளும் தமிழாராய்ச்சி மன்றமும் (1961–1969)", items: [10, 11, 12, 13, 14] },
-  { en: "Final Lectures & Posthumous Honours (1980–1981)", ta: "நிறைவு வாழ்வும் வரலாற்று நினைவேந்தலும் (1980–1981)", items: [15, 16] },
+  {
+    "en": "Formation and education (1913–1939)",
+    "ta": "தொடக்க வாழ்வும் கல்வியும் (1913–1939)",
+    "items": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "en": "Teaching and Tamil research (1940–1949)",
+    "ta": "கற்பித்தலும் தமிழாய்வும் (1940–1949)",
+    "items": [
+      4,
+      5
+    ]
+  },
+  {
+    "en": "Publishing and scholarship (1952–1961)",
+    "ta": "இதழியலும் ஆய்வும் (1952–1961)",
+    "items": [
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "en": "Connections and conferences (1961–1971)",
+    "ta": "அறிஞர் உறவுகளும் மாநாடுகளும் (1961–1971)",
+    "items": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "en": "Final lectures and remembrance (1980–1981)",
+    "ta": "இறுதிப் பேருரைகளும் நினைவேந்தலும் (1980–1981)",
+    "items": [
+      15,
+      16
+    ]
+  }
 ];
 
 export const MILESTONES: Milestone[] = [
-  { year: "1913", enTitle: "Birth in Karampon, Jaffna", enDetail: "Born 2 August to Naganathan Stanislaus and Cecilia Bastiampillai.", taTitle: "காரம்பொன் கிராமத்தில் பிறப்பு", taDetail: "1913 ஆகஸ்ட் 2 அன்று நாகநாதன் ஸ்ரனிஸ்லாஸ் — சிசிலியா இணையருக்கு மகனாகப் பிறந்தார்.", sources: ["S2", "S10", "S11"] },
-  { year: "1920–1922", enTitle: "Schooling in Jaffna", enDetail: "Studied at St. Anthony’s College (Kayts) and St. Patrick’s College (Jaffna).", taTitle: "யாழ்ப்பாணத்தில் தொடக்கக் கல்வி", taDetail: "ஊர்காவற்றுறை புனித அந்தோனியார் மற்றும் யாழ்ப்பாணம் புனித பத்தரிசியார் கல்லூரிகளில் ஆங்கில வழிக் கல்வி.", sources: ["S10", "S11"] },
-  { year: "1931–1934", enTitle: "Seminary in Colombo", enDetail: "St. Bernard’s Seminary; completed B.A. in Philosophy.", taTitle: "கொழும்பு செமினரியில் தத்துவக் கல்வி", taDetail: "கொழும்பு புனித பேர்னாட் செமினரியில் தத்துவவியலில் இளங்கலைப் பட்டம் பெற்றார்.", sources: ["S10", "S11"] },
-  { year: "1934–1938", enTitle: "Doctorate in Rome", enDetail: "Pontifical Urban University, Doctor of Divinity; ordained priest (1938).", taTitle: "ரோமில் இறையியல் முனைவர் பட்டம்", taDetail: "ரோம் அர்பன் பல்கலைக்கழகத்தில் இறையியல் முனைவர் (D.D.) பட்டம்; 1938-இல் குருத்துவ அருட்பொழிவு.", sources: ["S10", "S11"] },
-  { year: "1940–1945", enTitle: "Ministry and Tamil Learning in India", enDetail: "Southern India; began systematic study of classical Tamil literature.", taTitle: "தமிழகத்தில் ஆன்மிகப் பணியும் தமிழ்க் கல்வியும்", taDetail: "தென்னிந்தியாவில் அருட்பணி; தமிழ் செவ்வியல் இலக்கியங்களை முறையாகக் கற்றுத் தேர்ச்சி பெற்றார்.", sources: ["S10", "S11"] },
-  { year: "1945–1947", enTitle: "M.Litt. at Annamalai University", enDetail: "Completed research on landscape and nature in ancient Tamil poetry under S. S. Bharati.", taTitle: "அண்ணாமலையில் எம்.லிட். ஆய்வுப் பட்டம்", taDetail: "ச. சோமசுந்தர பாரதியாரின் வழிகாட்டலில் சங்க இலக்கிய இயற்கை குறித்த புகழ்பெற்ற எம்.லிட். ஆய்வு.", sources: ["S10", "S11"] },
-  { year: "1950", enTitle: "Rediscovery of 1554 Cartilha in Lisbon", enDetail: "Identified the earliest printed work containing an Indian language at the National Library.", taTitle: "லிஸ்பனில் 1554 ‘கார்த்தீலா’ கண்டறிதல்", taDetail: "போர்ச்சுகல் தேசிய நூலகத்தில் முதல் தமிழ் அச்சு நூலான 1554 ‘கார்த்தீலா’வை ஆவணப்படுத்தினார்.", sources: ["S8", "S10", "S11"] },
-  { year: "1952", enTitle: "Tamil Culture Quarterly Launched", enDetail: "Founded in Tuticorin; established the Academy of Tamil Culture.", taTitle: "‘Tamil Culture’ ஆய்விதழ் தொடக்கம்", taDetail: "தூத்துக்குடியில் உலகத்தரம் வாய்ந்த ஆங்கிலக் காலாண்டு ஆய்விதழையும் தமிழ் இலக்கியக் கழகத்தையும் நிறுவினார்.", sources: ["S1", "S4", "S10", "S11"] },
-  { year: "1952–1961", enTitle: "Teaching at University of Ceylon", enDetail: "Lecturer in Education at Peradeniya; promoted Tamil studies worldwide.", taTitle: "பேராதனைப் பல்கலைக்கழக விரிவுரையாளர்", taDetail: "இலங்கைப் பேராதனைப் பல்கலைக்கழகத்தில் விரிவுரையாளராகப் பணியாற்றி உலகளாவிய தமிழியலை வளர்த்தார்.", sources: ["S10", "S11"] },
-  { year: "1955–1957", enTitle: "Ph.D. at University of London", enDetail: "Completed second doctorate on educational theory in Tamil literature.", taTitle: "லண்டன் பல்கலைக்கழகத்தில் 2-வது முனைவர் பட்டம்", taDetail: "லண்டன் பல்கலைக்கழகக் கல்வி நிறுவனத்தில் தமிழ்க் கல்வியியல் சிந்தனைகளில் முனைவர் (Ph.D.) பட்டம்.", sources: ["S10", "S11"] },
-  { year: "1961–1969", enTitle: "Professor at University of Malaya", enDetail: "Head of the Department of Indian Studies; built international scholarly network.", taTitle: "மலேயாப் பல்கலைக்கழகத் துறைத் தலைவர்", taDetail: "இந்திய ஆய்வியல் துறையை நிறுவி, தென்கிழக்காசியாவின் முன்னணித் தமிழியல் மையமாக உயர்த்தினார்.", sources: ["S1", "S10", "S11"] },
-  { year: "1962", enTitle: "Proposal for World Tamil Conferences", enDetail: "Conceived international academic conferences on Tamil studies at Delhi seminar.", taTitle: "உலகத் தமிழ் மாநாட்டுக்கான வரைவு", taDetail: "தமிழக அரசு மற்றும் உலக அறிஞர்களுக்கு உலகத் தமிழ் மாநாடுகளை நடத்தும் திட்டத்தை முன்வைத்தார்.", sources: ["S11"] },
-  { year: "1964", enTitle: "IATR Founded in New Delhi", enDetail: "Co-founded International Association for Tamil Research on 7 January with 26 scholars.", taTitle: "புதுதில்லியில் உலகத் தமிழாராய்ச்சி மன்றம் உருவாக்கம்", taDetail: "25+ நாடுகளின் அறிஞர்களுடன் இணைந்து சர்வதேசத் தமிழாராய்ச்சி மன்றத்தை (IATR) தோற்றுவித்தார்.", sources: ["S1", "S2", "S10", "S11"] },
-  { year: "1966", enTitle: "1st International Conference in Kuala Lumpur", enDetail: "General Secretary of conference (16–23 April); released Proença dictionary reprint.", taTitle: "கோலாலம்பூரில் முதலாவது உலகத் தமிழ் மாநாடு", taDetail: "மாநாட்டின் பொதுச் செயலாளராகப் பெருவெற்றி பெறச் செய்து, 1679 புரோவென்சா அகராதியின் மறுபதிப்பை வெளியிட்டார்.", sources: ["S1", "S5", "S10", "S11"] },
-  { year: "1969", enTitle: "Teaching in Europe", enDetail: "Visiting Professor at Sorbonne (Paris) and University of Naples.", taTitle: "ஐரோப்பியப் பல்கலைக்கழகங்களில் வருகைப் பேராசிரியர்", taDetail: "பாரிஸ் சோர்போன் மற்றும் நேப்பிள்ஸ் பல்கலைக்கழகங்களில் தமிழ் வருகைப் பேராசிரியராகக் கற்பித்தார்.", sources: ["S1", "S10", "S11"] },
-  { year: "1980", enTitle: "Final Lectures and Passing", enDetail: "Delivered Thanthai Chelva Memorial Lecture in Colombo; passed away in Jaffna on 1 September.", taTitle: "இறுதிப் பேருரைகளும் மறைவும்", taDetail: "கொழும்பில் தந்தை செல்வா நினைவுப் பேருரையை நிகழ்த்தினார்; செப்டம்பர் 1 அன்று யாழ்ப்பாணத்தில் இயற்கை எய்தினார்.", sources: ["S1", "S9", "S10", "S11"] },
-  { year: "1981", enTitle: "Posthumous Honours", enDetail: "Statue unveiled at 5th World Conference in Madurai; posthumous doctorate conferred by University of Jaffna.", taTitle: "மதுரை மாநாட்டு நினைவேந்தல் & முனைவர் பட்டம்", taDetail: "மதுரை 5-வது உலகத் தமிழ் மாநாட்டில் முழு உருவச் சிலை திறப்பு; யாழ்ப்பாணப் பல்கலைக்கழகத்தின் மரணத்திற்குப் பின் கௌரவ முனைவர் பட்டம்.", sources: ["S1", "S10", "S11", "S13"] },
+  {
+    "year": "1913",
+    "enTitle": "Born in Karampon",
+    "enDetail": "Born on 2 August to Henry Stanislaus Ganapathipillai and Cecil Rasamma Vastiampillai.",
+    "taTitle": "காரம்பொனில் பிறப்பு",
+    "taDetail": "ஆகஸ்ட் 2 அன்று ஹென்ரி ஸ்தனிஸ்லாஸ் கணபதிப்பிள்ளை — செசில் இராசம்மா வஸ்தியாம்பிள்ளை இணையருக்குப் பிறந்தார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1923–1930",
+    "enTitle": "Schooling in Jaffna",
+    "enDetail": "Studied at St. Patrick’s College and developed his English writing through the college magazine.",
+    "taTitle": "யாழ்ப்பாணத்தில் பள்ளிக் கல்வி",
+    "taDetail": "புனித பத்திரிசியார் கல்லூரியில் பயின்றார்; கல்லூரி மலர் வழியாக ஆங்கில எழுத்தாற்றலை வளர்த்தார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1931–1934",
+    "enTitle": "Philosophy in Colombo",
+    "enDetail": "Studied philosophy at St. Bernard’s Seminary.",
+    "taTitle": "கொழும்பில் மெய்யியல் கல்வி",
+    "taDetail": "புனித பெர்நார்து குருத்துவக் கல்லூரியில் மெய்யியல் பயின்றார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1934–1939",
+    "enTitle": "Formation in Rome",
+    "enDetail": "Studied at Pontifical Urban University; ordained on 19 March 1938 and completed his D.D. in 1939.",
+    "taTitle": "ரோமில் கல்வியும் குருத்துவப் பயிற்சியும்",
+    "taDetail": "உர்பன் பல்கலைக்கழகத்தில் பயின்றார்; 1938 மார்ச் 19 குருத்துவ அருட்பொழிவு, 1939 இறையியல் முனைவர் பட்டம்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1940–1945",
+    "enTitle": "Teaching and sustained Tamil study",
+    "enDetail": "Deputy headmaster at St. Theresa’s High School, Vadakangulam; studied Tamil with Gurusami Subramania Iyer.",
+    "taTitle": "ஆசிரியப் பணியும் ஆழ்ந்த தமிழ்க் கல்வியும்",
+    "taDetail": "வடக்கன்குளம் புனித தெரசாள் பள்ளியில் துணைத் தலைமையாசிரியர்; குருசாமி சுப்பிரமணிய ஐயரிடம் தமிழ் பயின்றார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1945–1949",
+    "enTitle": "Research at Annamalai",
+    "enDetail": "M.A. in 1947 and M.Litt. in 1949; studied nature in Tamil poetry with A. Chidambaranathan.",
+    "taTitle": "அண்ணாமலையில் தமிழாய்வு",
+    "taDetail": "1947 எம்.ஏ., 1949 எம்.லிட்.; அ. சிதம்பரநாதனாரின் வழிகாட்டலில் தமிழ் இலக்கியத்தில் இயற்கை பற்றிய ஆய்வு.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1952",
+    "enTitle": "Tamil Culture begins",
+    "enDetail": "Launched the English-language research quarterly in February, following the Tamil Literature Society founded in 1948.",
+    "taTitle": "Tamil Culture இதழ் தொடக்கம்",
+    "taDetail": "1948 இல் நிறுவிய தமிழ் இலக்கியக் கழகத்தின் பணியைத் தொடர்ந்து, பெப்ருவரியில் ஆங்கிலக் காலாண்டு ஆய்விதழைத் தொடங்கினார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1954",
+    "enTitle": "A grammar manuscript in Lisbon",
+    "enDetail": "Found Henriques’s sixteenth-century Tamil grammar manuscript in the National Library.",
+    "taTitle": "லிஸ்பனில் இலக்கணச் சுவடி",
+    "taDetail": "தேசிய நூலகத்தில் என்ரீக்கஸ் அடிகளாரின் பதினாறாம் நூற்றாண்டுத் தமிழ் இலக்கணச் சுவடியைக் கண்டறிந்தார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1952–1961",
+    "enTitle": "Teaching at Peradeniya",
+    "enDetail": "Lecturer in Education at the University of Ceylon, with an interval for doctoral study in London.",
+    "taTitle": "பேராதனையில் கற்பித்தல்",
+    "taDetail": "இலங்கைப் பல்கலைக்கழகத்தில் கல்வித்துறை விரிவுரையாளர்; இடையில் லண்டனில் முனைவர் பட்ட ஆய்வு மேற்கொண்டார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1955–1957",
+    "enTitle": "Doctoral research in London",
+    "enDetail": "Earned a Ph.D. in 1957 on educational thought in ancient Tamil literature.",
+    "taTitle": "லண்டனில் முனைவர் பட்ட ஆய்வு",
+    "taDetail": "பழந்தமிழ் இலக்கியங்களில் கல்விச் சிந்தனைகள் குறித்த ஆய்வுக்காக 1957 இல் முனைவர் பட்டம் பெற்றார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1961–1969",
+    "enTitle": "Leading Indian Studies in Malaya",
+    "enDetail": "Headed the existing department and developed its teaching, library and research publications.",
+    "taTitle": "மலேயாவில் இந்தியத் துறைத் தலைமை",
+    "taDetail": "ஏற்கெனவே இயங்கிய துறையின் தலைவராகக் கற்பித்தல், நூலகம், ஆய்வு வெளியீடுகளை வளர்த்தார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1961",
+    "enTitle": "Proposal for international meetings",
+    "enDetail": "With T. P. Meenakshisundaram, sent a joint letter on 27 October proposing international Tamil research meetings.",
+    "taTitle": "உலகத் தமிழாய்வுக் கூட்டங்களுக்கான திட்டம்",
+    "taDetail": "தெ. பொ. மீனாட்சிசுந்தரனாருடன் இணைந்து அக்டோபர் 27 அன்று உலகத் தமிழாய்வுக் கூட்டங்களுக்கான மடலை அனுப்பினார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1964",
+    "enTitle": "IATR formed in New Delhi",
+    "enDetail": "On 7 January, 26 scholars and enthusiasts met to establish the association; Thani Nayagam and Zvelebil became joint secretaries.",
+    "taTitle": "புதுதில்லியில் உலகத் தமிழாராய்ச்சி மன்றம்",
+    "taDetail": "ஜனவரி 7 அன்று 26 தமிழறிஞர்களும் ஆர்வலர்களும் கூடி மன்றத்தை உருவாக்கினர்; தனிநாயக அடிகளாரும் சுவலபிலும் இணைச் செயலாளர்களாகினர்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1966",
+    "enTitle": "The first international Tamil conference",
+    "enDetail": "Helped organise the April Kuala Lumpur conference as deputy chairman; released the Proença dictionary facsimile.",
+    "taTitle": "முதலாவது உலகத் தமிழாராய்ச்சி மாநாடு",
+    "taDetail": "ஏப்ரல் கோலாலம்பூர் மாநாட்டின் அமைப்புக் குழுத் துணைத் தலைவராக முன்னின்றார்; புரோயென்சா அகராதியின் ஒளிப்படப் பதிப்பை வெளியிட்டார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1970–1971",
+    "enTitle": "Teaching in Paris and Naples",
+    "enDetail": "Taught at Collège de France in 1970 and as visiting professor at the University of Naples in 1971.",
+    "taTitle": "பாரிஸ், நேப்பிள்ஸில் கற்பித்தல்",
+    "taDetail": "1970 இல் பிரான்சுக் கல்லூரியிலும், 1971 இல் நேப்பிள்ஸ் பல்கலைக்கழகத்தில் வருகைப் பேராசிரியராகவும் கற்பித்தார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1980",
+    "enTitle": "Final lectures and death",
+    "enDetail": "Delivered the Thanthai Chelva memorial lectures in April; died in Pandatharippu, Jaffna, on 1 September.",
+    "taTitle": "இறுதிப் பேருரைகளும் மறைவும்",
+    "taDetail": "ஏப்ரலில் தந்தை செல்வா நினைவுச் சொற்பொழிவுகளை நிகழ்த்தினார்; செப்டம்பர் 1 அன்று யாழ்ப்பாணம் பண்டத்தரிப்பில் இயற்கை எய்தினார்.",
+    "sources": [
+      "S44"
+    ]
+  },
+  {
+    "year": "1981",
+    "enTitle": "Remembered at Madurai",
+    "enDetail": "A memorial statue was unveiled during the fifth World Tamil Conference in Madurai.",
+    "taTitle": "மதுரையில் நினைவேந்தல்",
+    "taDetail": "ஐந்தாவது உலகத் தமிழ் மாநாட்டின்போது மதுரையில் நினைவுச் சிலை திறக்கப்பட்டது.",
+    "sources": [
+      "S44"
+    ]
+  }
 ];
 
 export const CONTRIBUTORS_PILLARS: ContributionPillar[] = [
   {
-    enTitle: "Publishing (‘Tamil Culture’ Quarterly)",
-    taTitle: "ஆய்விதழியல் (‘Tamil Culture’ காலாண்டிதழ்)",
-    enDesc: "Founded Tamil Culture (1952–1966), an English-language quarterly dedicated to Tamil literature, history, art, and society. Reached universities globally and carried work by scholars including Kamil Zvelebil, Jean Filliozat, Mikhail Andronov, Murray Emeneau, F. B. J. Kuiper, J. R. Marr, C. R. Boxer, and Thomas Burrow.",
-    taDesc: "1952 முதல் 1966 வரை வெளிவந்த ‘Tamil Culture’ ஆங்கிலக் காலாண்டிதழ் வழியாக, உலகெங்கிலுமுள்ள தலைசிறந்த மொழியியல் அறிஞர்களின் தமிழாய்வுகளைப் பதிப்பித்துச் சர்வதேசத் தரத்திற்கு உயர்த்தினார்.",
+    "enTitle": "Publishing: Tamil Culture",
+    "taTitle": "இதழியல்: Tamil Culture",
+    "enDesc": "Founded the English-language quarterly in 1952 to connect research on Tamil language, literature, history, art and society with readers abroad. It appeared through 1966, with publication gaps. Contributors included Kamil Zvelebil, Jean Filliozat and Mikhail Andronov.",
+    "taDesc": "1952 இல் தொடங்கிய ஆங்கிலக் காலாண்டிதழ், தமிழ் மொழி, இலக்கியம், வரலாறு, கலை, சமூகம் பற்றிய ஆய்வுகளை உலக வாசகர்களிடம் கொண்டு சென்றது. வெளியீட்டு இடைவெளிகளுடன் 1966 வரை வெளிவந்தது."
   },
   {
-    enTitle: "Institution Building (IATR)",
-    taTitle: "நிறுவன உருவாக்கம் (உலகத் தமிழாராய்ச்சி மன்றம் - IATR)",
-    enDesc: "Convened scholars in New Delhi on 7 January 1964 to found the International Association for Tamil Research. Jean Filliozat was first president; Thomas Burrow, Murray Emeneau, T. P. Meenakshisundaram, Mu. Varadarajan served as vice-presidents; Thani Nayagam and Zvelebil served as joint secretaries.",
-    taDesc: "1964 ஜனவரி 7 அன்று புதுதில்லியில் உலகளாவிய மொழியியல் பேராசிரியர்களை ஒன்றிணைத்து சர்வதேசத் தமிழாராய்ச்சி மன்றத்தை (IATR) நிறுவினார்.",
+    "enTitle": "Connecting scholars: IATR",
+    "taTitle": "அறிஞர்களை இணைத்த மன்றம்: IATR",
+    "enDesc": "Helped establish IATR in New Delhi on 7 January 1964. Jean Filliozat became president; Thomas Burrow, F. B. J. Kuiper, T. P. Meenakshisundaram and Mu. Varadarajan became vice-presidents. Thani Nayagam and Kamil Zvelebil served as joint secretaries.",
+    "taDesc": "1964 ஜனவரி 7 அன்று புதுதில்லியில் பிற அறிஞர்களுடன் இணைந்து உலகத் தமிழாராய்ச்சி மன்றத்தை உருவாக்கினார். ழான் ஃபீலியோசா தலைவராகவும், தனிநாயக அடிகளாரும் கமில் சுவலபிலும் இணைச் செயலாளர்களாகவும் தேர்ந்தெடுக்கப்பட்டனர்."
   },
   {
-    enTitle: "Conference Leadership (1966 KL Conference)",
-    taTitle: "மாநாட்டுத் தலைமை (கோலாலம்பூர் உலக மாநாடு, 1966)",
-    enDesc: "General Secretary of the 1st International Conference-Seminar of Tamil Studies (16–23 April 1966). Opened by Malaysian Prime Minister Tunku Abdul Rahman; attended by Tamil Nadu Chief Minister M. Bhaktavatsalam. Published two-volume proceedings.",
-    taDesc: "மலேசியப் பிரதமர் துங்கு அப்துல் ரகுமான் தலைமையில் நடைபெற்ற முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டின் பொதுச் செயலாளராகப் பொறுப்பேற்று இரு தொகுதி நடவடிக்கைகளை வெளியிட்டார்.",
+    "enTitle": "Conference leadership: Kuala Lumpur, 1966",
+    "taTitle": "மாநாட்டுப் பணி: கோலாலம்பூர், 1966",
+    "enDesc": "As organising-committee deputy chairman, helped bring the first international Tamil research conference together in April 1966. Prime Minister Tunku Abdul Rahman opened it. He led the editorial committee for the proceedings, published in two volumes in 1968.",
+    "taDesc": "1966 ஏப்ரல் முதலாவது உலகத் தமிழாராய்ச்சி மாநாட்டின் அமைப்புக் குழுத் துணைத் தலைவராக முன்னின்றார். பிரதமர் துங்கு அப்துல் ரகுமான் மாநாட்டைத் திறந்து வைத்தார். அடிகளார் தலைமையிலான பதிப்புக் குழுவின் நடவடிக்கைகள் 1968 இல் இரு தொகுதிகளாக வெளிவந்தன."
   },
   {
-    enTitle: "Archival Research (16th-Century Print Recovery)",
-    taTitle: "ஆவண ஆய்வு (16-ஆம் நூற்றாண்டுத் தமிழ் அச்சு மீட்பு)",
-    enDesc: "Rediscovered and documented the 1554 Cartilha (Lisbon), 1578 Thambiran Vanakkam (Quilon), 1579 Kiristiani Vanakkam, 1679 Antão de Proença Tamil-Portuguese Dictionary (Vatican), and 1549 Arte da Lingua Malabar grammar manuscript.",
-    taDesc: "லிஸ்பனில் 1554 ‘கார்த்தீலா’, கொல்லத்தில் 1578 ‘தம்பிரான் வணக்கம்’, 1679 அந்தோனியோ த புரோவென்சா அகராதி உள்ளிட்ட இந்திய மொழிகளின் முதல் அச்சு நூல்களை ஐரோப்பிய ஆவணகங்களிலிருந்து மீட்டெடுத்தார்.",
+    "enTitle": "Studying early Tamil print",
+    "taTitle": "தொடக்க காலத் தமிழ் அச்சு ஆய்வு",
+    "enDesc": "Located and studied early Tamil books and manuscripts in European and American libraries. Found Henriques’s grammar manuscript in Lisbon in 1954, studied the Harvard copy of Thambiran Vanakkam, and published a facsimile of Proença’s 1679 dictionary in 1966.",
+    "taDesc": "ஐரோப்பிய, அமெரிக்க நூலகங்களில் தொடக்க காலத் தமிழ் நூல்களையும் சுவடிகளையும் தேடி ஆராய்ந்தார். 1954 லிஸ்பன் இலக்கணச் சுவடி, ஹார்வர்டின் தம்பிரான் வணக்கம் பிரதி, 1966 இல் வெளியிட்ட புரோயென்சா அகராதியின் ஒளிப்படப் பதிப்பு ஆகியவை இப்பணியின் பகுதிகள்."
   },
   {
-    enTitle: "Reference Works & Bibliographies",
-    taTitle: "அடிப்படை ஆய்வு நூலியல்கள் & வழிகாட்டிகள்",
-    enDesc: "Published A Reference Guide to Tamil Studies (1966, University of Malaya Press), a 130-page research bibliography. Arranged republication and expansion of Simon Casie Chetty’s Tamil Plutarch.",
-    taDesc: "‘A Reference Guide to Tamil Studies’ (1966) முதலான சர்வதேச ஆய்வு நூலியல்களையும், சைமன் காசிச் செட்டியின் ‘தமிழ் புளூட்டாக்’ வரலாற்று நூலின் மறுபதிப்பையும் வெளியிட்டார்.",
+    "enTitle": "Research guides and bibliographies",
+    "taTitle": "ஆய்வு வழிகாட்டிகளும் நூற்பட்டியல்களும்",
+    "enDesc": "Compiled A Reference Guide to Tamil Studies, published in 1966 with vi + 122 pages and 1,355 book records. He also arranged an expanded edition of Simon Casie Chetty’s Tamil Plutarch.",
+    "taDesc": "1966 இல் வெளியான A Reference Guide to Tamil Studies நூலில் vi + 122 பக்கங்களில் 1,355 நூற்பதிவுகளைத் தொகுத்தார். சைமன் காசிச் செட்டியின் தமிழ் புளூட்டாக் நூலின் விரிவாக்கப் பதிப்புக்கும் ஏற்பாடு செய்தார்."
   },
   {
-    enTitle: "International Teaching & Lectures",
-    taTitle: "உலகப் பல்கலைக்கழக விரிவுரைகள் & கல்விப் பணி",
-    enDesc: "Lectured across Japan, Chile, Brazil, Peru, Mexico, Ecuador, USA, and Europe. Delivered over 200 lectures in a single year of travel.",
-    taDesc: "ஜப்பான், சிலி, பிரேசில், பெரு, மெக்சிகோ, அமெரிக்கா, ஐரோப்பிய நாடுகள் எங்கும் ஓராண்டில் 200-க்கும் மேற்பட்ட சர்வதேசப் பல்கலைக்கழக விரிவுரைகளை நிகழ்த்தினார்.",
-  },
+    "enTitle": "Teaching and public lectures",
+    "taTitle": "கற்பித்தலும் பொது உரைகளும்",
+    "enDesc": "His 1949–1950 international travels took Tamil studies to varied audiences. In the United States alone he delivered more than 200 talks in one year, in universities, colleges, schools and public meetings.",
+    "taDesc": "1949–1950 உலகப் பயணத்தில் பலவகை அவையினரிடம் தமிழைப் பற்றிப் பேசினார். அமெரிக்க ஐக்கிய நாட்டில் மட்டும் ஓராண்டில் 200-க்கும் மேற்பட்ட உரைகளைப் பல்கலைக்கழகங்கள், கல்லூரிகள், பள்ளிகள், பொதுக்கூட்டங்களில் நிகழ்த்தினார்."
+  }
 ];

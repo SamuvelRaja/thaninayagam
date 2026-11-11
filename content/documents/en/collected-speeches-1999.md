@@ -7,7 +7,7 @@ pillar: lectures
 kind: speech-collection
 status: partial
 lang: en
-summary: A posthumous Tamil collection of Thani Nayagam Adigal's speeches.
+summary: "Finding aid to the posthumous Tamil speeches collection published in 1999."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives. Machine
   OCR may contain errors; the scan view is authoritative. Rights remain with the
@@ -31,3 +31,6 @@ Tamil Digital Library identifies Thani Nayagam Adigal as author and the World In
 
 On-site body is a finding aid (`content/books/collected-speeches.md`) until a clean re-OCR is available. Prefer the Internet Archive scan.
 
+## Edition evidence
+
+This edition is later than the 1993 biography; its year, publisher and contents require the later collection’s own bibliographical evidence.

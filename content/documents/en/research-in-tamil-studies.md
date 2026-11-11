@@ -1,15 +1,13 @@
 ---
 id: research-in-tamil-studies
 slug: research-in-tamil-studies
-title: Research in Tamil Studies
-year: '1980'
+title: "Research in Tamil Studies: Retrospect and Prospect"
+year: "1980"
 pillar: reference
-kind: lecture
+kind: "lecture-finding-aid"
 status: readable
 lang: en
-summary: >-
-  On-site dossier of three cleaned *Tamil Culture* essays on the Academy,
-  first Tamil books, and manuscripts in European libraries.
+summary: "Record of the English Thanthai Chelva memorial lecture of 28 April 1980. The reading here is three older related essays, not the lecture text."
 rights: >-
   Three *Tamil Culture* essays re-OCR’d from Internet Archive page images.
   Prefer the scan for footnotes and facsimile plates. Rights remain with the
@@ -20,12 +18,13 @@ images: []
 cite:
   - 7
   - 11
+  - 44
 bookMd: research-in-tamil-studies
 ---
 ## Bibliographic record
 
-Open Library lists *Research in Tamil Studies* (1980) as the Thanthai Chelva Memorial Lecture. No public scan of that lecture text was found; this page hosts three related institutional / bibliographic *Tamil Culture* essays.
+Amudhan records *Research in Tamil Studies: Retrospect and Prospect*, Jaffna, Thanthai Chelva Memorial Trust, 1980, 15 p. The English memorial lecture was delivered on 28 April 1980. Jaffna is the publication imprint; the biography does not establish Colombo as its delivery venue (printed pp. 201, 213).
 
-## How to read
+## Reading here
 
-Three cleaned essays follow: *This Journal of the Academy*; *The First Books Printed in Tamil*; *Tamil Manuscripts in European Libraries*. Prefer the scan for footnotes and plates.
+The lecture text is not reproduced here. The attached English selection contains *This Journal of the Academy* (1955), *The First Books Printed in Tamil* (1958), and *Tamil Manuscripts in European Libraries* (1954), separately listed on biography pp. 207–208. These supply context for his research, rather than the 1980 lecture itself.

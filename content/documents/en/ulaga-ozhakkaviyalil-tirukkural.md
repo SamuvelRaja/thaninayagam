@@ -2,14 +2,12 @@
 id: ulaga-ozhakkaviyalil-tirukkural
 slug: ulaga-ozhakkaviyalil-tirukkural
 title: உலக ஒழுக்கவியலில் திருக்குறள்
-year: ''
+year: "n.d."
 pillar: lectures
 kind: journal-article
 status: partial
 lang: en
-summary: >-
-  Wikipedia-listed Tamil title on the Tirukkural in world ethics; companion
-  excerpt from the digitised திருவள்ளுவர் lectures.
+summary: "Related Tamil reading on the Tirukkural in comparative ethics; a separate publication under this title remains unverified."
 rights: >-
   On-site reading text assembled from public Internet Archive OCR of related
   works (companion / edition-line reading). Machine OCR may contain errors.
@@ -21,6 +19,7 @@ images: []
 cite:
   - 11
   - 7
+  - 44
 bookMd: ulaga-ozhakkaviyalil-tirukkural
 ---
 ## Bibliographic record
@@ -30,3 +29,7 @@ Tamil Wikipedia lists *உலக ஒழுக்கவியலில் தி�
 ## How to read
 
 No separate public scan of this title is verified yet. For the related 1967 lectures, open [/en/archive/documents/tiruvalluvar/](/en/archive/documents/tiruvalluvar/).
+
+## Biography context
+
+Amudhan discusses the comparative-ethics topic in Tiruvalluvar but does not establish a separate publication or date under this title (printed pp. 155, 214). This page supplies related reading and a link to the verified lecture book.

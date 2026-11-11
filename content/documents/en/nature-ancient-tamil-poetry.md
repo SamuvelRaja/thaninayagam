@@ -2,14 +2,12 @@
 id: nature-ancient-tamil-poetry
 slug: nature-ancient-tamil-poetry
 title: 'Nature in Ancient Tamil Poetry: Concept and Interpretation'
-year: '1953'
+year: "1953"
 pillar: lectures
 kind: monograph
 status: readable
 lang: en
-summary: >-
-  Monograph developed from Thani Nayagam's M.Litt. research on nature in Sangam
-  poetry.
+summary: "English nature-poetry monograph from his 1949 M.Litt. research. The biography gives both 1952 and 1953 publication dates; this record retains the catalogued 1953 issue."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives. Full
   monograph re-OCR’d from page images (Preface–Ch. VIII, Books Consulted,
@@ -22,17 +20,14 @@ images: []
 cite:
   - 40
   - 29
+  - 44
 iaId: tdl.27397-nature-in-ancient-tamil-poetry-concept-and-interpretation
 bookMd: nature-ancient-tamil-poetry
 ---
 ## Bibliographic record
 
-Open Library records the English edition published in 1953 by the Tamil Literature Society, Tuticorin, as *Nature in ancient Tamil poetry, concept and interpretation*, by Xavier S. Thani Nayagam, with twenty-two preliminary pages and 185 numbered pages. A Tamil Digital Library / Internet Archive reading mirror is also catalogued (209 scan leaves); item metadata there incorrectly labels the language as Tamil.
+*Nature in Ancient Tamil Poetry: Concept and Interpretation* grew from his Annamalai M.Litt. thesis, completed in 1949. Amudhan’s narrative and reference bibliography say 1952, while the chronological writings appendix lists 1953, Tamil Literature Society, xxii + 185 p. (biography pp. 11, 171, 206, 219). This record retains the independently catalogued 1953 issue without resolving that discrepancy.
 
-## About this article
+## Reading here
 
-1953 Tuticorin monograph from his M.Litt. research. On-site text is a full re-OCR from IA page images. Related journal essay: Ethical Interpretation of Nature (*Tamil Culture*, 1952).
-
-## How to read
-
-Book text follows from `content/books/nature-ancient-tamil-poetry.md` (full re-OCR from IA leaves 5, 9–207). Prefer the IA scan for footnotes and Tamil citations.
+The English monograph follows below. Its 209 scan leaves differ from its printed pagination. Consult the scan for verse, footnotes and edition-specific citations.

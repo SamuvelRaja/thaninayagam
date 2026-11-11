@@ -5,6 +5,7 @@ export interface Category {
   en: string;
   hintTa: string;
   hintEn: string;
+  image?: string;
   [key: string]: any;
 }
 
@@ -13,6 +14,9 @@ export interface Subcategory {
   cat: string;
   ta: string;
   en: string;
+  hintTa?: string;
+  hintEn?: string;
+  image?: string;
   [key: string]: any;
 }
 
@@ -56,6 +60,8 @@ export interface BioSection {
   enBody: string;
   taBody: string;
   fig?: string | null;
+  figWidth?: number;
+  figHeight?: number;
   figCap?: string | null;
   figCapEn?: string | null;
   src?: string | null;

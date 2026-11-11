@@ -1,0 +1,69 @@
+/* Clear reading text, distinctive titles, and a shared bilingual type scale. */
+:root {
+  --font-ui: "Noto Sans Tamil", sans-serif;
+  --font-en: var(--font-ui);
+  --font-ta: var(--font-ui);
+  --font-ta-sans: var(--font-ui);
+  --font-display: "Spectral", "Tamil Sangam MN", "Noto Serif Tamil", Georgia, serif;
+}
+
+body { font-size: 1rem; line-height: 1.75; }
+html[lang="ta"] body { font-size: 1.02rem; line-height: 1.85; }
+h1, h2, h3, h4 { font-weight: 600; }
+html[lang="ta"] h1, html[lang="ta"] h2, html[lang="ta"] h3 { letter-spacing: 0; line-height: 1.5; }
+input, select, textarea, button { font-family: var(--font-ui); }
+.lede, html[lang="ta"] .lede { font-size: 1.05rem; line-height: 1.85; }
+.display-2, html[lang="ta"] .display-2 { font-size: clamp(1.75rem, 3vw, 2.6rem); line-height: 1.45; }
+.section-head h2, html[lang="ta"] .section-head h2 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.5; }
+.section-index { font-size: 1rem; }
+.eyebrow, html[lang="ta"] .eyebrow { font-family: var(--font-ui); font-size: .8rem; letter-spacing: .02em; }
+html[lang="ta"] .eyebrow { letter-spacing: 0; }
+.btn, html[lang="ta"] .btn, .pill, html[lang="ta"] .pill, .segmented button { font-family: var(--font-ui); font-size: .85rem; letter-spacing: 0; text-transform: none; font-weight: 600; }
+.meta, html[lang="ta"] .meta, .section-scope, html[lang="ta"] .section-scope { font-family: var(--font-ui); font-size: .8rem; letter-spacing: 0; }
+.plate figcaption, html[lang="ta"] .plate figcaption { font-family: var(--font-ui); font-size: .76rem; line-height: 1.7; }
+
+/* The main name carries the emphasis; the honorific stays easy to read. */
+.section-hero .display-1, html[lang="ta"] .section-hero .display-1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 3.8vw, 3.1rem);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  margin-bottom: 16px;
+}
+html[lang="ta"] .section-hero .display-1 { letter-spacing: 0; }
+.hero-title-prefix { display: block; font: 500 1rem/1.75 var(--font-ui); color: #CBD5E1; margin-bottom: 12px; letter-spacing: 0; }
+.hero-title-name { display: block; }
+.section-hero .hero-quote { font-size: 1.15rem; line-height: 1.65; font-weight: 500; margin-bottom: 22px; }
+html[lang="ta"] .section-hero .hero-quote { font-style: normal; }
+.section-hero .lede, html[lang="ta"] .section-hero .lede { font-size: 1rem; line-height: 1.85; max-width: 54ch; margin-bottom: 28px; }
+.section-epigraph .ta { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.6; font-weight: 600; }
+.section-epigraph .en { font-size: .95rem; line-height: 1.75; }
+
+/* Keep the colored cards; bring their labels and explanations into balance. */
+.stat-num { font-size: clamp(2.5rem, 4vw, 3.25rem); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.stat-badge, html[lang="ta"] .stat-badge { font-family: var(--font-ui); font-size: .78rem; letter-spacing: 0; text-transform: none; line-height: 1.75; }
+.stat-title { font-size: 1.03rem; line-height: 1.6; font-weight: 600; margin-bottom: 12px; }
+.stat-detail { font-size: .88rem; line-height: 1.85; }
+.bio-section h2, .pillar h3 { font-size: 1.25rem; line-height: 1.6; }
+.bio-section .b-alt-title, .pillar .p-alt-title { font-size: .8rem; font-style: normal; }
+.fact-val { line-height: 1.8; }
+.collection-entry > p, .featured-document > p { font-size: .84rem; line-height: 1.8; }
+.collection-count, .document-type-row, .document-available { font-size: .72rem; }
+.featured-document h3 { font-size: 1rem; line-height: 1.6; }
+.colophon .statement p { font-size: .95rem; line-height: 1.85; }
+.colophon a, html[lang="ta"] .colophon a { font-family: var(--font-ui); font-size: .85rem; }
+
+/* Longer documents retain serif reading text and the reader's size control. */
+html[lang="ta"] .reader-article { --font-ta: "Noto Serif Tamil", "Spectral", serif; font-family: var(--font-ta); }
+
+@media (max-width: 639px) {
+  body, html[lang="ta"] body { font-size: .96rem; line-height: 1.85; }
+  .section-hero .display-1, html[lang="ta"] .section-hero .display-1 { font-size: clamp(1.9rem, 7.8vw, 2.3rem); line-height: 1.4; }
+  .hero-title-prefix { font-size: .85rem; margin-bottom: 10px; }
+  .section-hero .hero-quote { font-size: 1rem; }
+  .section-hero .lede, html[lang="ta"] .section-hero .lede { font-size: .95rem; line-height: 1.85; }
+  .display-2, html[lang="ta"] .display-2 { font-size: 1.65rem; }
+  .stat-num { font-size: 2.75rem; }
+  .section-head h2, html[lang="ta"] .section-head h2 { font-size: 1.35rem; }
+}

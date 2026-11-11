@@ -1,0 +1,335 @@
+/* Living Archive 02 — the catalogue and the pages behind the collection. */
+:is(.page-contents, .section-about, .section-timeline, .section-closing,
+    .section-pillars, .section-plates, .section-register, .section-archive,
+    .section-origin, .section-donation-tiers, .section-volunteers, .section-charter) {
+  --paper: #F8F7F3;
+  --paper-raised: #FFFFFF;
+  --paper-deep: #EFEDE6;
+  --ledger: #EFEDE6;
+  --ink: #252522;
+  --ink-2: #6F6B65;
+  --ink-3: #6F6B65;
+  --line: #DEDCD6;
+  --line-strong: #C9C5BC;
+  --accent: #902C35;
+  --accent-ink: #902C35;
+  --accent-wash: #F5EAEB;
+  --cat-literature: #902C35;
+  --cat-culture: #902C35;
+  --cat-studies: #902C35;
+  --cat-philosophy: #902C35;
+  --cat-collected: #902C35;
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+
+:is(.section-about, .section-timeline, .section-closing, .section-pillars,
+    .section-plates, .section-register, .section-archive, .section-origin,
+    .section-donation-tiers, .section-volunteers, .section-charter) {
+  padding: 64px 0;
+}
+
+.page-contents {
+  background: #FFFFFF;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.page-contents > .container { gap: 12px 36px; padding-top: 18px; padding-bottom: 18px; }
+.page-contents a { font-size: .83rem; font-weight: 500; }
+.page-contents > .container > span { font-size: .75rem; }
+.page-contents a > span { color: var(--accent); }
+
+:is(.section-about, .section-timeline, .section-pillars, .section-plates,
+    .section-register, .section-donation-tiers, .section-volunteers) .section-head {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  gap: 18px;
+}
+:is(.section-about, .section-timeline, .section-pillars, .section-plates,
+    .section-register, .section-donation-tiers, .section-volunteers) .section-head h2,
+html[lang="ta"] :is(.section-timeline, .section-plates, .section-register,
+    .section-donation-tiers, .section-volunteers) .section-head h2 {
+  font-family: var(--font-ui);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.section-index { font-family: var(--font-ui); color: var(--accent); font-size: .75rem; }
+.section-index::after { display: none; }
+.section-scope { color: var(--ink-2); }
+:is(.section-timeline, .section-plates, .section-register, .section-donation-tiers,
+    .section-volunteers) .section-subhead {
+  font-family: var(--font-ui);
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+/* Biography: open reading space and a quiet reference column. */
+.section-about { background: var(--paper); }
+.about-grid { grid-template-columns: minmax(0, 1fr) 310px; gap: 72px; }
+.section-about .bio-section {
+  padding: 0 0 36px;
+  margin-bottom: 36px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+.section-about .bio-section::before { display: none; }
+.section-about .bio-section:last-child { margin-bottom: 0; }
+.section-about .bio-section .bio-num { font: 500 .78rem/1.5 var(--font-ui); color: var(--accent); margin-bottom: 14px; }
+.section-about .bio-section h2 { font: 600 1.3rem/1.6 var(--font-ui); margin-bottom: 5px; }
+.section-about .bio-section .b-alt-title { font-size: .78rem; color: var(--ink-2); margin-bottom: 20px; }
+.section-about .bio-section .measure { max-width: 65ch; }
+.section-about .bio-section .measure p { font-size: .94rem; line-height: 1.95; }
+.section-about .aside-card { padding: 26px; border-color: var(--line); border-radius: 5px; box-shadow: none; }
+.section-about .aside-card h3 { color: var(--accent); font: 600 .82rem/1.6 var(--font-ui); letter-spacing: 0; text-transform: none; }
+.section-about .aside-card .fact-row { padding: 14px 0; }
+.section-about .aside-card .fact-row dt { color: var(--ink-2); font: 400 .71rem/1.7 var(--font-ui); letter-spacing: 0; text-transform: none; }
+.section-about .aside-card .fact-row dd { font-size: .83rem; line-height: 1.8; font-weight: 400; }
+.section-about .aside-card .fact-langs .chip { background: var(--paper); color: var(--ink); border-color: var(--line); font: 400 .69rem/1.6 var(--font-ui); }
+.section-about .plate--inline { margin-top: 26px; }
+:is(.section-about, .section-plates) .plate .plate-mat { background: var(--paper-deep); border: 1px solid var(--line); padding: 18px; border-radius: 5px; box-shadow: none; }
+:is(.section-about, .section-plates) .plate img { border: 0; border-radius: 0; box-shadow: none; }
+:is(.section-about, .section-plates) .plate figcaption { font: 400 .73rem/1.8 var(--font-ui); color: var(--ink-2); margin-top: 12px; }
+
+.section-timeline { background: #FFFFFF; border-top: 1px solid var(--line); }
+.section-timeline .era-label { background: var(--paper); border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 3px; color: var(--accent); font: 500 .8rem/1.8 var(--font-ui); letter-spacing: 0; box-shadow: none; }
+.section-timeline .tl-item { grid-template-columns: 100px 1fr; gap: 8px 24px; padding: 28px 0 28px 28px; }
+.section-timeline .tl-year { font: 600 1.2rem/1.4 var(--font-ui); }
+.section-timeline .tl-title { font-size: .98rem; line-height: 1.65; font-weight: 500; }
+.section-timeline .tl-detail { font-size: .85rem; line-height: 1.9; }
+.section-closing { background: var(--paper-deep); border-top: 1px solid var(--line); }
+
+/* Contributions keep their scholarly detail without decorative card stripes. */
+.section-pillars { background: var(--paper); }
+.section-pillars .pillars { gap: 24px; }
+.section-pillars .pillar { padding: 30px; border-radius: 5px; box-shadow: none; transition: border-color 160ms ease; }
+.section-pillars .pillar::before { display: none; }
+.section-pillars .pillar:hover { transform: none; box-shadow: none; border-color: var(--line-strong); }
+.section-pillars .pillar .roman { color: var(--accent); font: 500 .85rem/1.5 var(--font-ui); margin-bottom: 20px; }
+.section-pillars .pillar h3 { font: 600 1.1rem/1.7 var(--font-ui); }
+.section-pillars .pillar .p-alt-title { font-size: .75rem; line-height: 1.6; margin: 6px 0 16px; }
+.section-pillars .pillar p { font-size: .88rem; line-height: 1.9; }
+.section-plates { background: var(--paper-deep); border-color: var(--line); }
+.section-plates .plate-strip { gap: 24px; align-items: start; }
+.section-plates .plate-strip .plate-mat { background: var(--paper); }
+.section-plates .plate-strip img { height: 250px; object-fit: contain; }
+.section-register { background: var(--paper); }
+
+/* Catalogue controls and register share one readable visual language. */
+.section-archive { background: var(--paper); padding-top: 24px; }
+.section-archive .archive-breadcrumb { font-size: .76rem; margin-bottom: 16px; gap: 10px; }
+.section-archive .archive-breadcrumb a { text-decoration: none; }
+.section-archive .archive-breadcrumb a:hover { text-decoration: underline; }
+.section-archive .archive-heading { margin-bottom: 20px; }
+.section-archive .archive-heading h1 { margin: 0 0 6px; font: 600 clamp(1.4rem, 2.4vw, 1.9rem)/1.5 var(--font-ui); color: var(--ink); text-wrap: balance; }
+.section-archive .archive-heading p { max-width: 85ch; margin: 0; font-size: .8rem; line-height: 1.8; color: var(--ink-2); }
+.section-archive .archive-field-intro { padding: 0 0 26px; border-bottom: 1px solid var(--line); }
+.section-archive .archive-field-intro h2 { font: 600 1.5rem/1.6 var(--font-ui); }
+.section-archive .archive-field-intro p { font-size: .87rem; line-height: 1.85; }
+.section-archive .archive-controls { margin-bottom: 24px; }
+.section-archive .archive-top-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.section-archive .archive-top-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.section-archive .archive-top-count { margin: 0; font: 500 .86rem/1.6 var(--font-ui); color: var(--ink-2); white-space: nowrap; }
+.section-archive .archive-top-count .count-value { color: var(--accent); font-weight: 700; font-family: var(--font-mono); font-size: .98rem; margin-right: 4px; }
+.section-archive .search-box.small-search { position: relative; width: 200px; max-width: 100%; margin: 0; display: flex; align-items: center; }
+.section-archive .search-box.small-search .small-search-icon { position: absolute; left: 12px; color: var(--ink-3); pointer-events: none; }
+.section-archive .search-input.small-search-input { min-height: 36px; height: 36px; margin-bottom: 0; padding: 6px 30px 6px 36px; border-color: var(--line-strong); border-radius: 5px; font: 400 .84rem/1.5 var(--font-ui); box-shadow: none; width: 100%; background: #FFFFFF; }
+.section-archive .search-input.small-search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-wash); }
+.section-archive .search-clear-btn { position: absolute; right: 8px; background: transparent; border: 0; color: var(--ink-3); padding: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .78rem; line-height: 1; }
+.section-archive .search-clear-btn:hover { color: var(--accent); }
+.section-archive .archive-top-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.section-archive .archive-tags-tray { margin-top: 16px; padding: 14px 16px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 6px; animation: archiveFadeIn 180ms ease; }
+@keyframes archiveFadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) {
+  .section-archive .archive-top-bar { flex-direction: column; align-items: stretch; gap: 14px; }
+  .section-archive .archive-top-left { justify-content: space-between; width: 100%; }
+  .section-archive .search-box.small-search { flex: 1; max-width: 200px; }
+  .section-archive .archive-top-right { justify-content: space-between; width: 100%; }
+}
+.section-archive .segmented { padding: 4px; border: 1px solid var(--line); border-radius: 5px; background: #FFFFFF; gap: 2px; }
+.section-archive .segmented button, html[lang="ta"] .section-archive .segmented button { padding: 8px 12px; border-radius: 3px; font: 500 .76rem/1.6 var(--font-ui); letter-spacing: 0; text-transform: none; }
+.section-archive .segmented button.active { background: var(--paper-deep); border-color: transparent; color: var(--accent); box-shadow: none; }
+:is(.section-archive, .section-register) .pill-row { gap: 8px; margin-bottom: 0; }
+:is(.section-archive, .section-register) .pill, html[lang="ta"] :is(.section-archive, .section-register) .pill { font: 400 .75rem/1.7 var(--font-ui); padding: 8px 13px; min-height: 38px; background: #FFFFFF; color: var(--ink-2); border-color: var(--line); border-radius: 4px; letter-spacing: 0; text-transform: none; box-shadow: none; }
+:is(.section-archive, .section-register) .pill:hover { transform: none; color: var(--accent); border-color: var(--accent); }
+:is(.section-archive, .section-register) .pill.active { background: var(--accent); border-color: var(--accent); color: #FFFFFF; box-shadow: none; }
+.section-archive .pill.pill-sub { border-style: solid; font-size: .72rem; min-height: 34px; padding: 6px 12px; }
+.section-archive .pill.pill-sub.active { background: var(--accent) !important; border-color: var(--accent) !important; }
+:is(.section-archive, .section-register) .table-count, html[lang="ta"] :is(.section-archive, .section-register) .table-count { font: 400 .77rem/1.8 var(--font-ui); color: var(--ink-2); }
+:is(.section-archive, .section-register) .record-wrap { background: #FFFFFF; border-color: var(--line); border-radius: 5px; box-shadow: none; }
+:is(.section-archive, .section-register) table.record th, html[lang="ta"] :is(.section-archive, .section-register) table.record th { font: 500 .74rem/1.7 var(--font-ui); background: #FFFFFF; color: var(--ink-2); border-bottom: 1px solid var(--line); padding: 16px 22px; letter-spacing: 0; text-transform: none; }
+:is(.section-archive, .section-register) table.record td { padding: 24px 22px; font-size: .83rem; line-height: 1.75; }
+:is(.section-archive, .section-register) table.record tbody tr:hover { background: var(--paper); }
+:is(.section-archive, .section-register) table.record tbody tr:last-child td { border-bottom: 0; }
+:is(.section-archive, .section-register) .cell-title { font-size: 1rem; line-height: 1.65; font-weight: 500; }
+:is(.section-archive, .section-register) .cell-title a { color: var(--ink); text-decoration: none; }
+:is(.section-archive, .section-register) .cell-title a:hover { color: var(--accent); }
+:is(.section-archive, .section-register) .ta-title { display: block; font-size: .82rem; color: var(--ink-2); margin-top: 6px; }
+:is(.section-archive, .section-register) :is(.cell-year, .cell-no, .rec-year) { font: 400 .79rem/1.7 var(--font-ui); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+:is(.section-archive, .section-register) :is(.cell-details, .rec-details) { color: var(--ink-2); font-size: .8rem; line-height: 1.85; margin-top: 8px; }
+:is(.section-archive, .section-register) .cat-chip, html[lang="ta"] :is(.section-archive, .section-register) .cat-chip { font: 400 .7rem/1.7 var(--font-ui); color: var(--accent); border-color: var(--line); background: var(--paper); padding: 4px 8px; letter-spacing: 0; text-transform: none; white-space: normal; }
+.section-register .rec-title-link { color: var(--ink); text-decoration: none; }
+.section-register .rec-title-link strong { font-weight: 500; font-size: .96rem; }
+.section-register .rec-title-link:hover { color: var(--accent); }
+.section-register .rec-field { font-size: .76rem; color: var(--ink-2); }
+:is(.section-archive, .section-register) .text-link-arrow, html[lang="ta"] :is(.section-archive, .section-register) .text-link-arrow { color: var(--accent); font: 500 .79rem/1.7 var(--font-ui); letter-spacing: 0; text-transform: none; text-decoration: none; }
+:is(.section-archive, .section-register, .section-closing, .section-volunteers) .btn, html[lang="ta"] :is(.section-archive, .section-register, .section-closing, .section-volunteers) .btn { font: 500 .76rem/1.8 var(--font-ui); border-radius: 4px; letter-spacing: 0; text-transform: none; box-shadow: none; }
+:is(.section-archive, .section-register) .btn-sm { padding: 7px 10px; }
+.section-archive .empty-state { padding: 64px 24px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 5px; }
+.section-archive .empty-state p { font-size: .88rem; font-style: normal; }
+
+/* Support pages use the same paper, ink, and burgundy emphasis. */
+.section-origin { background: var(--paper); }
+.section-origin .folio-grid { grid-template-columns: minmax(0, 1fr) 330px; gap: 64px; }
+.section-origin .folio-kicker { font: 500 .77rem/1.7 var(--font-ui); letter-spacing: 0; }
+.section-origin .folio-kicker::before { display: none; }
+.section-origin .folio-headline { font-family: var(--font-ui); font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; line-height: 1.5; }
+.section-origin .folio-deck { font-size: .88rem; line-height: 1.8; }
+.section-origin .folio-rule { height: 1px; border: 0; background: var(--line); margin: 26px 0; }
+.section-origin .folio-lede { font-size: .92rem; line-height: 1.95; }
+.section-origin[data-lang="en"] .folio-lede::first-letter { float: none; padding: 0; font-size: inherit; line-height: inherit; font-weight: inherit; }
+.section-origin .folio-pullquote { margin-top: 28px; padding-left: 22px; }
+.section-origin .folio-pullquote p { font-size: .93rem; line-height: 1.9; font-style: normal; }
+.section-origin .folio-pullquote cite { font: 400 .72rem/1.7 var(--font-ui); letter-spacing: 0; }
+.section-origin .folio-plate-frame { padding: 16px; border-color: var(--line); background: var(--paper-deep); border-radius: 4px; box-shadow: none; }
+.section-origin .folio-plate-frame img { border-radius: 0; }
+.section-donation-tiers { background: var(--paper-deep); border-top: 1px solid var(--line); }
+.section-donation-tiers .donation-intro-box { text-align: left; max-width: 760px; margin: 0 0 32px; }
+.section-donation-tiers .donation-intro-box .lede { font-size: .9rem; line-height: 1.9; }
+.section-donation-tiers .payment-grid { gap: 24px; }
+.section-donation-tiers .pay-card { padding: 30px; border: 1px solid var(--line); border-radius: 5px; box-shadow: none; }
+.section-donation-tiers .pay-badge { font: 500 .65rem/1.7 var(--font-ui); color: var(--accent); letter-spacing: .025em; }
+.section-donation-tiers .pay-card h3 { font: 600 1.1rem/1.7 var(--font-ui); }
+.section-donation-tiers .pay-card p { font-size: .85rem; line-height: 1.8; }
+.section-donation-tiers .qr-visual-box { border: 1px solid var(--line); background: var(--paper); border-radius: 4px; }
+.section-donation-tiers .qr-placeholder { border: 1px solid var(--line-strong); border-radius: 4px; box-shadow: none; }
+.section-donation-tiers .qr-placeholder .qr-text { font-family: var(--font-ui); color: var(--ink-2); }
+.section-donation-tiers :is(.upi-code, .cell-copy-wrap code) { color: var(--accent); }
+.section-donation-tiers .pay-card-foot { font: 400 .7rem/1.8 var(--font-ui); }
+.section-donation-tiers .bank-details-table th { font: 400 .74rem/1.8 var(--font-ui); letter-spacing: 0; text-transform: none; }
+.section-donation-tiers .bank-details-table td { font-size: .81rem; line-height: 1.8; overflow-wrap: anywhere; }
+.section-donation-tiers .copy-btn { font: 500 .69rem/1.5 var(--font-ui); border-radius: 3px; padding: 7px 9px; color: var(--accent); }
+.section-donation-tiers .intimation-card { border: 1px solid var(--line); border-radius: 5px; box-shadow: none; padding: 26px 30px; }
+.section-donation-tiers .intimation-content h3 { font: 600 1.05rem/1.7 var(--font-ui); }
+.section-donation-tiers .intimation-content p { font-size: .85rem; line-height: 1.85; overflow-wrap: anywhere; }
+.section-volunteers { background: var(--paper); border-color: var(--line); }
+.section-volunteers .section-lead-box { max-width: 760px; margin: 0 0 32px; text-align: left; }
+.section-volunteers .section-lead-box .lede { font-size: .9rem; line-height: 1.9; }
+.section-volunteers .vol-grid { gap: 24px; }
+.section-volunteers .vol-card { border: 1px solid var(--line); padding: 30px 26px; border-radius: 5px; box-shadow: none; }
+.section-volunteers .vol-card:hover { transform: none; border-color: var(--line-strong); box-shadow: none; }
+.section-volunteers .vol-num { color: var(--accent); font: 500 .75rem/1.7 var(--font-ui); }
+.section-volunteers .vol-icon { font-size: 1.5rem; }
+.section-volunteers .vol-title { font: 600 1rem/1.75 var(--font-ui); }
+.section-volunteers .vol-desc { font-size: .84rem; line-height: 1.95; }
+.section-volunteers .btn { white-space: normal; overflow-wrap: anywhere; }
+.section-charter { background: #902C35; color: #FFFFFF; }
+.section-charter .charter-box { max-width: 940px; }
+.section-charter .charter-text h3 { font: 600 1.2rem/1.7 var(--font-ui); color: #FFFFFF; }
+.section-charter .charter-text p { color: #FFFFFF; font-size: .88rem; line-height: 1.9; }
+.section-charter .tribute-footnote { border-color: #FFFFFF40; color: #FFFFFFCC; font-size: .77rem; line-height: 1.9; font-style: normal; }
+
+/* Reading controls remain driven by the selected reader theme and text scale. */
+.clean-reader .reader-workspace { padding-top: 40px; gap: 48px; }
+.clean-reader .reader-sidebar { border-radius: 5px; box-shadow: none; }
+.clean-reader .reader-floating-toggle { border-radius: 4px; box-shadow: none; font-family: var(--font-ui); }
+.clean-reader .rs-controls { padding: 14px; border-radius: 4px; }
+.clean-reader :is(.rs-nav-group, .rs-ctrl-label, .rs-zoom-val, .rs-cat-tag,
+    .rs-meta-row, .rs-progress-caption, .rs-toc-title, .rs-toc-badge,
+    .rs-toc-li a, .rs-sources-title, .rs-source-chip, .cr-meta-line,
+    .cr-author, .cr-fact-list, .cr-pager-hint, .cr-pager-title) {
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.clean-reader .rs-doc-title { font: 500 .92rem/1.65 var(--font-ui); }
+.clean-reader .rs-doc-card { border-radius: 4px; }
+.clean-reader .rs-toc-li a { line-height: 1.65; padding-top: 8px; padding-bottom: 8px; }
+.clean-reader .rs-theme-btn { width: 28px; height: 28px; }
+.clean-reader .rs-zoom-btn { min-height: 32px; padding: 4px 10px; }
+.clean-reader .cr-doc-header { padding-bottom: 28px; margin-bottom: 36px; }
+.clean-reader .cr-title, html[lang="ta"] .clean-reader .cr-title { font-family: var(--font-ui); font-weight: 600; line-height: 1.45; }
+.clean-reader .cr-author, html[lang="ta"] .clean-reader .cr-author { font-family: var(--font-ui); font-size: .9rem; font-style: normal; }
+.clean-reader .cr-meta-line, html[lang="ta"] .clean-reader .cr-meta-line { font-family: var(--font-ui); font-size: .76rem; line-height: 1.8; margin-bottom: 18px; }
+.clean-reader .cr-notice { border-color: var(--line); border-radius: 4px; font-family: var(--font-ui); line-height: 1.8; }
+.clean-reader .cr-pager-link { border-radius: 4px; }
+.clean-reader .cr-pager-link:hover { transform: none; }
+.clean-reader .cr-pager-title { line-height: 1.7; font-weight: 500; }
+
+@media (max-width: 1100px) {
+  .about-grid { gap: 40px; grid-template-columns: minmax(0, 1fr) 280px; }
+  .section-origin .folio-grid { grid-template-columns: minmax(0, 1fr) 280px; gap: 36px; }
+  .section-plates .plate-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .section-plates .plate-strip img { height: 290px; }
+}
+@media (max-width: 1023px) {
+  .clean-reader .reader-workspace { padding-top: 76px; gap: 0; }
+  .clean-reader .reader-sidebar { border-radius: 0; box-shadow: var(--shadow-lg); }
+}
+@media (max-width: 899px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .section-about .aside-card { position: static; }
+  .section-origin .folio-grid { grid-template-columns: 1fr; gap: 36px; }
+  .section-origin .folio-figures { display: flex; justify-content: center; max-width: 320px; margin: 0 auto; }
+  .section-pillars .pillars, .section-donation-tiers .payment-grid, .section-volunteers .vol-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 639px) {
+  :is(.section-about, .section-timeline, .section-closing, .section-pillars,
+      .section-plates, .section-register, .section-archive, .section-origin,
+      .section-donation-tiers, .section-volunteers, .section-charter) { padding: 40px 0; }
+  .page-contents > .container { gap: 10px 20px; padding-top: 16px; padding-bottom: 16px; }
+  .page-contents > .container > span { flex-basis: 100%; }
+  .page-contents a { font-size: .76rem; }
+  .section-about .bio-section h2 { font-size: 1.13rem; }
+  .section-about .bio-section .measure p { font-size: .9rem; }
+  .section-about .aside-card { padding: 22px; }
+  .section-timeline .tl-item { grid-template-columns: 68px 1fr; gap: 8px 14px; padding-left: 22px; }
+  .section-timeline .tl-year { font-size: 1rem; }
+  .section-timeline .tl-title { font-size: .88rem; }
+  .section-timeline .tl-detail { font-size: .8rem; }
+  .section-pillars .pillar { padding: 24px; }
+  .section-plates .plate-strip { grid-template-columns: 1fr 1fr; gap: 20px 14px; }
+  .section-plates .plate-strip .plate-mat { padding: 10px; }
+  .section-plates .plate-strip img { height: 200px; }
+  .section-plates .plate-strip figcaption { font-size: .65rem; }
+  .brush-page .section-archive { padding-top: 20px; }
+  .section-archive .archive-top-right { flex-wrap: nowrap; gap: 8px; }
+  .section-archive .archive-top-right > .btn { flex-shrink: 0; white-space: nowrap; }
+  .section-archive .segmented { width: auto; flex: 1; min-width: 0; }
+  .section-archive .segmented button, html[lang="ta"] .section-archive .segmented button { flex: 1; padding: 8px 6px; font-size: .7rem; }
+  :is(.section-archive, .section-register) .pill, html[lang="ta"] :is(.section-archive, .section-register) .pill { font-size: .7rem; padding: 7px 10px; }
+  :is(.section-archive, .section-register) .record-cards { gap: 14px; }
+  :is(.section-archive, .section-register) .record-card { padding: 22px; border-color: var(--line); border-radius: 5px; background: #FFFFFF; box-shadow: none; gap: 12px; }
+  :is(.section-archive, .section-register) .record-card .rc-meta { font: 400 .71rem/1.7 var(--font-ui); gap: 8px; }
+  :is(.section-archive, .section-register) .record-card .rc-title { font: 500 .98rem/1.7 var(--font-ui); }
+  :is(.section-archive, .section-register) .record-card .rc-details { font-size: .8rem; line-height: 1.9; }
+  :is(.section-archive, .section-register) .record-card .rc-action { font: 500 .75rem/1.7 var(--font-ui); letter-spacing: 0; text-transform: none; }
+  .section-origin .folio-headline { font-size: 1.5rem; }
+  .section-origin .folio-lede { font-size: .88rem; }
+  .section-origin .folio-plate-frame { padding: 10px; }
+  .section-donation-tiers .pay-card { padding: 24px 20px; }
+  .section-donation-tiers .qr-visual-box { padding: 18px 12px; }
+  .section-donation-tiers .upi-id-box { padding: 8px; gap: 6px; flex-wrap: wrap; }
+  .section-donation-tiers .upi-code { font-size: .8rem; }
+  .section-donation-tiers .intimation-card { padding: 24px 20px; }
+  .section-volunteers .vol-card { padding: 26px 22px; }
+  .clean-reader .reader-workspace { padding-top: 64px; }
+  .clean-reader .cr-title, html[lang="ta"] .clean-reader .cr-title { font-size: 1.7rem; }
+}
+@media print {
+  .clean-reader :is(.reader-sidebar, .reader-floating-toggle, .reader-sidebar-backdrop, .cr-pager) { display: none; }
+  .clean-reader .reader-workspace { padding: 0; }
+}
+
+/* Biography-verified reader metadata; follows the existing reading layout. */
+.rs-reading-language { font: 400 .7rem/1.8 var(--font-ui); color: var(--ink-2); margin: 7px 0 0; }
+.cr-reading-info { border-block: 1px solid var(--line); padding: 14px 0; margin: 21px 0 28px; }
+.cr-reading-info p { font: 400 .8rem/1.95 var(--font-ui); color: var(--ink-2); margin: 0; }
+.cr-sources { display: inline-flex; flex-wrap: wrap; gap: 8px; }
+.reader-article[lang="en"] .cr-body, .reader-article[lang="en"] .cr-body :is(h2,h3) { font-family: "Spectral", serif; }
+.reader-article[lang="ta"] .cr-body, .reader-article[lang="ta"] .cr-body :is(h2,h3) { font-family: "Noto Serif Tamil", serif; }

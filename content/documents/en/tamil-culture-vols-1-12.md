@@ -7,9 +7,7 @@ pillar: publishing
 kind: journal-run
 status: partial
 lang: en
-summary: >-
-  Finding aid for the English quarterly he founded and edited (vols. 1–12), with
-  links to cleaned Culture essay pages.
+summary: "Finding aid to the English quarterly founded and edited by Thani Nayagam, 1952–1966, with links to selected essays."
 rights: >-
   IA item is CC0-labelled by the uploader; underlying article rights may differ.
   On-site reading uses cleaned essay holdings; full bound-volume OCR is kept
@@ -21,6 +19,7 @@ images: []
 cite:
   - 4
   - 6
+  - 44
 iaId: tamil-culture-by-xavier-thaninayagam-adigalar-volume-1-12_202008
 bookMd: tamil-culture
 ---
@@ -31,3 +30,7 @@ The Internet Archive holding packages *Tamil Culture* volumes 1–12 (4,768 scan
 ## How to read
 
 Browse the cleaned essays listed below. Full bound-volume OCR is not shown as continuous reading text because of OCR quality. Prefer the Internet Archive page images for disputed readings; a local raw dump remains at [`/books/tamil-culture.txt`](/books/tamil-culture.txt) if needed.
+
+## Biography context
+
+The biography dates the English quarterly from February 1952 through 1966, with publication gaps in 1960, 1962 and 1965 (printed pp. 40, 98, 108, 190). The date span does not mean uninterrupted publication.

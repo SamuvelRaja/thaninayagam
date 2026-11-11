@@ -2,14 +2,12 @@
 id: aspects-tamil-humanism
 slug: aspects-tamil-humanism
 title: Aspects of Tamil Humanism
-year: '1972'
+year: "1961"
 pillar: lectures
-kind: journal-article
+kind: "lecture-record"
 status: readable
 lang: ta
-summary: >-
-  1972 Bunker விரிவுரைத் தலைப்பு; தொடர்புடைய *Tamil Culture* கட்டுரை பக்கப்
-  படிமங்களிலிருந்து மீண்டும் OCR.
+summary: "1961 பிப்ரவரி சொர்ணம்மாள் அறக்கட்டளை உரையின் பதிவு. கீழே உள்ள வாசிப்பு தொடர்புடைய 1957 Ancient Tamil Poet-Educators கட்டுரை; அந்த உரையின் மூலப் பிரதி அல்ல."
 rights: >-
   Internet Archive பொது வழித்தோன்றல்களிலிருந்து தளத்தில் வாசிப்பதற்காக வழங்கப்படுகிறது. இயந்திர OCR பிழைகள் இருக்கலாம்; படிமப் பார்வையே அதிகாரபூர்வமானது. உரிமைகள் அசல் வெளியீட்டாளர் / வைப்பாளர்களிடமே உள்ளன.
 sourceUrl: >-
@@ -19,13 +17,13 @@ images: []
 cite:
   - 11
   - 7
+  - 44
 bookMd: aspects-tamil-humanism
 ---
 ## நூலியல் பதிவு
 
-1972 யாழ்ப்பாணக் கல்லூரி Bunker நினைவு உரைகள் “Aspects of Tamil Humanism” என நினைவுத் தொகுதிகளில் குறிக்கப்படுகின்றன. தொடர்புடைய நூல்: *Tamil Humanism, the Classical Period* (1972).
+அமுதன் அடிகளாரின் 1993 வாழ்க்கை வரலாறு, அச்சுப் பக்கம் 209, *Aspects of Tamil Humanism* என்பதை 1961 பிப்ரவரி சொர்ணம்மாள் அறக்கட்டளை உரையாகக் குறிப்பிடுகிறது. அது சென்னைப் பல்கலைக்கழகத்தின் *Annals of Oriental Research*, தொகுதி XVII (1960–1961), பக். 1–25-இல் வெளியானது. 1972 பங்க்கர் நினைவு உரைகள் தனியான *Tamil Humanism: The Classical Period* நூலுக்குரியவை (வாழ்க்கை வரலாறு பக். 200, 212).
 
-## வாசிப்பு
+## இங்குள்ள வாசிப்பு
 
-*Ancient Tamil Poet-Educators* (*Tamil Culture*, தொகுதி 6 எண் 4) கீழே உள்ளது — உரைத் தொகுதி டிஜிட்டல் ஆகும் வரை. மேற்கோள் சந்தேகமாக இருந்தால் இதழ் படிமத்தைப் பயன்படுத்துங்கள்.
-
+கீழே உள்ள ஆங்கில உரை *Ancient Tamil Poet-Educators*, *Tamil Culture* 6(4), அக்டோபர்–டிசம்பர் 1957, பக். 273–285. இது தொடர்புடைய வாசிப்பு; 1961 உரையின் படியெடுப்பு அல்ல.

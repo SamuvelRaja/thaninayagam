@@ -1,0 +1,762 @@
+@import "../brush-fonts.css";
+
+/* ==========================================================================
+   THANI NAYAGAM DIGITAL ARCHIVE — BRUSH CALLIGRAPHY & RED SUN ART DIRECTION
+   Inspired by cinematic Tamil brush-stroke poster references (Dorothy)
+   ========================================================================== */
+
+.brush-page {
+  --paper: #faf9f6;
+  --paper-raised: #ffffff;
+  --paper-deep: #f1efea;
+  --ink: #111110;
+  --ink-2: #52504b;
+  --accent: var(--preview-accent);
+  --accent-ink: var(--preview-accent);
+  --accent-wash: var(--preview-accent-wash);
+  --line: #dedad2;
+  
+  --font-brush: "Anek Tamil", "Kavivanar", "Rock Salt", cursive, sans-serif;
+  --font-brush-en: var(--english-brush-font, "Permanent Marker", cursive);
+  
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html[lang="ta"] .brush-page {
+  --font-brush: "Anek Tamil", "Kavivanar", sans-serif;
+}
+
+html[lang="en"] .brush-page {
+  --font-brush: var(--font-brush-en);
+}
+
+/* Header Integration */
+body:has(.brush-page) .living-header {
+  --accent: var(--preview-accent);
+  --accent-wash: var(--preview-accent-wash);
+}
+
+body:has(.brush-page) .living-header .archive-nav-wrap {
+  background: #141412;
+}
+
+body:has(.brush-page) .living-header .archive-primary-nav {
+  border-bottom: 3px solid var(--preview-accent);
+}
+
+body:has(.brush-page) .living-header .archive-dropdown {
+  border-top: 3px solid var(--preview-accent);
+}
+
+body:has(.brush-page) .living-header .archive-brand-mark {
+  border-color: var(--preview-accent);
+  color: var(--preview-accent);
+}
+
+/* Palette consistency across sections */
+.brush-page :is(.section-about, .section-timeline, .section-closing, .section-pillars, .section-plates, .section-register, .section-archive, .section-origin, .section-donation-tiers, .section-volunteers, .section-charter) {
+  --paper: #faf9f6;
+  --paper-deep: #f1efea;
+  --ink: #111110;
+  --ink-2: #52504b;
+  --accent: var(--preview-accent);
+  --accent-ink: var(--preview-accent);
+  --accent-wash: var(--preview-accent-wash);
+}
+
+/* ==========================================================================
+   HEADINGS: TAMIL & ENGLISH BRUSH STROKE CALLIGRAPHY TYPOGRAPHY
+   Uses SVG displacement filter (#tamil-brush-engine & #tamil-brush-subtle)
+   ========================================================================== */
+
+/* Universal Section Titles (H2) */
+.brush-page :is(.living-section-heading, .directory-heading, .living-life-intro) h2,
+.brush-page :is(.section-head, .life-timeline-heading) h2,
+.brush-page :is(.bio-section h2, .folio-headline, .section-subhead, .archive-field-intro h2),
+.brush-page .living-closing h2 {
+  font-family: var(--font-brush) !important;
+  font-weight: 800 !important;
+  font-size: clamp(2.1rem, 3.6vw, 3rem) !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.025em !important;
+  color: #111110 !important;
+  text-wrap: balance;
+  transform: rotate(-1.5deg);
+  transform-origin: left center;
+  filter: url(#tamil-brush-subtle);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+html[lang="en"] .brush-page :is(.living-section-heading, .directory-heading) h2,
+html[lang="en"] .brush-page :is(.section-head, .life-timeline-heading) h2,
+html[lang="en"] .brush-page :is(.bio-section h2, .folio-headline, .section-subhead, .archive-field-intro h2),
+html[lang="en"] .brush-page .living-closing h2 {
+  font-family: var(--font-brush-en);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/* Secondary titles (H3) */
+.brush-page .collection-title h3,
+.brush-page .pillar h3,
+.brush-page .living-document-card h3 {
+  font-family: var(--font-brush);
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1.35;
+  color: #141412;
+  letter-spacing: -0.015em;
+}
+
+html[lang="en"] .brush-page .collection-title h3,
+html[lang="en"] .brush-page .pillar h3 {
+  font-family: var(--font-brush-en);
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+/* Numbers and metrics in clear, distinguished archival typography */
+.brush-page .living-metric > dd:not(.living-metric-detail) {
+  font-family: "Spectral", "Georgia", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: #ffffff;
+  filter: none;
+  margin-bottom: 8px;
+}
+
+.brush-page .living-fields {
+  padding-block: 72px;
+}
+
+.brush-page .living-journey-section {
+  background: #f3f1eb;
+}
+
+/* Closing Callout */
+.brush-page .living-closing {
+  background: #141412;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.brush-page .living-closing::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 420px;
+  height: 420px;
+  background: url('/images/brush/red-sun-spiral.webp') center/contain no-repeat;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.brush-page .living-closing h2 {
+  color: #ffffff;
+  filter: url(#tamil-brush-engine);
+}
+
+.brush-page .living-closing .living-kicker {
+  color: var(--preview-accent-light);
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.brush-page .living-closing .living-button {
+  background: var(--preview-accent);
+  color: #ffffff;
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--preview-accent) 30%, transparent);
+}
+
+.brush-page .living-button-primary {
+  background: var(--preview-accent);
+}
+
+.brush-page .living-button-primary:hover {
+  background: var(--preview-accent-hover);
+}
+
+/* ==========================================================================
+   HERO SECTION: POSTER COMPOSITION & BRUSH TYPOGRAPHY
+   ========================================================================== */
+
+.brush-hero {
+  position: relative;
+  background: #faf9f6;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.brush-hero-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  color: #68645e;
+  font: 0.65rem/1.8 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brush-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding-block: 40px 32px;
+}
+
+.brush-hero-copy {
+  z-index: 2;
+  min-width: 0;
+}
+
+.living-home .brush-hero .living-hero-kicker {
+  color: var(--preview-accent);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.living-home .brush-hero .living-hero-kicker span {
+  color: #7a766e;
+  margin-left: 14px;
+  letter-spacing: 0.08em;
+}
+
+/* Master Display Headline */
+html[lang] .brush-page .brush-main-title,
+html[lang="ta"] .brush-page .brush-main-title,
+html[lang] .living-home.brush-page .living-hero h1,
+html[lang="ta"] .living-home.brush-page .living-hero h1 {
+  font-family: "Anek Tamil", "Kavivanar", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: clamp(4.2rem, 7.8vw, 6.8rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.03em !important;
+  color: #111110 !important;
+  margin: 0 0 24px 0 !important;
+  transform: rotate(-2.5deg);
+  transform-origin: left center;
+  filter: url(#tamil-brush-engine);
+  display: block;
+}
+
+html[lang="ta"] .brush-page .brush-main-title,
+html[lang="ta"] .living-home.brush-page .living-hero h1 {
+  font-size: clamp(3.6rem, 6.5vw, 5.6rem) !important;
+  line-height: 1.25 !important;
+  filter: url(#tamil-brush-engine);
+}
+
+html[lang] .brush-page .brush-title-en,
+html[lang="en"] .brush-page .brush-main-title,
+html[lang="en"] .living-home.brush-page .living-hero h1 {
+  font-family: var(--font-brush-en) !important;
+  font-weight: 400 !important;
+  font-size: clamp(4.8rem, 8.5vw, 7.6rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #111110 !important;
+  filter: url(#tamil-brush-engine);
+}
+
+.brush-main-title .brush-title-line {
+  display: block;
+}
+
+.brush-main-title em,
+.brush-main-title .line-3 em,
+.brush-main-title .red-accent {
+  color: var(--preview-accent) !important;
+  font-style: normal;
+}
+
+.living-home.brush-page .living-hero-person {
+  color: #141412 !important;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.brush-page .living-hero .living-button-secondary {
+  color: #141412 !important;
+  border-color: #c4beb3 !important;
+}
+
+.brush-page .living-hero .living-button-secondary:hover {
+  background: #f1efea;
+  border-color: #141412 !important;
+}
+
+.brush-hero .living-hero-lede {
+  max-width: 48ch;
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: #52504b;
+}
+
+.brush-hero .living-hero-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.brush-hero .living-hero-footnote {
+  margin-top: 22px;
+}
+
+/* ==========================================================================
+   RED SUN BRUSH STROKES ROUND BACKGROUND FOR IMAGES
+   ========================================================================== */
+
+/* Hero portrait and painted caption match the original poster composition. */
+.brush-portrait {
+  --portrait-caption-height: 112px;
+  --portrait-caption-bottom: -16px;
+  position: relative;
+  height: 570px;
+  width: 100%;
+  margin: 0;
+  isolation: isolate;
+  align-self: start;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.brush-sun {
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.brush-portrait > .brush-sun {
+  position: absolute;
+  width: 114%;
+  max-width: none;
+  height: auto;
+  top: -8px;
+  left: -7%;
+  z-index: -1;
+  transform: rotate(-8deg);
+  filter: var(--preview-sun-filter);
+}
+
+.brush-portrait-person {
+  display: block;
+  position: relative;
+  width: 92%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: 1;
+  filter: contrast(1.08) brightness(0.96);
+}
+
+.brush-ground {
+  position: absolute;
+  z-index: 2;
+  width: 110%;
+  height: var(--portrait-caption-height);
+  left: -5%;
+  bottom: var(--portrait-caption-bottom);
+  background: #141412;
+  transform: rotate(-1.5deg);
+  mask: url('/images/brush/ink-stroke.svg') center/100% 100% no-repeat;
+}
+
+.brush-portrait figcaption {
+  position: absolute;
+  z-index: 3;
+  width: 88%;
+  height: var(--portrait-caption-height);
+  left: 6%;
+  bottom: var(--portrait-caption-bottom);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 12px;
+  color: #fff;
+  font: 600 1.125rem/1.5 var(--font-mono);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.brush-portrait figcaption > span:last-child {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brush-hero-bottom {
+  border-top: 1px solid #dcd7ce;
+}
+
+.brush-hero-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 16px;
+  font-size: 0.68rem;
+  color: #605e58;
+}
+
+.brush-hero-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--preview-accent);
+  font-weight: 600;
+}
+
+.brush-scroll-icon {
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   2. RED SUN BRUSH STROKE ROUND BACKGROUND FOR DOCUMENT PLATES & FIGURES
+   ========================================================================== */
+
+/* Universal Red Sun Background for Document Plates */
+.brush-page .section-plates .plate-mat,
+.brush-page .plate--inline .plate-mat,
+.brush-page .folio-plate-frame,
+.brush-image-wrap {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 44px 36px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+/* The circular red sun brush stroke halo behind every plate */
+.brush-page .section-plates .plate-mat::before,
+.brush-page .plate--inline .plate-mat::before,
+.brush-page .folio-plate-frame::before,
+.brush-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  background: url('/images/brush/red-sun-spiral.webp') center/contain no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  filter: var(--preview-sun-filter);
+  transform: rotate(-4deg);
+}
+
+/* Alternate rotation for organic handcrafted poster rhythm */
+.brush-page .section-plates .plate:nth-child(2) .plate-mat::before {
+  transform: rotate(24deg) scale(1.02);
+}
+.brush-page .section-plates .plate:nth-child(3) .plate-mat::before {
+  transform: rotate(-18deg) scale(0.98);
+}
+.brush-page .section-plates .plate:nth-child(4) .plate-mat::before {
+  transform: rotate(45deg) scale(1.04);
+}
+
+/* Document Cover / Plate Artwork Styling */
+.brush-page .section-plates .plate-mat img,
+.brush-page .plate--inline .plate-mat img,
+.brush-image-wrap img {
+  position: relative;
+  max-width: 175px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 16px 36px rgba(18, 18, 16, 0.22), 0 3px 10px rgba(18, 18, 16, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brush-page .section-plates .plate:nth-child(even) .plate-mat img {
+  transform: rotate(3deg);
+}
+
+.brush-page .section-plates .plate-mat:hover img,
+.brush-page .plate--inline .plate-mat:hover img {
+  transform: scale(1.03) rotate(0deg);
+  box-shadow: 0 22px 46px rgba(18, 18, 16, 0.28), 0 4px 12px rgba(18, 18, 16, 0.16);
+}
+
+/* Homepage Archival Treasures Strip */
+.brush-page .home-plates-strip {
+  padding-block: 64px 54px;
+  background: #f5f3ec;
+  border-top: 1px solid #ded9cd;
+  border-bottom: 1px solid #ded9cd;
+}
+
+.brush-page .home-plates-strip .living-section-heading {
+  margin-bottom: 32px;
+}
+
+.brush-page .home-plates-strip figcaption {
+  font-size: 0.76rem;
+  text-align: center;
+  color: #55534d;
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+/* 3. Interior Page Headers: Calligraphy + Red Sun Brush Art */
+.brush-page .living-page-header {
+  background: #faf9f6;
+  padding: 44px 0 36px;
+  overflow: hidden;
+  position: relative;
+}
+
+.brush-page-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) 280px;
+  gap: 52px;
+  align-items: center;
+}
+
+.brush-page .page-header-sponsors .brush-page-heading {
+  grid-template-columns: 1fr;
+  max-width: 820px;
+}
+
+.brush-page-heading-copy {
+  padding-block: 14px;
+  min-width: 0;
+}
+
+.brush-page .living-page-header h1 {
+  font-family: var(--font-brush);
+  font-weight: 900;
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #111110;
+  text-wrap: balance;
+  transform: rotate(-2deg);
+  transform-origin: left center;
+  filter: url(#tamil-brush-engine);
+  margin-bottom: 14px;
+}
+
+html[lang="en"] .brush-page .living-page-header h1 {
+  font-family: var(--font-brush-en);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.brush-page .living-page-header .slug-row {
+  color: var(--preview-accent);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.brush-page .living-page-header .lede {
+  margin-top: 18px;
+  max-width: 62ch;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #52504b;
+}
+
+/* Interior Page Header Red Sun Artwork */
+.brush-page-art {
+  position: relative;
+  isolation: isolate;
+  height: 290px;
+  display: grid;
+  place-items: center;
+}
+
+.brush-page-art > .brush-sun {
+  position: absolute;
+  width: 126%;
+  max-width: none;
+  z-index: -1;
+  top: -8%;
+  left: -13%;
+  filter: var(--preview-sun-filter);
+  transform: rotate(-12deg);
+}
+
+.brush-page-portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  filter: contrast(1.06);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 98%);
+}
+
+.brush-page-document {
+  height: 220px;
+  width: 155px;
+  object-fit: contain;
+  transform: rotate(6deg);
+  box-shadow: 0 16px 36px rgba(18, 18, 16, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.brush-page-art-sponsors .brush-page-document {
+  width: 170px;
+}
+
+/* Timeline progress styling */
+.brush-page .life-timeline-path-progress,
+.brush-page .life-timeline-path-tip {
+  stroke: var(--preview-accent);
+}
+
+.brush-page .life-timeline-path-tip {
+  fill: var(--preview-accent);
+  stroke: #faf9f6;
+}
+
+.brush-page .living-journey-year {
+  font-family: "Rock Salt", "Permanent Marker", cursive;
+  color: var(--preview-accent);
+  font-size: 1.15rem;
+}
+
+.brush-page .living-journey-event.is-reached .living-journey-marker {
+  background: var(--preview-accent);
+  outline-color: var(--preview-accent);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .brush-hero-grid {
+    gap: 32px;
+  }
+  .brush-portrait {
+    height: 500px;
+  }
+  .brush-page-heading {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 36px;
+  }
+  .brush-page-art {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brush-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 30px 24px;
+  }
+  .brush-hero-copy {
+    display: contents;
+  }
+  .brush-hero-title {
+    grid-row: 1;
+  }
+  .brush-portrait {
+    grid-row: 2;
+    width: min(100%, 460px);
+    height: 480px;
+    justify-self: center;
+  }
+  .brush-hero-story {
+    grid-row: 3;
+    padding-bottom: 16px;
+  }
+  .brush-main-title {
+    font-size: clamp(3.2rem, 12vw, 5.2rem);
+  }
+  html[lang="ta"] .brush-main-title {
+    font-size: clamp(2.8rem, 10vw, 4.4rem);
+  }
+  .brush-hero-topline > span:last-child {
+    display: none;
+  }
+  .brush-page-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .brush-page-art {
+    width: 200px;
+    height: 200px;
+    justify-self: end;
+  }
+  .brush-page .section-plates .plate-mat,
+  .brush-page .plate--inline .plate-mat {
+    min-height: 240px;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .brush-hero-topline {
+    font-size: 0.55rem;
+    padding-top: 18px;
+  }
+  .brush-portrait {
+    --portrait-caption-height: 168px;
+    height: 420px;
+    margin-block: 16px 20px;
+  }
+  .brush-portrait > .brush-sun {
+    width: 112%;
+    top: 4px;
+    left: -6%;
+  }
+  .brush-portrait figcaption {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 28px;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .brush-hero-story {
+    margin-top: 12px;
+  }
+  .brush-hero .living-button {
+    gap: 12px;
+    font-size: 0.78rem;
+    padding-inline: 18px;
+  }
+  .brush-hero-bottom .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.62rem;
+  }
+  .brush-page .living-fields {
+    padding-block: 44px;
+  }
+}

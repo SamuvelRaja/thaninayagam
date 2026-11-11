@@ -1,5 +1,5 @@
 # Rev. Dr. Xavier S. Thani Nayagam Adigal — Digital Archive
-### தனிநாயக அடிகள் எண்மிய ஆவணகம்
+### தனிநாயக அடிகள் ஆவணகம்
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61dafb?style=flat-square&logo=react)](https://react.dev/)
@@ -9,7 +9,9 @@
 
 A comprehensive, accessibility-first bilingual digital archive dedicated to the life, scholarship, global travels, and enduring legacy of **Rev. Dr. Xavier S. Thani Nayagam Adigal (1913–1980)** — reverently known as ***“Tamilttuthuvar”* (தமிழ்த் தூதுவர் / The Roving Ambassador of Tamil)**.
 
-The archive is statically rendered with Next.js, engineered for elder decision-makers and international scholars, featuring high-contrast typography, zero cognitive clutter, restrained archival motifs (*Olaichuvadi*, *Kolam*), and full-text digitized books, monographs, and research articles.
+The archive is statically rendered with Next.js and uses **Living Archive 02**, selected from `codexgpt6.1soldesign/design-02/`: an ivory canvas, oxblood subject navigation, spacious sans-serif typography, and an offset portrait frame. Both languages share the design, with a searchable homepage collection and document readers. The earlier design was restored at the owner’s request on 8 October 2026; biography-based factual corrections and edition qualifications remain in place.
+
+The catalogue and reader distinguish **reading texts, related reading, and catalogue guides**, and show the hosted text’s language separately from the interface language. An English interface does not imply an English translation. See [the research audit](workbench/research/BIOGRAPHY-FACT-CHECK.md) and [the design plan](workbench/BIOGRAPHY-WEBSITE-PLAN.md).
 
 ---
 
@@ -32,24 +34,23 @@ The archive is statically rendered with Next.js, engineered for elder decision-m
 
 * **Life**: 2 August 1913 (Kayts, Jaffna, Sri Lanka) – 1 September 1980 (Jaffna)
 * **Title**: *Tamilttuthuvar* (தமிழ்த் தூதுவர்) — The Roving Ambassador of Tamil
-* **Key Achievements**:
-  * **Founder & Editor** of the premier quarterly journal ***Tamil Culture*** (1952–1966), the first global peer-reviewed bridge for classical Tamil studies.
-  * **Co-founder of the IATR** (International Association for Tamil Research) in 1964 with Jean Filliozat, Kamil Zvelebil, V. I. Subramaniam, and T. Burrow.
-  * **Chief Organizer** of the historic **1st International Conference Seminar of Tamil Studies (1966)** in Kuala Lumpur.
-  * **Rediscoverer of 16th-Century Tamil Incunabula**:
-    * *Cartilha* (Lisbon, 1554) — earliest printed work containing an Indian language.
-    * *Thambiran Vanakkam* (Quilon, 1578) — first book printed in an Indian script using movable type.
-    * *Antão de Proença’s Tamil-Portuguese Dictionary* (Ambalakad, 1679) — discovered in the Vatican Library.
-  * **Global Academic Ambassador**: Delivered 200+ lectures across Europe, the Americas, Africa, and Asia establishing Tamil as an egalitarian classical world language.
+* **Selected work**:
+  * Founded and edited *Tamil Culture* from 1952; the biography records publication gaps within its 1952–1966 span.
+  * Helped establish the International Association for Tamil Research in January 1964.
+  * Served as Deputy Chairman of the organizing committee for the first international Tamil research conference in Kuala Lumpur in 1966; its proceedings appeared in 1968.
+  * Studied early Tamil printed books, grammars and dictionaries, including the 1679 Tamil–Portuguese dictionary of Antão de Proença.
+  * Compared Tamil literature and ethics with other classical traditions and carried Tamil scholarship to readers abroad.
+
+Edition dates and source conflicts are qualified in individual catalogue records; the source ledger records the evidence.
 
 ---
 
 ## Key Features
 
 - **🌐 Dual-Language Parity (Tamil & English)**: Complete native experience across both languages with dedicated localized metadata, typography, and content.
-- **📖 Full-Text Document Reader**: In-browser reading interface for 30+ digitized books, collected papers, monographs, and essays with chapter navigation, reading progress, and anchor links.
-- **🎋 Palm-Leaf (*Olaichuvadi*) Aesthetics**: Tactile parchment textures, manuscript cards, and Sangam-inspired design accents.
-- **👁️ Elder & Scholar Accessible (WCAG AAA)**: Large readable type (minimum ~20px body measure), 7:1+ contrast ratios, visible persistent navigation (no hidden desktop hamburger menus), and zero motion gimmicks.
+- **📖 Full-Text Document Reader**: In-browser reading interface for the collection’s available texts, related essays, and catalogue guides with chapter navigation, reading progress, and anchor links.
+- **Living Archive 02 design**: Five subject links, searchable document cards, a scholarly achievements band, and a life timeline in a consistent ivory and oxblood palette.
+- **Accessible Navigation & Reading Controls**: Keyboard-operated navigation, a mobile menu, visible focus states, reduced-motion support, and adjustable reader text size and themes.
 - **🗺️ Interactive Chronology**: Biographical timeline and itinerary tracing his academic journey from Jaffna to the world.
 - **📚 Primary Source Ledger**: Direct bibliographic citations, verified catalog links to the Internet Archive, Open Library, and Tamil Digital Library.
 - **🛠️ Maintainer Digitization Workbench**: Built-in tracking and automated conversion toolchain for OCR processing, markdown generation, and catalog curation.
@@ -60,9 +61,9 @@ The archive is statically rendered with Next.js, engineered for elder decision-m
 
 | Section | Tamil Route (Default) | English Route | Description |
 | :--- | :--- | :--- | :--- |
-| **Home** | `/` | `/en/` | Hero overview, key achievements, collections & featured works |
-| **Biography** | `/about/` | `/en/about/` | Full biographical dossier, academic pedigree & global mission |
-| **Contributions** | `/contributions/` | `/en/contributions/` | Scholarly pillars, chronology, thematic analyses & publications |
+| **Home** | `/` | `/en/` | Hero overview, collections, searchable featured works and life journey |
+| **Biography** | `/about/` | `/en/about/` | Biographical sections, reference facts and the life timeline |
+| **Contributions** | `/contributions/` | `/en/contributions/` | Scholarly pillars, archival plates and publication register |
 | **Archive Explorer** | `/archive/` | `/en/archive/` | Searchable & filterable holdings catalog across 5 pillars |
 | **Document Reader** | `/archive/documents/[slug]/` | `/en/archive/documents/[slug]/` | Full-text reader with dynamic TOC and archival metadata |
 | **Timeline** | `/timeline/` | `/en/timeline/` | Chronological life journey and historical milestones |
@@ -74,20 +75,9 @@ The archive is statically rendered with Next.js, engineered for elder decision-m
 
 ## Design Philosophy
 
-The site keeps decoration in service of the archive itself — restrained accents drawn from Tamil archival tradition:
+Living Archive 02 keeps the archive open and easy to explore. Its shared palette uses ivory (`#F8F7F3`), oxblood (`#902C35`), charcoal (`#252522`), and white document surfaces. Noto Sans Tamil supplies the bilingual interface typography; the document reader retains serif text, size controls, and light, sepia, and dark preferences.
 
-```
-┌────────────────────┐    ┌────────────────────┐    ┌────────────────────┐
-│   Pulli Kolam      │    │    Olaichuvadi     │    │     Thamizhi       │
-│ Geometric Lattices │    │ Manuscript Cards & │    │ Epigraphic Glyphs  │
-│ & Threshold Art    │    │ Parchment Surfaces │    │ & Bronze Seals     │
-└────────────────────┘    └────────────────────┘    └────────────────────┘
-```
-
-* **Kolam (கோலம்)**: Symmetrical threshold art used as modular grid markers and framing motifs.
-* **Olaichuvadi (ஓலைச்சுவடி)**: Rounded cards, bookmark ribbons, and warm parchment reader surfaces.
-* **Thamizhi (தமிழி)**: Inscriptional glyphs reflecting 3rd-century BCE epigraphic heritage.
-* **Cheppedu (செப்பேடு)**: Bronze-accented archival seals for primary sources and verifiable holdings.
+The active styles are `assets/css/living-archive.css` for the homepage and tokens, `living-layout.css` for shared navigation and page headers, and `living-pages.css` for interior pages. The original HTML design gallery remains available in `codexgpt6.1soldesign/`.
 
 ---
 

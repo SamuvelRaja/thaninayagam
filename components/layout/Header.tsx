@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState, useLayoutEffect } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { STRINGS, ROUTES } from "@/lib/data";
+import { usePathname, useSearchParams } from "next/navigation";
+import { STRINGS, ROUTES, WORKS } from "@/lib/data";
+import { archiveNavigation, lifeNavigation } from "@/lib/navigation";
 
 interface HeaderProps {
   lang: "ta" | "en";
@@ -11,164 +13,172 @@ interface HeaderProps {
   customLangToggles?: { ta: string; en: string };
 }
 
-export const Header: React.FC<HeaderProps> = ({
-  lang,
-  current,
-  progress,
-  customLangToggles,
-}) => {
-  const S = STRINGS[lang];
-  const [menuOpen, setMenuOpen] = useState(false);
-  const currentRoute = ROUTES.find((r) => r.key === current) || ROUTES[0];
-  const toggles = customLangToggles || { ta: currentRoute.ta, en: currentRoute.en };
+const subjectLabels: Record<string, { ta: string; en: string }> = {
+  "tamil-literature": { ta: "இலக்கியம்", en: "Literature" },
+  "tamil-culture": { ta: "பண்பாடு", en: "Culture" },
+  "tamil-studies": { ta: "தமிழாய்வு", en: "Research" },
+  "philosophy-thought": { ta: "மெய்யியல்", en: "Philosophy" },
+  "collected-editions": { ta: "தொகுப்புகள்", en: "Collections" },
+};
 
-  useLayoutEffect(() => {
+function HeaderView({ lang, current, progress, customLangToggles, query = "" }: HeaderProps & { query?: string }) {
+  const S = STRINGS[lang];
+  const prefix = lang === "en" ? "/en" : "";
+  const [hash, setHash] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
+  const hoverCloseTimer = useRef<number | null>(null);
+  const groupRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const pathname = usePathname();
+  const groups = [...archiveNavigation(lang), lifeNavigation(lang)];
+  const params = new URLSearchParams(query);
+  const selectedCat = params.get("cat") || WORKS.find((work) => pathname?.includes(`/documents/${work.slug}/`))?.cat;
+  const currentRoute = ROUTES.find((route) => route.key === current) || ROUTES[0];
+  const baseToggles = customLangToggles || { ta: currentRoute.ta, en: currentRoute.en };
+  const cancelHoverClose = () => {
+    if (hoverCloseTimer.current !== null) window.clearTimeout(hoverCloseTimer.current);
+    hoverCloseTimer.current = null;
+  };
+  const supportsHover = () => window.matchMedia("(min-width: 1101px) and (hover: hover) and (pointer: fine)").matches;
+  const closeNavigation = () => { cancelHoverClose(); setMenuOpen(false); setOpenGroup(null); };
+
+  useEffect(() => () => cancelHoverClose(), []);
+  const languageHref = (target: "ta" | "en") => `${baseToggles[target]}${query ? `?${query}` : ""}${hash}`;
+
+  useEffect(() => {
     document.documentElement.lang = lang;
+    const syncHash = () => setHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
   }, [lang]);
+
+  useEffect(() => { closeNavigation(); }, [pathname, query]);
+
+  useEffect(() => {
+    const dismiss = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) closeNavigation();
+    };
+    const escape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      cancelHoverClose();
+      if (openGroup) {
+        groupRefs.current[openGroup]?.focus();
+        setOpenGroup(null);
+      } else if (menuOpen) {
+        setMenuOpen(false);
+        menuRef.current?.focus();
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 1101px)");
+    const resize = () => closeNavigation();
+    document.addEventListener("pointerdown", dismiss);
+    document.addEventListener("keydown", escape);
+    desktop.addEventListener("change", resize);
+    return () => {
+      document.removeEventListener("pointerdown", dismiss);
+      document.removeEventListener("keydown", escape);
+      desktop.removeEventListener("change", resize);
+    };
+  }, [openGroup, menuOpen]);
 
   return (
     <>
-      <a className="skip-link" href="#main">
-        {S.skip}
-      </a>
-      <header className="site-header" role="banner">
+      <a className="archive-skip-link" href="#main">{S.skip}</a>
+      <header className="site-header archive-header living-header" ref={headerRef} onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) closeNavigation();
+      }}>
         <div className="container header-inner">
-          <Link
-            className="brand"
-            href={ROUTES[0][lang]}
-            aria-label={
-              lang === "ta"
-                ? "தனிநாயக அடிகள் — முகப்பு"
-                : "Father Thani Nayagam — Home"
-            }
-          >
-            <span className="seal" aria-hidden="true">ஃ</span>
+          <Link className="brand" href={`${prefix}/`} aria-label={lang === "ta" ? "தனிநாயக அடிகள் — முகப்பு" : "Father Thani Nayagam — Home"} onClick={closeNavigation}>
+            <svg className="seal archive-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true"><path d="M8 8h24v24H8zM14 12v16M26 12v16M14 20h12" /><circle cx="20" cy="14" r="2" /><circle cx="20" cy="26" r="2" /></svg>
             <span className="brand-text">
-              <span className="brand-name">
-                {lang === "en" ? "Father Thani Nayagam" : "தனிநாயக அடிகள்"}
-              </span>
-              <span className="brand-sub">{S.brandSub}</span>
+              <span className="brand-name brush-heading-mark"><span className="brush-heading-ink">{lang === "ta" ? "தனிநாயகம் அடிகள்" : "Thani Nayagam"}</span></span>
+              <span className="brand-sub">{lang === "ta" ? "ஆவணகம் · 1913–1980" : "Archive · 1913–1980"}</span>
             </span>
           </Link>
-          <nav
-            className="site-nav"
-            aria-label={
-              lang === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Primary navigation"
-            }
-          >
-            {ROUTES.map((r, i) => {
-              const href = r[lang];
-              const isCur = r.key === current;
+          <nav className="archive-utility" aria-label={lang === "ta" ? "ஆவணக வழிசெலுத்தல்" : "Archive navigation"}>
+            <Link href={`${prefix}/about/`} aria-current={current === "about" ? "page" : undefined}>{lang === "ta" ? "வாழ்க்கை" : "Life"}</Link>
+            <Link href={`${prefix}/contributions/`} aria-current={current === "contributions" ? "page" : undefined}>{lang === "ta" ? "பங்களிப்புகள்" : "Contributions"}</Link>
+            <Link href={`${prefix}/archive/`} aria-current={current === "archive" && !selectedCat ? "page" : undefined}>{lang === "ta" ? "ஆவணங்கள்" : "Documents"}</Link>
+            <Link href={`${prefix}/sponsors/`} aria-current={current === "sponsors" ? "page" : undefined}>{lang === "ta" ? "ஆதரவு" : "Support"}</Link>
+          </nav>
+          <div className="lang-toggle" role="group" aria-label={lang === "ta" ? "மொழி" : "Language"}>
+            <Link href={languageHref("ta")} lang="ta" aria-label="தமிழில் வாசிக்க" aria-current={lang === "ta" ? "true" : undefined} onClick={closeNavigation}>தமிழ்</Link>
+            <Link href={languageHref("en")} lang="en" aria-label="Read in English" aria-current={lang === "en" ? "true" : undefined} onClick={closeNavigation}>EN</Link>
+          </div>
+          <button ref={menuRef} className="menu-btn" type="button" aria-expanded={menuOpen} aria-controls="archive-navigation" onClick={() => {
+            setMenuOpen(!menuOpen); setOpenGroup(null);
+          }}><span>{menuOpen ? S.menuClose : S.menu}</span><svg className="menu-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">{menuOpen ? <path d="m6 6 12 12M6 18 18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg></button>
+        </div>
+        <div className={`archive-nav-wrap ${menuOpen ? "is-open" : ""}`} id="archive-navigation">
+          <nav className="container archive-primary-nav" aria-label={lang === "ta" ? "ஆய்வுத் துறைகளும் வாழ்க்கை வரலாறும்" : "Fields of study and biography"}>
+            {groups.map((group) => {
+              const open = openGroup === group.key;
+              const active = group.key === "life" ? ["about", "contributions", "sponsors"].includes(current) : current === "archive" && selectedCat === group.key;
               return (
-                <Link
-                  key={r.key}
-                  href={href}
-                  aria-current={isCur ? "page" : undefined}
-                >
-                  {S.nav[i]}
-                </Link>
+                <div className={`archive-nav-group ${active ? "is-current" : ""}`} key={group.key}
+                  onPointerEnter={(event) => {
+                    if (event.pointerType !== "mouse" || !supportsHover()) return;
+                    cancelHoverClose();
+                    setOpenGroup(group.key);
+                  }}
+                  onPointerLeave={(event) => {
+                    if (event.pointerType !== "mouse" || !supportsHover()) return;
+                    if (event.currentTarget.contains(document.activeElement)) return;
+                    cancelHoverClose();
+                    hoverCloseTimer.current = window.setTimeout(() => {
+                      setOpenGroup((value) => value === group.key ? null : value);
+                      hoverCloseTimer.current = null;
+                    }, 180);
+                  }}
+                  onBlur={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                      cancelHoverClose();
+                      setOpenGroup((value) => value === group.key ? null : value);
+                    }
+                  }}>
+
+                  <button type="button" ref={(node) => { groupRefs.current[group.key] = node; }} aria-expanded={open} aria-controls={`nav-${group.key}`} onClick={(event) => {
+                    cancelHoverClose();
+                    setOpenGroup(event.detail > 0 && supportsHover() ? group.key : open ? null : group.key);
+                  }} onKeyDown={(event) => {
+                    if (event.key !== "ArrowDown") return;
+                    event.preventDefault();
+                    cancelHoverClose();
+                    setOpenGroup(group.key);
+                    requestAnimationFrame(() => document.getElementById(`nav-${group.key}`)?.querySelector<HTMLAnchorElement>("a")?.focus());
+                  }}>
+                    {subjectLabels[group.key]?.[lang] || group.label}<svg className="nav-chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+                  </button>
+                  <div className="archive-dropdown" id={`nav-${group.key}`} hidden={!open}>
+                    <span className="nav-panel-label">{lang === "ta" ? "ஆவணகத்தை ஆராய்க" : "Explore the archive"}</span>
+                    <Link className="nav-overview" href={group.href} onClick={closeNavigation}>{group.title}<span aria-hidden="true">↗</span></Link>
+                    <p className="nav-description">{group.description}</p>
+                    <ul>{group.links.map((link) => <li key={link.href}><Link href={link.href} onClick={closeNavigation} aria-current={group.key !== "life" && params.get("sub") && link.href.endsWith(`sub=${params.get("sub")}`) ? "page" : undefined}>{link.label}<span aria-hidden="true">↗</span></Link></li>)}</ul>
+                  </div>
+                </div>
               );
             })}
+            <div className="archive-mobile-utility">
+              <Link href={`${prefix}/`} onClick={closeNavigation}>{S.nav[0]}</Link>
+              <Link href={`${prefix}/archive/`} onClick={closeNavigation}>{lang === "ta" ? "அனைத்து ஆவணங்கள்" : "All documents"}</Link>
+              <Link href={`${prefix}/sponsors/`} onClick={closeNavigation}>{S.nav[4]}</Link>
+            </div>
           </nav>
-          <div className="lang-toggle" role="group" aria-label="Language">
-            <Link
-              href={toggles.ta}
-              aria-current={lang === "ta" ? "true" : undefined}
-            >
-              த
-            </Link>
-            <Link
-              href={toggles.en}
-              aria-current={lang === "en" ? "true" : undefined}
-            >
-              EN
-            </Link>
-          </div>
-          <button
-            className="menu-btn"
-            type="button"
-            aria-expanded={menuOpen}
-            aria-controls="menu-sheet"
-            onClick={() => setMenuOpen(true)}
-          >
-            {S.menu}
-          </button>
         </div>
-        {typeof progress === "number" && (
-          <div
-            className="site-header-progress"
-            role="progressbar"
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-valuenow={Math.round(progress)}
-            style={{ width: `${progress}%` }}
-            title={`${Math.round(progress)}%`}
-          />
-        )}
+        {typeof progress === "number" && <div className="site-header-progress" role="progressbar" aria-label={lang === "ta" ? "வாசிப்பு முன்னேற்றம்" : "Reading progress"} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress)} style={{ width: `${progress}%` }} />}
       </header>
-
-      <div className={`menu-sheet ${menuOpen ? "open" : ""}`} id="menu-sheet">
-        <div className="menu-sheet-top">
-          <Link
-            className="brand"
-            href={ROUTES[0][lang]}
-            onClick={() => setMenuOpen(false)}
-            aria-label={
-              lang === "ta"
-                ? "தனிநாயக அடிகள் — முகப்பு"
-                : "Father Thani Nayagam — Home"
-            }
-          >
-            <span className="seal" aria-hidden="true">ஃ</span>
-            <span className="brand-text">
-              <span className="brand-name">
-                {lang === "en" ? "Father Thani Nayagam" : "தனிநாயக அடிகள்"}
-              </span>
-              <span className="brand-sub">{S.brandSub}</span>
-            </span>
-          </Link>
-          <button
-            className="menu-close"
-            type="button"
-            onClick={() => setMenuOpen(false)}
-          >
-            {S.menuClose} ✕
-          </button>
-        </div>
-        <nav
-          className="menu-links"
-          aria-label={
-            lang === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Primary navigation"
-          }
-        >
-          {ROUTES.map((r, i) => (
-            <Link
-              key={r.key}
-              href={r[lang]}
-              aria-current={r.key === current ? "page" : undefined}
-              onClick={() => setMenuOpen(false)}
-            >
-              {S.nav[i]}
-            </Link>
-          ))}
-        </nav>
-        <div className="menu-lang lang-toggle" role="group" aria-label="Language">
-          <Link
-            href={toggles.ta}
-            aria-current={lang === "ta" ? "true" : undefined}
-            onClick={() => setMenuOpen(false)}
-          >
-            த
-          </Link>
-          <Link
-            href={toggles.en}
-            aria-current={lang === "en" ? "true" : undefined}
-            onClick={() => setMenuOpen(false)}
-          >
-            EN
-          </Link>
-        </div>
-      </div>
     </>
   );
-};
+}
+
+function HeaderWithQuery(props: HeaderProps) {
+  const query = useSearchParams().toString();
+  return <HeaderView {...props} query={query} />;
+}
+
+export function Header(props: HeaderProps) {
+  return <Suspense fallback={<HeaderView {...props} />}><HeaderWithQuery {...props} /></Suspense>;
+}

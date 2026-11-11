@@ -1,0 +1,56 @@
+.brush-page .archival-treasures {
+  padding-block: 72px 76px;
+  background: #f5f3ec;
+  border-block: 1px solid #ded9cd;
+  overflow: clip;
+}
+.archival-treasures .treasures-heading { margin-bottom: 44px; gap: 32px; }
+.archival-treasures .treasures-heading h2 { max-width: 24ch; margin-bottom: 0; }
+.archival-treasures .treasures-link { flex-shrink: 0; margin-bottom: 10px; }
+.treasures-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
+.treasure { min-width: 0; margin: 0; padding-inline: 24px; border-left: 1px solid #dcd7ce; }
+.treasure:first-child { padding-left: 0; border-left: 0; }
+.treasure:last-child { padding-right: 0; }
+.treasure-art {
+  position: relative; isolation: isolate; display: flex; align-items: flex-end; justify-content: center;
+  height: 304px; padding: 20px 14px 24px; margin-bottom: 24px; border-bottom: 1px solid #cdc7ba;
+}
+.treasure-art::before {
+  content: ""; position: absolute; z-index: -1; inset: 10px -6px 16px;
+  background: url('/images/brush/brush-oval.webp') center/contain no-repeat;
+  filter: var(--preview-blue-art-filter); opacity: .17; pointer-events: none;
+}
+.treasure:nth-child(even) .treasure-art::before { background-image: url('/images/brush/brush-crescent.webp'); transform: rotate(12deg); }
+.treasure-art img {
+  display: block; width: auto; max-width: 100%; height: auto; max-height: 252px; object-fit: contain;
+  border: 0; border-radius: 0; transform: none;
+  box-shadow: 0 8px 15px #28231b18, 0 1px 3px #28231b18;
+}
+.treasure--landscape .treasure-art { align-items: center; }
+.treasure--landscape .treasure-art img { width: 100%; }
+.treasure figcaption { padding: 0; margin: 0; background: transparent; border: 0; text-align: left; }
+.treasure-year { display: block; color: var(--preview-accent); font: 600 2rem/1.2 var(--font-en); letter-spacing: -.04em; margin-bottom: 14px; }
+.brush-page .treasure h3 { margin: 0 0 8px; font: 600 .96rem/1.8 var(--font-ui); color: #191916; letter-spacing: 0; }
+.treasure figcaption p { margin: 0; font: 400 .72rem/1.8 var(--font-ui); color: #666158; }
+@media (max-width: 1100px) {
+  .treasures-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 36px 0; }
+  .treasure { padding-inline: 28px; }
+  .treasure:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .treasure:nth-child(even) { padding-right: 0; }
+  .treasure-art img { max-height: 252px; max-width: 220px; }
+  .treasure--landscape .treasure-art img { max-width: 280px; }
+}
+@media (max-width: 639px) {
+  .brush-page .archival-treasures { padding-block: 44px 48px; }
+  .archival-treasures .treasures-heading { gap: 12px; margin-bottom: 24px; }
+  .archival-treasures .treasures-link { margin-bottom: 0; font-size: .72rem; }
+  .treasures-grid { gap: 30px 0; }
+  .treasure { padding-inline: 14px; }
+  .treasure-art { height: 198px; padding: 14px 4px 18px; margin-bottom: 16px; }
+  .treasure-art img { max-width: 100%; max-height: 166px; }
+  .treasure--landscape .treasure-art img { max-width: 100%; }
+  .treasure-art::before { inset: 10px -4px; }
+  .treasure-year { font-size: 1.65rem; margin-bottom: 10px; }
+  .brush-page .treasure h3 { font-size: .79rem; line-height: 1.8; margin-bottom: 6px; }
+  .treasure figcaption p { font-size: .65rem; }
+}

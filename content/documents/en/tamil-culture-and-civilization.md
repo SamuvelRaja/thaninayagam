@@ -7,9 +7,7 @@ pillar: lectures
 kind: anthology
 status: readable
 lang: en
-summary: >-
-  An English anthology of classical-period readings selected and introduced by
-  Xavier S. Thani Nayagam.
+summary: "Edition record for the classical-period anthology; related English culture essays are provided here rather than the complete anthology."
 rights: >-
   On-site reading text assembled from public Internet Archive OCR of related
   works (companion / edition-line reading). Machine OCR may contain errors.
@@ -19,6 +17,7 @@ sourceLabel: 'Open Library — Asia Publishing House, 1971'
 images: []
 cite:
   - 37
+  - 44
 bookMd: tamil-culture-and-civilization
 ---
 ## Bibliographic record
@@ -28,3 +27,7 @@ Open Library records *Tamil culture and civilization: readings: the classical pe
 ## How to read
 
 No public scan of the 1971 anthology was found. On-site reading below collects his closest classical-culture essays already digitised (also available inside *Tamil Culture* vols 1–12). The Past/Present/Future Ceylon address, Ethical Interpretation, and Stoicism essays have been re-OCR’d from IA page images; footnotes and Tamil verse may still need the scan.
+
+## Biography context
+
+Amudhan lists a 1970 issue, x + 233 p., compiled from readings used in his teaching (biography pp. 181, 212, 219). This record retains the independently catalogued 1971 issue. The attached related essays are not the complete anthology.

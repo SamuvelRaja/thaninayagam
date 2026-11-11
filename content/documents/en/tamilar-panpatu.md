@@ -2,14 +2,12 @@
 id: tamilar-panpatu
 slug: tamilar-panpatu
 title: தமிழர் பண்பாடு நேற்றும் இன்றும் நாளையும்
-year: ''
+year: "n.d."
 pillar: lectures
 kind: title-note
 status: readable
 lang: en
-summary: >-
-  Tamil Wikipedia title; on-site reading uses his 1955 English Ceylon address
-  on Tamil culture’s past, present, and future (re-OCR’d).
+summary: "Unverified Tamil title record; the reading here is a related English address on Tamil culture published in 1955."
 rights: >-
   On-site reading text re-OCR’d from public Internet Archive page images of
   Tamil Culture Vol. IV No. 4. Residual OCR noise may remain in footnotes/Tamil.
@@ -20,6 +18,7 @@ images: []
 cite:
   - 11
   - 7
+  - 44
 bookMd: tamilar-panpatu
 ---
 ## Bibliographic record
@@ -29,3 +28,7 @@ Tamil Wikipedia lists *தமிழர் பண்பாடு நேற்ற�
 ## How to read
 
 No separate edition scan was verified for the Tamil Wikipedia title. Below is the closest digitised English address on the same theme (*Tamil Culture* Vol. IV No. 4, pp. 341–364; IA leaves 1374–1397), re-OCR’d for on-site reading. Prefer the scan for Tamil verse and footnotes.
+
+## Biography context
+
+This exact Tamil title and its claimed 1965 date are not established by Amudhan’s biography. The attached reading is the distinct English 1955 address Tamil Culture: Its Past, Its Present and Its Future with Special Reference to Ceylon (biography p. 207). The separately recorded 1980 Tamil memorial lecture is another work (p. 215).

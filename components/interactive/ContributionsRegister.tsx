@@ -1,5 +1,7 @@
 "use client";
 
+import { BrushText } from "@/components/ui/BrushText";
+
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { WORKS, CATS, CAT_BY, STRINGS } from "@/lib/data";
@@ -24,19 +26,19 @@ export const ContributionsRegister: React.FC<ContributionsRegisterProps> = ({ la
       <div className="container">
         <div className="section-head">
           <span className="section-index">03</span>
-          <h2>
+          <h2><BrushText>
             {isTa
               ? "அடிகளாரின் முதன்மை வெளியீடுகளின் பதிவேடு"
               : "Selected publications register"}
-          </h2>
+          </BrushText></h2>
           <span className="section-scope">
             {isTa ? "முழுப் பதிவேடு" : "Chronological Register"}
           </span>
         </div>
 
-        <h2 className="display-2" style={{ textAlign: "center", marginBottom: "48px" }}>
+        <h2 className="section-subhead" style={{ textAlign: "center", marginBottom: "32px" }}><BrushText>
           {isTa ? "தேர்ந்தெடுத்த வெளியீடுகள்" : "Selected Publications"}
-        </h2>
+        </BrushText></h2>
 
         <div className="toolbar">
           <div className="pill-row" id="reg-pills">

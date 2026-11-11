@@ -1,15 +1,13 @@
 ---
 id: conference-1966-proceedings
 slug: conference-1966-proceedings
-title: >-
-  Proceedings of the First International Conference-Seminar of Tamil Studies
-  (1966 / pub. 1968)
-year: '1966'
+title: "Proceedings of the First International Conference-Seminar of Tamil Studies (1968)"
+year: "1968"
 pillar: conference
-kind: proceedings
+kind: "proceedings-finding-aid"
 status: partial
 lang: en
-summary: Published record of the Kuala Lumpur conference he organised.
+summary: "Finding aid to the two-volume proceedings published in 1968 for the Kuala Lumpur conference of April 1966."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives. Machine
   OCR may contain errors; the scan view is authoritative. Rights remain with the
@@ -22,25 +20,14 @@ images:
 cite:
   - 5
   - 15
+  - 44
 iaId: dli.jZY9lup2kZl6TuXGlZQdjZM9kuxy.TVA_BOK_0009170
 bookMd: conference-1966
 ---
-## Title page
+## Bibliographic record
 
-Proceedings of the First International Conference-Seminar of Tamil Studies  
-Kuala Lumpur, Malaysia · April 1966  
-First published January 1968 under the International Association for Tamil Research  
-Copyright reserved, I.A.T.R.
+The first International Conference-Seminar of Tamil Studies took place in Kuala Lumpur in April 1966; the two-volume proceedings were published by IATR in 1968. Thani Nayagam was Deputy Chairman of the organizing committee; its General Secretary was V. Selvanayagam. His IATR office was a separate role (Amudhan, 1993, printed pp. 70–73, 211).
 
-## Board and authored contributions
+## Reading here
 
-Xavier S. Thani Nayagam is named on the board of editors. Contents and page text identify his authored pieces as “Chairman's Introductory Remarks” (printed pp. 3–5; scan leaves 43–45) and “The Identification of Kataaram” (printed pp. 67–71; scan leaves 107–111).
-
-## Significance
-
-As IATR general secretary he organised the First International Conference-Seminar of Tamil Studies in Kuala Lumpur from 16 to 23 April 1966. The printed proceedings remain the primary published record of the gathering and tie together his publishing, institutional, and Malaysian university work. Full paper text is not reproduced here.
-
-## How to read
-
-On-site body is a finding aid (`content/books/conference-1966.md`) for the noisy full OCR. Prefer the Internet Archive scan; see leaf pointers above for Thani Nayagam’s authored pieces.
-
+This page is a finding aid, not the complete proceedings. His authored contributions include *Chairman’s Introductory Remarks* (pp. 3–5; scan leaves 43–45) and *The Identification of Kataaram* (pp. 67–71; leaves 107–111). Use the proceedings scan for the papers. The conference year and the 1968 publication year identify different events.

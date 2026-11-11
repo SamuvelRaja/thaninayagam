@@ -1,0 +1,239 @@
+:root {
+  --preview-accent: #1558e8;
+  --preview-accent-hover: #1043b2;
+  --preview-accent-wash: #edf2ff;
+  --preview-accent-light: #b4caff;
+  --preview-sun-filter: url(#accent-sun-blue);
+  --preview-blue-art-filter: contrast(1.03);
+}
+:root:has(.brush-page), body:has(.brush-page) .living-header, .brush-page,
+.brush-page :is(.page-contents, .section-about, .section-timeline, .section-closing, .section-pillars,
+.section-plates, .section-register, .section-archive, .section-origin,
+.section-donation-tiers, .section-volunteers, .section-charter) {
+  --accent: var(--preview-accent);
+  --accent-ink: var(--preview-accent);
+  --accent-wash: var(--preview-accent-wash);
+  --gold: var(--preview-accent);
+  --gold-ink: var(--preview-accent);
+  --gold-wash: var(--preview-accent-wash);
+  --cat-literature: var(--preview-accent);
+  --cat-culture: var(--preview-accent);
+  --cat-studies: var(--preview-accent);
+  --cat-philosophy: var(--preview-accent);
+  --cat-collected: var(--preview-accent);
+}
+.brush-page .living-button-primary, .living-home.brush-page .living-button-primary { color: #fff; background: var(--preview-accent); }
+.brush-page .living-button-primary:hover { background: var(--preview-accent-hover); }
+.brush-page .living-text-link:hover { color: var(--preview-accent-hover); }
+.living-home.brush-page .living-hero-lede { color: #52504b; }
+.living-home.brush-page .living-hero-footnote .living-hero-roles { color: #605e58; }
+.living-home.brush-page .living-hero-source summary { color: var(--preview-accent); }
+.brush-page .living-closing h2 { color: #fff !important; }
+.brush-page .section-charter { background: var(--preview-accent); }
+.brush-page .living-closing .living-button:hover { background: var(--preview-accent-hover); }
+.brush-page .living-closing::before { filter: var(--preview-sun-filter); }
+.brush-page :is(.living-journey-event,.life-event).is-reached :is(.living-journey-marker,.life-event-marker) {
+  background: var(--preview-accent); outline-color: var(--preview-accent);
+}
+.brush-page :is(.living-journey-event,.life-event).is-reached :is(.living-journey-year,.life-event-year) { color: var(--preview-accent); }
+.brush-page .living-journey-event.is-reached::before,
+.brush-page .life-event.is-reached .life-event-card::before { background: var(--preview-accent); }
+.brush-page :is(.living-journey-event,.life-event).is-current :is(.living-journey-marker,.life-event-marker) {
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--preview-accent) 12%, transparent);
+}
+.brush-page :is(.living-journey-event,.life-event).is-current :is(.living-journey-stop,.life-event-card) { border-color: var(--preview-accent); }
+.brush-page .life-era-nav a > span, .brush-page .life-event-sources .chip { color: var(--preview-accent); }
+.brush-page .life-era-nav a:hover, .brush-page .living-journey-stop:hover { background: var(--preview-accent-wash); color: var(--preview-accent); }
+.brush-page .life-era-nav a[aria-current="step"], .brush-page .life-event-sources a.chip:hover {
+  color: #fff; background: var(--preview-accent); border-color: var(--preview-accent);
+}
+.brush-page .life-timeline-path-progress { stroke: var(--preview-accent); }
+.brush-page .life-timeline-path-tip { fill: var(--preview-accent); }
+
+/* Hand-drawn Tamil forms with directional bristle gaps, rather than a distressed print face. */
+html[lang="ta"] .brush-page { --font-brush: "Kavivanar", "Noto Serif Tamil", serif; }
+html[lang="ta"] .brush-page .brush-main-title,
+html[lang="ta"] .living-home.brush-page .living-hero h1,
+html[lang="ta"] .brush-page .living-page-header h1 {
+  font-family: "Kavivanar", "Noto Serif Tamil", serif !important;
+  font-weight: 700 !important;
+  -webkit-text-stroke: 1.8px currentColor;
+  font-size: clamp(3.2rem,6.2vw,5.4rem) !important;
+  line-height: 1.42 !important;
+  letter-spacing: -.02em !important;
+  filter: url(#tamil-dry-brush);
+  transform: rotate(-3deg) skewX(-5deg);
+}
+html[lang="ta"] .brush-page .living-page-header h1 {
+  font-size: clamp(2.5rem,4.6vw,4.1rem) !important;
+  -webkit-text-stroke: 1.15px currentColor;
+  max-width: 24ch;
+}
+html[lang="ta"] .brush-page :is(.living-section-heading,.directory-heading,.living-life-intro,.section-head,.life-timeline-heading) h2,
+html[lang="ta"] .brush-page :is(.bio-section h2,.folio-headline,.section-subhead,.archive-field-intro h2,.living-closing h2) {
+  font-family: "Kavivanar", "Noto Serif Tamil", serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.8rem,3.2vw,2.7rem) !important;
+  line-height: 1.6 !important;
+  -webkit-text-stroke: .75px currentColor;
+  filter: url(#tamil-dry-brush-small);
+  transform: rotate(-1.5deg) skewX(-3deg);
+  letter-spacing: 0 !important;
+}
+html[lang="ta"] .brush-page :is(.collection-title h3,.pillar h3,.living-document-card h3) {
+  font-family: "Kavivanar", "Noto Serif Tamil", serif;
+  font-weight: 700; line-height: 1.6; -webkit-text-stroke: .35px currentColor;
+  filter: url(#tamil-dry-brush-small);
+}
+/* English retains its existing letterforms; fit display copy on compact screens. */
+@media (max-width: 639px) {
+ html[lang="ta"] .living-home.brush-page .living-hero h1 { font-size: clamp(2.65rem,10.8vw,4rem) !important; -webkit-text-stroke: 1.2px currentColor; }
+ html[lang="ta"] .brush-page .living-page-header h1 { font-size: 2.2rem !important; -webkit-text-stroke: .85px currentColor; }
+ html[lang="ta"] .brush-page :is(.living-section-heading,.directory-heading,.living-life-intro,.section-head,.life-timeline-heading) h2,
+ html[lang="ta"] .brush-page :is(.bio-section h2,.folio-headline,.section-subhead,.archive-field-intro h2,.living-closing h2) { font-size: 1.7rem !important; }
+ html[lang="en"] .living-home.brush-page .living-hero h1 { font-size: clamp(4rem,18vw,5rem) !important; }
+}
+
+
+
+/* Painted halos can bleed within a spread without widening the mobile page. */
+.brush-page :is(.section-plates,.section-origin), .brush-page .plate--inline { overflow: clip; }
+.brush-page-art > .brush-sun.brush-painted-blue { filter: var(--preview-blue-art-filter); }
+/* Each spread uses its own paint gesture; all follow the chosen primary colour. */
+.brush-page .section-plates .plate-mat::before,
+.brush-page .plate--inline .plate-mat::before,
+.brush-page .folio-plate-frame::before {
+  background-image: var(--brush-plate-art,url('/images/brush/red-sun-spiral.webp'),url('/images/brush/red-sun.webp'));
+  background-size: contain, 82% auto;
+  filter: var(--brush-plate-filter,var(--preview-sun-filter));
+}
+.brush-page .section-plates .plate:nth-child(odd) .plate-mat { --brush-plate-art: url('/images/brush/red-sun.webp'); }
+.brush-page .section-plates .plate:nth-child(2) .plate-mat {
+  --brush-plate-art: url('/images/brush/brush-crescent.webp');
+  --brush-plate-filter: var(--preview-blue-art-filter);
+}
+.brush-page .section-plates .plate:nth-child(4) .plate-mat {
+  --brush-plate-art: url('/images/brush/brush-oval.webp');
+  --brush-plate-filter: var(--preview-blue-art-filter);
+}
+.brush-page .section-plates .plate:nth-child(2) .plate-mat::before { transform: rotate(12deg); }
+.brush-page .section-plates .plate:nth-child(4) .plate-mat::before { transform: rotate(-10deg); }
+.brush-page .folio-plate:first-child .folio-plate-frame { --brush-plate-art: url('/images/brush/red-sun.webp'); }
+.brush-page .folio-plate:last-child .folio-plate-frame {
+  --brush-plate-art: url('/images/brush/brush-oval.webp');
+  --brush-plate-filter: var(--preview-blue-art-filter);
+}
+.brush-page .living-life-intro > div::after {
+  content: ""; display: block; width: 220px; max-width: 70%; height: 22px; margin-top: 10px;
+  background: url('/images/brush/brush-sweep.webp') center/100% auto no-repeat;
+  filter: var(--preview-blue-art-filter);
+}
+.brush-page .living-closing::before {
+  top: 20px; right: -80px; width: 580px; height: calc(100% - 40px);
+  background-image: url('/images/brush/brush-sweep.webp');
+  filter: var(--preview-blue-art-filter); opacity: .32; transform: rotate(-18deg);
+}
+.brush-page .living-closing > .container { position: relative; }
+@media (max-width:639px) {
+ .brush-page .living-closing::before { right: -170px; width: 440px; opacity: .2; }
+}
+/* Leave enough line height for the English brush letterforms. */
+html[lang="en"] .living-home.brush-page .living-hero h1 { line-height: 1.15 !important; }
+html[lang="en"] .brush-page .living-page-header h1 {
+ font-size: clamp(3.2rem,5.2vw,4.8rem); line-height: 1.3;
+ text-transform: none; letter-spacing: 0;
+}
+html[lang="en"] .brush-page :is(.living-section-heading,.directory-heading,.living-life-intro,.section-head,.life-timeline-heading) h2,
+html[lang="en"] .brush-page :is(.bio-section h2,.folio-headline,.section-subhead,.archive-field-intro h2,.living-closing h2) {
+ font-family: var(--font-brush-en) !important;
+ font-weight: 400 !important;
+ font-size: clamp(2.4rem,3.6vw,3.2rem) !important;
+ line-height: 1.35 !important;
+ letter-spacing: 0 !important;
+ text-transform: none;
+}
+html[lang="en"] .brush-page :is(.collection-title h3,.pillar h3,.living-document-card h3) {
+ font-family: var(--font-brush-en);
+ font-weight: 400;
+ font-size: 2rem;
+ line-height: 1.35;
+ text-transform: none; letter-spacing: 0;
+}
+html[lang="en"] .brush-page :is(.living-metric > dd:not(.living-metric-detail), .living-journey-year) { font-family: "Spectral", "Georgia", serif; filter: none; }
+@media (max-width: 768px) {
+ html[lang="en"] .brush-page .brush-hero-story { grid-row: 2; }
+ html[lang="en"] .brush-page .brush-portrait { grid-row: 3; }
+}
+
+/* Real paint behind header lettering, sized to the words rather than the column. */
+.brush-page .brush-heading-mark,
+body:has(.brush-page) .living-header .brush-heading-mark {
+  display: inline-block;
+  position: relative;
+  isolation: isolate;
+  max-width: 100%;
+  padding-inline: .18em;
+  color: #111110;
+}
+.brush-page .brush-heading-mark::before,
+body:has(.brush-page) .living-header .brush-heading-mark::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -.12em -.08em -.14em;
+  background: url('/images/brush/brush-sweep.webp') center/100% 100% no-repeat;
+  filter: var(--preview-blue-art-filter);
+  opacity: .22;
+  pointer-events: none;
+}
+html[lang] .brush-page .brush-main-title,
+html[lang] .living-home.brush-page .living-hero h1,
+html[lang] .brush-page .living-page-header h1 { filter: none; }
+.brush-page .brush-heading-ink { display: block; position: relative; }
+.brush-page .brush-main-title .brush-heading-mark em { color: var(--preview-accent) !important; }
+html[lang="ta"] .brush-page .brush-heading-ink { filter: url(#tamil-dry-brush); }
+html[lang="en"] .brush-page .brush-heading-ink { filter: none; }
+/* Match English display lettering to the approved document title treatment. */
+html[lang="en"] .brush-page .brush-heading-mark::before { opacity: .16; }
+html[lang="en"] .brush-page .living-closing .brush-heading-mark::before { opacity: .42; }
+.brush-main-title .line-2 .brush-heading-mark::before { transform: rotate(1.5deg); }
+.brush-main-title .line-3 .brush-heading-mark::before { transform: rotate(-1deg); }
+.brush-page .living-page-header .brush-heading-mark { padding-inline: .22em; }
+body:has(.brush-page) .living-header .brand-name.brush-heading-mark {
+  align-self: flex-start;
+  padding: .24em .35em .2em;
+  margin-left: -.25em;
+  color: #111110;
+  white-space: nowrap;
+  max-width: none;
+}
+body:has(.brush-page) .living-header .brand-name::before { inset: -.1em -.15em; }
+@media (max-width: 639px) {
+  html[lang="ta"] body:has(.brush-page) .living-header .brand-name.brush-heading-mark {
+    font-size: .68rem;
+    padding-inline: .2em;
+  }
+}
+
+/* Carry the same paint through section introductions and field titles. */
+.brush-page :is(h2,h3):has(> .brush-heading-mark--section) { filter: none !important; }
+.brush-page .brush-heading-mark--section { color: inherit; padding-inline: .14em; overflow-wrap: anywhere; }
+.brush-page .section-head h2:has(> .brush-heading-mark--section) { min-width: 0; }
+.brush-page .brush-heading-mark--section::before { opacity: .18; inset: -.08em -.12em; }
+html[lang="ta"] .brush-page .brush-heading-mark--section .brush-heading-ink { filter: url(#tamil-dry-brush-small); }
+.brush-page .collection-title .brush-heading-mark--section::before,
+.brush-page .pillar .brush-heading-mark--section::before { transform: rotate(-2deg); opacity: .24; }
+.brush-page .living-closing .brush-heading-mark--section::before { opacity: .42; }
+.brush-page .living-life-intro:has(.brush-heading-mark--section) > div::after { display: none; }
+
+/* One filled, square paint asset preserves the circular silhouette. */
+.brush-sun-round { aspect-ratio: 1; height: auto; }
+.brush-portrait > .brush-sun.brush-painted-blue { filter: var(--preview-blue-art-filter); }
+
+/* Keep the complete word in one brush face, with gentler texture for its pulli. */
+html[lang="ta"] .brush-page .brush-main-title .line-3 .brush-heading-ink { filter: url(#tamil-dry-brush-small); }
+.brush-main-title em { -webkit-text-stroke-color: currentColor; }
+
+@media (max-width: 639px) {
+ html[lang="en"] .brush-page .living-page-header h1 { font-size: clamp(2.4rem,10vw,3.2rem); }
+}

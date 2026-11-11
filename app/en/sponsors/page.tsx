@@ -1,10 +1,10 @@
+import { PaymentCards } from "@/components/interactive/PaymentCards";
+import { BrushText } from "@/components/ui/BrushText";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { SectionHead } from "@/components/layout/SectionHead";
 import { TributeHero } from "@/components/ui/TributeHero";
-import { PaymentCards } from "@/components/interactive/PaymentCards";
 import { STRINGS } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -37,8 +37,9 @@ export default function EnglishSponsorsPage() {
   return (
     <>
       <Header lang="en" current="sponsors" />
-      <main id="main">
+      <main id="main" className="brush-page">
         <PageHeader
+          lang="en"
           slug="sponsors"
           title="Showcasing Father Thani Nayagam’s Legacy to the World"
           lead="Guided by the lifelong archival work of Rev. Dr. Amudhan Adigal, this open-access initiative preserves and shares Father Thani Nayagam’s global scholarship."
@@ -50,15 +51,10 @@ export default function EnglishSponsorsPage() {
         {/* Section 02: Financial Support */}
         <section className="section section-donation-tiers" id="donate">
           <div className="container">
-            <SectionHead
-              num="02"
-              title="Infrastructure & Maintenance Fund"
-              scope="Financial Support"
-            />
             <div className="donation-intro-box">
-              <h2 className="display-2">Archive & Website Maintenance Fund</h2>
+              <h2 className="section-subhead"><BrushText>Archive & Website Maintenance Fund</BrushText></h2>
               <p className="lede">
-                For those who wish to support our server infrastructure, high-speed cloud hosting, and ongoing digital preservation work so we can keep maintaining this archive, direct contributions can be made via the details below.
+                For those who wish to support the technology and documentation work involved to run and maintain this archive, direct contributions can be made via the details below.
               </p>
             </div>
 
@@ -68,11 +64,9 @@ export default function EnglishSponsorsPage() {
             <div className="intimation-card" style={{ marginTop: "32px" }}>
               <div className="intimation-icon">📜</div>
               <div className="intimation-content">
-                <p className="eyebrow">DONOR INTIMATION & ACKNOWLEDGEMENT</p>
                 <h3>Notify Us After Contributing</h3>
                 <p>
-                  After completing your transfer, please email your transaction reference (UTR / Receipt) to{" "}
-                  <strong>donations@thaninayagam.org</strong> so we can send an acknowledgement.
+                  After completing your transfer, please email your transaction reference (UTR / Receipt) to <a href="mailto:kesavan@alarveliyeedu.com">kesavan@alarveliyeedu.com</a> so we can send an acknowledgement.
                 </p>
               </div>
             </div>
@@ -82,13 +76,8 @@ export default function EnglishSponsorsPage() {
         {/* Section 03: Help Grow the Archive */}
         <section className="section section-volunteers">
           <div className="container">
-            <SectionHead
-              num="03"
-              title="Help Grow the Archive & Provide Feedback"
-              scope="Missing Works & Feedback"
-            />
             <div className="section-lead-box">
-              <h2 className="display-2">Missing Works, Archival Information & Feedback</h2>
+              <h2 className="section-subhead"><BrushText>Missing Works, Archival Information & Feedback</BrushText></h2>
               <p className="lede">
                 Help us expand and refine this archive by sharing missing documents, archival context, or feedback on how we can improve.
               </p>
@@ -104,8 +93,8 @@ export default function EnglishSponsorsPage() {
               ))}
             </div>
             <div style={{ textAlign: "center", marginTop: "36px" }}>
-              <a href="mailto:volunteer@thaninayagam.org" className="btn btn-ghost">
-                Share Information & Feedback: volunteer@thaninayagam.org →
+              <a href="mailto:kesavan@alarveliyeedu.com" className="btn btn-ghost">
+                Share Information & Feedback: kesavan@alarveliyeedu.com →
               </a>
             </div>
           </div>
@@ -119,7 +108,7 @@ export default function EnglishSponsorsPage() {
               <div className="charter-text">
                 <h3>100% Free & Open-Access Ethical Charter</h3>
                 <p>
-                  All contributions directly fund the perpetual, open-access preservation of Father Thani Nayagam&apos;s complete intellectual corpus. The library operates entirely non-commercially with no paywalls, subscriptions, or ads.
+                  All contributions directly fund the perpetual, open-access preservation of Father Thani Nayagam’s complete intellectual corpus. The library operates entirely non-commercially with no paywalls, subscriptions, or ads.
                 </p>
                 <div className="tribute-footnote">
                   <span className="tf-icon">💐</span>

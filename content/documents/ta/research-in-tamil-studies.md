@@ -1,30 +1,28 @@
 ---
 id: research-in-tamil-studies
 slug: research-in-tamil-studies
-title: Research in Tamil Studies
-year: '1980'
+title: "Research in Tamil Studies: Retrospect and Prospect"
+year: "1980"
 pillar: reference
-kind: lecture
+kind: "lecture-finding-aid"
 status: readable
 lang: ta
-summary: >-
-  அகாடமி, முதல் தமிழ் அச்சு நூல்கள், ஐரோப்பிய நூலக ஏடுகள் — மூன்று சுத்தம்
-  செய்யப்பட்ட *Tamil Culture* கட்டுரைகளின் தொகுப்புப் பக்கம்.
+summary: "1980 ஏப்ரல் 28 ஆங்கிலத் தந்தை செல்வா நினைவு உரையின் பதிவு. இங்குள்ள வாசிப்பு பழைய தொடர்புடைய மூன்று கட்டுரைகள்; அந்த உரையின் மூலப் பிரதி அல்ல."
 rights: >-
-  மூன்று *Tamil Culture* கட்டுரைகள் மறு-OCR. அடிக்குறிப்பு / பலகைப் படிமங்களுக்குப்
-  படிமத்தை விரும்புக. உரிமைகள் அசல் வெளியீட்டாளர் / வைப்பாளர்களிடமே உள்ளன.
+  மூன்று *Tamil Culture* கட்டுரைகள் இத்தளத்தில் சேர்க்கப்பட்டுள்ளன. அடிக்குறிப்புகளுக்கு மூல இதழைப் பார்க்கவும். உரிமைகள் அசல் வெளியீட்டாளர் / வைப்பாளர்களிடமே உள்ளன.
 sourceUrl: 'https://openlibrary.org/works/OL326640W'
 sourceLabel: Open Library — Research in Tamil Studies
 images: []
 cite:
   - 7
   - 11
+  - 44
 bookMd: research-in-tamil-studies
 ---
 ## நூலியல் பதிவு
 
-Open Library *Research in Tamil Studies* (1980) எனப் பட்டியலிடுகிறது (தந்தை செல்வா நினைவு உரை). அந்த உரையின் பொது ஸ்கேன் கிடைக்கவில்லை; தொடர்புடைய மூன்று *Tamil Culture* கட்டுரைகள் இங்கே உள்ளன.
+அமுதன் அடிகளார் *Research in Tamil Studies: Retrospect and Prospect*, யாழ்ப்பாணம், தந்தை செல்வா நினைவு அறங்காவற் குழு, 1980, 15 பக். எனப் பதிவு செய்கிறார். ஆங்கில நினைவு உரை 1980 ஏப்ரல் 28 அன்று நிகழ்த்தப்பட்டது. யாழ்ப்பாணம் வெளியீட்டு இடம்; உரை நிகழ்ந்த இடம் கொழும்பு என்பதை வாழ்க்கை வரலாறு உறுதிப்படுத்தவில்லை (அச்சுப் பக். 201, 213).
 
-## வாசிப்பு
+## இங்குள்ள வாசிப்பு
 
-மூன்று சுத்தம் செய்யப்பட்ட கட்டுரைகள் கீழே: *This Journal of the Academy*; *The First Books Printed in Tamil*; *Tamil Manuscripts in European Libraries*.
+அந்த உரையின் மூலப் பிரதி இங்கு இல்லை. இணைக்கப்பட்ட ஆங்கிலத் தேர்வில் *This Journal of the Academy* (1955), *The First Books Printed in Tamil* (1958), *Tamil Manuscripts in European Libraries* (1954) உள்ளன. வாழ்க்கை வரலாறு பக். 207–208-இல் தனித்தனியாகப் பதிவான இவை ஆய்வுப் பின்னணியைத் தருகின்றன; 1980 உரை அல்ல.

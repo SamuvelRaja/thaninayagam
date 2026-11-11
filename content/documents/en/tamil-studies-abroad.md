@@ -7,9 +7,7 @@ pillar: iatr
 kind: symposium
 status: lending
 lang: en
-summary: >-
-  A symposium volume connected with the International Association for Tamil
-  Research.
+summary: "Finding aid to the English symposium edited by Thani Nayagam and published through IATR in 1968."
 rights: >-
   Hosted for on-site reading from Internet Archive public derivatives. Machine
   OCR may contain errors; the scan view is authoritative. Rights remain with the
@@ -19,6 +17,7 @@ sourceLabel: Internet Archive — Tamil Studies Abroad (controlled lending)
 images: []
 cite:
   - 32
+  - 44
 iaId: tamilstudiesabro0000unse
 bookMd: tamil-studies-abroad
 ---
@@ -29,3 +28,7 @@ Open Library records an English 1968 International Association of Tamil Research
 ## Read on this site
 
 Archive article markdown (publication note + Collected Papers quotation) is available below. A full OCR of the controlled-lending Internet Archive scan is not yet hosted locally.
+
+## Biography context
+
+Amudhan identifies Thani Nayagam as editor of the 1968 symposium, with 15 articles. He gives 268 pages in the narrative and vii + 269 in the bibliography (printed pp. 179, 212). The existing catalogue’s 288 pages are a separate record; these counts require edition and pagination verification.

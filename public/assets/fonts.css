@@ -1,5 +1,61 @@
 /* Self-hosted High Performance Typefaces - Zero FOUT / Zero Latency */
 
+/* Tamil Sangam MN 400 normal */
+@font-face {
+  font-family: 'Tamil Sangam MN';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Tamil Sangam MN'), local('TamilSangamMN'),
+       url(/assets/fonts/tamil-sangam-mn-normal-400.woff2) format('woff2'),
+       url(/assets/fonts/tamil-sangam-mn-normal-400.ttf) format('truetype');
+}
+
+/* Tamil Sangam MN 500 normal */
+@font-face {
+  font-family: 'Tamil Sangam MN';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Tamil Sangam MN'), local('TamilSangamMN'),
+       url(/assets/fonts/tamil-sangam-mn-normal-400.woff2) format('woff2'),
+       url(/assets/fonts/tamil-sangam-mn-normal-400.ttf) format('truetype');
+}
+
+/* Tamil Sangam MN 600 normal */
+@font-face {
+  font-family: 'Tamil Sangam MN';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Tamil Sangam MN Bold'), local('TamilSangamMN-Bold'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.woff2) format('woff2'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.ttf) format('truetype');
+}
+
+/* Tamil Sangam MN 700 normal */
+@font-face {
+  font-family: 'Tamil Sangam MN';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Tamil Sangam MN Bold'), local('TamilSangamMN-Bold'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.woff2) format('woff2'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.ttf) format('truetype');
+}
+
+/* Tamil Sangam MN 800 normal */
+@font-face {
+  font-family: 'Tamil Sangam MN';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Tamil Sangam MN Bold'), local('TamilSangamMN-Bold'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.woff2) format('woff2'),
+       url(/assets/fonts/tamil-sangam-mn-normal-700.ttf) format('truetype');
+}
+
+
 /* Spectral 400 italic - latin-ext */
 @font-face {
   font-family: 'Spectral';

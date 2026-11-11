@@ -2,14 +2,12 @@
 id: aspects-tamil-humanism
 slug: aspects-tamil-humanism
 title: Aspects of Tamil Humanism
-year: '1972'
+year: "1961"
 pillar: lectures
-kind: journal-article
+kind: "lecture-record"
 status: readable
 lang: en
-summary: >-
-  1972 Bunker Lectures theme; related *Tamil Culture* essay on classical Tamil
-  humanism re-OCR’d from page images until the lecture text is digitised.
+summary: "Record of the February 1961 Sornammal lecture. The reading here is the related 1957 essay Ancient Tamil Poet-Educators, not the lecture text."
 rights: >-
   On-site reading is the *Tamil Culture* essay (Vol. 6 No. 4, pp. 273–285),
   re-OCR’d from IA leaves 2099–2111 and lightly corrected; prefer the scan for
@@ -21,12 +19,13 @@ images: []
 cite:
   - 11
   - 7
+  - 44
 bookMd: aspects-tamil-humanism
 ---
 ## Bibliographic record
 
-Memorial sources identify the 1972 Bunker Memorial Lectures at Jaffna College as “Aspects of Tamil Humanism”. Related Open Library monograph: *Tamil Humanism, the Classical Period* (1972).
+Amudhan’s biography (1993), printed p. 209, identifies *Aspects of Tamil Humanism* as a February 1961 Sornammal endowment lecture, published in *Annals of Oriental Research*, University of Madras, vol. XVII (1960–1961), pp. 1–25. The 1972 Bunker lectures belong to the distinct *Tamil Humanism: The Classical Period* (biography pp. 200, 212).
 
-## How to read
+## Reading here
 
-*Ancient Tamil Poet-Educators* (*Tamil Culture*, Vol. 6 No. 4) follows as the on-site humanism reading text until the lecture volume is digitised. Use the journal scan when a citation looks uncertain.
+The attached English text is *Ancient Tamil Poet-Educators*, *Tamil Culture* 6(4), October–December 1957, pp. 273–285. It is related reading, not a transcription of the 1961 lecture.

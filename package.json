@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preview": "serve out",
+    "preview": "serve out --no-etag",
     "archive:scaffold": "node scripts/convert-holding.mjs",
     "archive:import": "node scripts/import-ia-books.mjs",
     "archive:books": "node scripts/ocr-to-markdown-books.mjs",
