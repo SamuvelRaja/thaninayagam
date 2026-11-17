@@ -12,7 +12,6 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
       <div className="container colophon-grid">
         <div className="statement">
           <Link className="brand footer-brand" href={`${pfx}/`}>
-            <svg className="seal archive-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true"><path d="M8 8h24v24H8zM14 12v16M26 12v16M14 20h12" /><circle cx="20" cy="14" r="2" /><circle cx="20" cy="26" r="2" /></svg>
             <span className="brand-text">
               <span className="brand-name">{lang === "ta" ? "தனிநாயகம் அடிகள்" : "Thani Nayagam"}</span>
               <span className="brand-sub">{lang === "ta" ? "ஆவணகம் · 1913–1980" : "Archive · 1913–1980"}</span>

@@ -907,7 +907,7 @@ export const STRINGS = {
   ta: {
     title: "தனிநாயக அடிகள் — ஆவணகம்",
     desc: "அருள்திரு. முனைவர் சேவியர் தனிநாயகம் அடிகளாரின் (1913–1980) வாழ்வு, எழுத்துகள் மற்றும் உலகளாவிய தமிழியல் பணிகளின் திறந்தவெளி ஆவணகம்.",
-    nav: ["முகப்பு", "அவரைப் பற்றி", "பங்களிப்புகள்", "ஆவணகம்", "உதவி"],
+    nav: ["முகப்பு", "அவரைப் பற்றி", "பங்களிப்புகள்", "ஆவணகம்", "கட்டுரைகள்", "உதவி"],
     brandSub: "",
     menu: "பட்டியல்",
     menuClose: "மூடு",
@@ -948,7 +948,7 @@ export const STRINGS = {
   en: {
     title: "Thani Nayagam Adigal — Open Archive",
     desc: "Explore the life and writings of Rev. Dr. Xavier S. Thani Nayagam Adigal (1913–1980), with books, research essays, journals and conference records.",
-    nav: ["Home", "About", "Contributions", "Archive", "Support"],
+    nav: ["Home", "About", "Contributions", "Archive", "Essays", "Support"],
     brandSub: "",
     menu: "Menu",
     menuClose: "Close",
@@ -993,6 +993,7 @@ export const ROUTES = [
   { key: "about", ta: "/about/", en: "/en/about/" },
   { key: "contributions", ta: "/contributions/", en: "/en/contributions/" },
   { key: "archive", ta: "/archive/", en: "/en/archive/" },
+  { key: "katturaigal", ta: "/katturaigal/", en: "/en/katturaigal/" },
   { key: "sponsors", ta: "/sponsors/", en: "/en/sponsors/" },
 ];
 

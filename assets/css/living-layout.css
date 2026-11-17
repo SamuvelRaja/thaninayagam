@@ -57,19 +57,178 @@ html[lang="ta"] .living-footer .brand-sub {
 }
 .living-header .archive-utility a:hover,
 .living-header .archive-utility a[aria-current] { color: var(--accent); }
-.living-header .lang-toggle { gap: 0; padding: 0; border: 1px solid var(--line); border-radius: 0; background: none; }
+.living-header .header-donate-btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: var(--accent-wash, #fbf2f2);
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  line-height: 1.25;
+  transition: all 180ms ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.living-header .header-donate-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(144, 44, 53, 0.2);
+}
+.living-header .header-donate-btn:hover .hdb-icon-wrap,
+.living-header .header-donate-btn:hover .hdb-main,
+.living-header .header-donate-btn:hover .hdb-sub {
+  color: #ffffff;
+}
+.living-header .header-donate-btn[aria-current="page"] {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.living-header .header-donate-btn[aria-current="page"] .hdb-icon-wrap,
+.living-header .header-donate-btn[aria-current="page"] .hdb-main,
+.living-header .header-donate-btn[aria-current="page"] .hdb-sub {
+  color: #ffffff;
+}
+.living-header .hdb-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: color 180ms ease;
+}
+.living-header .hdb-icon {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+.living-header .hdb-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.living-header .header-donate-btn .hdb-main {
+  font-family: var(--font-ui);
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .01em;
+  line-height: 1.25;
+}
+.living-header .header-donate-btn .hdb-sub {
+  font-family: var(--font-ui);
+  font-size: .62rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  margin-top: 1px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.living-header .header-mobile-cta-wrap {
+  display: none;
+  background: var(--paper, #f8f7f3);
+  border-top: 1px solid var(--line, #dedcd6);
+  border-bottom: 1px solid var(--line, #dedcd6);
+  padding: 6px 0;
+}
+.living-header .header-mobile-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--accent-wash, #fbf2f2);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 160ms ease;
+  font-family: var(--font-ui);
+}
+.living-header .header-mobile-cta:hover,
+.living-header .header-mobile-cta[aria-current="page"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+.living-header .header-mobile-cta:hover .hdb-icon-wrap,
+.living-header .header-mobile-cta:hover .hmc-title,
+.living-header .header-mobile-cta:hover .hmc-sub,
+.living-header .header-mobile-cta:hover .hmc-sep,
+.living-header .header-mobile-cta:hover .hmc-arrow,
+.living-header .header-mobile-cta[aria-current="page"] .hdb-icon-wrap,
+.living-header .header-mobile-cta[aria-current="page"] .hmc-title,
+.living-header .header-mobile-cta[aria-current="page"] .hmc-sub,
+.living-header .header-mobile-cta[aria-current="page"] .hmc-sep,
+.living-header .header-mobile-cta[aria-current="page"] .hmc-arrow {
+  color: #ffffff;
+}
+.living-header .header-mobile-cta .hdb-icon-wrap {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.living-header .header-mobile-cta .hmc-title {
+  font-weight: 700;
+  font-size: .82rem;
+  color: var(--accent);
+  letter-spacing: .01em;
+  flex-shrink: 0;
+}
+.living-header .header-mobile-cta .hmc-sep {
+  color: var(--ink-2);
+  font-size: .75rem;
+  opacity: .5;
+  flex-shrink: 0;
+}
+.living-header .header-mobile-cta .hmc-sub {
+  font-weight: 500;
+  font-size: .67rem;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.living-header .header-mobile-cta .hmc-arrow {
+  font-size: .8rem;
+  color: var(--accent);
+  margin-left: auto;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.living-header .lang-toggle {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: none;
+  overflow: hidden;
+}
 .living-header .lang-toggle a {
   font-family: var(--font-ui);
-  min-width: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
   min-height: 36px;
-  padding: 6px 9px;
-  font-size: .72rem;
-  font-weight: 500;
+  padding: 4px 8px;
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
   border-radius: 0;
   color: var(--ink-2);
 }
 .living-header .lang-toggle a + a { border-left: 1px solid var(--line); }
-.living-header .lang-toggle a[aria-current="true"] { background: var(--paper); color: var(--accent); }
+.living-header .lang-toggle a[aria-current="true"] { background: var(--paper); color: var(--accent); font-weight: 700; }
 .living-header .lang-toggle a:hover { background: var(--paper); color: var(--accent); }
 .living-header .archive-nav-wrap { background: var(--accent); border-top: 0; }
 .living-header .archive-primary-nav { justify-content: space-between; gap: 24px; }
@@ -175,9 +334,21 @@ html[lang="ta"] .living-footer a { color: var(--ink-2); font-family: var(--font-
 .living-footer .colophon-bottom p { margin: 0; color: var(--ink-2); font: 400 .66rem/1.8 var(--font-ui); }
 
 @media (max-width: 1100px) {
-  :root { --header-h: 74px; }
-  .living-header .header-inner { min-height: 74px; gap: 16px; }
+  :root { --header-h: 118px; }
+  .living-header .header-inner { min-height: 64px; gap: 12px; }
+  .living-header .brand { flex: 1 1 auto; min-width: 0; }
   .living-header .archive-utility { display: none; }
+  .living-header .header-donate-desktop { display: none !important; }
+  .living-header .header-mobile-cta-wrap { display: block; }
+  .living-header .mobile-utility-donate {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .living-header .mobile-utility-donate small {
+    font-size: .68rem;
+    opacity: .85;
+  }
   .living-header .brand-name,
   html[lang="ta"] .living-header .brand-name { font-size: .98rem; }
   .living-header .menu-btn,
@@ -207,17 +378,22 @@ html[lang="ta"] .living-footer a { color: var(--ink-2); font-family: var(--font-
 }
 
 @media (max-width: 639px) {
-  .living-header .header-inner { gap: 8px; }
+  :root { --header-h: 112px; }
+  .living-header .header-inner { min-height: 58px; gap: 8px; }
+  .living-header .header-mobile-cta-wrap { padding: 5px 0; }
+  .living-header .header-mobile-cta { padding: 6px 10px; gap: 6px; }
+  .living-header .header-mobile-cta .hmc-title { font-size: .78rem; }
+  .living-header .header-mobile-cta .hmc-sub { font-size: .63rem; }
   .living-header .brand { gap: 8px; min-width: 0; }
-  .living-header .archive-mark { width: 29px; height: 29px; flex-basis: 29px; }
+  .living-header .archive-mark { width: 30px; height: 30px; flex-basis: 30px; }
   .living-header .brand-name,
-  html[lang="ta"] .living-header .brand-name { font-size: .78rem; }
+  html[lang="ta"] .living-header .brand-name { font-size: .84rem; }
   .living-header .brand-sub,
   html[lang="ta"] .living-header .brand-sub { font-size: .58rem; }
-  .living-header .lang-toggle a { min-width: 29px; padding: 5px 6px; font-size: .65rem; }
+  .living-header .lang-toggle a { min-width: 32px; min-height: 34px; padding: 4px 6px; font-size: .82rem; }
   .living-header .menu-btn,
-  html[lang="ta"] .living-header .menu-btn { padding: 5px 8px; font-size: .65rem; }
-  .living-header .menu-icon { width: 15px; height: 15px; }
+  html[lang="ta"] .living-header .menu-btn { min-height: 34px; padding: 6px 10px; font-size: .7rem; }
+  .living-header .menu-icon { width: 16px; height: 16px; }
   .page-header.living-page-header { padding: 35px 0 30px; }
   .living-page-header .slug-row { font-size: .67rem; }
   .living-page-header .display-2,

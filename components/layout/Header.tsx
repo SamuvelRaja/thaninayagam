@@ -92,7 +92,6 @@ function HeaderView({ lang, current, progress, customLangToggles, query = "" }: 
       }}>
         <div className="container header-inner">
           <Link className="brand" href={`${prefix}/`} aria-label={lang === "ta" ? "தனிநாயக அடிகள் — முகப்பு" : "Father Thani Nayagam — Home"} onClick={closeNavigation}>
-            <svg className="seal archive-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true"><path d="M8 8h24v24H8zM14 12v16M26 12v16M14 20h12" /><circle cx="20" cy="14" r="2" /><circle cx="20" cy="26" r="2" /></svg>
             <span className="brand-text">
               <span className="brand-name brush-heading-mark"><span className="brush-heading-ink">{lang === "ta" ? "தனிநாயகம் அடிகள்" : "Thani Nayagam"}</span></span>
               <span className="brand-sub">{lang === "ta" ? "ஆவணகம் · 1913–1980" : "Archive · 1913–1980"}</span>
@@ -102,15 +101,51 @@ function HeaderView({ lang, current, progress, customLangToggles, query = "" }: 
             <Link href={`${prefix}/about/`} aria-current={current === "about" ? "page" : undefined}>{lang === "ta" ? "வாழ்க்கை" : "Life"}</Link>
             <Link href={`${prefix}/contributions/`} aria-current={current === "contributions" ? "page" : undefined}>{lang === "ta" ? "பங்களிப்புகள்" : "Contributions"}</Link>
             <Link href={`${prefix}/archive/`} aria-current={current === "archive" && !selectedCat ? "page" : undefined}>{lang === "ta" ? "ஆவணங்கள்" : "Documents"}</Link>
-            <Link href={`${prefix}/sponsors/`} aria-current={current === "sponsors" ? "page" : undefined}>{lang === "ta" ? "ஆதரவு" : "Support"}</Link>
+            <Link href={`${prefix}/katturaigal/`} aria-current={current === "katturaigal" ? "page" : undefined}>{lang === "ta" ? "கட்டுரைகள்" : "Essays"}</Link>
           </nav>
+          <Link
+            href={`${prefix}/sponsors/`}
+            className="header-donate-btn header-donate-desktop"
+            aria-current={current === "sponsors" ? "page" : undefined}
+            onClick={closeNavigation}
+          >
+            <span className="hdb-icon-wrap" aria-hidden="true">
+              <svg className="hdb-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
+            </span>
+            <span className="hdb-copy">
+              <span className="hdb-main">{lang === "ta" ? "உதவி" : "Support"}</span>
+              <span className="hdb-sub">{lang === "ta" ? "நன்கொடை / உதவ / ஆதரவளிக்க" : "Donate / Support / Contribute"}</span>
+            </span>
+          </Link>
           <div className="lang-toggle" role="group" aria-label={lang === "ta" ? "மொழி" : "Language"}>
-            <Link href={languageHref("ta")} lang="ta" aria-label="தமிழில் வாசிக்க" aria-current={lang === "ta" ? "true" : undefined} onClick={closeNavigation}>தமிழ்</Link>
-            <Link href={languageHref("en")} lang="en" aria-label="Read in English" aria-current={lang === "en" ? "true" : undefined} onClick={closeNavigation}>EN</Link>
+            <Link href={languageHref("ta")} lang="ta" aria-label="தமிழில் வாசிக்க" aria-current={lang === "ta" ? "true" : undefined} onClick={closeNavigation}>அ</Link>
+            <Link href={languageHref("en")} lang="en" aria-label="Read in English" aria-current={lang === "en" ? "true" : undefined} onClick={closeNavigation}>A</Link>
           </div>
           <button ref={menuRef} className="menu-btn" type="button" aria-expanded={menuOpen} aria-controls="archive-navigation" onClick={() => {
             setMenuOpen(!menuOpen); setOpenGroup(null);
           }}><span>{menuOpen ? S.menuClose : S.menu}</span><svg className="menu-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">{menuOpen ? <path d="m6 6 12 12M6 18 18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg></button>
+        </div>
+        <div className="header-mobile-cta-wrap">
+          <div className="container">
+            <Link
+              href={`${prefix}/sponsors/`}
+              className="header-mobile-cta"
+              aria-current={current === "sponsors" ? "page" : undefined}
+              onClick={closeNavigation}
+            >
+              <span className="hdb-icon-wrap" aria-hidden="true">
+                <svg className="hdb-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+              </span>
+              <span className="hmc-title">{lang === "ta" ? "உதவி" : "Support"}</span>
+              <span className="hmc-sep" aria-hidden="true">·</span>
+              <span className="hmc-sub">{lang === "ta" ? "நன்கொடை / உதவ / ஆதரவளிக்க" : "Donate / Support / Contribute"}</span>
+              <span className="hmc-arrow" aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
         <div className={`archive-nav-wrap ${menuOpen ? "is-open" : ""}`} id="archive-navigation">
           <nav className="container archive-primary-nav" aria-label={lang === "ta" ? "ஆய்வுத் துறைகளும் வாழ்க்கை வரலாறும்" : "Fields of study and biography"}>
@@ -164,7 +199,11 @@ function HeaderView({ lang, current, progress, customLangToggles, query = "" }: 
             <div className="archive-mobile-utility">
               <Link href={`${prefix}/`} onClick={closeNavigation}>{S.nav[0]}</Link>
               <Link href={`${prefix}/archive/`} onClick={closeNavigation}>{lang === "ta" ? "அனைத்து ஆவணங்கள்" : "All documents"}</Link>
-              <Link href={`${prefix}/sponsors/`} onClick={closeNavigation}>{S.nav[4]}</Link>
+              <Link href={`${prefix}/katturaigal/`} onClick={closeNavigation}>{lang === "ta" ? "கட்டுரைகள்" : "Essays"}</Link>
+              <Link href={`${prefix}/sponsors/`} onClick={closeNavigation} className="mobile-utility-donate">
+                <span>{lang === "ta" ? "உதவி" : "Support"}</span>
+                <small>{lang === "ta" ? "நன்கொடை / உதவ / ஆதரவளிக்க" : "Donate / Support / Contribute"}</small>
+              </Link>
             </div>
           </nav>
         </div>

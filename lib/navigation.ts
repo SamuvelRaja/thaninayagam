@@ -39,7 +39,8 @@ export function lifeNavigation(lang: ArchiveLanguage) {
       { label: lang === "ta" ? "உலகத் தமிழ்ப்பயணம்" : "Global Tamil journey", href: `${prefix}/#journey` },
       { label: lang === "ta" ? "வரலாற்றுப் பங்களிப்புகள்" : "Historical contributions", href: `${prefix}/contributions/` },
       { label: lang === "ta" ? "ஆவணப் படங்கள்" : "Archival plates", href: `${prefix}/contributions/#plates` },
-      { label: lang === "ta" ? "ஆவணகத்திற்கு ஆதரவு" : "Support the archive", href: `${prefix}/sponsors/` },
+      { label: lang === "ta" ? "அடிகள் பற்றிய கட்டுரைகள்" : "Essays on Adigal", href: `${prefix}/katturaigal/` },
+      { label: lang === "ta" ? "உதவி (நன்கொடை / உதவ / ஆதரவளிக்க)" : "Support (Donate / Support / Contribute)", href: `${prefix}/sponsors/` },
     ],
   };
 }

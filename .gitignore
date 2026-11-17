@@ -3,6 +3,7 @@ node_modules/
 out/
 .DS_Store
 npm-debug.log*
+scratch/
 
 # Local research downloads (OCR dumps, IA derivatives)
 workbench/research/*-djvu.txt
