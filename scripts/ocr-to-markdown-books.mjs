@@ -11,7 +11,7 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const ROOT = process.cwd();
-const SRC = path.join(ROOT, "public", "books");
+const SRC = path.join(ROOT, "archive-source", "books");
 const OUT = path.join(ROOT, "content", "books");
 const DOCS = path.join(ROOT, "content", "documents");
 
