@@ -89,7 +89,7 @@ const ENRICHMENTS: Record<string, Partial<Katturai>> = {
     descriptionEn:
       "A research essay chronicling Father Thani Nayagam's worldwide service to Tamil, founding of the International Association for Tamil Research (IATR), launching of 'Tamil Culture', and recovery of early Tamil printed books.",
     authorEn: "Rev. Dr. Amudhan Adigal",
-    sourceEn: "Faces of Language (Thamizhuravu Publication), pp. 76–82 (1993)",
+    sourceEn: "Faces of Language (Thamizhuravu Publication) (1993)",
     aboutAuthorEn:
       "Rev. Dr. Amudhan Adigal (1937–2003) was a pioneering research historian who continuously documented Father Thani Nayagam's intellectual life for over 30 years and authored the first comprehensive biography.",
     thumbnailImage: "/images/katturaigal/tamil-valartha-thaninayagam-thumb.webp",
