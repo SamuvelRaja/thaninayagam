@@ -5,6 +5,7 @@
   --font-ta: var(--font-ui);
   --font-ta-sans: var(--font-ui);
   --font-display: "Spectral", "Tamil Sangam MN", "Noto Serif Tamil", Georgia, serif;
+  --font-title: "Noto Serif Tamil", "Tamil Sangam MN", "Spectral", Georgia, serif;
 }
 
 body { font-size: 1rem; line-height: 1.75; }
