@@ -1144,20 +1144,26 @@ html[lang="en"] .section-volunteers .section-lead-box .section-subhead {
   margin-bottom: 0.85rem;
 }
 
-.km-title {
-  font-family: var(--font-title, "Noto Serif Tamil", "Tamil Sangam MN", "Spectral", Georgia, serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.32;
-  letter-spacing: -0.01em;
+.km-title,
+html[lang="ta"] .km-title,
+html[lang="ta"] h1.km-title,
+.katturai-minimal-reader h1.km-title {
+  font-family: var(--font-title, "Noto Serif Tamil", "Tamil Sangam MN", "Spectral", Georgia, serif) !important;
+  font-size: clamp(1.65rem, 2.75vw, 2.25rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.34 !important;
+  letter-spacing: -0.01em !important;
   color: var(--ink);
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem !important;
   text-wrap: balance;
 }
 
-html[lang="en"] .km-title {
-  font-family: "Spectral", Georgia, serif;
-  font-size: clamp(1.95rem, 3.4vw, 2.65rem);
+html[lang="en"] .km-title,
+html[lang="en"] h1.km-title,
+html[lang="en"] .katturai-minimal-reader h1.km-title {
+  font-family: "Spectral", Georgia, serif !important;
+  font-size: clamp(1.8rem, 3.2vw, 2.45rem) !important;
+  line-height: 1.28 !important;
 }
 
 .km-byline {
@@ -1219,10 +1225,15 @@ html[lang="en"] .km-title {
 
 .km-lead p {
   margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-family: "Noto Serif Tamil", "Tamil Sangam MN", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
   color: var(--ink-2);
   text-wrap: pretty;
+}
+
+html[lang="en"] .km-lead p {
+  font-family: "Spectral", Georgia, serif;
 }
 
 /* In-Page Minimalist Table of Contents */
@@ -1302,28 +1313,40 @@ html[lang="en"] .km-title {
 
 /* Article Body Typography */
 .km-body {
-  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-family: "Noto Serif Tamil", "Tamil Sangam MN", Georgia, serif;
   color: var(--ink);
 }
 
 .km-body p {
-  font-size: 1.12rem;
-  line-height: 2;
-  margin: 0 0 1.75rem;
+  font-family: "Noto Serif Tamil", "Tamil Sangam MN", Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  margin: 0 0 1.65rem;
   letter-spacing: 0.005em;
   text-wrap: pretty;
 }
 
-.km-body h2 {
-  font-family: var(--font-title, "Spectral", "Noto Serif Tamil", Georgia, serif);
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 700;
-  line-height: 1.35;
+html[lang="en"] .km-body,
+html[lang="en"] .km-body p {
+  font-family: "Spectral", Georgia, serif;
+}
+
+.km-body h2,
+html[lang="ta"] .km-body h2,
+html[lang="ta"] .katturai-minimal-reader .km-body h2 {
+  font-family: "Noto Serif Tamil", "Tamil Sangam MN", Georgia, serif !important;
+  font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
   color: var(--ink);
-  margin: 3.5rem 0 1.25rem;
-  padding-top: 1.75rem;
+  margin: 3.25rem 0 1.15rem !important;
+  padding-top: 1.5rem !important;
   border-top: 1px solid var(--line-light);
   scroll-margin-top: calc(var(--header-h, 60px) + 24px);
+}
+
+html[lang="en"] .km-body h2 {
+  font-family: "Spectral", Georgia, serif !important;
 }
 
 .km-body h2:first-of-type {
